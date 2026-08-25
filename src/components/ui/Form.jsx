@@ -1,7 +1,7 @@
 export function Field({ label, hint, children }) {
   return (
     <label className="block">
-      <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-navy">{label}</span>
+      <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-navy dark:text-slate-200">{label}</span>
       {children}
       {hint ? <span className="mt-1 block text-xs text-slate-400">{hint}</span> : null}
     </label>
@@ -48,4 +48,3 @@ export function SelectInput({ label, value, onChange, options, hint }) {
     </Field>
   )
 }
-

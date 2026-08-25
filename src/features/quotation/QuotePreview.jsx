@@ -38,6 +38,7 @@ export function QuotePreview({ client, system, extras, margin, reference }) {
           <div className="rounded-lg bg-[#EEF2F7] p-3"><div className="text-[10px] font-bold uppercase text-navy">Panels</div><div className="font-heading font-extrabold text-navy">{quote.panels} x {system.panelW}W</div></div>
           <div className="rounded-lg bg-[#EEF2F7] p-3"><div className="text-[10px] font-bold uppercase text-navy">Battery</div><div className="font-heading font-extrabold text-navy">{quote.batteries} x {system.battAh}Ah</div></div>
           <div className="rounded-lg bg-[#EEF2F7] p-3"><div className="text-[10px] font-bold uppercase text-navy">Inverter</div><div className="font-heading font-extrabold text-navy">{formatNumber(quote.inverterWatts / 1000, 1)}kVA</div></div>
+          <div className="rounded-lg bg-[#EEF2F7] p-3 sm:col-span-3"><div className="text-[10px] font-bold uppercase text-navy">Solar Resource</div><div className="font-heading font-extrabold text-navy">{formatNumber(system.psh || 5, 1)} peak sun hours</div></div>
         </div>
 
         <div className="overflow-x-auto">
@@ -83,4 +84,3 @@ export function QuotePreview({ client, system, extras, margin, reference }) {
     </section>
   )
 }
-

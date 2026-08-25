@@ -14,6 +14,10 @@
     font-family: 'Inter', system-ui, sans-serif;
   }
 
+  .dark body {
+    background: #020617;
+  }
+
   button,
   input,
   select {
@@ -28,7 +32,7 @@
 
 @layer components {
   .input {
-    @apply min-h-11 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20;
+    @apply min-h-11 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/20 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100;
   }
 }
 
