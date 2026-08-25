@@ -13,9 +13,9 @@ export function HomePage() {
   return (
     <div>
       <section className="mb-6 overflow-hidden rounded-lg bg-gradient-to-br from-navy to-[#2C5282] p-6 text-white sm:p-8">
-        <div className="text-xs font-bold uppercase tracking-[0.16em] text-gold">Musstech Solar Energy</div>
-        <h2 className="mt-2 font-heading text-4xl font-extrabold tracking-normal">Solar Hub</h2>
-        <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75">Professional solar calculators, diagnosis tools, training resources, and quotation workflow for real installation work.</p>
+        <div className="text-xs font-bold uppercase tracking-[0.16em] text-navy">Musstech Solar Hub</div>
+        <h2 className="mt-2 font-heading text-4xl font-extrabold trackingn-normal">Solar Hub</h2>
+        <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75">Professional tools for solar installers, engineers, consultants, and technical trainers. Design systems, generate quotations, troubleshoot faults, and access training resources from one dashboard..</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link className="inline-flex min-h-11 items-center rounded-lg bg-gold px-5 text-sm font-extrabold text-navy" to="/calculators">Start Calculating</Link>
           <Link className="inline-flex min-h-11 items-center rounded-lg bg-white/15 px-5 text-sm font-bold text-white" to="/quotation">Create Quote</Link>

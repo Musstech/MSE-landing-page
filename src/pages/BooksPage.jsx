@@ -30,7 +30,7 @@ export function BooksPage() {
               </div>
               <div className="flex items-center justify-between gap-3">
                 <div className="font-heading text-xl font-extrabold text-gold">{formatCurrency(book.price)}</div>
-                <a className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg bg-navy px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#243f63]" href="https://selar.com/89d88rao55" target="_blank" rel="noreferrer">
+                <a className="inline-flex min-h-10 items-center justify-center gap-2 rounded-lg bg-navy px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#243f63]" href="https://selar.com/m/M_S_E" target="_blank" rel="noreferrer">
                   Buy <ExternalLink className="h-4 w-4" />
                 </a>
               </div>
@@ -41,7 +41,7 @@ export function BooksPage() {
       <section className="mt-6 rounded-lg bg-gradient-to-br from-navy to-[#2C5282] p-6 text-center text-white">
         <div className="text-xs font-bold uppercase tracking-wide text-gold">Get all 4 books</div>
         <div className="mt-1 font-heading text-2xl font-extrabold">The Complete MSE Solar Library</div>
-        <a className="mt-5 inline-flex min-h-11 items-center justify-center rounded-lg bg-gold px-6 text-sm font-extrabold text-navy" href="https://selar.com/89d88rao55" target="_blank" rel="noreferrer">Visit Selar Store</a>
+        <a className="mt-5 inline-flex min-h-11 items-center justify-center rounded-lg bg-gold px-6 text-sm font-extrabold text-navy" href="https://selar.com/m/M_S_E" target="_blank" rel="noreferrer">Visit Selar Store</a>
       </section>
     </div>
   )
