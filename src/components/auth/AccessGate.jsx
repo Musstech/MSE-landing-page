@@ -4,7 +4,6 @@ import { usePersistentState } from '../../hooks/usePersistentState'
 import { Button } from '../ui/Button'
 
 const configuredPin = import.meta.env.VITE_ACCESS_PIN || '246564'
-
 export function AccessGate({ children }) {
   const [unlocked, setUnlocked] = usePersistentState('mse-access-unlocked', false)
   const [pin, setPin] = useState('')
