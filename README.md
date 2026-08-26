@@ -26,7 +26,18 @@ npm run build
 npm run preview
 ```
 
+## Access PIN
+
+The app shows an access screen before users can open the tools. Set the PIN with:
+
+```bash
+VITE_ACCESS_PIN=your-pin-here
+```
+
+On Vercel, add `VITE_ACCESS_PIN` under Project Settings > Environment Variables before deploying.
+
+This is a simple frontend gate. For selling unique PINs to TikTok buyers, connect the app to a backend/payment system so each buyer gets a verified one-time or subscription access code.
+
 ## Deployment
 
 The app is a single-page Vite app. `vercel.json` rewrites all routes to `index.html` so direct links such as `/calculators` and `/quotation` work after deployment.
-

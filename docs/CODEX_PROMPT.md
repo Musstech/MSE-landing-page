@@ -13,6 +13,10 @@ Use this prompt when running GitHub Copilot Workspace, OpenAI Codex, Claude Code
 - Shared UI components live in `src/components/ui/`
 - Feature modules live in `src/features/`
 - Pages live in `src/pages/`
+- Book cover images live in `public/image/`
+- Access PIN is configured with `VITE_ACCESS_PIN`
+- Theme is controlled by `src/contexts/ThemeContext.jsx`
+- PSH region presets live in `src/data/solarRegions.js`
 
 ## To Add A New Calculator
 
@@ -31,6 +35,7 @@ Use this prompt when running GitHub Copilot Workspace, OpenAI Codex, Claude Code
 
 - Book data lives in `src/data/books.js`.
 - Quotation default pricing lives in `src/pages/QuotationPage.jsx`.
+- Book cards should not show prices unless the product owner explicitly asks for prices to return.
 
 ## Solar Formulas
 
@@ -41,4 +46,3 @@ Use this prompt when running GitHub Copilot Workspace, OpenAI Codex, Claude Code
 - DC Current = P / V
 - AC Current = P / (V x 0.8)
 - Breaker = ceil((I / 0.8) x 1.25), then next standard size
-

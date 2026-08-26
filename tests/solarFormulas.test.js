@@ -44,4 +44,7 @@ assert.equal(quote.panels, 5)
 assert.equal(quote.batteries, 1)
 assert.ok(quote.totalCost > quote.equipCost)
 
+const lowSunQuote = calculateQuote({ designLoad: 8000, nightLoad: 4000, voltage: 48, battType: 'lithium', autonomy: 1, panelW: 500, battAh: 200, panelPrice: 145000, battPrice: 480000, invPrice: 520000, psh: 4, efficiency: 75 }, 150000, 20)
+assert.equal(lowSunQuote.panels, 6)
+
 console.log('solar formula tests passed')

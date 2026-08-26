@@ -7,8 +7,8 @@ export function Button({ children, variant = 'primary', size = 'md', className, 
         'inline-flex min-h-11 items-center justify-center gap-2 rounded-lg font-semibold transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50',
         variant === 'primary' && 'bg-navy text-white hover:bg-[#243f63]',
         variant === 'gold' && 'bg-gold text-navy hover:bg-[#e29a20]',
-        variant === 'soft' && 'bg-[#EEF2F7] text-navy hover:bg-[#e2e8f0]',
-        variant === 'ghost' && 'bg-transparent text-navy hover:bg-[#EEF2F7]',
+        variant === 'soft' && 'bg-[#EEF2F7] text-navy hover:bg-[#e2e8f0] dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700',
+        variant === 'ghost' && 'bg-transparent text-navy hover:bg-[#EEF2F7] dark:text-slate-100 dark:hover:bg-slate-800',
         variant === 'danger' && 'bg-[#FFF5F5] text-[#C53030] hover:bg-[#fed7d7]',
         size === 'sm' && 'px-3 py-2 text-xs',
         size === 'md' && 'px-4 py-2.5 text-sm',
@@ -21,4 +21,3 @@ export function Button({ children, variant = 'primary', size = 'md', className, 
     </button>
   )
 }
-

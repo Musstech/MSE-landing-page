@@ -142,12 +142,12 @@ export function calculateCost({ systemCost, dailyKwh, years, maintenance, genFue
   }
 }
 
-export function calculateQuote(system, extras, margin) {
+export function calculateQuote(system, extras, margin, options = {}) {
   const panelResult = calculatePanels({
     designLoad: system.designLoad,
     panelW: system.panelW,
-    psh: DEFAULT_PSH,
-    efficiency: DEFAULT_EFFICIENCY * 100,
+    psh: options.psh ?? system.psh ?? DEFAULT_PSH,
+    efficiency: options.efficiency ?? system.efficiency ?? DEFAULT_EFFICIENCY * 100,
   })
   const batteryResult = calculateBattery(system)
   const inverterWatts = Math.ceil((((Number(system.designLoad) || 0) / 24) * 1.5 * DESIGN_MARGIN) / 1000) * 1000
@@ -167,4 +167,3 @@ export function calculateQuote(system, extras, margin) {
     totalCost: equipCost * (1 + Math.max(0, Number(margin) || 0) / 100),
   }
 }
-

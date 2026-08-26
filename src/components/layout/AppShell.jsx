@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { BookOpen } from 'lucide-react'
+import { BookOpen, Moon, Sun } from 'lucide-react'
 import { navigation } from '../../data/navigation'
+import { useTheme } from '../../contexts/ThemeContext'
 
 const titles = {
   '/': 'Musstech Solar Hub',
@@ -13,9 +14,10 @@ const titles = {
 export function AppShell() {
   const location = useLocation()
   const title = titles[location.pathname] || 'Musstech Solar Hub'
+  const { theme, toggleTheme } = useTheme()
 
   return (
-    <div className="min-h-screen bg-[#F7F8FA] text-slate-700">
+    <div className="min-h-screen bg-[#F7F8FA] text-slate-700 dark:bg-slate-950 dark:text-slate-200">
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col bg-navy text-white lg:flex">
         <div className="border-b border-white/10 p-6">
           <div className="font-heading text-lg font-extrabold leading-tight text-gold">Musstech</div>
@@ -44,19 +46,28 @@ export function AppShell() {
       </aside>
 
       <main className="min-h-screen lg:pl-60">
-        <header className="sticky top-0 z-30 flex min-h-16 items-center justify-between border-b border-slate-200 bg-white/95 px-4 backdrop-blur sm:px-6">
-          <h1 className="font-heading text-lg font-extrabold text-navy">{title}</h1>
-          <a className="inline-flex min-h-10 items-center gap-2 rounded-lg bg-gold px-3 text-sm font-bold text-navy" href="https://selar.com/89d88rao55" target="_blank" rel="noreferrer">
-            <BookOpen className="h-4 w-4" />
-            Books
-          </a>
+        <header className="sticky top-0 z-30 flex min-h-16 items-center justify-between border-b border-slate-200 bg-white/95 px-4 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95 sm:px-6">
+          <h1 className="font-heading text-lg font-extrabold text-navy dark:text-white">{title}</h1>
+          <div className="flex items-center gap-2">
+            <button
+              className="inline-flex min-h-10 w-10 items-center justify-center rounded-lg bg-[#EEF2F7] text-navy transition hover:bg-slate-200 dark:bg-slate-800 dark:text-gold dark:hover:bg-slate-700"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
+            <a className="inline-flex min-h-10 items-center gap-2 rounded-lg bg-gold px-3 text-sm font-bold text-navy" href="https://selar.com/m/M_S_E" target="_blank" rel="noreferrer">
+              <BookOpen className="h-4 w-4" />
+              Books
+            </a>
+          </div>
         </header>
         <div className="mx-auto max-w-6xl px-4 py-5 pb-24 sm:px-6 sm:py-8 lg:pb-8">
           <Outlet />
         </div>
       </main>
 
-      <nav className="fixed inset-x-0 bottom-0 z-50 grid grid-cols-5 border-t border-slate-200 bg-white pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgba(15,23,42,0.08)] lg:hidden">
+      <nav className="fixed inset-x-0 bottom-0 z-50 grid grid-cols-5 border-t border-slate-200 bg-white pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgba(15,23,42,0.08)] dark:border-slate-800 dark:bg-slate-900 lg:hidden">
         {navigation.map((item) => {
           const Icon = item.icon
           return (
@@ -64,7 +75,7 @@ export function AppShell() {
               key={item.id}
               to={item.path}
               end={item.path === '/'}
-              className={({ isActive }) => `flex min-h-16 flex-col items-center justify-center gap-1 text-[10px] font-bold uppercase tracking-wide ${isActive ? 'bg-[#EEF2F7] text-navy' : 'text-slate-400'}`}
+              className={({ isActive }) => `flex min-h-16 flex-col items-center justify-center gap-1 text-[10px] font-bold uppercase tracking-wide ${isActive ? 'bg-[#EEF2F7] text-navy dark:bg-slate-800 dark:text-gold' : 'text-slate-400'}`}
             >
               <Icon className="h-5 w-5" />
               {item.label}
@@ -75,4 +86,3 @@ export function AppShell() {
     </div>
   )
 }
-

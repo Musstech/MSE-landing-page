@@ -5,6 +5,8 @@ import { CalculatorsPage } from './pages/CalculatorsPage'
 import { TroubleshootingPage } from './pages/TroubleshootingPage'
 import { BooksPage } from './pages/BooksPage'
 import { QuotationPage } from './pages/QuotationPage'
+import { AccessGate } from './components/auth/AccessGate'
+import { ThemeProvider } from './contexts/ThemeContext'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,11 @@ const router = createBrowserRouter([
 ])
 
 export default function App() {
-  return <RouterProvider router={router} />
+  return (
+    <ThemeProvider>
+      <AccessGate>
+        <RouterProvider router={router} />
+      </AccessGate>
+    </ThemeProvider>
+  )
 }
-
