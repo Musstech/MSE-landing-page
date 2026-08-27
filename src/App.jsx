@@ -7,6 +7,7 @@ import { BooksPage } from './pages/BooksPage'
 import { QuotationPage } from './pages/QuotationPage'
 import { AccessGate } from './components/auth/AccessGate'
 import { ThemeProvider } from './contexts/ThemeContext'
+import { Analytics } from '@vercel/analytics/react'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ export default function App() {
       <AccessGate>
         <RouterProvider router={router} />
       </AccessGate>
+      <Analytics />
     </ThemeProvider>
   )
 }
