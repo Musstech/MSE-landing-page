@@ -7,8 +7,9 @@ export function formatNumber(value, digits = 0) {
   })
 }
 
-export function formatCurrency(value) {
-  return `NGN ${formatNumber(value)}`
+export function formatCurrency(value, currency = '$') {
+  const label = String(currency || '$').trim()
+  return `${label} ${formatNumber(value)}`
 }
 
 export function clampNumber(value, fallback = 0, min = 0, max = Number.MAX_SAFE_INTEGER) {
@@ -16,4 +17,3 @@ export function clampNumber(value, fallback = 0, min = 0, max = Number.MAX_SAFE_
   if (!Number.isFinite(number)) return fallback
   return Math.min(max, Math.max(min, number))
 }
-

@@ -43,11 +43,26 @@ export function LoadCalculator() {
         <div className="divide-y divide-slate-100">
           {rows.map((row) => (
             <div key={row.id} className="grid gap-3 p-4 md:grid-cols-[1fr_90px_70px_80px_90px_44px] md:items-center">
-              <input className="input" value={row.name} onChange={(event) => updateRow(row.id, 'name', event.target.value)} aria-label="Appliance name" />
-              <input className="input" type="number" min="0" value={row.watts} onChange={(event) => updateRow(row.id, 'watts', Number(event.target.value))} aria-label="Watts" />
-              <input className="input" type="number" min="0" value={row.qty} onChange={(event) => updateRow(row.id, 'qty', Number(event.target.value))} aria-label="Quantity" />
-              <input className="input" type="number" min="0" max="24" step="0.5" value={row.dayH} onChange={(event) => updateRow(row.id, 'dayH', Number(event.target.value))} aria-label="Day hours" />
-              <input className="input" type="number" min="0" max="24" step="0.5" value={row.nightH} onChange={(event) => updateRow(row.id, 'nightH', Number(event.target.value))} aria-label="Night hours" />
+              <label className="block">
+                <span className="mobile-row-label">Appliance</span>
+                <input className="input" value={row.name} onChange={(event) => updateRow(row.id, 'name', event.target.value)} aria-label="Appliance name" />
+              </label>
+              <label className="block">
+                <span className="mobile-row-label">Watts</span>
+                <input className="input" type="number" min="0" value={row.watts} onChange={(event) => updateRow(row.id, 'watts', Number(event.target.value))} aria-label="Watts" />
+              </label>
+              <label className="block">
+                <span className="mobile-row-label">Qty</span>
+                <input className="input" type="number" min="0" value={row.qty} onChange={(event) => updateRow(row.id, 'qty', Number(event.target.value))} aria-label="Quantity" />
+              </label>
+              <label className="block">
+                <span className="mobile-row-label">Day hrs</span>
+                <input className="input" type="number" min="0" max="24" step="0.5" value={row.dayH} onChange={(event) => updateRow(row.id, 'dayH', Number(event.target.value))} aria-label="Day hours" />
+              </label>
+              <label className="block">
+                <span className="mobile-row-label">Night hrs</span>
+                <input className="input" type="number" min="0" max="24" step="0.5" value={row.nightH} onChange={(event) => updateRow(row.id, 'nightH', Number(event.target.value))} aria-label="Night hours" />
+              </label>
               <Button variant="danger" size="sm" aria-label="Remove appliance" onClick={() => setRows((current) => current.filter((item) => item.id !== row.id))}><Trash2 className="h-4 w-4" /></Button>
             </div>
           ))}
@@ -75,4 +90,3 @@ export function LoadCalculator() {
     </div>
   )
 }
-

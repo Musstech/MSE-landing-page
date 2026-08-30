@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy:   "#1A2E4A",
+        navy:   "#0F172A",
         gold:   "#F5A623",
-        solar:  "#E8722A",
-        sgreen: "#276749",
+        solar:  "#38BDF8",
+        sgreen: "#0EA5E9",
       },
       fontFamily: {
-        heading: ["Poppins","sans-serif"],
+        heading: ["-apple-system","BlinkMacSystemFont","Segoe UI","sans-serif"],
       }
     }
   },

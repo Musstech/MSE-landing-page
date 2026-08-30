@@ -5,7 +5,7 @@ import { CalculatorsPage } from './pages/CalculatorsPage'
 import { TroubleshootingPage } from './pages/TroubleshootingPage'
 import { BooksPage } from './pages/BooksPage'
 import { QuotationPage } from './pages/QuotationPage'
-import { AccessGate } from './components/auth/AccessGate'
+import { PremiumAccessProvider } from './components/auth/PremiumAccess'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { Analytics } from '@vercel/analytics/react'
 
@@ -26,9 +26,9 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <ThemeProvider>
-      <AccessGate>
+      <PremiumAccessProvider>
         <RouterProvider router={router} />
-      </AccessGate>
+      </PremiumAccessProvider>
       <Analytics />
     </ThemeProvider>
   )

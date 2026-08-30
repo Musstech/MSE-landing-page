@@ -29,12 +29,24 @@ export function InverterCalculator() {
         </div>
         {loads.map((load) => (
           <div key={load.id} className="grid gap-3 border-b border-slate-100 p-4 md:grid-cols-[1fr_90px_70px_130px_44px] md:items-center">
-            <input className="input" value={load.name} onChange={(event) => update(load.id, 'name', event.target.value)} />
-            <input className="input" type="number" min="0" value={load.watts} onChange={(event) => update(load.id, 'watts', Number(event.target.value))} />
-            <input className="input" type="number" min="0" value={load.qty} onChange={(event) => update(load.id, 'qty', Number(event.target.value))} />
-            <select className="input bg-white" value={load.surge} onChange={(event) => update(load.id, 'surge', event.target.value)}>
-              <option value="default">General</option><option value="fan">Fan</option><option value="fridge">Fridge</option><option value="freezer">Freezer</option><option value="ac">AC</option><option value="pump">Pump</option>
-            </select>
+            <label className="block">
+              <span className="mobile-row-label">Load</span>
+              <input className="input" value={load.name} onChange={(event) => update(load.id, 'name', event.target.value)} />
+            </label>
+            <label className="block">
+              <span className="mobile-row-label">Watts</span>
+              <input className="input" type="number" min="0" value={load.watts} onChange={(event) => update(load.id, 'watts', Number(event.target.value))} />
+            </label>
+            <label className="block">
+              <span className="mobile-row-label">Qty</span>
+              <input className="input" type="number" min="0" value={load.qty} onChange={(event) => update(load.id, 'qty', Number(event.target.value))} />
+            </label>
+            <label className="block">
+              <span className="mobile-row-label">Surge Type</span>
+              <select className="input bg-white" value={load.surge} onChange={(event) => update(load.id, 'surge', event.target.value)}>
+                <option value="default">General</option><option value="fan">Fan</option><option value="fridge">Fridge</option><option value="freezer">Freezer</option><option value="ac">AC</option><option value="pump">Pump</option>
+              </select>
+            </label>
             <Button variant="danger" size="sm" onClick={() => setLoads((current) => current.filter((item) => item.id !== load.id))}><Trash2 className="h-4 w-4" /></Button>
           </div>
         ))}
@@ -49,4 +61,3 @@ export function InverterCalculator() {
     </div>
   )
 }
-
