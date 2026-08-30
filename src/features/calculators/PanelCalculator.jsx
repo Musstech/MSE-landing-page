@@ -9,7 +9,7 @@ import { ResultBanner } from '../../components/ui/ResultBanner'
 import { SectionHeader } from '../../components/ui/SectionHeader'
 
 export function PanelCalculator() {
-  const [state, setState] = usePersistentState('mse-panel-calc', { designLoad: 8000, panelW: 500, regionId: 'nigeria-average', psh: 5, efficiency: 75 })
+  const [state, setState] = usePersistentState('mse-panel-calc', { designLoad: 8000, panelW: 500, regionId: 'global-average', psh: 5, efficiency: 75 })
   const result = calculatePanels(state)
   const update = (field, value) => setState((current) => ({ ...current, [field]: value }))
   const selectedRegion = solarRegions.find((region) => region.id === state.regionId) || solarRegions[0]

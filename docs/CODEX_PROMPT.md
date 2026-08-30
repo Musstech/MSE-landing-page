@@ -1,20 +1,20 @@
-# Musstech Solar Hub - AI Agent Execution Prompt
+# Solar Hub - AI Agent Execution Prompt
 
 Use this prompt when running GitHub Copilot Workspace, OpenAI Codex, Claude Code, or another AI coding agent to extend or modify this application.
 
 ## Project Context
 
 - React 18 + Vite + Tailwind CSS web application
-- Brand: Musstech Solar Energy
+- Product name: Solar Hub
 - Owner: Imam Musa
-- Colors: Navy `#1A2E4A`, Gold `#F5A623`, Orange `#E8722A`, Green `#276749`
+- Visual direction: iOS-inspired glass UI with white surfaces, sky-blue accents, and light/dark mode
 - Formulas live in `src/utils/solarFormulas.js`
 - Data lives in `src/data/`
 - Shared UI components live in `src/components/ui/`
 - Feature modules live in `src/features/`
 - Pages live in `src/pages/`
 - Book cover images live in `public/image/`
-- Access PIN is configured with `VITE_ACCESS_PIN`
+- Premium PIN is configured with `VITE_ACCESS_PIN`
 - Theme is controlled by `src/contexts/ThemeContext.jsx`
 - PSH region presets live in `src/data/solarRegions.js`
 

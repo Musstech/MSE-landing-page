@@ -12,7 +12,6 @@ export function HomePage() {
   return (
     <div className="space-y-6">
       <section className="ios-card relative overflow-hidden p-6 sm:p-8">
-        <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-sky-300/30 blur-3xl" />
         <div className="relative">
           <div className="inline-flex items-center gap-2 rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-sky-700 dark:bg-sky-400/15 dark:text-sky-300">
             <Sparkles className="h-3.5 w-3.5" />
@@ -80,4 +79,3 @@ export function HomePage() {
     </div>
   )
 }
-

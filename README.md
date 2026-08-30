@@ -1,4 +1,4 @@
-# Musstech Solar Hub
+# Solar Hub
 
 Responsive React/Vite web application for solar sizing, troubleshooting, training resources, and quotation generation.
 
@@ -26,9 +26,9 @@ npm run build
 npm run preview
 ```
 
-## Access PIN
+## Premium PIN
 
-The app shows an access screen before users can open the tools. Set the PIN with:
+Home, ebooks, troubleshooting, and the basic load calculator are free to open. Advanced sizing, cost editing, and professional quotations unlock with a premium PIN. Set the PIN with:
 
 ```bash
 VITE_ACCESS_PIN=your-pin-here

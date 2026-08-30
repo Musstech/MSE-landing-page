@@ -24,7 +24,7 @@ export function QuotationPage() {
 function QuotationBuilder() {
   const [installer, setInstaller] = usePersistentState('mse-quote-installer', { companyName: '', tagline: '', currency: '$' })
   const [client, setClient] = usePersistentState('mse-quote-client', { name: '', address: '', phone: '', email: '', date: today })
-  const [system, setSystem] = usePersistentState('mse-quote-system', { designLoad: 8000, nightLoad: 4000, voltage: 48, battType: 'lithium', autonomy: 1, regionId: 'nigeria-average', psh: 5, efficiency: 75, panelW: 500, battAh: 200, panelPrice: 145000, battPrice: 480000, invPrice: 520000 })
+  const [system, setSystem] = usePersistentState('mse-quote-system', { designLoad: 8000, nightLoad: 4000, voltage: 48, battType: 'lithium', autonomy: 1, regionId: 'global-average', psh: 5, efficiency: 75, panelW: 500, battAh: 200, panelPrice: 145000, battPrice: 480000, invPrice: 520000 })
   const [margin, setMargin] = usePersistentState('mse-quote-margin', 20)
   const [extras, setExtras] = usePersistentState('mse-quote-extras', 150000)
   const [shown, setShown] = useState(false)
@@ -72,7 +72,7 @@ function QuotationBuilder() {
             <NumberInput label="Nighttime Load" value={system.nightLoad} onChange={(value) => updateSystem('nightLoad', value)} unit="Wh" />
             <SelectInput label="System Voltage" value={system.voltage} onChange={(value) => updateSystem('voltage', Number(value))} options={[12, 24, 48].map((value) => ({ value, label: `${value}V` }))} />
             <SelectInput label="Battery Type" value={system.battType} onChange={(value) => updateSystem('battType', value)} options={[{ value: 'lithium', label: 'Lithium LiFePO4' }, { value: 'leadAcid', label: 'Lead-Acid' }, { value: 'agm', label: 'AGM/Gel' }]} />
-            <SelectInput label="Solar Location / PSH" value={system.regionId || 'nigeria-average'} onChange={updateRegion} options={solarRegions.map((region) => ({ value: region.id, label: `${region.label} (${region.psh} PSH)` }))} />
+            <SelectInput label="Solar Location / PSH" value={system.regionId || 'global-average'} onChange={updateRegion} options={solarRegions.map((region) => ({ value: region.id, label: `${region.label} (${region.psh} PSH)` }))} />
             <NumberInput label="Peak Sun Hours" value={system.psh || 5} onChange={(value) => updateSystem('psh', value)} unit="hrs" step={0.5} min={1} max={8} />
             <NumberInput label="Autonomy Days" value={system.autonomy} onChange={(value) => updateSystem('autonomy', value)} unit="days" step={0.5} />
             <NumberInput label="Panel Wattage" value={system.panelW} onChange={(value) => updateSystem('panelW', value)} unit="W" min={1} />
