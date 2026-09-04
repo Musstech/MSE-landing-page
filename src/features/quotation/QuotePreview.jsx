@@ -1,12 +1,15 @@
 import { Printer } from 'lucide-react'
 import { calculateQuote } from '../../utils/solarFormulas'
 import { formatCurrency, formatNumber } from '../../utils/format'
+import { getCurrencyOption, getCurrencySymbol } from '../../data/currencies'
 import { Button } from '../../components/ui/Button'
 
 export function QuotePreview({ client, installer, system, extras, margin, reference }) {
   const quote = calculateQuote(system, extras, margin)
-  const currency = installer.currency || '$'
+  const currencyOption = getCurrencyOption(installer.currencyCode || installer.currency)
+  const currency = getCurrencySymbol(currencyOption.code)
   const companyName = installer.companyName || 'Your Company'
+  const companySubtitle = installer.subtitle ?? installer.tagline ?? ''
   const rows = [
     [`Solar Panel ${system.panelW}W`, quote.panels, system.panelPrice, quote.panels * system.panelPrice],
     [`${system.battType === 'lithium' ? 'Lithium Battery' : 'Battery'} ${system.battAh}Ah ${system.voltage}V`, quote.batteries, system.battPrice, quote.batteries * system.battPrice],
@@ -21,11 +24,12 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.18em] text-sky-200">Solar Quotation</div>
             <div className="mt-2 font-heading text-3xl font-extrabold tracking-normal">{companyName}</div>
-            {installer.tagline ? <div className="mt-1 text-sm text-white/70">{installer.tagline}</div> : null}
+            {companySubtitle ? <div className="mt-1 text-sm text-white/70">{companySubtitle}</div> : null}
           </div>
           <div className="rounded-2xl bg-white/10 p-4 text-sm text-white/80 backdrop-blur sm:text-right">
             <div>Date: {client.date}</div>
             <div>Ref: {reference}</div>
+            <div>{currencyOption.code} {currencyOption.symbol}</div>
           </div>
         </div>
       </div>
@@ -94,4 +98,3 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
     </section>
   )
 }
-

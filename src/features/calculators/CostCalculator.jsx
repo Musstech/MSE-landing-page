@@ -1,23 +1,25 @@
 import { usePersistentState } from '../../hooks/usePersistentState'
 import { calculateCost } from '../../utils/solarFormulas'
 import { formatCurrency, formatNumber } from '../../utils/format'
-import { NumberInput, TextInput } from '../../components/ui/Form'
+import { currencyOptions, formatCurrencyOption, getCurrencyOption, getCurrencySymbol } from '../../data/currencies'
+import { NumberInput, SelectInput } from '../../components/ui/Form'
 import { Callout } from '../../components/ui/Callout'
 import { StatCard } from '../../components/ui/Card'
 import { ResultBanner } from '../../components/ui/ResultBanner'
 import { SectionHeader } from '../../components/ui/SectionHeader'
 
 export function CostCalculator() {
-  const [state, setState] = usePersistentState('mse-cost-calc', { currency: '$', systemCost: 1500000, dailyKwh: 8, years: 20, maintenance: 30000, genFuelPerL: 1200 })
+  const [state, setState] = usePersistentState('mse-cost-calc', { currencyCode: 'USD', systemCost: 1500000, dailyKwh: 8, years: 20, maintenance: 30000, genFuelPerL: 1200 })
   const result = calculateCost(state)
   const update = (field, value) => setState((current) => ({ ...current, [field]: value }))
-  const currency = state.currency || '$'
+  const selectedCurrency = getCurrencyOption(state.currencyCode || state.currency)
+  const currency = getCurrencySymbol(selectedCurrency.code)
 
   return (
     <div>
       <SectionHeader title="Cost Per kWh Calculator" subtitle="Compare lifecycle solar cost against generator electricity." />
       <div className="grid gap-4 md:grid-cols-2">
-        <TextInput label="Currency Symbol" value={currency} onChange={(value) => update('currency', value)} />
+        <SelectInput label="Country / Currency" value={selectedCurrency.code} onChange={(value) => update('currencyCode', value)} options={currencyOptions.map((option) => ({ value: option.code, label: formatCurrencyOption(option) }))} />
         <NumberInput label="Total System Cost" value={state.systemCost} onChange={(value) => update('systemCost', value)} unit={currency} />
         <NumberInput label="Daily Energy Produced" value={state.dailyKwh} onChange={(value) => update('dailyKwh', value)} unit="kWh" min={0.1} />
         <NumberInput label="System Lifetime" value={state.years} onChange={(value) => update('years', value)} unit="yrs" min={1} max={30} />

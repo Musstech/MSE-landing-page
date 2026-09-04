@@ -10,7 +10,7 @@ import { CostCalculator } from '../features/calculators/CostCalculator'
 
 const tabs = [
   { id: 'load', label: 'Load' },
-  { id: 'panel', label: 'Panel', premium: true },
+  { id: 'panel', label: 'Panel' },
   { id: 'battery', label: 'Battery', premium: true },
   { id: 'inverter', label: 'Inverter', premium: true },
   { id: 'cable', label: 'Cable', premium: true },
@@ -29,7 +29,7 @@ export function CalculatorsPage() {
     <div>
       <Tabs tabs={visibleTabs} active={tab} onChange={setTab} />
       {tab === 'load' && <LoadCalculator />}
-      {tab === 'panel' && <PremiumGate title="Unlock Panel Sizing"><PanelCalculator /></PremiumGate>}
+      {tab === 'panel' && <PanelCalculator />}
       {tab === 'battery' && <PremiumGate title="Unlock Battery Sizing"><BatteryCalculator /></PremiumGate>}
       {tab === 'inverter' && <PremiumGate title="Unlock Inverter Sizing"><InverterCalculator /></PremiumGate>}
       {tab === 'cable' && <PremiumGate title="Unlock Cable & Breaker Sizing"><CableCalculator /></PremiumGate>}

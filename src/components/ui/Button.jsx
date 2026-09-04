@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 
-export function Button({ children, variant = 'primary', size = 'md', className, ...props }) {
+export function Button({ children, variant = 'primary', size = 'md', className, as: Component = 'button', ...props }) {
   return (
-    <button
+    <Component
       className={clsx(
         'inline-flex min-h-11 items-center justify-center gap-2 rounded-lg font-semibold transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50',
         variant === 'primary' && 'bg-sky-500 text-white shadow-lg shadow-sky-500/20 hover:bg-sky-600',
@@ -19,6 +19,6 @@ export function Button({ children, variant = 'primary', size = 'md', className, 
       {...props}
     >
       {children}
-    </button>
+    </Component>
   )
 }

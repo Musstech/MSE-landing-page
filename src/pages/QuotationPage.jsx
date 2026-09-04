@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { calculateQuote } from '../utils/solarFormulas'
 import { solarRegions } from '../data/solarRegions'
+import { currencyOptions, formatCurrencyOption, getCurrencyOption, getCurrencySymbol, normalizeCurrencyCode } from '../data/currencies'
 import { formatCurrency, formatNumber } from '../utils/format'
 import { usePersistentState } from '../hooks/usePersistentState'
 import { PremiumGate } from '../components/auth/PremiumAccess'
@@ -9,7 +10,6 @@ import { Card, StatCard } from '../components/ui/Card'
 import { NumberInput, SelectInput, TextInput } from '../components/ui/Form'
 import { ResultBanner } from '../components/ui/ResultBanner'
 import { SectionHeader } from '../components/ui/SectionHeader'
-import { QuotePreview } from '../features/quotation/QuotePreview'
 
 const today = new Date().toISOString().slice(0, 10)
 
@@ -22,18 +22,28 @@ export function QuotationPage() {
 }
 
 function QuotationBuilder() {
-  const [installer, setInstaller] = usePersistentState('mse-quote-installer', { companyName: '', tagline: '', currency: '$' })
+  const navigate = useNavigate()
+  const [installer, setInstaller] = usePersistentState('mse-quote-installer', { companyName: '', subtitle: '', currencyCode: 'USD' })
   const [client, setClient] = usePersistentState('mse-quote-client', { name: '', address: '', phone: '', email: '', date: today })
   const [system, setSystem] = usePersistentState('mse-quote-system', { designLoad: 8000, nightLoad: 4000, voltage: 48, battType: 'lithium', autonomy: 1, regionId: 'global-average', psh: 5, efficiency: 75, panelW: 500, battAh: 200, panelPrice: 145000, battPrice: 480000, invPrice: 520000 })
   const [margin, setMargin] = usePersistentState('mse-quote-margin', 20)
   const [extras, setExtras] = usePersistentState('mse-quote-extras', 150000)
-  const [shown, setShown] = useState(false)
-  const reference = useMemo(() => `MSE-${Date.now().toString().slice(-6)}`, [shown])
+  const [, setReference] = usePersistentState('mse-quote-reference', `QUOTE-${Date.now().toString().slice(-6)}`)
   const quote = calculateQuote(system, extras, margin)
+  const selectedCurrency = getCurrencyOption(installer.currencyCode || installer.currency)
+  const currencySymbol = getCurrencySymbol(selectedCurrency.code)
 
   const updateInstaller = (field, value) => setInstaller((current) => ({ ...current, [field]: value }))
   const updateClient = (field, value) => setClient((current) => ({ ...current, [field]: value }))
   const updateSystem = (field, value) => setSystem((current) => ({ ...current, [field]: value }))
+  const updateCurrency = (currencyCode) => {
+    const option = getCurrencyOption(currencyCode)
+    setInstaller((current) => ({
+      ...current,
+      currencyCode: normalizeCurrencyCode(option.code),
+      currency: option.symbol,
+    }))
+  }
   const updateRegion = (regionId) => {
     const region = solarRegions.find((item) => item.id === regionId)
     setSystem((current) => ({
@@ -42,17 +52,21 @@ function QuotationBuilder() {
       psh: regionId === 'custom' ? current.psh : region?.psh || current.psh,
     }))
   }
+  const openPreview = () => {
+    setReference(`QUOTE-${Date.now().toString().slice(-6)}`)
+    navigate('/quotation/preview')
+  }
 
   return (
     <div>
-      <SectionHeader title="Quotation Generator" subtitle="Auto-size system components and prepare a clean client quotation." />
+      <SectionHeader title="Quotation Generator" subtitle="Enter the installer, client, system, and pricing details before opening the client preview page." />
       <div className="grid gap-5 lg:grid-cols-3">
         <Card>
           <h3 className="mb-4 font-heading font-extrabold text-slate-950 dark:text-white">Installer Profile</h3>
           <div className="grid gap-4">
             <TextInput label="Company Name" value={installer.companyName} onChange={(value) => updateInstaller('companyName', value)} />
-            <TextInput label="Tagline / Contact Line" value={installer.tagline} onChange={(value) => updateInstaller('tagline', value)} />
-            <TextInput label="Currency Symbol" value={installer.currency} onChange={(value) => updateInstaller('currency', value)} />
+            <TextInput label="Company Subtitle" value={installer.subtitle ?? installer.tagline ?? ''} onChange={(value) => updateInstaller('subtitle', value)} />
+            <SelectInput label="Country / Currency" value={selectedCurrency.code} onChange={updateCurrency} options={currencyOptions.map((option) => ({ value: option.code, label: formatCurrencyOption(option) }))} />
           </div>
         </Card>
         <Card>
@@ -84,16 +98,16 @@ function QuotationBuilder() {
       <Card className="mt-5">
         <h3 className="mb-4 font-heading font-extrabold text-slate-950 dark:text-white">Equipment Pricing</h3>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          <NumberInput label={`Panel Price (${system.panelW}W)`} value={system.panelPrice} onChange={(value) => updateSystem('panelPrice', value)} unit={installer.currency || '$'} />
-          <NumberInput label={`Battery Price (${system.battAh}Ah)`} value={system.battPrice} onChange={(value) => updateSystem('battPrice', value)} unit={installer.currency || '$'} />
-          <NumberInput label="Inverter Price" value={system.invPrice} onChange={(value) => updateSystem('invPrice', value)} unit={installer.currency || '$'} />
-          <NumberInput label="Extras" value={extras} onChange={setExtras} unit={installer.currency || '$'} />
+          <NumberInput label={`Panel Price (${system.panelW}W)`} value={system.panelPrice} onChange={(value) => updateSystem('panelPrice', value)} unit={currencySymbol} />
+          <NumberInput label={`Battery Price (${system.battAh}Ah)`} value={system.battPrice} onChange={(value) => updateSystem('battPrice', value)} unit={currencySymbol} />
+          <NumberInput label="Inverter Price" value={system.invPrice} onChange={(value) => updateSystem('invPrice', value)} unit={currencySymbol} />
+          <NumberInput label="Extras" value={extras} onChange={setExtras} unit={currencySymbol} />
           <NumberInput label="Profit Margin" value={margin} onChange={setMargin} unit="%" min={0} max={100} />
         </div>
       </Card>
 
       <div className="mt-5">
-        <ResultBanner label="Client Total Price" value={formatCurrency(quote.totalCost, installer.currency)} sub={`Equipment cost: ${formatCurrency(quote.equipCost, installer.currency)} | Margin: ${formatNumber(margin)}%`} />
+        <ResultBanner label="Client Total Price" value={formatCurrency(quote.totalCost, currencySymbol)} sub={`Equipment cost: ${formatCurrency(quote.equipCost, currencySymbol)} | Margin: ${formatNumber(margin)}%`} />
         <div className="mt-3 grid gap-3 sm:grid-cols-3">
           <StatCard label="Solar Panels" value={`${quote.panels} x ${system.panelW}W`} tone="gold" />
           <StatCard label="Battery Bank" value={`${quote.batteries} x ${system.battAh}Ah`} tone="blue" />
@@ -101,8 +115,7 @@ function QuotationBuilder() {
         </div>
       </div>
 
-      <Button className="mt-5 w-full" variant="primary" size="lg" onClick={() => setShown(true)}>Generate Quotation Preview</Button>
-      {shown ? <div className="mt-6"><QuotePreview client={client} installer={installer} system={system} extras={extras} margin={margin} reference={reference} /></div> : null}
+      <Button className="mt-5 w-full" variant="primary" size="lg" onClick={openPreview}>Open Quotation Preview Page</Button>
     </div>
   )
 }

@@ -48,7 +48,7 @@ export function PremiumUnlockCard({ title = 'Unlock Premium Tools', compact = fa
         <Sparkles className="h-5 w-5 text-sky-500" />
       </div>
       <p className="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">
-        Enter your access PIN to use advanced sizing, cable and cost tools, editable pricing, and professional quotation generation.
+        Enter your access PIN to unlock battery and inverter sizing, cable and protection tools, editable pricing, and professional quotation documents.
       </p>
       <form className="mt-5" onSubmit={submit}>
         <label htmlFor="premium-pin" className="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">Access PIN</label>
@@ -75,4 +75,3 @@ export function PremiumGate({ children, title }) {
   if (premiumUnlocked) return children
   return <PremiumUnlockCard title={title} />
 }
-
