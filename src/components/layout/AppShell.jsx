@@ -141,10 +141,14 @@ export function AppShell() {
                 key={item.id}
                 to={item.path}
                 end={item.path === '/'}
-                className={({ isActive }) => `flex min-h-14 flex-col items-center justify-center gap-1 rounded-full text-[10px] font-semibold transition ${isActive ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/25' : 'text-slate-500 dark:text-slate-400'}`}
+                className={({ isActive }) => `flex min-h-14 flex-col items-center justify-center gap-1 rounded-full text-[10px] font-semibold transition ${isActive ? 'bg-white/45 text-slate-700 shadow-sm ring-1 ring-white/70 dark:bg-white/10 dark:text-slate-200 dark:ring-white/10' : 'text-slate-500 dark:text-slate-400'}`}
               >
-                <Icon className="h-5 w-5" />
-                {item.label}
+                {({ isActive }) => (
+                  <>
+                    <Icon className={`h-5 w-5 ${isActive ? 'text-sky-600 dark:text-sky-300' : 'text-current'}`} />
+                    <span>{item.label}</span>
+                  </>
+                )}
               </NavLink>
             )
           })}

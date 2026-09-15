@@ -1,0 +1,2355 @@
+FILE: Configure It Right.docx
+CONFIGURE IT RIGHT
+The Complete Guide to Solar Panel, Inverter and Battery
+Configuration, Communication and Wiring
+Deye   |   Growatt   |   SRNE   |   Voltronic   |   Victron   |   Felicity
+IMAM MUSA
+Solar Energy Consultant and Technical Trainer
+Musstech Solar Energy   |   2025 Edition
+TABLE OF CONTENTS
+Introduction
+Why Configuration Matters3
+Chapter 1   Understanding Solar System Configurations
+4
+1.1   Basic Off-Grid Configuration
+1.2   Expanded Off-Grid Configuration
+1.3   Hybrid Single Inverter Configuration
+1.4   Parallel Inverter Configuration
+1.5   Three-Phase Configuration Overview
+Chapter 2   Panel Configuration
+8
+2.1   Series Connection: Voltage and String Design
+2.2   Parallel Connection: Current and Capacity
+2.3   Series-Parallel Combination
+2.4   MPPT String Design for Single and Dual MPPT
+2.5   Mixed Panel Configuration Rules
+2.6   Tips and Common Mistakes in Panel Configuration
+Chapter 3   Battery Configuration
+14
+3.1   Series Battery Connection for Higher Voltage
+3.2   Parallel Battery Connection for Higher Capacity
+3.3   Maximum Parallel Limits by Battery Type
+3.4   Battery Bank Design for Different System Sizes
+3.5   Mixing Battery Brands and Ages
+3.6   Tips and Common Mistakes in Battery Configuration
+Chapter 4   Inverter Parallel Configuration
+20
+4.1   Why and When to Parallel Inverters
+4.2   Single Phase Parallel Configuration
+4.3   Three Phase Configuration (L1 L2 L3)
+4.4   Master and Slave Setup
+4.5   Communication Cable for Parallel Inverters
+4.6   Tips and Common Mistakes in Parallel Configuration
+Chapter 5   Communication Cables and Ports
+26
+5.1   CAN Bus Cable and Port Function
+5.2   RS485 Cable and Modbus Protocol
+5.3   Parallel Communication Cable
+5.4   USB Port Functions
+5.5   WiFi Module Connection
+5.6   Dry Contact Port and Generator Signal
+5.7   RJ45 Pin Assignment Reference
+Chapter 6   Hybrid Inverter Deep Dive
+32
+6.1   PV Input Terminals (PV1 and PV2)
+6.2   Battery Terminals (BAT+ and BAT-)
+6.3   AC Output Terminals
+6.4   AC Input (Grid) and Generator Terminals
+6.5   Communication Ports (CAN, RS485, USB, WiFi)
+6.6   Dry Contact and Control Ports
+6.7   Earth and Bonding Terminals
+6.8   LED Indicator Functions
+Chapter 7   Deye Inverter Configuration Guide
+38
+7.1   Deye Key Settings Overview
+7.2   Battery Type and Communication Setup
+7.3   Working Mode Configuration
+7.4   Charging and Discharging Parameters
+7.5   Parallel and Three-Phase Setup
+7.6   Common Deye Configuration Mistakes
+Chapter 8   Growatt Inverter Configuration Guide
+44
+8.1   Growatt Key Settings Overview
+8.2   Battery Type and BMS Communication
+8.3   Working Mode Configuration
+8.4   Time of Use Settings
+8.5   Growatt ShinePhone App Setup
+8.6   Common Growatt Configuration Mistakes
+Chapter 9   SRNE Inverter Configuration Guide
+50
+9.1   SRNE Key Settings Overview
+9.2   Battery Communication Setup
+9.3   Working Mode Configuration
+9.4   Generator Integration Settings
+9.5   Common SRNE Configuration Mistakes
+Chapter 10   Working Modes Explained (All Brands)
+56
+10.1  Self-Use Mode
+10.2  Time of Use Mode
+10.3  Off-Grid Mode
+10.4  Backup Mode
+10.5  Grid-Tie Mode
+10.6  Generator Priority Mode
+10.7  Brand Comparison Settings Table
+Chapter 11   Generator Integration and Configuration
+62
+11.1  Generator Input Port and Wiring
+11.2  Dry Contact for Generator Auto-Start
+11.3  Generator Charging Settings
+11.4  ATS (Automatic Transfer Switch) Function
+11.5  Generator Settings by Brand
+11.6  Tips and Common Mistakes
+Chapter 12   WiFi Monitoring Setup
+68
+12.1  Solarman App Setup (Deye)
+12.2  ShinePhone App Setup (Growatt)
+12.3  SolarGo App Setup (SRNE)
+12.4  VRM Portal Setup (Victron)
+12.5  Remote Monitoring Best Practices
+Chapter 13   Three-Phase Configuration
+74
+13.1  When Three-Phase is Required
+13.2  Three-Phase Inverter Wiring
+13.3  Load Balancing Across Three Phases
+13.4  Three-Phase Fault Diagnosis
+13.5  Three-Phase Settings by Brand
+Chapter 14   System Expansion Guide
+80
+14.1  Adding More Panels to an Existing Array
+14.2  Adding a Second Battery Bank
+14.3  Upgrading from Single to Parallel Inverters
+14.4  Pre-Expansion Checks
+14.5  Common Expansion Mistakes
+Chapter 15   Fault Codes and Troubleshooting
+86
+15.1  How to Read Fault Codes
+15.2  Deye Fault Code Reference
+15.3  Growatt Fault Code Reference
+15.4  SRNE Fault Code Reference
+15.5  Voltronic Fault Code Reference
+15.6  General Troubleshooting Guide
+Chapter 16   Complete Configuration Checklist
+92
+16.1  Pre-Configuration Checklist
+16.2  Panel String Configuration Checklist
+16.3  Battery Configuration Checklist
+16.4  Inverter Settings Checklist
+16.5  Communication Setup Checklist
+16.6  Final Verification Checklist
+Appendix   Reference Tables and Glossary
+96
+Brand Settings Comparison Table
+Communication Protocol Summary
+Cable Type Reference
+Glossary of Configuration Terms
+Introduction
+Calculate It Right taught you how to size every component. Wire It Right taught you how to install everything safely. Configure It Right teaches you the third and final skill: how to connect every component together correctly, set up every inverter parameter precisely, and make every part of the system communicate and work as one.
+A solar system that is correctly sized and properly installed but incorrectly configured will still fail to perform. The battery may be damaged by wrong charging voltage. The inverter may trip at peak load due to wrong working mode. Two parallel inverters may fight each other instead of working together. The BMS may shut down the battery because the communication cable is connected to the wrong port.
+This book covers every configuration scenario you will encounter in the field: panel strings, battery banks, parallel inverters, three-phase systems, CAN bus and RS485 communication, hybrid inverter settings, working modes, generator integration, WiFi monitoring, system expansion, and fault code diagnosis. Brand-specific guidance for Deye, Growatt, SRNE, Voltronic, Victron, and Felicity is included throughout.
+TIP: How to Use This Book
+Read Chapters 1 to 6 first to understand the principles of configuration and communication. Then go to the specific brand chapter for your inverter (Chapters 7, 8, or 9). Use Chapters 10 to 13 for specific topics like working modes, generator setup, and three-phase. Keep Chapters 15 and 16 open on every job as your field reference.
+CHAPTER
+1
+Understanding Solar System Configurations
+Before configuring any component, you must understand what type of system you are building and how all the components will work together. Every configuration decision you make downstream depends on getting this architecture decision right first.
+Figure 1.1: All four solar system configurations from basic off-grid to parallel inverter. Each configuration has specific cable, port, and communication requirements covered in detail in this book.
+1.1  Basic Off-Grid Configuration
+The simplest configuration: one string of panels, one inverter with built-in MPPT, and one battery bank. No grid connection. All loads are powered exclusively by solar and battery. This configuration is used for remote sites with no grid access.
+Component
+Specification
+Connection
+Solar Panels
+1 string (2 to 6 panels in series)
+PV+ and PV- terminals on inverter
+Inverter
+Off-grid or hybrid in off-grid mode
+Central hub connecting all components
+Battery
+Single bank matched to inverter voltage
+BAT+ and BAT- terminals on inverter
+Loads
+Within inverter rated power
+AC output terminals of inverter
+1.2  Expanded Off-Grid Configuration
+When energy requirements grow beyond what a single panel string and battery can supply, the system is expanded. More panel strings are added (series-parallel configuration), the battery bank is expanded (parallel batteries), and a larger inverter may be required. This is the most common configuration for Nigerian residential off-grid installations.
+Component
+Expansion Option
+What Changes
+Solar Panels
+Add second string in parallel
+More current, same voltage. MPPT handles both strings
+Battery Bank
+Add batteries in parallel (max 4 without busbar)
+More capacity for longer nights. Same voltage
+Inverter
+Upgrade to higher kVA rating
+Only if new loads exceed current inverter capacity
+Cable Sizes
+Must be recalculated for new current levels
+Higher current = larger cable required
+1.3  Hybrid Single Inverter Configuration
+A hybrid inverter connects to solar panels, battery bank, grid input, and loads simultaneously. It manages all four connections intelligently, prioritising solar, using battery when solar is insufficient, and drawing from grid when both solar and battery are low. This is the most common professional installation configuration.
+Solar panels connect to the PV input terminals of the hybrid inverter via the built-in MPPT controller.
+Battery connects to the BAT terminals. Communication cable (CAN or RS485) connects battery BMS to inverter.
+Grid AC input connects to the AC-IN terminals. Inverter uses this to charge battery and supplement loads.
+All loads connect to the AC-OUT terminals. Inverter manages which power source supplies these loads.
+1.4  Parallel Inverter Configuration
+When load requirements exceed the capacity of a single inverter, two or more identical inverters are connected in parallel. Each inverter handles a portion of the total load. A communication cable between the inverters synchronises their output so they work together as a single larger unit.
+DANGER: Only Identical Inverters Can Be Paralleled
+Never attempt to parallel inverters of different brands, models, or firmware versions. The communication protocol between parallel inverters is proprietary to each manufacturer. Mixing models creates communication conflicts that cause both inverters to malfunction and can permanently damage both units.
+1.5  Three-Phase Configuration Overview
+Three-phase systems use three inverters, one per phase, with a master-slave communication arrangement. Each inverter handles one phase of the three-phase supply. This configuration is required for three-phase loads such as industrial equipment, large commercial air conditioning, and three-phase motors. Full three-phase configuration is covered in Chapter 13.
+KEY TAKEAWAYS
+Choose the system configuration before purchasing any equipment
+Basic off-grid: 1 string, 1 inverter, 1 battery bank, no grid
+Hybrid: solar plus battery plus grid, all managed by hybrid inverter
+Parallel inverters: ONLY same brand, same model, same firmware
+Three-phase: 3 inverters in master-slave arrangement, one per phase
+All configuration decisions affect cable sizes, port connections, and settings
+CHAPTER
+2
+Panel Configuration
+How you connect solar panels together determines the voltage and current your inverter receives. Getting this wrong means the MPPT controller either cannot track properly (if voltage is too low) or is permanently destroyed (if voltage is too high). Panel configuration is not just about getting more power. It is about matching the output precisely to what the inverter can accept.
+Figure 2.1: Three panel connection methods. Series adds voltage. Parallel adds current. Series-parallel combines both for higher voltage and higher current simultaneously.
+2.1  Series Connection: Voltage and String Design
+In a series connection, the positive terminal of each panel connects to the negative terminal of the next panel. The result is that voltage adds up while current stays the same as a single panel.
+String Voltage = Number of Panels x Panel Voc   |   String Current = Single Panel Isc
+Example panels:
+500W panels, Voc = 45V, Isc = 13A
+2 panels in series:
+45 x 2
+= 90V string, 13A
+3 panels in series:
+45 x 3
+= 135V string, 13A
+4 panels in series:
+45 x 4
+= 180V string, 13A
+CRITICAL CHECK:
+String Voc must be BELOW inverter MPPT max input voltage
+Always verify!
+DANGER: Panel String Voc Exceeds Inverter Maximum
+If you connect a panel string whose Voc exceeds the inverter MPPT maximum input voltage, the MPPT controller is destroyed instantly and permanently the first time the sun shines. This is not a warranty repair. Always calculate string Voc before connecting panels. Check the inverter datasheet for the maximum PV input voltage.
+2.2  Parallel Connection: Current and Capacity
+In a parallel connection, all positive terminals connect together and all negative terminals connect together. Current adds up while voltage stays the same as a single panel.
+Parallel Current = Number of Panels x Panel Isc   |   Parallel Voltage = Single Panel Voc
+2 panels in parallel:
+13A x 2
+= 26A, voltage 45V
+3 panels in parallel:
+13A x 3
+= 39A, voltage 45V
+Cable size check:
+39A requires 10mm2 DC cable minimum
+Size for 125% = 10mm2
+COMMON MISTAKE: Parallel Panels Without Blocking Diodes
+When panels are connected in parallel, a shaded panel can become a load drawing current from the unshaded panels rather than contributing to the string. Most modern panels have bypass diodes built in, but in a parallel configuration without string-level protection, a faulty panel can drain the entire array at night. Always use a combiner box with string fuses or blocking diodes for parallel strings above 3 panels.
+2.3  Series-Parallel Combination
+The series-parallel configuration achieves both higher voltage and higher current simultaneously. Multiple series strings (each string having the same number of panels in series) are connected in parallel with each other.
+Example: 6 x 500W panels
+2 strings x 3 panels in series each
+String voltage:
+45V x 3
+= 135V per string
+Parallel current:
+13A x 2 strings
+= 26A total
+Total power:
+135V x 26A
+= 3,510W array
+Cable size:
+26A requires 6mm2 minimum
+Use 10mm2 for safety
+TIP: Always Use Equal String Lengths
+In a series-parallel configuration, all strings must have the same number of panels. A string with 3 panels has a different voltage than a string with 2 panels. Connecting unequal strings in parallel causes current to flow from the higher voltage string into the lower voltage string, reducing output and potentially damaging panels.
+2.4  MPPT String Design for Single and Dual MPPT
+Modern hybrid inverters typically have one or two independent MPPT channels. Each MPPT channel independently tracks the maximum power point of the connected string. Dual MPPT inverters allow you to connect two independent strings with different orientations, tilt angles, or partial shading conditions.
+MPPT Configuration
+When to Use
+Benefit
+Example
+Single MPPT
+All panels same orientation and tilt
+Simple wiring, lower cost
+6 panels in 2 strings of 3, all facing south
+Dual MPPT
+Panels on different roof faces
+Each string optimised independently
+String 1: south panels, String 2: east panels
+Dual MPPT with same strings
+Two identical strings on same roof
+Higher current capacity, redundancy
+2 x 3 panels both south, one per MPPT input
+2.5  Mixed Panel Configuration Rules
+Mixing panels of different wattages, voltages, or brands in the same string is strongly discouraged. In a series string, the weakest panel limits the output of the entire string. In parallel strings, unequal voltages cause circulation currents that reduce output.
+Never mix panels with different Voc values in the same series string.
+Never mix panels with different Isc values in the same parallel string.
+If mixing is unavoidable, connect each panel type to a separate MPPT input.
+Document all panel specifications and configurations for future maintenance reference.
+2.6  Tips and Common Mistakes in Panel Configuration
+TIP: Test Each String Before Connecting to Inverter
+Before connecting any panel string to the inverter, measure the open-circuit voltage of the string with a multimeter. Compare this to the calculated string Voc. If they match within 10%, the string is correctly wired. If Voc is lower than expected, check for a loose MC4 connection or a shaded panel. If Voc is higher than expected, you may have too many panels in the string.
+COMMON MISTAKE: Using PV Cable for Battery Connections
+Some installers use the orange UV-rated PV cable for battery connections because it is available on site. PV cable is designed for outdoor solar circuits and may not be rated for the continuous high current of battery-to-inverter connections. Always use flexible welding cable or purpose-made battery cable for battery connections.
+KEY TAKEAWAYS
+Series: voltage adds up, current stays the same. Always check string Voc against MPPT max
+Parallel: current adds up, voltage stays the same. Size cables for total parallel current
+Series-parallel: all strings must have equal numbers of panels in series
+Dual MPPT allows independent strings on different orientations for better seasonal output
+Never mix panels with different Voc or Isc in the same string or parallel group
+Test every string Voc with a multimeter before connecting to the inverter
+CHAPTER
+3
+Battery Configuration
+Battery configuration determines both the voltage and capacity of your battery bank. Getting the configuration wrong means either the wrong voltage to the inverter (causing immediate damage) or insufficient capacity for the required backup time. This chapter covers every battery connection method and the critical limits that must be observed.
+Figure 3.1: Battery series and parallel configurations with maximum parallel limits and communication protocol options. Always verify battery communication type before purchasing an inverter.
+3.1  Series Battery Connection for Higher Voltage
+Series connections are used to achieve the required system voltage from lower voltage batteries. Four 12V batteries in series produce 48V. Two 24V batteries in series produce 48V. The capacity in Ah remains the same as a single battery regardless of how many are connected in series.
+Series Bank Voltage = Sum of all battery voltages   |   Series Bank Capacity = Single battery Ah
+Target System Voltage
+Battery Configuration
+Example
+Notes
+12V
+1 x 12V battery
+1 x 100Ah = 12V 100Ah
+Smallest systems only, not recommended above 1kVA
+24V
+2 x 12V in series
+2 x 200Ah = 24V 200Ah
+Medium systems, consider upgrading to 48V
+48V
+4 x 12V in series
+4 x 200Ah = 48V 200Ah
+Professional standard for all serious installations
+48V
+2 x 24V in series
+2 x 200Ah = 48V 200Ah
+Fewer batteries, same result as 4 x 12V
+3.2  Parallel Battery Connection for Higher Capacity
+Parallel connections increase capacity while maintaining the same voltage. Each additional battery in parallel adds its full Ah capacity to the bank while the voltage remains unchanged. This is how you extend the backup time of a system without changing the inverter settings.
+Parallel Bank Capacity = Sum of all battery Ah values   |   Parallel Bank Voltage = Single battery voltage
+1 x 200Ah at 48V:
+Backup: 200Ah x 48V x 0.80 DoD
+= 7,680Wh usable
+2 x 200Ah at 48V parallel:
+400Ah x 48V x 0.80 DoD
+= 15,360Wh usable
+4 x 200Ah at 48V parallel:
+800Ah x 48V x 0.80 DoD
+= 30,720Wh usable
+Note:
+Maximum 4 batteries in parallel without busbar
+See busbar section
+3.3  Maximum Parallel Limits by Battery Type
+Lithium battery manufacturers specify a maximum number of batteries that can be connected in parallel without a dedicated busbar distribution system. Exceeding this limit causes uneven current distribution between batteries, leading to some batteries overcharging while others undercharge. This creates premature degradation and potential thermal runaway.
+Battery Type
+Max Parallel Without Busbar
+Max Parallel With Busbar
+Notes
+Lithium LiFePO4 (typical)
+4 batteries
+8 to 16 batteries
+Check specific manufacturer limit in datasheet
+Lead-Acid Tubular
+4 batteries
+Up to 8 batteries
+Unequal aging makes large parallel banks problematic
+AGM or Gel
+3 to 4 batteries
+Up to 8 batteries
+Less tolerant of parallel imbalance than Lithium
+Pylontech US series
+8 batteries
+Up to 16 batteries
+Pylontech has higher built-in parallel tolerance
+DANGER: Exceeding Parallel Battery Limit Without Busbar
+Connecting 5 or more Lithium batteries in parallel without a proper busbar system causes the batteries closest to the inverter connection point to carry more current than those further away. This creates a situation where some batteries are at a higher state of charge and temperature than others. Over time this leads to cell degradation, BMS faults, and potentially thermal runaway. Always respect the manufacturer parallel limit.
+3.4  Battery Bank Design for Different System Sizes
+System Size
+Recommended Configuration
+Total Capacity
+Expected Backup
+1 to 2kVA basic
+1 x 100Ah 48V Lithium
+4,800Wh (3,840Wh usable)
+3 to 4 hours basic loads
+3.5kVA standard home
+1 x 200Ah 48V Lithium
+9,600Wh (7,680Wh usable)
+6 to 8 hours standard loads
+5kVA medium home
+2 x 200Ah 48V Lithium parallel
+19,200Wh (15,360Wh usable)
+10 to 14 hours
+10kVA large home
+4 x 200Ah 48V Lithium parallel
+38,400Wh (30,720Wh usable)
+Full night coverage
+10kVA plus commercial
+Busbar system with 6 to 16 batteries
+Variable
+Custom design required
+3.5  Mixing Battery Brands and Ages
+Every Lithium battery has slightly different internal resistance based on its age, chemistry, and state of health. When batteries of different brands or ages are mixed in the same parallel bank, the battery with the lowest internal resistance carries more current than the others. This accelerates its degradation while the others underperform.
+Never mix Lithium batteries of different brands in the same bank.
+Never mix Lithium batteries of significantly different ages (more than 12 months apart).
+Never mix Lithium batteries of different capacities in the same bank.
+Never mix Lithium and Lead-Acid batteries in the same bank under any circumstances.
+3.6  Tips and Common Mistakes in Battery Configuration
+PRO INSTALLER TIP
+Always commission the inverter with a single battery first before expanding to a parallel bank. This allows you to verify that the single battery communicates correctly with the inverter, the BMS is functioning, and the charging voltage is correctly set. Expanding to a full parallel bank after individual verification is much easier to troubleshoot than commissioning a full bank at once.
+COMMON MISTAKE: Connecting Battery Positive and Negative to Wrong Terminals
+Battery polarity reversal is one of the most expensive mistakes in solar installation. Connecting battery positive to BAT negative on the inverter causes immediate destruction of the inverter's internal protection circuitry. Always verify polarity with a multimeter before making the final connection. Use colour-coded cables: red for positive, black for negative, and never deviate from this convention.
+KEY TAKEAWAYS
+Series: voltage adds up (4 x 12V = 48V), capacity stays the same
+Parallel: capacity adds up (4 x 200Ah = 800Ah), voltage stays the same
+Maximum 4 Lithium batteries in parallel without a busbar system
+Never mix battery brands, ages, or capacities in the same bank
+Never mix Lithium and Lead-Acid batteries in the same bank
+Verify battery polarity with multimeter before every connection
+CHAPTER
+4
+Inverter Parallel Configuration
+Connecting two or more inverters in parallel doubles or triples your system power capacity without requiring a single much larger inverter. But parallel inverter configuration is one of the most technically demanding operations in solar installation. The communication between parallel inverters must be exactly right or the inverters will fight each other rather than work together.
+Figure 4.1: Single phase parallel (left) and three-phase configuration (right). All parallel inverters must be same brand, same model, and same firmware. Communication cable between inverters is mandatory.
+4.1  Why and When to Parallel Inverters
+Parallel inverters are used when the required system power exceeds the maximum capacity of a single inverter. A client who needs 10kVA output can use two 5kVA inverters in parallel rather than one 10kVA inverter. Parallel configurations also provide redundancy: if one inverter develops a fault, the other continues to supply loads at reduced capacity.
+Required Output
+Parallel Configuration
+Total Capacity
+Redundancy Benefit
+Up to 5kVA
+Single inverter (no parallel)
+5kVA
+No redundancy
+5 to 10kVA
+2 x 5kVA inverters
+10kVA
+1 inverter can carry critical loads if other fails
+10 to 15kVA
+3 x 5kVA inverters
+15kVA
+2 inverters continue if 1 fails
+15 to 20kVA
+4 x 5kVA inverters
+20kVA
+3 inverters continue if 1 fails
+Three-phase
+3 x inverters (1 per phase)
+3x single inverter rating
+Each phase independent
+4.2  Single Phase Parallel Configuration
+In single phase parallel, all inverters share the same AC output and the same battery bank. A dedicated communication cable between the inverters allows the master inverter to control the slave inverters, synchronising their output frequency, voltage, and phase so their AC outputs can be safely combined.
+Identify which inverter will be MASTER. This is usually set in the inverter settings menu.
+Connect the parallel communication cable from the COMMS port of the master to the COMMS port of slave 1. Continue daisy-chain for additional slaves.
+Connect all inverters to the same battery bank. Each inverter has its own separate BAT+ and BAT- connection to the battery busbar.
+Connect all inverter AC outputs to the shared AC busbar or distribution board.
+Connect solar panel strings. Distribute strings evenly between inverters where possible.
+Set each slave inverter to SLAVE mode in the settings. Power on master first, then slaves.
+PRO INSTALLER TIP
+When distributing panel strings between parallel inverters, try to give each inverter approximately the same number of panels so each MPPT operates at a similar power level. An inverter with significantly more panels than its parallel partner will reach maximum AC output and throttle its solar input while the other inverter operates below its capacity. Balanced panel distribution maximises total system output.
+4.3  Three Phase Configuration
+Three-phase configuration uses three identical inverters, one assigned to each phase (L1, L2, L3). The master inverter controls both slaves and ensures all three phases are synchronised in frequency, voltage, and phase angle. This is required for three-phase loads and large commercial installations.
+Inverter 1 (Master): handles Phase L1. Set to Master in settings.
+Inverter 2 (Slave 1): handles Phase L2. Set to Slave Phase 2 in settings.
+Inverter 3 (Slave 2): handles Phase L3. Set to Slave Phase 3 in settings.
+Communication cable connects all three inverters in daisy chain from master to slave 1 to slave 2.
+Each inverter connects independently to the shared battery bank.
+Output: 3-phase 380V or 415V (L1 to L2 to L3 to Neutral to Earth).
+4.4  Master and Slave Setup
+Brand
+Master Setting
+Slave Setting
+Communication Cable
+Deye
+Setting 28 = PAR (Master)
+Setting 28 = PAR (Slave)
+Deye parallel cable (supplied)
+Growatt
+Work Mode = PAR Master
+Work Mode = PAR Slave
+Growatt parallel cable (supplied)
+SRNE
+Mode = Parallel Master
+Mode = Parallel Slave
+SRNE parallel cable (supplied)
+Voltronic (Axpert)
+Setting 27 = PAr (Master)
+Setting 27 = PAr (Slave)
+Voltronic parallel cable (supplied)
+Victron
+VE.Bus Master
+VE.Bus Slave
+VE.Bus cable (RJ45)
+DANGER: Power On Sequence Must Be Correct
+When starting a parallel system, always power on the MASTER inverter first. Wait for the master to fully initialise and display normal operation before powering on the first slave. Wait for the first slave to initialise before powering on the second slave. Powering on slaves before the master causes communication errors and may result in both inverters shutting down in fault state.
+4.5  Communication Cable for Parallel Inverters
+The parallel communication cable is a proprietary cable supplied by the inverter manufacturer. It is not a standard RJ45 Ethernet cable even though it uses the same connector. The pinout and protocol are specific to each manufacturer. Using the wrong cable or a generic Ethernet cable will cause the parallel system to fail.
+TIP: Order the Parallel Cable When Ordering the Inverters
+The parallel communication cable is sometimes sold separately and is not always included in the standard inverter package. When ordering parallel inverters, always explicitly request the parallel communication cable for that model at the time of order. Running a job without the correct cable and discovering this on installation day is an avoidable delay.
+4.6  Tips and Common Mistakes in Parallel Configuration
+COMMON MISTAKE: Running Parallel Inverters Without Communication Cable
+Some installers attempt to run parallel inverters without the communication cable, thinking the AC outputs will synchronise automatically. They will not. Without the communication cable, each inverter generates its own AC output independently. When these outputs are connected together, the phase difference between them causes destructive circulating currents that can destroy both inverters within minutes.
+KEY TAKEAWAYS
+Only identical inverters can be paralleled: same brand, same model, same firmware
+Communication cable between parallel inverters is mandatory. Never operate without it
+In single phase parallel, all inverters share the same battery bank and AC output bus
+In three-phase, each inverter handles one phase: L1 (master), L2 (slave 1), L3 (slave 2)
+Power on sequence: master first, then slave 1, then slave 2
+Load balance panel strings evenly between parallel inverters for maximum output
+CHAPTER
+5
+Communication Cables and Ports
+Communication cables are the nervous system of a modern solar installation. Without correct communication between the inverter and battery, the inverter uses its own internal assumptions for charging voltage and current, which are frequently incorrect for the specific battery installed. The result is a battery that is either overcharged or chronically undercharged, leading to premature failure.
+Figure 5.1: All six communication cable types with connector types, protocols, compatible brands, and port functions. The RJ45 pin assignment at the bottom shows CAN Bus (pins 4 and 5) and RS485 (pins 1, 2, 3, 6) wiring.
+5.1  CAN Bus Cable and Port Function
+CAN (Controller Area Network) bus is the most advanced battery communication protocol used in solar systems. It is a bidirectional protocol that allows the battery BMS to send real-time data to the inverter and allows the inverter to send charge commands back to the BMS.
+Data Sent by Battery BMS
+Data Received by Inverter
+Result
+State of Charge (SOC) percentage
+Charge current limit
+Inverter adjusts charging to protect battery
+Cell voltages (individual and total)
+Discharge current limit
+Inverter limits output current to protect cells
+Battery temperature
+Maximum charge voltage
+Prevents overcharge in hot conditions
+Fault and alarm codes
+Minimum discharge voltage
+Prevents deep discharge damage
+Cycle count and health status
+Enable or Disable charging
+BMS can halt charging if fault detected
+The CAN bus cable uses RJ45 connectors. Pins 4 and 5 carry the CAN High and CAN Low signals respectively. The cable must be a twisted pair for pins 4 and 5 to maintain signal integrity over the cable length. Maximum recommended cable length is 5 metres between inverter and battery.
+TIP: Always Enable CAN Communication in Both Inverter and Battery Settings
+CAN communication must be enabled in the inverter settings AND in the battery BMS settings. Connecting the cable alone is not sufficient. In Deye inverters, go to Setting 05 and select the correct battery communication type. In Pylontech batteries, ensure the RS485 or CAN port is selected with the correct protocol in the battery management settings.
+5.2  RS485 Cable and Modbus Protocol
+RS485 is an older but still widely used serial communication protocol. It uses a two-wire differential signal (A+ and B-) that is highly resistant to electrical noise. Most solar inverters implement Modbus RTU protocol over RS485 for battery communication.
+RS485 cable uses pins 1 and 2 (A+/TX+) and pins 3 and 6 (B-/TX-) of the RJ45 connector.
+Maximum cable length: 100 metres at low data rates (much longer than CAN bus).
+RS485 supports multiple devices on one bus (up to 32 devices in a chain).
+Modbus device address must be set correctly. Default is usually address 1 or 2.
+Termination resistor (120 ohm) required at the last device in a long RS485 chain.
+5.3  Parallel Communication Cable
+The parallel communication cable connects paired inverters to synchronise their output. This cable is proprietary to each manufacturer and must be the exact cable specified for the model. It is NOT a standard Ethernet cable. The signal it carries is specific to the inverter's parallel synchronisation protocol and operates at different voltage levels than standard Ethernet.
+Inverter Brand
+Parallel Cable Type
+Port Name
+Maximum Inverters
+Deye
+Deye parallel cable (RJ45 type)
+PARALLEL port
+4 units
+Growatt
+Growatt parallel cable
+COM port
+6 units
+SRNE
+SRNE parallel cable
+PARALLEL port
+6 units
+Voltronic/Axpert
+Voltronic parallel cable
+PAR port
+6 units
+Victron
+VE.Bus RJ45 cable
+VE.Bus port
+12 units
+5.4  USB Port Functions
+The USB port on a hybrid inverter serves three distinct functions depending on the device connected. Understanding which function is available on which inverter model prevents frustration when a USB connection does not behave as expected.
+Firmware update: connect a USB flash drive with the firmware file to update the inverter firmware. This is the most critical USB function.
+Data logging: some inverters log operational data to a USB flash drive for later analysis.
+PC monitoring: connect inverter to PC with USB cable to run manufacturer monitoring software for real-time data and parameter setting.
+5.5  WiFi Module Connection
+WiFi modules plug into a dedicated slot or USB port on the inverter. They connect to the home or business WiFi network and upload inverter data to the manufacturer cloud server. The Solarman app (Deye) and ShinePhone app (Growatt) provide real-time monitoring and basic parameter adjustment via smartphone. Full WiFi monitoring setup is covered in Chapter 12.
+5.6  Dry Contact Port and Generator Signal
+The dry contact port provides a simple two-wire signal output that can control external devices. The most common application is automatic generator starting: when the battery drops below a set SOC, the inverter closes the dry contact, which triggers the generator auto-start relay. When the battery is sufficiently charged, the inverter opens the dry contact and the generator stops.
+TIP: Use a Relay for Generator Auto-Start
+The dry contact on most inverters is a low-current signal (typically 12V DC at less than 100mA). Never connect it directly to the generator start motor. Always use a dedicated relay or auto-start module between the inverter dry contact and the generator. The relay amplifies the signal to the level required by the generator start system.
+5.7  RJ45 Pin Assignment Reference
+Pin
+Wire Colour (T568B)
+CAN Bus Function
+RS485 Function
+Pin 1
+White-Orange
+Not used
+TX+ (A+)
+Pin 2
+Orange
+Not used
+TX- (B-)
+Pin 3
+White-Green
+Not used
+RX+ (also A+)
+Pin 4
+Blue
+CAN High
+Not typically used
+Pin 5
+White-Blue
+CAN Low
+Not typically used
+Pin 6
+Green
+Not used
+RX- (also B-)
+Pin 7
+White-Brown
+GND (some manufacturers)
+GND
+Pin 8
+Brown
+12V power (some manufacturers)
+12V or not used
+KEY TAKEAWAYS
+CAN Bus: bidirectional, battery sends SOC and BMS data to inverter for intelligent charging
+RS485: Modbus protocol, used with most Lithium batteries, longer cable runs possible
+Parallel cable is PROPRIETARY to each brand. Never use standard Ethernet cable
+Always enable communication protocol in BOTH the inverter settings AND the battery settings
+USB: firmware updates, data logging, and PC monitoring. Not for battery communication
+Dry contact: low current signal for generator auto-start or load control via external relay
+CHAPTER
+6
+Hybrid Inverter Deep Dive
+A hybrid inverter is the most complex single component in a solar installation. It has more terminals, more ports, and more settings than any other device in the system. Understanding every port and every function eliminates guesswork during installation and makes fault diagnosis straightforward when problems occur.
+Figure 6.1: Complete hybrid inverter port breakdown with every terminal labelled and explained. Each port is colour-coded by function: gold for PV input, green for battery, red for AC output, blue for AC input, and purple for communication.
+6.1  PV Input Terminals (PV1 and PV2)
+PV input terminals receive DC power from the solar panel strings. Modern hybrid inverters have one or two independent MPPT inputs (PV1 and PV2). Each MPPT input independently tracks the maximum power point of its connected string.
+Terminal
+Function
+Specification
+Common Error
+PV1+
+Positive input of first panel string
+String Voc must be below MPPT maximum
+Exceeding maximum destroys MPPT controller
+PV1-
+Negative input of first panel string
+Same cable size as PV1+
+Never earth or ground PV negative
+PV2+
+Positive input of second string (dual MPPT)
+Independent MPPT, can be different string size
+Connecting to PV2 when only single MPPT available
+PV2-
+Negative input of second string
+Same cable size as PV2+
+Using standard Ethernet cable instead of PV cable
+DANGER: Never Earth or Ground the PV Negative Conductor
+In a standard solar installation without galvanic isolation, the PV negative must float (not be connected to earth). Connecting PV negative to earth creates a ground fault condition that trips the inverter immediately and may damage the MPPT controller. Some inverter manufacturers recommend earthing one PV conductor in specific configurations, but only when explicitly specified in the installation manual.
+6.2  Battery Terminals (BAT+ and BAT-)
+The battery terminals carry the highest continuous current of any connection on the inverter. For a 5kVA inverter on a 48V system, battery current can reach 100A under full load. Cable sizing and connection quality at these terminals is critical for both safety and performance.
+Use the largest flexible cable the terminal will accept. Minimum 35mm2 for 5kVA systems. 50mm2 for 10kVA.
+Use copper cable lugs crimped with a proper hydraulic crimping tool. Hammer crimps are not acceptable for battery connections.
+Apply anti-oxidation compound to all copper connections to prevent terminal resistance increase over time.
+Install an ANL fuse or DC breaker within 150mm of the battery positive terminal.
+Connect the protective earth (PE) terminal to the battery rack and system earth.
+6.3  AC Output Terminals
+The AC output terminals supply power to all connected loads. In a hybrid system, this output can come from solar (via the inverter), battery (via the inverter), or grid (passed through the inverter with automatic voltage regulation). All these sources are seamlessly managed by the inverter.
+Terminal
+Label
+Function
+Notes
+AC Output Live
+AC-OUT L
+Live wire to distribution board
+Red or brown cable, size depends on inverter rating
+AC Output Neutral
+AC-OUT N
+Neutral wire to distribution board
+Blue or black cable
+Protective Earth
+PE
+Earth conductor to DB and system earth
+Green-yellow cable, minimum 6mm2
+6.4  AC Input (Grid) and Generator Terminals
+The hybrid inverter has two AC input sources: the utility grid and an optional generator. These inputs allow the inverter to charge the battery from external AC sources when solar generation is insufficient.
+AC-IN L and AC-IN N: Grid utility connection. The inverter automatically monitors grid voltage and frequency and uses grid power according to the selected working mode.
+GEN L and GEN N: Generator connection. The inverter recognises the generator as an AC input source but applies different settings: generator charging current may be set lower than grid charging current to avoid overloading small generators.
+The inverter cannot output to the grid and accept from the grid simultaneously. These are separate modes controlled by the working mode settings.
+6.5  Communication Ports
+Port
+Label
+Function
+Cable Required
+BMS Communication
+CAN or RS485
+Battery state data exchange with BMS
+CAN cable (RJ45) or RS485 2-wire
+Parallel Communication
+PARALLEL or COM
+Inverter-to-inverter sync for parallel operation
+Manufacturer parallel cable (proprietary)
+USB
+USB-A or USB-B
+Firmware update, data logging, PC monitoring
+Standard USB cable
+WiFi
+WiFi module slot
+Remote monitoring via smartphone app
+Manufacturer WiFi dongle
+PC Monitoring
+RS232 or USB
+Local PC connection for parameter setting
+RS232 cable or USB cable
+6.6  Dry Contact and Control Ports
+Dry contact terminals provide a low-current switching signal for external control functions. The most important application is generator auto-start. When the battery reaches the low SOC threshold set in the inverter, the dry contact closes and triggers the generator to start automatically.
+Dry contact voltage: typically 12V DC at 100mA maximum.
+Connection: 2 wire only. No polarity in most implementations.
+External relay required: the dry contact signal is too weak to start a generator directly.
+Generator SOC threshold: set the SOC at which generator starts (typically 20 to 30%).
+Generator stop SOC: set the SOC at which generator stops (typically 80 to 90%).
+6.7  Earth and Bonding Terminals
+Every hybrid inverter has a dedicated protective earth (PE) terminal. This terminal must be connected to the system earth with a minimum 6mm2 green-yellow cable. The inverter chassis must be at earth potential at all times during operation.
+6.8  LED Indicator Functions
+LED Indicator
+Green (Normal)
+Orange (Warning)
+Red (Fault)
+Solar/PV
+PV input charging battery
+PV input present but not charging
+PV input fault or Voc exceeded
+Battery
+Battery healthy, charging or discharging
+Battery low SOC or near limit
+Battery fault or BMS shutdown
+Grid
+Grid connected and within spec
+Grid voltage or frequency marginal
+Grid failure or out of specification
+Load
+Normal load being supplied
+Load approaching inverter limit
+Overload fault
+Fault LED
+No fault condition
+Minor warning active
+Critical fault, check display
+KEY TAKEAWAYS
+PV input: never exceed inverter MPPT maximum voltage. Always calculate string Voc first
+Battery terminals: use proper crimped lugs, minimum 35mm2 cable for 5kVA systems
+AC output: red or brown for live, blue for neutral, green-yellow for earth, always
+Communication ports: CAN or RS485 for battery BMS, parallel port for parallel inverters
+Dry contact: low current signal only. Always use external relay for generator auto-start
+Earth terminal: minimum 6mm2 green-yellow cable, always connected before energising
+CHAPTER
+7
+Deye Inverter Configuration Guide
+Deye is one of the most widely used hybrid inverter brands in Africa. The Deye SUN series (SUN-3K, SUN-5K, SUN-8K, SUN-10K) uses a numbered settings menu accessed through the LCD panel. All key configuration settings are accessed through the SET button and navigated with the UP/DOWN arrows.
+7.1  Deye Key Settings Overview
+Setting Number
+Setting Name
+Purpose
+Typical Value
+Setting 01
+Working Mode
+Selects system operating mode
+SEL (Self-use) for most installations
+Setting 02
+Output Voltage
+AC output voltage setpoint
+220V or 230V depending on region
+Setting 03
+Output Frequency
+AC output frequency
+50Hz for Africa
+Setting 05
+Battery Type
+Selects battery chemistry
+LIb for Lithium, USE for custom
+Setting 09
+Battery Capacity
+Total battery capacity in Ah
+Match to installed battery bank Ah
+Setting 10
+Max Charge Current
+Maximum charging current from grid
+Set to 60% of inverter max to protect generator
+Setting 11
+Max Discharge Current
+Maximum discharge current to loads
+Usually set to inverter maximum
+Setting 12
+Battery Low Voltage
+Minimum discharge voltage cutoff
+Match to battery manufacturer spec (48V system: 44V)
+Setting 13
+Battery Full Voltage
+Maximum charge voltage cutoff
+Match to battery spec (48V Lithium: typically 56V)
+Setting 28
+Parallel Setting
+Master or Slave for parallel operation
+Master for first inverter, Slave for others
+7.2  Deye Battery Type and Communication Setup
+Setting battery type correctly in a Deye inverter is critical. The wrong battery type causes incorrect charging voltage which either undercharges or permanently damages the battery.
+For Lithium LiFePO4 with CAN communication: Set Setting 05 to LIb. Connect CAN cable from inverter CAN port to battery CAN port.
+For Lithium without communication: Set Setting 05 to USE (User defined). Manually set charge voltage (Setting 13), float voltage, and discharge cutoff (Setting 12).
+For Lead-Acid: Set Setting 05 to AGM or FLA depending on type.
+For Pylontech batteries with RS485: Set Setting 05 to LIb and set RS485 address to 1 in Pylontech battery settings.
+BRAND GUIDE: Deye SUN-5K
+Key CAN port location: Bottom left of inverter terminal block, labelled CAN. For Pylontech US2000 or US3000 batteries, use the RS485 port (labelled RS485 on Deye, connected to Pylontech RS485 port). Set Setting 05 = LIb and Setting 09 = total bank Ah. Deye automatically reads individual cell voltages, SOC, and temperature from Pylontech via this connection. The inverter display will show BMS data when communication is active.
+7.3  Deye Working Mode Configuration
+Mode
+Setting 01 Value
+When to Use
+Notes
+Self-Use (Recommended)
+SEL
+Most Nigerian hybrid installations
+Solar first, battery backup, grid supplement when needed
+Time of Use
+TOU
+Where off-peak tariffs apply
+Set charge and discharge windows in sub-menu
+Off-Grid
+SBU
+No grid connection available
+Battery is sole backup, grid input disabled
+Battery First
+BAT
+Maximise battery use, minimise grid
+Good for sites with unreliable grid supply
+Grid First
+UTI
+Grid is reliable, battery for emergencies only
+Battery stays fully charged, extended battery life
+7.4  Deye Charging and Discharging Parameters
+For 48V Lithium LiFePO4:
+Max charge voltage (Setting 13):
+Typically 56.4V to 57.6V
+Check battery datasheet
+Float charge voltage:
+Typically 54V to 55.2V
+Check battery datasheet
+Low battery cutoff (Setting 12):
+44V to 46V for 48V Lithium
+Check battery datasheet
+Max charge current (Setting 10):
+0.2C to 0.5C of battery Ah
+200Ah x 0.2 = 40A max
+7.5  Deye Parallel and Three-Phase Setup
+Deye parallel configuration requires: same model number, same firmware version, manufacturer parallel cable, and both inverters powered from the same battery bank. Access Setting 28 on both inverters. Set first inverter to MASTER (or PAR01) and second inverter to SLAVE (or PAR02). Power on master first, then slave. The display should show PARALLEL ACTIVE on both units within 30 seconds.
+7.6  Common Deye Configuration Mistakes
+COMMON MISTAKE: Setting Battery Capacity Wrong
+Setting 09 (Battery Capacity) must match the total Ah of the installed battery bank, not a single battery. If you install 2 x 200Ah batteries in parallel (400Ah total) and set Setting 09 to 200, the inverter SOC calculation will be wrong and the battery will appear to discharge twice as fast as actual.
+COMMON MISTAKE: Not Setting Max Charge Current for Generator Use
+When charging from a generator, the default maximum charge current may overload the generator. A 3kVA generator should not charge at more than 20A on a 48V system (960W charging power out of 3,000W generator capacity). Set Setting 10 to an appropriate level before connecting a generator.
+KEY TAKEAWAYS
+Deye Setting 05 (battery type): LIb for Lithium with communication, USE for custom settings
+Always set Setting 09 (battery capacity) to TOTAL bank Ah not single battery Ah
+Setting 01 = SEL (Self-Use) is the recommended default for Nigerian hybrid installations
+For parallel Deye: Setting 28 = MASTER on first, SLAVE on second, power on master first
+Max charge voltage and cutoff voltage must match battery manufacturer specifications
+Always verify the Deye display shows BMS communication data after connecting CAN cable
+CHAPTER
+8
+Growatt Inverter Configuration Guide
+Growatt is a major global inverter brand with strong presence in Africa. The Growatt SPF series (off-grid) and MIN/MID/MAX series (hybrid) use different interfaces. The SPF series uses a numbered parameter menu similar to Deye. The MIN TL-X and MID series use the ShinePhone app or PC software for advanced settings. This chapter covers the most common Growatt models used in African installations.
+8.1  Growatt Key Settings Overview (SPF Series)
+Parameter
+Menu Location
+Purpose
+Typical Setting
+Output Mode
+Parameter 01
+Output source priority
+SBU (Solar Battery Utility)
+Battery Type
+Parameter 05
+Battery chemistry selection
+LL for Lithium, AGM, FLO for others
+Battery Capacity
+Parameter 17
+Total battery bank capacity in Ah
+Total parallel bank Ah
+Max Charge Current (AC)
+Parameter 11
+Grid or generator charging current
+Per generator or grid capacity
+Max Charge Current (PV)
+Parameter 02
+Solar charging current limit
+Usually maximum setting
+Battery Low Warning
+Parameter 12
+Low battery alert voltage
+Match battery manufacturer spec
+Battery Equalization
+Parameter 09
+Equalisation for lead-acid only
+Disable for Lithium
+Over Discharge Voltage
+Parameter 29
+Minimum allowed battery voltage
+Match Lithium minimum spec
+8.2  Growatt Battery Type and BMS Communication
+Growatt supports multiple battery communication protocols depending on the model and firmware version. The SPF series supports RS485 Modbus and some models support CAN bus.
+For Lithium with RS485: Set Parameter 05 to LL. Connect RS485 cable from Growatt RS485 port to battery RS485 port. Set Modbus address to 1 in battery settings.
+For Lithium without communication: Set Parameter 05 to USE. Manually configure all voltage parameters (12, 29, etc.) to match battery specification.
+For Pylontech Force H2: Use the supplied RS485 cable. Set Growatt to Pylontech protocol in advanced settings accessible via ShinePhone or PC software.
+BRAND GUIDE: Growatt SPF 5000 ES
+Most common Growatt model in Nigeria. Battery communication via RS485 (terminal block on main board, labelled COM). Supports Pylontech, LBSA, and most standard Lithium batteries via Modbus. To enable: Parameter 05 = LL, then access advanced settings via PC software to set Modbus protocol and battery model. ShinePhone app required for some advanced parameters not available on the front panel menu.
+8.3  Growatt Working Mode Configuration
+Mode
+Parameter 01 Value
+Description
+Best For
+Solar-Battery-Utility (SBU)
+SBU
+Solar first, then battery, then grid as last resort
+Off-grid feel with grid backup
+Solar-Utility-Battery (SUB)
+SUB
+Solar first, grid second, battery for when both fail
+Grid-connected with battery backup
+Utility-Solar-Battery (USB)
+USB
+Grid powers loads, solar charges battery
+Grid priority mode, battery always full
+Battery-Solar-Utility (BSU)
+BSU
+Battery and solar first, grid as supplement
+Maximum self-sufficiency mode
+8.4  Growatt Time of Use Settings
+Growatt Time of Use (TOU) mode allows the inverter to charge the battery at specified times (typically when electricity is cheapest or generator is running) and discharge the battery at other times (when electricity is most expensive). This mode is set through the ShinePhone app or PC software as it has too many parameters for the front panel menu.
+Time slot 1: Start time, end time, power source priority, and SOC target.
+Time slot 2: Can be configured for peak discharge period.
+TOU requires ShinePhone app or PC connection with Growatt monitoring dongle.
+Battery must have communication cable connected for accurate SOC tracking in TOU mode.
+8.5  Growatt ShinePhone App Setup
+Purchase a Growatt WiFi or GPRS monitoring dongle (sold separately).
+Insert dongle into the COM1 port on the Growatt inverter.
+Download ShinePhone app from App Store or Google Play Store.
+Create a Growatt account on the ShinePhone app.
+Scan the QR code on the dongle or enter the dongle serial number in the app.
+The inverter data appears in the app within 5 to 10 minutes after successful pairing.
+Advanced settings including TOU and battery parameters are accessible from the settings menu within the plant dashboard.
+8.6  Common Growatt Configuration Mistakes
+COMMON MISTAKE: Battery Equalisation Left On for Lithium
+Parameter 09 (Battery Equalization) must be set to OFF for all Lithium battery types. Battery equalisation is a lead-acid maintenance feature that applies a brief overvoltage to balance lead-acid cells. Applied to a Lithium battery, it triggers the BMS over-voltage protection and may permanently reduce cell capacity.
+KEY TAKEAWAYS
+Growatt Parameter 05 = LL for Lithium with RS485 communication
+Parameter 01 = SBU is the recommended default mode for most Nigerian installations
+Disable Parameter 09 (battery equalisation) for ALL Lithium battery types
+ShinePhone app required for TOU settings and some advanced battery parameters
+Growatt monitoring dongle is sold separately and required for app monitoring
+Always set Parameter 17 to TOTAL bank Ah, not single battery Ah
+CHAPTER
+9
+SRNE Inverter Configuration Guide
+SRNE (Shenzhen SRNE Solar Technology) produces a range of hybrid and off-grid inverters popular in African markets due to their competitive pricing and good reliability record. The SRNE HF series and ML series are most common in Nigerian installations. SRNE inverters use a combination of front panel LCD menu and dedicated app (SolarGo) for configuration.
+9.1  SRNE Key Settings Overview
+Setting
+Location
+Purpose
+Typical Value
+Output Priority
+Menu 01
+Power source priority
+SBU for most installations
+Battery Type
+Menu 02
+Battery chemistry
+LI for Lithium, GEL, AGM, FLO
+Battery Ah Capacity
+Menu 16
+Total battery bank capacity
+Total parallel bank Ah
+Bulk Charge Voltage
+Menu 26
+Maximum charge voltage
+56.4V for standard 48V Lithium
+Float Charge Voltage
+Menu 27
+Maintenance charge voltage
+54V for standard 48V Lithium
+Low Battery Cutoff
+Menu 29
+Minimum discharge voltage
+44V for 48V Lithium
+Max AC Charge Current
+Menu 11
+Grid or generator charge current
+As per generator capacity
+Communication Type
+Advanced menu
+Battery BMS communication
+CAN or RS485 per battery type
+9.2  SRNE Battery Communication Setup
+SRNE supports CAN bus and RS485 communication with lithium battery systems. The communication port is located on the bottom terminal strip of the inverter.
+For Lithium with CAN: Set Menu 02 to LI and select CAN in the communication sub-menu. Connect CAN cable from SRNE CAN port to battery CAN port.
+For Lithium with RS485: Set Menu 02 to LI and select RS485 in the communication sub-menu. Set baud rate to 9600 or as specified by battery manufacturer.
+For Felicity Lithium batteries: Use the CAN cable supplied by Felicity. Set SRNE to Felicity protocol in the advanced communication menu.
+BRAND GUIDE: SRNE HF2430W80-100
+Most common SRNE 5kVA model in Nigeria. Communication port: RJ45 on main board, labelled COM. Supports Pylontech (RS485), Felicity (CAN), and generic Lithium (RS485 Modbus). SolarGo app required for advanced settings and monitoring. Generator auto-start via dry contact terminals labelled GEN-START on terminal block.
+9.3  SRNE Working Mode Configuration
+Mode
+Menu 01 Setting
+Description
+SBU (Solar-Battery-Utility)
+SBU
+Recommended mode: solar first, battery second, grid last
+SUB (Solar-Utility-Battery)
+SUB
+Solar first, grid second, battery for emergencies only
+UTI (Utility First)
+UTI
+Grid powers everything, solar and battery in standby
+OFF-GRID
+OFG
+No grid, solar and battery only, generator via GEN port
+9.4  SRNE Generator Integration Settings
+SRNE has dedicated generator integration settings that allow the generator to be treated differently from the grid. This is important because generators typically have lower power capacity than the grid and should not be overloaded with battery charging while also supplying loads.
+Menu 11: Set maximum AC charge current from grid.
+Generator charge current: Set separately in generator sub-menu (typically 50 to 60% of Menu 11 value).
+Generator auto-start: Connect generator auto-start relay to GEN-START dry contact terminals.
+Generator start SOC: Set in Menu 30 (typically 20 to 30% SOC).
+Generator stop SOC: Set in Menu 31 (typically 80 to 90% SOC).
+9.5  Common SRNE Configuration Mistakes
+COMMON MISTAKE: Setting Bulk Charge Voltage Too High
+Some installers set the SRNE bulk charge voltage (Menu 26) to the absolute maximum from the battery datasheet without understanding that the datasheet maximum is the never-exceed limit, not the recommended operating voltage. Always set the bulk charge voltage to the recommended charge voltage in the battery datasheet, which is typically 0.5 to 1V below the absolute maximum. Consistently charging at the absolute maximum reduces Lithium battery lifespan significantly.
+KEY TAKEAWAYS
+SRNE Menu 02 = LI for Lithium, set communication type (CAN or RS485) in sub-menu
+Menu 01 = SBU is the recommended default for most Nigerian hybrid installations
+Generator charge current should be set lower than grid charge current in generator sub-menu
+Menu 16 must be set to TOTAL bank Ah, not single battery Ah
+Bulk charge voltage should be at recommended level, not absolute maximum from datasheet
+SolarGo app required for remote monitoring and some advanced parameter settings
+CHAPTER
+10
+Working Modes Explained (All Brands)
+The working mode determines how the inverter prioritises its four possible power sources: solar panels, battery, grid, and generator. Selecting the wrong working mode is one of the most common reasons a solar system does not behave the way the client expects. This chapter explains every mode in detail and provides a brand comparison table.
+Figure 10.1: All six working modes with flow diagrams showing power priority and brand-specific settings for each mode. Self-Use mode is the recommended default for most installations.
+10.1  Self-Use Mode (Recommended Default)
+Self-Use mode is the most common and most appropriate mode for Nigerian hybrid solar installations. The inverter follows this priority: Solar panels power loads first. Any excess solar charges the battery. When solar is insufficient, battery supplements the loads. When both solar and battery are low, grid or generator provides the remaining power.
+Power Priority
+When Active
+Action
+1st: Solar
+Sunlight available, panels generating
+Powers loads directly. Excess charges battery
+2nd: Battery
+Solar insufficient or nighttime
+Battery discharges to supplement or replace solar
+3rd: Grid or Generator
+Battery below minimum SOC threshold
+Grid charges battery to minimum level then returns to battery
+Battery full and solar excess
+Midday with light loads and full battery
+Inverter may limit solar input (clipping) or export if grid-tie enabled
+10.2  Time of Use Mode
+Time of Use (TOU) mode adds a time-scheduling layer on top of Self-Use mode. The installer programs specific time windows for charging (from grid at cheap tariff) and discharging (supplying loads from battery when tariff is high). This mode requires battery communication for accurate SOC tracking.
+Charge window: typically set to off-peak electricity hours (midnight to 6am where applicable).
+Discharge window: typically set to peak tariff hours.
+Requires accurate time setting on the inverter. Check inverter clock after every power interruption.
+Battery must have CAN or RS485 communication for accurate SOC tracking in TOU mode.
+10.3  Off-Grid Mode
+Off-Grid mode disconnects the AC input (grid) from the system. The inverter operates entirely from solar and battery. No grid power is used or allowed into the system. The generator input (if available) can still be used in this mode. This mode is used for truly remote installations where no grid connection exists.
+DANGER: Do Not Use Off-Grid Mode with Grid Connected
+If an inverter is set to Off-Grid mode while still physically connected to the grid, the AC input protection circuit in the inverter may be bypassed. During a grid outage, the inverter may continue to supply power back onto the grid line, which creates a serious hazard for grid maintenance workers. Always disconnect the grid AC input cable physically when setting Off-Grid mode.
+10.4  Backup Mode
+In Backup mode, the grid powers all loads and charges the battery to 100%. The battery is only used when the grid fails. This mode maximises battery lifespan by keeping the battery fully charged and rarely discharging it. It is ideal for clients who only want solar as emergency backup and want to maximise battery longevity.
+10.5  Grid-Tie Mode
+Grid-Tie mode allows excess solar power to be exported to the utility grid. This mode requires anti-islanding protection (built into all modern hybrid inverters) and may require a net metering agreement with the electricity utility. Grid-tie mode is not commonly used in most African markets but is increasingly available as electricity regulations evolve.
+10.6  Generator Priority Mode
+Generator Priority mode charges the battery from the generator as the primary source, with solar supplementing the charge. This mode is used when the battery is very low and rapid recharging is needed. It overrides the normal solar-first priority to ensure the generator runs at its most efficient load point while charging.
+10.7  Brand Comparison Settings Table
+Working Mode
+Deye Setting 01
+Growatt Parameter 01
+SRNE Menu 01
+Voltronic Setting 01
+Self-Use (recommended)
+SEL
+SBU
+SBU
+SBU
+Time of Use
+TOU
+TOU (app required)
+TOU (app required)
+TOU
+Off-Grid (no grid)
+SBU
+SOL
+OFG
+SBU
+Backup (grid priority)
+UTI
+SUB
+UTI
+UTI
+Battery First
+BAT
+BSU
+BSU
+SBU (modify cutoffs)
+Generator Priority
+GEN
+GEN
+GEN
+N/A (manual)
+KEY TAKEAWAYS
+Self-Use mode is the correct default for most Nigerian hybrid solar installations
+Time of Use requires battery BMS communication and accurate inverter clock
+Never use Off-Grid mode while grid AC input cable is still physically connected
+Backup mode maximises battery lifespan but does not use solar for daily loads
+Always verify working mode after every inverter restart or firmware update
+Confirm with client which mode they want before commissioning and document it
+CHAPTER
+11
+Generator Integration and Configuration
+Generator integration allows a hybrid solar system to automatically start the generator when the battery is low and solar generation is insufficient. Done correctly, this creates a fully autonomous energy system that never runs out of power and uses the generator only when necessary. Done incorrectly, it creates a situation where the generator overloads, the inverter faults, or the generator runs indefinitely without charging the battery.
+11.1  Generator Input Port and Wiring
+Most hybrid inverters have a dedicated generator AC input separate from the grid AC input. This allows the inverter to apply different settings for generator power compared to grid power. The key difference is that generator power capacity is limited, so the maximum charge current from the generator must be set lower than from the grid.
+Connection
+Terminal
+Cable Size
+Notes
+Generator Live output
+GEN-L terminal on inverter
+4mm2 minimum
+Same colour as grid live connection
+Generator Neutral output
+GEN-N terminal on inverter
+4mm2 minimum
+Same colour as grid neutral
+Generator Earth
+PE terminal on inverter
+6mm2 minimum
+Generator frame must also be earthed
+Generator auto-start signal
+DRY CONTACT terminals
+1.5mm2 any colour
+Via external relay, not direct to generator starter
+11.2  Dry Contact for Generator Auto-Start
+The inverter dry contact terminals provide a low-current switching signal. When the battery SOC drops below the generator start threshold, the dry contact closes. This signal triggers an external relay which then starts the generator using the generator's standard electric starter.
+Connect dry contact terminals on inverter to an external 12V relay coil.
+Connect the relay switching contacts (normally open) in series with the generator auto-start circuit.
+Test the relay operation by manually triggering the dry contact from the inverter menu.
+Set generator start SOC threshold in inverter settings (typically 20 to 30%).
+Set generator stop SOC threshold in inverter settings (typically 80 to 90%).
+Add a time delay (10 to 30 seconds) between start signal and generator connection to allow generator to warm up.
+11.3  Generator Charging Settings
+The maximum charge current from the generator must be set to avoid overloading the generator. As a rule, never draw more than 70% of the generator rated power for battery charging. Leave 30% headroom for the generator to also supply loads simultaneously.
+3kVA generator example:
+3,000W x 0.70 = 2,100W available for charging
+At 48V system:
+2,100W / 48V
+= 43.75A max charge current
+Round down for safety:
+Set max generator charge current to 40A
+While running loads:
+Generator supplies loads AND charges battery
+Verify total does not exceed 3,000W
+11.4  ATS (Automatic Transfer Switch) Function
+Most hybrid inverters include an internal ATS that switches between grid, generator, and battery without interruption. The ATS transfer time is typically 10 to 20 milliseconds which is fast enough that most equipment does not notice the switch. However, some sensitive electronic equipment may be affected by even brief power interruptions.
+Grid-to-battery transfer: nearly instantaneous, typically 10ms.
+Generator-to-battery transfer: slightly longer due to generator startup time.
+Generator start time: typically 3 to 10 seconds depending on generator model.
+During generator startup: inverter supplies loads from battery until generator reaches stable voltage.
+11.5  Generator Settings by Brand
+Brand
+Generator Start SOC
+Generator Stop SOC
+Max Generator Charge Current
+Generator Connection
+Deye
+Setting 62 (typically 25%)
+Setting 63 (typically 85%)
+Setting 10 (separate from grid)
+GEN terminals on inverter
+Growatt
+Parameter 33 (typically 20%)
+Parameter 34 (typically 80%)
+Separate gen charge menu
+AC-IN terminals (shared with grid on some models)
+SRNE
+Menu 30 (typically 20%)
+Menu 31 (typically 85%)
+Generator sub-menu
+GEN port on terminal block
+Voltronic
+Setting 12 (SOC based)
+Setting 13 (SOC based)
+Setting 11 (AC charge current)
+AC-IN terminal
+11.6  Tips and Common Generator Mistakes
+COMMON MISTAKE: Connecting Generator to Grid AC Input Instead of GEN Input
+Some installers connect the generator to the grid AC input instead of the dedicated GEN input. This works initially but prevents the inverter from applying generator-specific settings such as lower charge current limits. The inverter treats the generator as grid power and may overload it. Always use the dedicated GEN input port where available.
+TIP: Run Generator at Optimal Load
+A generator operates most efficiently and reliably at 50 to 80% of its rated load. A 3kVA generator running at 30% load (charging a 48V battery at 20A) runs inefficiently, consumes more fuel per kWh, and accumulates carbon in the combustion chamber faster. Configure the generator charge current so the generator runs at 60 to 75% of its rated capacity when charging.
+KEY TAKEAWAYS
+Never draw more than 70% of generator rated power for battery charging
+Set generator charge current SEPARATELY from grid charge current in inverter settings
+Always use an external relay between inverter dry contact and generator auto-start circuit
+Allow 10 to 30 second warm-up time before connecting generator to inverter AC input
+Generator frame must be earthed independently, not just through the AC neutral conductor
+Monitor generator output voltage and frequency before first connection to inverter
+CHAPTER
+12
+WiFi Monitoring Setup
+WiFi monitoring transforms a solar installation from a black box into a transparent, remotely monitored system. Both you and your client can see real-time performance data, identify faults before they become serious problems, and verify the system is operating correctly from anywhere in the world. Setting up monitoring correctly is a professional differentiator that justifies premium pricing.
+12.1  Solarman App Setup (Deye Inverters)
+Purchase a Deye WiFi logger dongle (also called SolarmanStick or LSW-3). This is sold separately.
+Insert the WiFi dongle into the WiFi module slot on the Deye inverter (bottom of the unit, labelled WiFi).
+Download the Solarman Smart app from App Store or Google Play.
+Create a Solarman account using your email address.
+In the app, tap Add Device, then select the dongle type (SolarmanStick or as listed).
+Enter the dongle serial number (found on the dongle label) or scan the QR code.
+Connect the dongle to the client WiFi network: in the app, enter the WiFi network name and password.
+The inverter data should appear in the app within 5 to 10 minutes.
+Solarman shows: real-time solar power generation, battery SOC and status, grid power flow, load power consumption, daily and total energy statistics, fault alerts, and historical data charts.
+PRO INSTALLER TIP
+Create the monitoring account using your business email, not the client personal email. This allows you to monitor all your installed systems from one installer account. You can then share access to the client for their personal view while retaining installer-level access for diagnostics and remote parameter changes.
+12.2  ShinePhone App Setup (Growatt Inverters)
+Purchase the Growatt WiFi dongle (Growatt Shine WiFi-X or ShineLink). Sold separately.
+Insert dongle into the COM1 port on the Growatt inverter.
+Download ShinePhone app from App Store or Google Play.
+Register a Growatt account on the ShinePhone app or at server.growatt.com.
+In the app, tap Add Plant then Add Device.
+Enter the dongle serial number or scan the QR code on the dongle.
+Configure WiFi connection: in the app, select the dongle device, then tap WiFi Setup, and enter the network credentials.
+System data appears in the app within 5 to 15 minutes of successful WiFi connection.
+12.3  SolarGo App Setup (SRNE Inverters)
+SRNE uses the SolarGo app for monitoring and remote parameter adjustment. The WiFi module is either built into newer SRNE models or available as an optional plug-in dongle for older models.
+Verify if your SRNE model has built-in WiFi or requires a dongle. Check the product specification.
+For dongle models: insert the SRNE WiFi dongle into the communication port.
+Download SolarGo from App Store or Google Play.
+Create an account, add a device, and enter the device serial number.
+Configure WiFi network credentials through the app WiFi setup screen.
+SolarGo also allows remote parameter adjustment for some settings, eliminating the need for a physical site visit for minor adjustments.
+12.4  VRM Portal Setup (Victron Inverters)
+Victron uses the VRM (Victron Remote Management) portal, which is the most comprehensive monitoring platform in the solar industry. It requires a Victron Cerbo GX (communication hub) or Color Control GX to be installed alongside the inverter.
+Cerbo GX connects to all Victron components via VE.Bus (inverter), VE.Direct (MPPT), and CAN bus (battery).
+Cerbo GX connects to internet via Ethernet cable or WiFi dongle.
+Create VRM account at vrm.victronenergy.com.
+Add site using the VRM token displayed on the Cerbo GX screen.
+VRM portal shows advanced data including battery cell voltages, MPPT tracker performance, and historical load analysis.
+12.5  Remote Monitoring Best Practices
+TIP: Set Up Alerts and Notifications
+All monitoring apps allow you to set up email or push notification alerts for fault conditions. Configure alerts for: battery SOC below 20%, PV generation below expected level for 3 consecutive days (possible shading or soiling), inverter fault codes, and grid failure. These alerts allow you to diagnose and often resolve issues remotely without a site visit, saving time and maintaining client satisfaction.
+COMMON MISTAKE: Monitoring Requires Stable WiFi at Installation Site
+All WiFi monitoring dongles require a stable WiFi connection to function. If the client has an unreliable or slow internet connection, monitoring will be intermittent. Discuss this with the client during installation. Consider using a GPRS (4G) dongle instead of WiFi for sites with poor internet, as some inverter brands offer GPRS monitoring as an alternative.
+KEY TAKEAWAYS
+WiFi monitoring dongle is sold separately for most inverter brands. Order it with the inverter
+Solarman app for Deye, ShinePhone for Growatt, SolarGo for SRNE, VRM for Victron
+Create installer monitoring account first, then share client access for their view
+Set up fault alerts and notification for battery low, PV low, and inverter fault events
+GPRS dongle is available as alternative for sites with poor or no WiFi coverage
+Document the monitoring login credentials in the client handover documentation
+CHAPTER
+13
+Three-Phase Configuration
+Three-phase power is required for industrial equipment, large commercial air conditioning systems, and three-phase motors. A three-phase solar installation uses three single-phase hybrid inverters working in a master-slave arrangement, each handling one phase of the three-phase supply. This chapter covers when three-phase is required, how to wire it correctly, and how to balance loads across phases.
+13.1  When Three-Phase is Required
+Load Type
+Single Phase?
+Three Phase?
+Notes
+Standard residential loads (lights, fans, TV, fridge)
+Yes
+Not required
+Single phase is sufficient for all standard residential loads
+Single phase air conditioners (1 to 2.5HP)
+Yes
+Not required
+All standard home AC units are single phase
+Three-phase motors
+No
+Required
+Industrial pumps, compressors, and industrial machines
+Three-phase air conditioning (commercial, above 5HP)
+No
+Required
+Large commercial AC systems are typically three-phase
+Industrial equipment
+No
+Required
+CNC machines, industrial welders, large compressors
+Commercial buildings with three-phase supply
+Optional
+Recommended
+Match the building supply type for proper integration
+13.2  Three-Phase Inverter Wiring
+Three-phase wiring requires careful attention to phase sequence. The three phases must be connected in the correct order (L1, L2, L3) to ensure three-phase motors rotate in the correct direction and three-phase equipment operates correctly.
+Inverter 1 (Master): AC output connected to L1 phase of distribution board.
+Inverter 2 (Slave 1): AC output connected to L2 phase of distribution board.
+Inverter 3 (Slave 2): AC output connected to L3 phase of distribution board.
+All three neutral outputs connected to common neutral busbar.
+All three earth conductors connected to common earth busbar.
+Communication cable daisy-chain: Master to Slave 1, Slave 1 to Slave 2.
+All three inverters share the same battery bank via separate connections to battery busbar.
+DANGER: Wrong Phase Sequence Causes Three-Phase Motor Damage
+If the three phases are connected in the wrong sequence (L1-L3-L2 instead of L1-L2-L3), three-phase motors will rotate in the reverse direction. This can cause immediate mechanical damage to pumps and compressors. Always verify phase sequence with a phase sequence tester before energising any three-phase load for the first time.
+13.3  Load Balancing Across Three Phases
+In a three-phase solar system, each inverter handles the loads connected to its phase independently. If all heavy loads are on one phase, that inverter may overload while the other two inverters are lightly loaded. Good load balancing ensures all three inverters operate at similar power levels.
+TIP: Balance Loads as Evenly as Possible
+Divide the total loads approximately equally across the three phases. If the total load is 12kW, aim for approximately 4kW per phase. Single-phase loads (lights, fans, sockets) can be distributed across phases in the distribution board. Three-phase loads (motors) automatically draw from all three phases equally and do not require balancing.
+13.4  Three-Phase Fault Diagnosis
+Symptom
+Likely Cause
+Solution
+Three-phase motor runs in reverse
+Wrong phase sequence (L1-L2-L3 incorrectly connected)
+Swap any two of the three phase connections at the motor terminals
+One phase has no output
+Slave inverter on that phase has faulted
+Check slave inverter display for fault code
+Three-phase motor vibrates abnormally
+Phase imbalance or one phase significantly lower voltage
+Check all three phase voltages with multimeter
+Master inverter keeps restarting
+Communication cable fault or slave not responding
+Check parallel communication cable connections on all three inverters
+Unequal battery drain
+Loads very unbalanced across three phases
+Redistribute single-phase loads more evenly in distribution board
+13.5  Three-Phase Settings by Brand
+Brand
+Master Setting
+Slave 1 (L2) Setting
+Slave 2 (L3) Setting
+Communication
+Deye
+Setting 28 = 3P-M
+Setting 28 = 3P-S1
+Setting 28 = 3P-S2
+Deye parallel cable daisy chain
+Growatt
+Work Mode = 3P-Master
+Work Mode = 3P-Slave1
+Work Mode = 3P-Slave2
+Growatt 3P cable
+SRNE
+Phase = 3P-Master
+Phase = 3P-Slave1
+Phase = 3P-Slave2
+SRNE parallel cable
+Voltronic
+Setting 27 = 3Ph-M
+Setting 27 = 3Ph-S1
+Setting 27 = 3Ph-S2
+Voltronic 3P cable
+KEY TAKEAWAYS
+Three-phase requires three identical inverters: one per phase (L1, L2, L3)
+Phase sequence must be L1-L2-L3. Wrong sequence causes motors to run in reverse
+All three inverters share the same battery bank via individual connections to battery busbar
+Balance loads as evenly as possible across all three phases
+Use a phase sequence tester before energising any three-phase motor for the first time
+Communication cable daisy-chain: Master to Slave 1, then Slave 1 to Slave 2
+CHAPTER
+14
+System Expansion Guide
+Solar systems are rarely static. Clients add new appliances, businesses grow, and energy needs evolve. A system that was correctly sized two years ago may need expansion today. System expansion done correctly is straightforward. Done incorrectly, it can create safety hazards, damage existing components, and void equipment warranties.
+14.1  Adding More Panels to an Existing Array
+Adding panels to an existing array requires checking several parameters before purchasing any new panels:
+Check inverter maximum PV input current: the total current from all panel strings must not exceed this value.
+Check inverter maximum PV input power: the total array wattage must not exceed this value (typically 120 to 150% of inverter rated power is acceptable).
+Check MPPT voltage range: new panels must match the existing string voltage if being added to existing strings, or the new string voltage must be within the MPPT range.
+Verify existing cables: adding more panels increases current. Existing cables may need upgrading.
+Only add identical panels to existing series strings. Adding different panels to an existing string reduces the output of the existing panels.
+14.2  Adding a Second Battery Bank
+Expanding the battery bank increases backup time. The expansion requirements depend on the battery type and how many batteries are already installed.
+Scenario
+Action Required
+Notes
+Adding same brand, same model batteries
+Connect new batteries in parallel with existing
+Verify total does not exceed manufacturer parallel limit
+Existing bank has 4 batteries (at parallel limit)
+Install busbar system, then add to busbar
+Busbar allows expansion beyond 4-battery limit
+Existing bank is lead-acid, wanting to add Lithium
+Do not mix. Replace entire bank or install separate system
+Never mix battery chemistry types in same bank
+Adding batteries to inverter with communication
+Reconfigure inverter bank capacity setting to new total Ah
+Inverter must know total Ah for accurate SOC calculation
+14.3  Upgrading from Single to Parallel Inverters
+Adding a second inverter in parallel is the most complex expansion scenario. It requires that the new inverter is identical in brand, model, and firmware to the existing inverter. The existing inverter must also be capable of parallel operation (not all models support parallel).
+Verify existing inverter model supports parallel operation. Check the manufacturer specifications.
+Purchase identical model and ensure firmware versions can be matched (update if necessary).
+Update existing inverter firmware to latest version before adding parallel unit.
+Update new inverter firmware to match existing inverter exactly.
+Connect parallel communication cable between the two inverters.
+Set existing inverter to MASTER mode. Set new inverter to SLAVE mode.
+Connect new inverter to shared battery bank and shared AC output bus.
+Power on master first, then slave. Verify parallel operation is confirmed on both displays.
+14.4  Pre-Expansion Checks
+Check
+Why It Matters
+How to Verify
+Inverter PV input current limit
+More panels = more current. Must not exceed inverter limit
+Check inverter datasheet for max PV input current
+Existing cable sizes
+More current requires larger cables
+Measure cable cross-section or check installation records
+Battery parallel limit
+Adding batteries may exceed manufacturer limit
+Check battery datasheet for max parallel limit
+Inverter firmware version
+Parallel expansion requires matched firmware
+Check firmware version on inverter display settings menu
+Inverter warranty status
+Unauthorised modifications may void warranty
+Check warranty terms before any hardware changes
+14.5  Common Expansion Mistakes
+COMMON MISTAKE: Adding Different Panel Models to Existing Strings
+When expanding by adding panels to existing series strings, the new panels must be identical to the existing panels. Different Isc values in a series string cause the lower-current panel to limit the entire string output. Different Voc values cause string voltage mismatch. Always use identical panels when expanding existing strings. If identical panels are unavailable, connect the new panels as a separate string on the second MPPT input.
+KEY TAKEAWAYS
+Always check inverter PV input current and power limits before adding panels
+Never add different panel models to an existing series string
+Battery expansion must respect the manufacturer maximum parallel limit
+For parallel inverter expansion, both inverters must be same model and same firmware version
+Update total battery Ah in inverter settings after every battery bank expansion
+Verify cable sizes can handle increased current before any panel or battery expansion
+CHAPTER
+15
+Fault Codes and Troubleshooting
+Fault codes are the inverter communicating exactly what is wrong. Every experienced installer develops the skill to read a fault code, identify the root cause, and resolve the issue quickly. This chapter provides a comprehensive fault code reference for all major inverter brands and a systematic troubleshooting approach for the most common field problems.
+Figure 15.1: Fault code reference table with codes, causes, and solutions. Red severity codes indicate immediate safety risks. Orange codes indicate performance issues that need prompt attention.
+15.1  How to Read Fault Codes
+When a fault occurs, the inverter displays a fault code on the LCD screen and typically activates a fault LED. The fault code format varies by brand: Deye uses F01 to F99, Growatt uses E01 to E99, SRNE uses F01 to F50, and Voltronic uses numbers 01 to 30. Some faults are self-clearing once the cause is resolved. Others require a manual reset.
+Record the exact fault code from the display before attempting any reset.
+Check if the fault is intermittent (comes and goes) or persistent (remains continuously).
+Measure the relevant parameters (battery voltage, PV voltage, load current) with a multimeter.
+Compare measurements to the fault code description to confirm the diagnosis.
+Resolve the root cause before resetting the fault.
+15.2  Deye Fault Code Reference
+Deye Code
+Fault Name
+Cause
+Solution
+F01
+PV Over Voltage
+Panel string Voc exceeds MPPT maximum
+Reduce panels in series. Check cold-morning Voc calculation
+F02
+PV Under Voltage
+Panel string Voc below MPPT minimum
+Check panel connections and string continuity
+F03
+Battery Over Voltage
+Battery voltage exceeds maximum charge voltage
+Check Setting 13 (max charge voltage) matches battery spec
+F04
+Battery Under Voltage
+Battery voltage below minimum cutoff
+Charge battery. Check Setting 12 (low battery cutoff)
+F05
+Overload
+Load power exceeds inverter capacity
+Reduce connected loads. Check for motor surge
+F06
+Overtemperature
+Inverter internal temperature too high
+Check ventilation. Clean air vents. Reduce load
+F07
+BMS Communication Lost
+CAN or RS485 cable disconnected or wrong setting
+Check cable connection. Verify Setting 05 (battery type)
+F08
+Grid Voltage Fault
+Grid voltage or frequency out of acceptable range
+Check grid connection. Inverter will reconnect when grid normalises
+F09
+Fan Fault
+Internal cooling fan not working
+Replace fan or contact Deye service
+F10
+Parallel Communication
+Slave not responding to master
+Check parallel cable. Verify slave setting on second inverter
+15.3  Growatt Fault Code Reference
+Growatt Code
+Fault Name
+Cause
+Solution
+E01
+Over Voltage
+PV or AC output voltage too high
+Check string voltage and grid voltage
+E02
+Under Voltage
+AC output voltage too low
+Check inverter output settings
+E03
+Over Current
+Output current exceeds rating
+Reduce loads, check for short circuit
+E04
+Overload
+Total load exceeds inverter capacity
+Shed loads or upgrade inverter
+E05
+Overtemperature
+Insufficient cooling
+Check ventilation clearance around inverter
+E06
+Battery Fault
+Battery voltage abnormal or BMS fault
+Check battery connections and BMS status
+E07
+PV Isolation Fault
+Ground fault detected in PV circuit
+Check PV cable insulation, check earth connections
+E08
+Communication Fault
+RS485 or CAN communication lost
+Check communication cable and Parameter 05 (battery type)
+E09
+Grid Fault
+Grid failure or out of specification
+Inverter will auto-reconnect when grid normalises
+15.4  SRNE Fault Code Reference
+SRNE Code
+Fault Name
+Solution
+F01
+Over Voltage (PV or AC)
+Check PV string voltage. Check grid connection
+F02
+Under Voltage (Battery or AC)
+Charge battery. Check AC input connection
+F03
+Over Current or Overload
+Reduce loads. Check for short circuit in wiring
+F04
+Overtemperature
+Improve ventilation. Clean air filter if fitted
+F05
+Battery Low
+Battery needs charging from solar or generator
+F06
+BMS Communication Lost
+Check CAN or RS485 cable from inverter to battery
+F07
+Grid Frequency Fault
+Grid frequency out of 48 to 52Hz range, will auto-clear
+F08
+Fan Fault
+Replace internal cooling fan
+15.5  Voltronic (Axpert) Fault Code Reference
+Voltronic Code
+Fault Name
+Solution
+01
+Fan Locked
+Clean or replace fan
+02
+Over Voltage
+Check PV string voltage and battery charge voltage setting
+03
+Battery Voltage Too High
+Reduce battery charge voltage in settings
+04
+Short Circuit
+Check all cable connections for short circuit
+05
+Inverter Fail
+Internal fault, contact manufacturer
+06
+Bus Overvoltage
+Internal DC bus fault, contact manufacturer
+07
+Battery Open Circuit
+Check battery connections and fuse
+08
+Bus Soft Start Fail
+Power cycle the inverter
+51
+Over Current AC Output
+Reduce connected loads
+52
+Bus Voltage Too Low
+Check battery voltage and solar input
+15.6  General Troubleshooting Guide
+Problem
+First Check
+Second Check
+Resolution
+Inverter not charging battery
+Check PV input voltage at inverter
+Check working mode setting
+Verify string Voc, correct mode setting
+Battery drains overnight faster than expected
+Check actual nighttime load vs design
+Check battery capacity setting in inverter
+Measure actual load, correct battery Ah setting
+Inverter output voltage unstable
+Check battery voltage under load
+Check inverter output setting
+Replace battery if voltage drops under load
+BMS communication fault (F07 or E08)
+Check CAN or RS485 cable connection
+Check battery type setting in inverter
+Replace cable, verify communication protocol setting
+Parallel inverters not synchronising
+Check parallel cable connection
+Check firmware versions match
+Update firmware on both, replace cable if faulty
+Low PV generation despite good sun
+Check panel Voc at inverter input
+Check for shading on panels
+Verify Voc, inspect panels, check string configuration
+KEY TAKEAWAYS
+Always record the exact fault code before attempting any reset or repair
+Measure actual values (voltage, current, temperature) to confirm the fault diagnosis
+Most faults have simple causes: over-voltage, under-voltage, overload, or communication cable
+BMS communication faults are almost always a cable, setting, or protocol mismatch
+Never bypass or ignore fault codes. Each code indicates a real system condition
+Document every fault and resolution in the project service record for future reference
+CHAPTER
+16
+Complete Configuration Checklist
+This chapter provides a complete configuration checklist covering every step from initial component check through to final system verification. Use this checklist on every installation. A checklist is not a sign of inexperience. It is the mark of a professional who understands that human memory under time pressure is unreliable and that a missed step costs significantly more to fix than to prevent.
+16.1  Pre-Configuration Checklist
+Item
+Check
+Notes
+Panel string Voc calculated
+Verify against MPPT maximum voltage
+Must be below inverter max input voltage
+Panel string Isc calculated
+Verify cable size handles total current
+Size for 125% of maximum current
+Battery configuration confirmed
+Series and parallel connections verified
+Voltage matches inverter specification
+Battery communication type identified
+CAN bus or RS485 confirmed for battery model
+Match to inverter communication capability
+Inverter working mode decided
+Client requirements understood
+Document chosen mode for client records
+Generator specifications known (if applicable)
+Generator kVA rating and connection type
+Set charge current appropriately
+16.2  Panel String Configuration Checklist
+Step
+Action
+Pass Condition
+Measure each panel Voc individually
+Multimeter across each panel terminals
+Within 5% of nameplate Voc
+Calculate and verify string Voc
+Sum of panel Voc values in series string
+Below inverter MPPT maximum
+Measure string current (Isc)
+Clamp meter on string cable in full sun
+Within 10% of panel nameplate Isc
+Verify string polarity
+PV+ terminal of string should read positive
+Red wire to PV+, black or white to PV-
+Test all MC4 connections
+Pull test every MC4 connector mated
+Cannot pull apart without MC4 tool
+Check cable routing and protection
+All cables secured and no sharp bend
+No exposed cable, no contact with roof metal
+16.3  Battery Configuration Checklist
+Step
+Action
+Pass Condition
+Verify battery voltage
+Multimeter at battery terminals before connecting
+Matches inverter system voltage specification
+Verify battery polarity
+Red probe to positive terminal reads positive
+BAT+ on inverter connects to battery positive
+Check communication cable connection
+CAN or RS485 cable fully inserted in both ends
+Cable clicks into RJ45 port on both inverter and battery
+Verify battery type setting in inverter
+Check Setting 05 (Deye), Parameter 05 (Growatt)
+Set to correct type: LI, LL, or USE for custom
+Verify battery capacity setting in inverter
+Check Setting 09 (Deye), Parameter 17 (Growatt)
+Set to TOTAL bank Ah, not single battery Ah
+Install ANL fuse or DC breaker
+Within 150mm of battery positive terminal
+Correct rating per calculation: (inverter W / battery V / 0.8) x 1.25
+16.4  Inverter Settings Checklist
+Setting
+Parameter
+Typical Value
+Verify Against
+Output voltage
+Output voltage setting
+220V or 230V
+Local grid standard
+Output frequency
+Frequency setting
+50Hz
+Local grid standard
+Battery type
+Battery type setting
+LI for Lithium, AGM for AGM
+Installed battery chemistry
+Battery capacity
+Battery Ah setting
+Total bank Ah
+Physical battery installation
+Max charge voltage
+Bulk charge voltage
+Per Lithium spec (typically 56 to 57.6V for 48V)
+Battery manufacturer datasheet
+Low battery cutoff
+Discharge cutoff voltage
+44 to 46V for 48V Lithium
+Battery manufacturer datasheet
+Working mode
+Mode selection
+SEL or SBU for most Nigerian installations
+Client requirements
+Max charge current
+AC or generator charge current
+Per generator or grid capacity
+Generator or grid supply rating
+16.5  Communication Setup Checklist
+Communication Type
+Connection Verified
+Protocol Setting
+Data Visible
+CAN bus (battery to inverter)
+CAN cable connected at both ends
+Battery type set to LI or LIb in inverter
+Inverter display shows BMS SOC data
+RS485 (battery to inverter)
+RS485 2-wire connected at both ends
+Modbus address set to 1 in battery
+Inverter display shows battery data
+Parallel cable (inverter to inverter)
+Cable connected at both inverter COMMS ports
+Master set to MASTER, slave set to SLAVE
+Both inverters display PARALLEL ACTIVE
+WiFi dongle (monitoring)
+WiFi dongle inserted and app configured
+App connected to correct dongle serial number
+Live data visible in monitoring app
+Dry contact (generator auto-start)
+2 wires connected to DRY CONTACT terminals
+Generator start SOC threshold configured
+Generator starts when battery reaches threshold SOC
+16.6  Final Verification Checklist
+Final Check
+Method
+Pass Condition
+AC output voltage
+Multimeter at inverter AC output terminals
+220V to 230V, 49.5 to 50.5Hz
+Battery charging from solar
+Check inverter display in full sun
+Charging current positive and MPPT tracking active
+Battery discharging to loads
+Check inverter display with loads connected
+Discharge current present, SOC decreasing
+BMS communication active
+Check inverter display for BMS data
+SOC percentage and cell voltage visible
+Earth continuity
+Multimeter from each grounded component to earth rod
+Below 1 ohm resistance for all points
+Client training completed
+Walk through normal and fault operation with client
+Client can identify normal operation on inverter display
+Monitoring app active
+Check app shows live data
+All parameters updating in real time
+KEY TAKEAWAYS
+Complete all 6 checklists in order on every installation
+Measure before connecting. Never assume values are correct without measuring
+Battery type and battery capacity settings in the inverter are the most commonly wrong settings
+BMS communication must show live data in the inverter display after communication cable connection
+Document all settings in writing and give a copy to the client at handover
+The configuration checklist is your quality control. Complete it every time.
+CHAPTER
+17
+Victron Energy Configuration Guide
+Victron Energy is widely regarded as the premium standard in solar installation worldwide. Victron products are more expensive than other brands but offer unmatched reliability, the most comprehensive monitoring platform available, and the best parallel and three-phase support in the industry. Victron uses a unique ecosystem of communication protocols that differs completely from other brands.
+Figure 17.1: Victron system architecture showing VE.Bus, VE.Direct, VE.Can and VE.Smart protocols connecting all components to the Cerbo GX central hub. The VRM portal provides cloud monitoring from anywhere.
+17.1  Victron Product Ecosystem
+Unlike other inverter brands where all functions are built into one unit, Victron uses a modular ecosystem. Each component does one job excellently and they all communicate with each other through dedicated Victron protocols.
+Component
+Function
+Communication
+Typical Model
+MultiPlus-II
+Hybrid inverter-charger
+VE.Bus to Cerbo GX
+MultiPlus-II 48/5000
+SmartSolar MPPT
+Solar charge controller
+VE.Direct to Cerbo GX
+SmartSolar 150/100
+Cerbo GX
+Communication hub
+VE.Bus, VE.Direct, VE.Can
+Cerbo GX with Touch 50
+BMV-712 or SmartShunt
+Battery monitor
+VE.Direct to Cerbo GX
+SmartShunt 500A
+Lynx Smart BMS
+Lithium BMS interface
+VE.Can to Cerbo GX
+Lynx Smart BMS 500A
+VRM Portal
+Cloud monitoring
+Via Cerbo GX ethernet
+vrm.victronenergy.com
+17.2  MultiPlus-II Key Settings via VictronConnect
+Victron inverter settings are configured through the VictronConnect app via Bluetooth or through the Cerbo GX web interface. There is no numbered parameter menu like Deye or Growatt. All settings are named and grouped logically in the app.
+Setting Category
+Key Parameters
+Typical Values for 48V Lithium
+Charger Settings
+Absorption voltage, float voltage, charge current
+Absorption: 56.4V  Float: 54V  Max charge: per battery spec
+Inverter Settings
+AC output voltage, frequency, PowerAssist
+230V  50Hz  PowerAssist enabled for small generator use
+Battery Settings
+Battery capacity, low battery shutdown, BMS control
+Match installed bank Ah  Low shutdown: 46V
+Grid and Generator
+AC input current limit, UPS function
+Set to generator rated current. UPS enabled for fast transfer
+ESS (Energy Storage)
+Minimum SOC, feed-in excess solar, grid setpoint
+Min SOC: 20%  Feed-in: disabled in most African markets
+BRAND GUIDE: Victron MultiPlus-II
+Configuration is done entirely through VictronConnect app (Bluetooth on phone or tablet) or the Cerbo GX web browser interface. There is no front panel settings menu. Key advantage: all settings have clear English names with help text. Connect phone to MultiPlus-II via Bluetooth, open VictronConnect, select the device, and navigate to Settings. For ESS (Energy Storage System) configuration, the Cerbo GX and VRM portal are required in addition to VictronConnect.
+17.3  Cerbo GX Setup and VRM Portal
+Connect all Victron devices to Cerbo GX: MultiPlus-II via VE.Bus cable (RJ45), SmartSolar MPPT via VE.Direct cable (3-pin), BMV or SmartShunt via VE.Direct cable.
+Connect Cerbo GX to internet via Ethernet cable (recommended) or WiFi dongle.
+Navigate to the Cerbo GX web interface from a browser on the same network (IP address shown on Cerbo GX display).
+Go to Settings then VRM online portal then Add VRM token.
+Create account at vrm.victronenergy.com and enter the VRM token to link the installation.
+All system data now accessible from anywhere via VRM portal or the VRM app.
+PRO INSTALLER TIP
+The VRM portal stores historical data indefinitely and provides advanced analytics including battery health trends, solar yield analysis, and load consumption patterns. Share VRM access with the client using the Guest role, which gives them read-only access to their system data without the ability to change settings.
+17.4  Victron ESS (Energy Storage System) Configuration
+ESS is the Victron working mode for grid-connected systems with battery storage. It is more sophisticated than the simple working modes of other brands and requires correct setup through the VRM portal.
+ESS Mode 1 (Optimised with BatteryLife): Solar charges battery, battery supplements grid during discharge. Battery SOC protected by BatteryLife algorithm.
+ESS Mode 2 (Optimised without BatteryLife): Full battery use, no SOC floor protection. More aggressive battery use.
+ESS Mode 3 (Keep batteries charged): Battery kept full at all times. Grid powers loads. Backup mode.
+ESS Mode 4 (External control): Third-party software controls charge and discharge decisions.
+17.5  Common Victron Configuration Mistakes
+COMMON MISTAKE: Not Installing Cerbo GX for ESS
+ESS configuration requires the Cerbo GX hub. Without it, the MultiPlus-II runs in standard UPS mode only without the intelligent ESS management. Many installers skip the Cerbo GX to save cost and then wonder why the system does not manage grid and solar intelligently. For any grid-connected Victron installation, the Cerbo GX is mandatory.
+KEY TAKEAWAYS
+Victron uses VictronConnect app for settings, not a numbered parameter menu
+Cerbo GX is the communication hub connecting all Victron components
+VE.Bus for MultiPlus, VE.Direct for MPPT and SmartShunt, VE.Can for Lynx BMS
+VRM portal provides cloud monitoring and historical data from anywhere
+ESS configuration requires Cerbo GX and VRM portal, not just VictronConnect
+Share VRM Guest access with client for their own read-only system monitoring
+CHAPTER
+18
+Felicity Solar Configuration Guide
+Felicity Solar is a South African brand with strong distribution across West Africa including Nigeria. Felicity produces complete solar packages including panels, inverters, and batteries, all designed to work together. Their inverters are based on the Voltronic (Axpert) platform with Felicity-specific firmware and branding.
+18.1  Felicity Inverter Key Settings
+Felicity inverters use a numbered parameter system similar to Voltronic Axpert. The LCD panel and button navigation are identical to the Voltronic platform. All Voltronic Axpert configuration knowledge applies directly to Felicity inverters.
+Parameter
+Setting Name
+Typical Value
+Notes
+Parameter 01
+Output source priority
+SBU (Solar-Battery-Utility)
+Recommended for most installations
+Parameter 02
+Max charging current (PV)
+Maximum available
+Do not reduce unless array is oversized
+Parameter 05
+Battery type
+LI (Lithium)
+Must match installed battery chemistry
+Parameter 11
+Max charging current (AC)
+Per generator or grid capacity
+Reduce for generator use
+Parameter 12
+Battery low warning
+46V for 48V Lithium
+Match battery manufacturer spec
+Parameter 26
+Battery bulk charge voltage
+56.4V for 48V Lithium
+Check Felicity battery datasheet
+Parameter 27
+Battery float charge voltage
+54V for 48V Lithium
+Check Felicity battery datasheet
+Parameter 29
+Battery cutoff voltage
+44V for 48V Lithium
+Match Felicity battery minimum spec
+BRAND GUIDE: Felicity Solar Hybrid
+Felicity batteries communicate with Felicity inverters via CAN bus using a proprietary Felicity protocol. The CAN cable supplied by Felicity must be used. Connect CAN cable from inverter CAN port to battery CAN port. Set Parameter 05 to LI. The inverter display should show BMS data within 30 seconds of connection. If no BMS data appears, check the CAN cable is the Felicity-supplied cable and not a generic RJ45 cable.
+18.2  Felicity Battery Communication Setup
+Felicity LiFePO4 batteries communicate via CAN bus using a Felicity-specific protocol.
+The CAN cable is usually supplied with the battery. It is not a generic Ethernet cable.
+Connect one end to the inverter CAN port (labelled CAN or BMS on the terminal strip).
+Connect the other end to the battery CAN port (usually the port labelled CAN or RS485 on the battery BMS panel).
+Set inverter Parameter 05 to LI for Lithium.
+If communication is successful, the inverter display shows SOC percentage and battery voltage from the BMS.
+18.3  Common Felicity Configuration Mistakes
+COMMON MISTAKE: Using Generic Ethernet Cable for CAN Connection
+Felicity CAN cables have specific wiring that differs from standard Ethernet. Using a generic RJ45 cable between Felicity inverter and Felicity battery will not establish communication. The inverter will run without BMS data and apply its own internal charge parameters, which may not match the Felicity battery specifications precisely.
+COMMON MISTAKE: Setting Bulk Charge Voltage to Generic Lithium Values
+Felicity batteries may have slightly different charge voltage specifications from generic Lithium LiFePO4. Always check the specific charge voltages from the Felicity battery datasheet rather than using generic 56.4V values. Using slightly wrong charge voltages does not cause immediate damage but reduces battery lifespan over many charge cycles.
+KEY TAKEAWAYS
+Felicity inverters use the Voltronic Axpert platform: Parameter 01 = SBU for standard mode
+Felicity battery communication: CAN bus using Felicity-supplied cable, not generic RJ45
+Parameter 05 = LI for Lithium. Verify BMS data appears on inverter display after connection
+Always use Felicity battery datasheet for exact charge voltage values, not generic Lithium values
+Felicity inverters support parallel configuration up to 6 units using Voltronic parallel protocol
+Parameter 11 must be reduced when using a generator to avoid overloading it
+CHAPTER
+19
+Lithium Battery Brand Setup Guide
+Every Lithium battery brand has its own communication requirements, charge voltage specifications, and BMS protocol. Connecting a battery to an inverter without configuring the correct protocol is one of the most common causes of poor battery performance and premature battery failure. This chapter provides specific setup instructions for every major Lithium battery brand used in African solar installations.
+Figure 19.1: Communication settings comparison for Pylontech, LBSA, Felicity, Huawei, and generic Lithium batteries. Always identify the exact communication type before purchasing an inverter.
+19.1  Pylontech Battery Setup
+Pylontech is one of the most widely compatible Lithium battery brands. It supports both RS485 Modbus and CAN bus depending on the model. The US2000 and US3000 use RS485. The Force H2 and newer models support CAN bus.
+Step
+Action
+Detail
+Step 1
+Identify Pylontech model
+US2000/US3000 = RS485. Force H2 = CAN bus
+Step 2
+Connect communication cable
+RS485: use 485 port on Pylontech master unit. CAN: use CAN port
+Step 3
+Set battery address
+Set DIP switch on Pylontech to address 1 (master). Additional units: 2, 3, etc.
+Step 4
+Set inverter battery type
+Deye: Setting 05 = LIb. Growatt: Parameter 05 = LL. SRNE: Menu 02 = LI
+Step 5
+Verify communication
+Inverter display should show SOC and voltage from Pylontech BMS within 60 seconds
+Step 6
+Set total capacity
+Set inverter battery Ah to total parallel bank Ah (not single unit Ah)
+PRO INSTALLER TIP
+For multiple Pylontech units in parallel, only the MASTER unit (DIP switch address 1) connects the communication cable to the inverter. The slave units (addresses 2, 3, 4) communicate internally via the Pylontech bus cables that daisy-chain between units. Never connect communication cables from slave Pylontech units to the inverter.
+19.2  LBSA Battery Setup
+LBSA (Lithium Battery Storage Africa) is a Nigerian-assembled Lithium battery using quality cells. LBSA batteries typically communicate via CAN bus and are compatible with Deye, Growatt, and SRNE inverters.
+Communication: CAN bus via RJ45 connector.
+Inverter setting: Battery type = LI or LIb. Communication = CAN.
+LBSA batteries include BMS that sends SOC, voltage, temperature, and fault data to the inverter.
+Charge voltage: 56.4V typical for 48V LBSA battery. Verify with LBSA datasheet.
+Maximum parallel: up to 4 units without busbar system.
+19.3  Huawei LUNA2000 Battery Setup
+Huawei LUNA2000 is a modular battery system where capacity is added in 5kWh modules. It uses CAN bus communication with Huawei SUN2000 hybrid inverters. The Huawei system is a closed ecosystem: LUNA2000 batteries are designed to work exclusively with Huawei SUN2000 inverters.
+Communication: CAN bus using Huawei-supplied cable.
+Inverter: Must be Huawei SUN2000. Not compatible with other inverter brands.
+Configuration: Done through Huawei FusionSolar app. Not through LCD parameter menu.
+Capacity: Each module is 5kWh. System supports 2 to 3 modules (10 to 15kWh).
+Installation: Huawei-certified installer strongly recommended due to closed ecosystem.
+19.4  Generic Lithium Battery Setup (No Communication)
+Many budget Lithium batteries in the Nigerian market have no communication port or use non-standard protocols that are incompatible with major inverter brands. For these batteries, the inverter must be configured with manual voltage parameters.
+Inverter Parameter
+Value for 48V Lithium LiFePO4
+How to Find the Right Value
+Battery type setting
+USE (User defined) or LI if available
+Select custom to allow manual voltage entry
+Bulk charge voltage
+56.4V (typical)
+From battery datasheet: recommended charge voltage
+Absorption voltage
+56.4V (same as bulk for LiFePO4)
+LiFePO4 does not have a separate absorption stage
+Float voltage
+54.0V (typical)
+From battery datasheet: float or standby voltage
+Low battery cutoff
+44.0V to 46.0V (typical)
+From battery datasheet: minimum discharge voltage
+Equalisation
+DISABLE always for Lithium
+Equalisation damages Lithium cells severely
+DANGER: Never Enable Equalisation for Any Lithium Battery
+Battery equalisation is a lead-acid maintenance procedure that applies a controlled overvoltage to balance cell levels in lead-acid batteries. For Lithium cells, this overvoltage triggers the BMS over-voltage protection, may permanently reduce cell capacity, and in extreme cases causes electrolyte decomposition. Equalisation must be disabled in the inverter settings for every Lithium battery installation regardless of brand.
+KEY TAKEAWAYS
+Pylontech US2000 and US3000: RS485 communication. Force H2: CAN bus
+For multiple Pylontech units, only the master unit connects to the inverter communication port
+LBSA: CAN bus communication, compatible with Deye, Growatt, and SRNE
+Huawei LUNA2000 is a closed ecosystem: only works with Huawei SUN2000 inverters
+Generic Lithium without communication: set manual voltage parameters (USE or custom mode)
+Disable equalisation for EVERY Lithium battery installation without exception
+CHAPTER
+20
+Standalone MPPT Charge Controller Configuration
+Not every solar installation uses a hybrid inverter with built-in MPPT. Many off-grid and budget installations use a separate standalone MPPT charge controller between the solar panels and the battery, with a separate inverter or no inverter at all. Standalone MPPT controllers require their own configuration and must be matched correctly to the panel array and battery voltage.
+Figure 20.1: MPPT vs PWM comparison and configuration guide for EPever, Victron SmartSolar, Renogy, and generic MPPT controllers. MPPT always outperforms PWM by 20 to 30% in real-world conditions.
+20.1  When to Use a Standalone MPPT Controller
+Situation
+Recommendation
+Reason
+Hybrid inverter with built-in MPPT
+No standalone MPPT needed
+Built-in MPPT handles panel connection directly
+Off-grid system: panels to battery, separate inverter
+Standalone MPPT required
+Inverter does not manage panel charging
+Adding solar to existing battery bank
+Add standalone MPPT
+Allows solar charging without replacing existing inverter
+Very large array exceeding inverter MPPT capacity
+Add external MPPT in parallel
+Offloads excess panel power to additional charge controller
+Budget system with basic off-grid inverter
+Standalone MPPT required
+Basic inverters do not include MPPT function
+20.2  MPPT Sizing Calculation
+MPPT Current Rating (A) = Total Panel Wattage / Battery Bank Voltage
+Example: 2,000W at 48V:
+2,000 / 48
+= 41.7A
+Round up with 25% margin:
+41.7 x 1.25
+= 52A
+Select MPPT rating:
+Next standard size above 52A
+= 60A MPPT
+Also check:
+Panel string Voc must be within MPPT input voltage range
+Verify always
+20.3  EPever Tracer AN Series Configuration
+EPever Tracer is the most common standalone MPPT brand in Nigeria. The AN series controllers have a built-in LCD display for basic settings and use the MT50 remote display or PC software (SolarStation Monitor) for advanced configuration.
+Battery type: Select LiFePO4 or User (custom) in the battery type menu.
+Charge voltage: Set bulk, absorption, and float voltages to match battery specification.
+Temperature compensation: Disable for Lithium batteries (temperature compensation is for lead-acid only).
+Equalisation: Disable for Lithium batteries.
+Load output: Configure load output terminal if controlling DC loads directly from the controller.
+BRAND GUIDE: EPever Tracer AN
+Access settings using the MT50 remote display or PC software via the RS485 port. Battery type selection is the most critical setting. Select LiFePO4 if available in the firmware. If not available, select User and manually enter: Bulk = 56.4V, Absorption = 56.4V, Float = 54V, Equalization = OFF for a 48V Lithium system. EPever mobile app also available for some models with Bluetooth module.
+20.4  Victron SmartSolar Configuration
+Victron SmartSolar controllers are configured entirely through the VictronConnect app via Bluetooth. No display or buttons are required. The app provides real-time data, full setting access, and historical yield data.
+Download VictronConnect app on your smartphone.
+Open app and tap the SmartSolar device that appears via Bluetooth.
+Tap Settings (gear icon) and select Battery.
+Select preset battery type or choose Expert mode for manual voltage entry.
+For Lithium LiFePO4: set absorption voltage 56.4V, float voltage 54V, tail current 1A, absorption time maximum 1 hour.
+Disable temperature compensation and disable equalisation.
+Enable BatteryLife if the battery has no BMS communication with the SmartSolar.
+PRO INSTALLER TIP
+The VictronConnect yield history shows daily, monthly, and annual solar generation from the SmartSolar controller. This data is invaluable for verifying system performance against design expectations and for troubleshooting underperformance. Share the VictronConnect access with the client as a professional value-added service.
+20.5  Common Standalone MPPT Mistakes
+COMMON MISTAKE: Panel String Voltage Exceeds MPPT Input Maximum
+The standalone MPPT controller has its own maximum input voltage specification independent of any inverter. Always verify that the panel string Voc is below the MPPT controller maximum input voltage, not just below the inverter MPPT maximum. A 3-panel string with 45V Voc per panel produces 135V which exceeds the 100V maximum of many basic MPPT controllers.
+KEY TAKEAWAYS
+Standalone MPPT is required for off-grid systems with separate inverters
+MPPT current rating = Total panel watts / Battery voltage, then round up with 25% margin
+EPever Tracer: configure via MT50 remote display or PC software via RS485
+Victron SmartSolar: configure entirely via VictronConnect app over Bluetooth
+Always disable temperature compensation and equalisation for Lithium batteries
+Verify panel string Voc is below the MPPT controller maximum input voltage
+CHAPTER
+21
+Cold Temperature String Voltage Calculation
+The most common cause of MPPT controller failure in solar installations is not overload or surge. It is panel string voltage exceeding the MPPT maximum input voltage on a cold morning. Panel voltage rises as temperature falls. A string that is safely within the MPPT limit at 25 degrees C may exceed it by 15 to 20% on a cold harmattan morning at 5 degrees C.
+Figure 21.1: Panel Voc versus temperature curve showing the danger zone below 10 degrees C. The STC (Standard Test Condition) measurement at 25 degrees C understates real-world maximum voltage. Always calculate cold Voc before finalising string design.
+21.1  Why Panel Voltage Rises in Cold Weather
+Solar panels are rated at Standard Test Conditions (STC): 1,000 W/m2 irradiance at 25 degrees C cell temperature. The temperature coefficient (Pmax) printed on the panel nameplate tells you by how much the panel output changes per degree of temperature change. For voltage, the coefficient is always negative, meaning voltage increases as temperature decreases.
+Cold Voc = Nominal Voc x (1 + |Temp Coefficient| x (STC Temp - Minimum Temp) / 100)
+Example: A panel with Voc = 45V and temperature coefficient of -0.35% per degree C. On a cold morning at 5 degrees C (20 degrees below STC temperature of 25 degrees C): Cold Voc = 45 x (1 + 0.35 x 20 / 100) = 45 x 1.07 = 48.15V per panel.
+21.2  When This Matters in Nigeria
+Nigeria is a tropical country and most locations rarely see temperatures below 15 degrees C. However, during the harmattan season (November to February), northern Nigeria can experience early morning temperatures as low as 5 to 8 degrees C. Combined with high altitude locations like Jos Plateau (which sees temperatures approaching 0 degrees C in December), the cold Voc calculation becomes very important.
+Location
+Minimum Temperature
+Voc Increase per Panel
+Risk Level
+Lagos (coastal)
+18 degrees C minimum
+45V x 1.024 = 46.1V
+Low risk
+Abuja
+12 degrees C minimum
+45V x 1.045 = 47.0V
+Moderate risk
+Kano
+8 degrees C minimum
+45V x 1.059 = 47.7V
+Moderate risk
+Jos Plateau
+2 to 4 degrees C minimum
+45V x 1.073 = 48.3V
+High risk for long strings
+South Africa (Joburg)
+-2 to 5 degrees C minimum
+45V x 1.094 = 49.2V
+Very high risk
+21.3  Step-by-Step Cold Voc Calculation
+Find the panel temperature coefficient from the panel datasheet. It is labelled Pmax Temperature Coefficient or Voc Temperature Coefficient.
+Identify the minimum expected temperature at the installation site. Use local weather data or the values in the table above.
+Calculate the temperature difference: STC temperature (25 degrees C) minus minimum site temperature.
+Calculate the Voc increase factor: 1 plus (|coefficient| x temperature difference / 100).
+Calculate cold Voc per panel: Nominal Voc x increase factor.
+Calculate cold string Voc: cold Voc per panel x number of panels in series.
+Compare cold string Voc to inverter MPPT maximum input voltage. Cold string Voc must be below MPPT maximum.
+Panel specs:
+Voc = 45V, Temp coeff = -0.35%/C
+Site minimum temp:
+5 degrees C (northern Nigeria harmattan)
+Temp difference:
+25 - 5
+= 20 degrees C
+Voc increase factor:
+1 + (0.35 x 20 / 100)
+= 1.07
+Cold Voc per panel:
+45 x 1.07
+= 48.15V per panel
+3 panels in series:
+48.15 x 3
+= 144.5V cold string Voc
+Inverter MPPT max:
+145V
+JUST within limit (risky)
+Recommendation:
+Use 2 panels in series instead
+96.3V = clearly safe
+DANGER: Never Design String Voltage to Exact MPPT Maximum
+Some installers calculate that their cold string Voc is exactly at or just 1V below the MPPT maximum and consider this acceptable. It is not. The temperature coefficient has a tolerance of plus or minus 10%. A panel rated at -0.35%/C may actually be -0.385%/C. The minimum temperature estimate may be optimistic. Leave at least a 10% safety margin below the MPPT maximum. If cold Voc is within 10% of the MPPT maximum, reduce the number of panels in the string.
+KEY TAKEAWAYS
+Panel Voc increases as temperature decreases. Cold mornings produce the highest string voltage
+Cold Voc = Nominal Voc x (1 + |Temp Coeff| x (25 - Min Temp) / 100)
+Calculate cold Voc for the minimum expected site temperature before finalising string design
+Cold string Voc must be at least 10% below the inverter MPPT maximum input voltage
+Northern Nigeria harmattan can bring temperatures to 5 to 8 degrees C in December
+Jos Plateau and high altitude locations are highest risk for cold Voc exceedance in Nigeria
+CHAPTER
+22
+System Commissioning Report Template
+A commissioning report is the official document that records every measurement taken, every setting configured, and every check completed during the installation and commissioning process. It serves three critical purposes: it proves to the client that the work was done professionally and completely, it protects the installer legally if a dispute arises about installation quality, and it provides the baseline data for future maintenance and troubleshooting.
+Figure 22.1: Solar system commissioning report template. Complete every field during commissioning and obtain client signature before leaving the site. Keep a copy for your project records.
+22.1  Why Every Installation Needs a Commissioning Report
+A commissioning report is not bureaucracy. It is professional protection and quality assurance. Consider these scenarios:
+A client claims the inverter was never properly configured. Your commissioning report shows the exact settings recorded on installation day.
+A battery fails 18 months after installation. Your commissioning report shows the charge voltage was correctly set. The fault is in the battery, not the installation.
+You return to a site for maintenance a year later. The commissioning report tells you exactly what was installed, what settings were used, and what measurements were recorded at installation.
+A client wants to add more panels or batteries. The commissioning report tells you the existing string configuration, inverter settings, and battery bank size without needing to open anything.
+22.2  What the Commissioning Report Must Include
+Section
+Required Information
+Why It Matters
+Project Information
+Client name, site address, dates, equipment serial numbers
+Unique identification for the project in your records
+Commissioning Measurements
+All measured voltages, currents, earth resistance values
+Baseline data for comparing future performance
+Inverter Settings
+All configured parameter values
+Proof of correct configuration and reference for future
+Communication Setup
+Protocol used, connection verified, BMS data confirmed
+Confirms battery communication is working correctly
+Panel Configuration
+Number of strings, panels per string, string Voc measured
+Reference for future panel additions or troubleshooting
+Battery Configuration
+Number of batteries, series and parallel arrangement, total Ah
+Reference for future battery additions or replacements
+Client Training
+Topics covered, client signature confirming training received
+Confirms client knows how to use their system
+Installer Certification
+Installer name, reference number, date, signature
+Professional accountability and quality assurance
+22.3  Completing the Report During Commissioning
+The commissioning report must be completed during the commissioning process, not afterwards from memory. Every measurement should be recorded immediately when taken. Every setting should be recorded as it is entered into the inverter. Do not rely on memory to complete the report after the job is done.
+Bring printed commissioning report forms to every installation.
+Record panel string Voc measurements as you take them.
+Record every inverter setting as you configure it.
+Record earth resistance measurements from the earth tester.
+Note the BMS communication status and what data appears on the inverter display.
+Walk the client through the system and record what you demonstrated.
+Obtain client signature before leaving the site.
+Photograph the completed report and keep digital copy in your project records.
+TIP: Send a Digital Copy to the Client
+After completing the commissioning report, photograph all pages and send the images to the client via WhatsApp or email. This gives the client a permanent record of their system specifications that they can refer to independently. It also reinforces your professional image and reduces future enquiries about system specifications.
+22.4  Using the Commissioning Report for Warranty Claims
+All major inverter and battery brands require evidence of correct installation before honouring warranty claims. A completed commissioning report showing correct charge voltage settings, correct communication configuration, and correct installation measurements is the strongest evidence that the installation was done correctly and that any fault is in the equipment, not the installation.
+PRO INSTALLER TIP
+Keep digital copies of all commissioning reports in a cloud-based folder (Google Drive or Dropbox) organised by client name and date. This gives you instant access to any project record from your phone. When a client calls with a question about their system two years after installation, you can pull up their commissioning report within seconds and give them accurate information.
+KEY TAKEAWAYS
+A commissioning report protects you legally and professionally on every installation
+Complete the report during commissioning, not afterwards from memory
+Record every measurement as you take it and every setting as you enter it
+Obtain client signature before leaving the site
+Send a digital copy to the client immediately after completion
+Keep all commissioning reports in cloud storage for instant access from anywhere
+A completed commissioning report is required evidence for most equipment warranty claims
+Appendix
+Brand Settings Comparison Table
+Function
+Deye Setting
+Growatt Parameter
+SRNE Menu
+Voltronic Setting
+Working Mode
+Setting 01
+Parameter 01
+Menu 01
+Setting 01
+Battery Type
+Setting 05
+Parameter 05
+Menu 02
+Setting 05
+Battery Capacity (Ah)
+Setting 09
+Parameter 17
+Menu 16
+Setting 20
+Max Charge Voltage
+Setting 13
+Parameter 57
+Menu 26
+Setting 26
+Low Battery Cutoff
+Setting 12
+Parameter 29
+Menu 29
+Setting 29
+Max AC Charge Current
+Setting 10
+Parameter 11
+Menu 11
+Setting 11
+Parallel Mode
+Setting 28
+Work Mode PAR
+Phase menu
+Setting 27
+Generator SOC Start
+Setting 62
+Parameter 33
+Menu 30
+Setting 12
+Generator SOC Stop
+Setting 63
+Parameter 34
+Menu 31
+Setting 13
+Communication Protocol Summary
+Protocol
+Cable Type
+Max Length
+Direction
+Typical Use
+CAN Bus
+RJ45 (pins 4 and 5)
+5 metres
+Bidirectional
+Lithium BMS to inverter (most Deye, newer Growatt)
+RS485
+RJ45 (pins 1,2,3,6) or 2-wire
+100 metres
+Bidirectional
+Lithium BMS to inverter (Pylontech, LBSA, most brands)
+Parallel Comms
+Proprietary RJ45
+As supplied by manufacturer
+Master to slave
+Inverter-to-inverter sync for parallel operation
+VE.Bus
+RJ45
+10 metres
+Bidirectional
+Victron inverter-to-Cerbo GX
+USB
+Standard USB cable
+5 metres
+Bidirectional
+Firmware update, PC monitoring, data logging
+WiFi
+802.11 b/g/n
+WiFi range
+One-way (upload)
+Remote monitoring via smartphone app
+Cable Type Reference
+Cable Type
+Application
+Key Property
+Notes
+UV-rated DC solar cable (PV cable)
+Panel strings to combiner or MPPT
+UV resistant insulation
+Orange or red/black, rated for outdoor use
+Flexible welding cable
+Battery to inverter connections
+Multi-strand, highly flexible
+Best for high-current, vibration-resistant connections
+Standard flexible copper cable
+AC wiring, internal cable runs
+Cost effective
+Not suitable for outdoor PV cable runs
+Twisted pair (CAT5 or CAT6)
+Communication cables (CAN, RS485)
+Twisted pair reduces electrical noise
+Use for BMS communication cables
+2-core cable
+Dry contact, generator signal
+Light duty signal cable
+1.5mm2 sufficient for dry contact signals
+Green-yellow cable
+Earth and protective bonding
+Colour identification
+Always use green-yellow for earth conductors only
+Glossary of Configuration Terms
+Term
+Definition
+ATS (Automatic Transfer Switch)
+Internal switch in hybrid inverter that transfers between grid, generator, and battery supply without interruption.
+BMS (Battery Management System)
+Electronic circuit in Lithium batteries that monitors cell voltages, temperature, and controls charge and discharge.
+CAN Bus
+Controller Area Network. High-speed bidirectional communication protocol used between battery BMS and inverter.
+Daisy Chain
+Connecting devices in series (A to B to C) rather than all connected back to one point.
+DoD (Depth of Discharge)
+Maximum percentage of battery capacity safely usable before recharging. Lithium: 80%, Lead-acid: 50%.
+Dry Contact
+Low-current switching output on inverter for controlling external devices via relay.
+MPPT (Maximum Power Point Tracking)
+Algorithm in charge controller that continuously adjusts operating point to maximise panel power output.
+Modbus
+Serial communication protocol used over RS485 for device data exchange.
+Parallel Communication
+Proprietary cable between parallel inverters that synchronises their output frequency, voltage, and phase.
+RS485
+Serial communication standard using differential signalling for noise-resistant long-distance data transmission.
+Self-Use Mode
+Inverter operating mode: solar powers loads first, excess charges battery, grid used as last resort.
+SOC (State of Charge)
+Percentage of remaining battery capacity expressed as a percentage of total capacity.
+String
+Series connection of solar panels. Voltage = sum of panel voltages.
+TOU (Time of Use)
+Inverter mode that charges and discharges battery at scheduled times to maximise cost savings.
+Vmp
+Maximum power voltage. The panel operating voltage at maximum power output. Used for MPPT range check.
+Voc
+Open circuit voltage. Maximum voltage a solar panel produces with no load connected. Used for string design.
+Configure It Right   |   Imam Musa   |   Musstech Solar Energy   |   2025 Edition
+The right configuration is what makes the difference between a system that works and a system that performs.

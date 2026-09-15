@@ -1,0 +1,3833 @@
+FILE: Calculate it Right.pdf
+PAGES: 65
+
+--- PAGE 1 ---
+ 
+ 
+ 
+  CALCULATE  IT  RIGHT
+ The  Complete  Calculation  Guide  for  Solar  Installers Calculations    |    Pro  Tips    |    Common  Mistakes    |    Real  Examples 
+     IMAM  MUSA Solar  Energy  Consultant  and  Technical  Trainer Musstech  Solar  Energy    |    2026   Edition 
+ 
+
+
+--- PAGE 2 ---
+TABLE  OF  CONTENTS  
+Introduction            3         About  This  Book  and  How  to  Use  It         3
+   Chapter  1    Understanding  Energy  Units 4         1.1    Watts,  Watt-Hours  and  Kilowatt-Hours        4
+         1.2    Peak  Sun  Hours  Explained         6
+         1.3    System  Efficiency:  The  75%  Rule        8
+         1.4    Duty  Cycle:  How  Long  Appliances  Really  Run       10
+         1.5    Key  Takeaways  and  Practice  Exercises       12
+   Chapter  2    Load  Calculation 13         2.1    The  6-Step  Load  Calculation  Process        13
+         2.2    Beginner  Example:  Studio  Apartment        15
+         2.3    Intermediate  Example:  3-Bedroom  Home       17
+         2.4    Advanced  Example:  Office  with  AC        19
+         2.5    Professional  Example:  Large  Home  with  Multiple  ACs      21
+         2.6    Tips  and  Common  Mistakes  in  Load  Calculation      23
+   Chapter  3    Solar  Panel  Sizing 24         3.1    The  Panel  Sizing  Formula         24
+         3.2    Why  We  Use  75%  System  Efficiency        24
+         3.3    Panel  Sizing  Examples  at  4  Levels        26
+         3.4    Choosing  the  Right  Panel  Wattage        28
+         3.5    Tips  and  Common  Mistakes  in  Panel  Sizing       29
+   Chapter  4    Battery  Sizing 30         4.1    Battery  Sizing  Using  Nighttime  Load        30
+         4.2    Depth  of  Discharge:  Lithium  vs  Lead-Acid       31
+         4.3    Battery  Lifecycle  at  Different  DoD  Levels       32
+         4.4    Battery  Sizing  Examples  at  4  Levels        33
+         4.5    Tips  and  Common  Mistakes  in  Battery  Sizing       35
+   Chapter  5    Inverter  Sizing 36         5.1    The  Inverter  Sizing  Formula         36
+         5.2    Motor  Surge  Factor  Table         36
+         5.3    Inverter  Sizing  Examples  at  4  Levels        38
+         5.4    Tips  and  Common  Mistakes  in  Inverter  Sizing       40
+   Chapter  6    Series  and  Parallel  Calculations 41         6.1    Series:  Voltage  Calculation         41
+         6.2    Parallel:  Capacity  Calculation         42
+ 
+Calculate  It  Right|     Page  2
+ 
+
+--- PAGE 3 ---
+        6.3    Series-Parallel  Combination  Examples        43
+         6.4    Panel  String  Voltage  Calculation        44
+   Chapter  7    Cable  Sizing  Calculations 45         7.1    DC  Cable  Sizing          45
+         7.2    AC  Cable  Sizing          46
+         7.3    Voltage  Drop  Calculation         47
+   Chapter  8    Complete  System  Design  Examples 48         8.1    Case  Study  A:  Residential  2-Bedroom  Flat       48
+         8.2    Case  Study  B:  Small  Commercial  Office       51
+   Chapter  9    Top  20  Calculation  Mistakes 54         Mistakes  1  to  10:  Calculation  and  Sizing  Errors       54
+         Mistakes  11  to  20:  Wiring  and  Field  Errors        56
+   Chapter  10    Quick  Reference  Calculator 58         10.1   All  Formulas  at  a  Glance         58
+         10.2   Common  HP  Conversions         59
+         10.3   Quick  Sizing  Reference  Table         60
+   Chapter  11    Nameplate  Reading  Guide 61         11.1   Solar  Panel  Nameplate  Diagram  and  Explanation      61
+         11.2   Battery  Nameplate  Diagram  and  Explanation       63
+         11.3   Inverter  Nameplate  Diagram  and  Explanation       65
+   Chapter  12    Tilt  Angle  and  Panel  Orientation 67         12.1   Orientation  Rule  by  Hemisphere        67
+         12.2   Tilt  Angle  Impact  on  Annual  Output  by  Region       68
+   Chapter  13    System  Voltage  Selection  Guide 70         13.1   How  System  Voltage  Affects  Cable  Size  and  Cost      70
+         13.2   Voltage  Selection  Guide  by  System  Size       71
+   Chapter  14    Autonomy  Days  Calculation 73         14.1   Autonomy  Days  Formula  and  Worked  Examples      73
+         14.2   Autonomy  Recommendation  by  Region  in  Nigeria      74
+   Chapter  15    Cost  Per  kWh  Calculator 76         15.1   Generator  Cost  Per  kWh  Calculation        76
+         15.2   Solar  Cost  Per  kWh  Calculation        77
+ 
+Calculate  It  Right|     Page  3
+ 
+
+--- PAGE 4 ---
+        15.3   The  20-Year  Comparison  That  Closes  Sales78
+   Chapter  16    Seasonal  Load  and  Output  Variation 80         16.1   How  Seasons  Affect  Solar  Output  in  Nigeria       80
+         16.2   Designing  for  the  Worst-Case  Season        81
+   Chapter  17    Maintenance  Schedule  Calculator 83         17.1   Monthly  Maintenance  Tasks         83
+         17.2   Quarterly  Maintenance  Tasks         84
+         17.3   Component  Replacement  Timeline  with  Costs       85
+   Chapter  18    Complete  System  Design  Process 87         18.1   Load  Calculation  Flowchart:  All  8  Steps       87
+         18.2   Complete  System  Wiring  Diagram  with  Labels       88
+   Chapter  19    Cable  Sizing  Visual  Reference 90         19.1   Cable  Cross-Section  Diagram  to  Scale       90
+         19.2   Cable  Size  by  System  Size  Quick  Reference  Table      91
+   Appendix    Formulas,  Tables  and  Glossary 93         Duty  Cycle  Reference  Table         93
+         Glossary  of  Key  Calculation  Terms         93
+  
+Calculate  It  Right|     Page  4
+ 
+
+--- PAGE 5 ---
+Introduction 
+This  book  exists  because  most  solar  failures  in  the  field  are  not  hardware  failures.  
+They
+ 
+are
+ 
+calculation
+ 
+failures.
+ 
+A
+ 
+correctly
+ 
+sized
+ 
+system,
+ 
+properly
+ 
+installed,
+ 
+will
+ 
+run
+ 
+reliably
+ 
+for
+ 
+20
+ 
+years.
+ 
+An
+ 
+incorrectly
+ 
+calculated
+ 
+system
+ 
+will
+ 
+disappoint
+ 
+the
+ 
+customer
+ 
+within
+ 
+weeks
+ 
+and
+ 
+destroy
+ 
+your
+ 
+reputation
+ 
+along
+ 
+with
+ 
+it. Solar  Calculation  Mastery  takes  you  through  every  calculation  you  will  ever  need  as  
+a
+ 
+solar
+ 
+installer
+ 
+or
+ 
+consultant,
+ 
+from
+ 
+basic
+ 
+energy
+ 
+units
+ 
+all
+ 
+the
+ 
+way
+ 
+to
+ 
+complete
+ 
+multi-load
+ 
+system
+ 
+design.
+ 
+Every
+ 
+formula
+ 
+is
+ 
+explained.
+ 
+Every
+ 
+step
+ 
+is
+ 
+shown.
+ 
+Every
+ 
+chapter
+ 
+includes
+ 
+diagrams
+ 
+for
+ 
+visual
+ 
+understanding,
+ 
+worked
+ 
+examples
+ 
+at
+ 
+multiple
+ 
+skill
+ 
+levels,
+ 
+pro
+ 
+tips
+ 
+from
+ 
+real
+ 
+field
+ 
+experience,
+ 
+and
+ 
+the
+ 
+common
+ 
+mistakes
+ 
+that
+ 
+catch
+ 
+most
+ 
+installers. Whether  you  are  calculating  your  first  studio  apartment  system  or  designing  a  large  
+commercial
+ 
+installation
+ 
+with
+ 
+multiple
+ 
+air
+ 
+conditioners,
+ 
+this
+ 
+book
+ 
+gives
+ 
+you
+ 
+the
+ 
+confidence
+ 
+to
+ 
+get
+ 
+every
+ 
+number
+ 
+right
+ 
+every
+ 
+single
+ 
+time.  
+TIP:  How  to  Use  This  Book Read  Chapters  1  to  5  in  order  as  each  builds  on  the  previous  one.  Chapters  6  and  7  cover  wiring  and  cable  calculations.  Chapter  8  brings  everything  together  in  complete  real  case  studies.  Chapters  9  and  10  are  field  references.  Chapters  11  to  19  cover  advanced  topics  including  business  tools,  seasonal  planning,  and  maintenance.  Keep  this  book  with  you  on  every  site  visit.  
+Calculate  It  Right|     Page  5
+ 
+
+--- PAGE 6 ---
+CHAPTER
+ 
+1 
+Understanding  Energy  Units 
+ Before  you  can  calculate  anything  in  solar,  you  must  understand  the  four  
+fundamental
+ 
+units
+ 
+of
+ 
+energy
+ 
+measurement.
+ 
+These
+ 
+are
+ 
+not
+ 
+just
+ 
+academic
+ 
+concepts.
+ 
+They
+ 
+are
+ 
+the
+ 
+building
+ 
+blocks
+ 
+of
+ 
+every
+ 
+single
+ 
+calculation
+ 
+you
+ 
+will
+ 
+ever
+ 
+make
+ 
+as
+ 
+a
+ 
+solar
+ 
+installer.
+ 
+Getting
+ 
+these
+ 
+wrong
+ 
+from
+ 
+the
+ 
+start
+ 
+means
+ 
+every
+ 
+calculation
+ 
+that
+ 
+follows
+ 
+will
+ 
+also
+ 
+be
+ 
+wrong. This  chapter  explains  each  unit  clearly  with  real  appliance  examples,  visual  
+diagrams,
+ 
+and
+ 
+the
+ 
+critical
+ 
+mistakes
+ 
+that
+ 
+trip
+ 
+up
+ 
+most
+ 
+beginners.
+ 
+Take
+ 
+your
+ 
+time
+ 
+here.
+ 
+Master
+ 
+these
+ 
+four
+ 
+concepts
+ 
+and
+ 
+the
+ 
+rest
+ 
+of
+ 
+this
+ 
+book
+ 
+becomes
+ 
+straightforward.  
+1.1   Watts,  Watt-Hours  and  Kilowatt-Hours The  single  most  important  distinction  in  solar  calculations  is  the  difference  between  
+Watts
+ 
+and
+ 
+Watt-Hours.
+ 
+These
+ 
+two
+ 
+units
+ 
+are
+ 
+constantly
+ 
+confused
+ 
+by
+ 
+beginners,
+ 
+and
+ 
+that
+ 
+confusion
+ 
+leads
+ 
+to
+ 
+systems
+ 
+that
+ 
+are
+ 
+either
+ 
+dangerously
+ 
+undersized
+ 
+or
+ 
+unnecessarily
+ 
+expensive.  
+ Figure  1.1:  Watts  measures  power  at  any  moment.  Watt-Hours  measures  energy  consumed  over  
+time.
+ 
+Every
+ 
+solar
+ 
+calculation
+ 
+uses
+ 
+Watt-Hours,
+ 
+not
+ 
+Watts.
+  Unit Symbol What  It  Measures Real-World  Example 
+Watt W 
+Power  consumed  at  any  single  moment 
+A  75W  ceiling  fan  uses  75W  while  spinning 
+Watt-Hour Wh 
+Energy  used  over  time  (Power  x  Time) 
+That  fan  running  for  8  hours  uses  600Wh 
+Calculate  It  Right|     Page  6
+ 
+
+
+--- PAGE 7 ---
+Kilowatt-Hour 
+kWh 
+1,000  Watt-hours  (used  on  electricity  bills) 
+600Wh  is  the  same  as  0.6  kWh Ampere-Hour 
+Ah 
+Battery  capacity  (how  much  charge  it  stores) 
+A  200Ah  battery  at  12V  stores  2,400Wh  
+Energy  (Wh)  =  Power  (W)  x  Time  (Hours)  This  formula  is  the  foundation  of  every  load  calculation  in  this  book.  You  will  use  it  
+hundreds
+ 
+of
+ 
+times.
+ 
+Let
+ 
+us
+ 
+walk
+ 
+through
+ 
+it
+ 
+with
+ 
+five
+ 
+common
+ 
+household
+ 
+appliances
+ 
+so
+ 
+the
+ 
+relationship
+ 
+becomes
+ 
+completely
+ 
+clear.  
+Appliance 
+Power  (Watts) 
+Time  Used  Per  Day 
+Energy  Calculation 
+Daily  Energy 
+LED  Light  Bulb 15W 6  hours 15  x  6 =  90  Wh/day Ceiling  Fan 75W 8  hours 75  x  8 =  600  Wh/day LED  Television 100W 5  hours 100  x  5 =  500  Wh/day Laptop  Computer 65W 4  hours 65  x  4 =  260  Wh/day 
+Refrigerator 200W 
+10  effective  hours 
+200  x  10 
+=  2,000  Wh/day  
+COMMON  MISTAKE:  Confusing  Watts  with  Watt-Hours The  most  common  beginner  mistake  is  stating  that  a  system  needs  5,000  Watts  when  they  actually  mean  5,000  Watt-Hours  per  day.  Watts  is  power  (at  any  single  moment).  Watt-Hours  is  energy  (accumulated  over  time).  A  200W  refrigerator  running  for  10  hours  does  NOT  use  200  Wh.  It  uses  200  x  10  =  2,000  Wh.  Always  multiply  by  time.  Never  use  the  wattage  figure  alone  as  your  energy  figure.  Question: How  much  energy  does  a  150W  fridge  use  in  one  day? 
+ 
+Wrong  answer: 150  Wh  (forgetting  to  multiply  by  time) INCORRECT Correct  answer: 150W  x  10  effective  hours =  1,500  Wh/day Difference: 1,500  -  150 10x  underestimate!  
+Calculate  It  Right|     Page  7
+ 
+
+--- PAGE 8 ---
+1.2   Peak  Sun  Hours  Explained Peak  Sun  Hours  (PSH)  is  the  most  misunderstood  concept  in  solar  calculations.  
+Many
+ 
+beginners
+ 
+assume
+ 
+it
+ 
+means
+ 
+the
+ 
+number
+ 
+of
+ 
+hours
+ 
+the
+ 
+sun
+ 
+is
+ 
+visible.
+ 
+It
+ 
+does
+ 
+not.
+ 
+Understanding
+ 
+what
+ 
+it
+ 
+actually
+ 
+means
+ 
+is
+ 
+essential
+ 
+for
+ 
+accurate
+ 
+panel
+ 
+sizing.  
+ Figure  1.2:  Peak  Sun  Hours  across  Africa.  Northern  Nigeria  receives  up  to  7  PSH  per  day.  The  
+standard
+ 
+design
+ 
+value
+ 
+for
+ 
+all
+ 
+African
+ 
+regions
+ 
+is
+ 
+5
+ 
+PSH
+ 
+per
+ 
+day.
+  A  Peak  Sun  Hour  is  defined  as  one  hour  during  which  solar  irradiance  averages  
+1,000
+ 
+watts
+ 
+per
+ 
+square
+ 
+metre.
+ 
+This
+ 
+is
+ 
+the
+ 
+standard
+ 
+test
+ 
+condition
+ 
+used
+ 
+to
+ 
+rate
+ 
+solar
+ 
+panels
+ 
+(called
+ 
+STC:
+ 
+Standard
+ 
+Test
+ 
+Conditions). In  practice,  the  sun  does  not  shine  at  1,000  W/m2  all  day.  It  is  weaker  in  the  early  
+morning
+ 
+and
+ 
+late
+ 
+afternoon,
+ 
+and
+ 
+strongest
+ 
+around
+ 
+midday.
+ 
+The
+ 
+PSH
+ 
+figure
+ 
+converts
+ 
+the
+ 
+total
+ 
+daily
+ 
+solar
+ 
+energy
+ 
+into
+ 
+an
+ 
+equivalent
+ 
+number
+ 
+of
+ 
+full-intensity
+ 
+hours.
+ 
+So
+ 
+when
+ 
+we
+ 
+say
+ 
+Africa
+ 
+averages
+ 
+5
+ 
+PSH,
+ 
+we
+ 
+mean:  What  5  PSH  means: Total  daily  solar  energy  equals  5  hours  at  full  1,000  W/m2  intensity 
+ 
+Actual  sunshine: Sun  may  be  visible  for  10  to  12  hours  per  day 
+ 
+But  useful  energy: Only  equivalent  to  5  hours  at  full  rated  panel  output 
+ 
+Design  standard: Use  5  PSH  for  all  African  locations  unless  site  data  available 
+Safe  and  reliable 
+ 
+Region  in  Africa Latitude Average  PSH 
+Solar  Potential 
+Design  Notes 
+Calculate  It  Right|     Page  8
+ 
+
+
+--- PAGE 9 ---
+Northern  Nigeria  (Kano,  Maiduguri) 
+12  degrees  N 
+6.0  to  7.0 Excellent 
+Can  use  6.0  for  accurate  sizing Middle  Belt  Nigeria  (Abuja,  Jos) 
+9  degrees  N 
+5.5  to  6.0 Very  Good 
+Use  5.5  for  conservative  design Southern  Nigeria  (Lagos,  Port  Harcourt) 
+6  degrees  N 
+4.5  to  5.5 Good Use  5.0  for  design 
+Ghana,  Ivory  Coast,  Senegal 
+5  to  8  degrees  N 
+5.0  to  6.0 Very  Good Use  5.0  for  design 
+Kenya,  Ethiopia,  Tanzania 
+0  to  9  degrees  N 
+5.5  to  6.5 Excellent Use  5.5  for  design 
+South  Africa  (Johannesburg) 
+26  degrees  S 
+5.5  to  6.5 Excellent Use  5.5  for  design 
+Democratic  Republic  of  Congo 
+0  to  5  degrees  S 
+4.0  to  5.0 Fair 
+Use  4.5,  heavy  cloud  cover  
+PRO  INSTALLER  TIP Always  use  5  PSH  as  your  standard  design  value  for  Africa  unless  you  have  site-specific  irradiance  data.  This  value  gives  a  conservative  and  reliable  result  that  works  across  all  regions.  Using  a  higher  value  to  save  money  on  panels  is  a  false  economy  that  leads  to  disappointed  customers  during  the  rainy  season  or  on  overcast  days.  
+Calculate  It  Right|     Page  9
+ 
+
+--- PAGE 10 ---
+1.3   System  Efficiency:  The  75%  Rule If  a  400W  solar  panel  receives  5  hours  of  full-intensity  sunlight,  how  much  energy  
+does
+ 
+it
+ 
+deliver
+ 
+to
+ 
+your
+ 
+appliances?
+ 
+The
+ 
+naive
+ 
+answer
+ 
+is
+ 
+400
+ 
+x
+ 
+5
+ 
+=
+ 
+2,000
+ 
+Wh.
+ 
+The
+ 
+correct
+ 
+professional
+ 
+answer
+ 
+is
+ 
+400
+ 
+x
+ 
+5
+ 
+x
+ 
+0.75
+ 
+=
+ 
+1,500
+ 
+Wh.
+ 
+The
+ 
+difference
+ 
+of
+ 
+500
+ 
+Wh
+ 
+per
+ 
+day,
+ 
+per
+ 
+panel,
+ 
+adds
+ 
+up
+ 
+to
+ 
+enormous
+ 
+undersizing
+ 
+in
+ 
+a
+ 
+complete
+ 
+system.  
+ Figure  1.3:  Where  the  missing  25%  of  solar  energy  goes.  Temperature,  dust,  inverter  conversion,  
+cable
+ 
+resistance,
+ 
+and
+ 
+MPPT
+ 
+tracking
+ 
+all
+ 
+reduce
+ 
+real-world
+ 
+output
+ 
+below
+ 
+the
+ 
+theoretical
+ 
+maximum.
+  Real-world  solar  systems  experience  six  categories  of  energy  loss  between  the  
+panel
+ 
+and
+ 
+your
+ 
+appliances.
+ 
+Together
+ 
+these
+ 
+losses
+ 
+typically
+ 
+reduce
+ 
+output
+ 
+by
+ 
+20
+ 
+to
+ 
+30%.
+ 
+Using
+ 
+75%
+ 
+efficiency
+ 
+(0.75)
+ 
+as
+ 
+your
+ 
+derating
+ 
+factor
+ 
+is
+ 
+the
+ 
+accepted
+ 
+professional
+ 
+standard.  
+Loss  Source 
+Typical  Loss 
+Explanation 
+Temperature  losses 5  to  10% 
+Panels  lose  approximately  0.4%  of  rated  power  per  degree  C  above  25  degrees  C.  Nigerian  roof  temperatures  regularly  reach  60  to  70  degrees  C,  causing  significant  losses. 
+Dust  and  soiling 2  to  5% 
+Dust,  bird  droppings,  and  pollen  on  the  panel  surface  reduce  light  reaching  the  cells.  Harmattan  season  makes  this  worse. 
+Inverter  conversion 3  to  5% 
+Converting  DC  electricity  from  panels  and  batteries  to  AC  electricity  for  appliances  is  not  100%  efficient.  Typical  inverters  are  88  to  95%  efficient. 
+Cable  resistance 1  to  3% 
+All  cables  have  electrical  resistance.  Current  flowing  through  resistance  generates  heat,  which  is  wasted  energy. 
+Calculate  It  Right|     Page  10
+ 
+
+
+--- PAGE 11 ---
+MPPT  tracking 1  to  2% 
+The  charge  controller  continuously  searches  for  the  panel  maximum  power  point.  It  is  not  perfectly  on  target  100%  of  the  time. 
+Shading  and  mismatch 
+0  to  10% 
+Even  partial  shading  of  one  cell  in  a  panel  can  reduce  the  entire  panel  output  by  50%  or  more.  Different  panels  in  a  string  operating  at  slightly  different  levels  also  cause  mismatch  losses. TOTAL  TYPICAL  LOSS 
+15  to  30% 
+Use  25%  as  your  standard  system  loss.  This  gives  the  75%  efficiency  factor  used  in  all  calculations.  
+Real  Output  (Wh)  =  Panel  Watts  x  Peak  Sun  Hours  x  0.75  
+Panel  Array  Required  (W)  =  Total  Design  Load  (Wh)  /  (PSH  x  0.75)  =  Design  Load  /  3.75  The  number  3.75  in  the  second  formula  is  simply  5  PSH  multiplied  by  0.75  system  
+efficiency.
+ 
+It
+ 
+is
+ 
+the
+ 
+effective
+ 
+daily
+ 
+output
+ 
+in
+ 
+Wh
+ 
+per
+ 
+Watt
+ 
+of
+ 
+panel
+ 
+capacity
+ 
+installed.
+ 
+This
+ 
+single
+ 
+number
+ 
+is
+ 
+the
+ 
+shortcut
+ 
+you
+ 
+will
+ 
+use
+ 
+in
+ 
+every
+ 
+panel
+ 
+sizing
+ 
+calculation
+ 
+in
+ 
+this
+ 
+book.  Theoretical  output: 400W  panel  x  5  PSH =  2,000  Wh/day Real  output  at  75%: 400W  x  5  x  0.75 =  1,500  Wh/day Energy  lost  daily: 2,000  -  1,500 =  500  Wh  lost    Per  year: 500  Wh  x  365  days =  182,500  Wh  lost  annually Panels  needed  (10kWh/day): 
+10,000  /  3.75 =  2,667W  =  6  x  500W  panels Without  efficiency: 10,000  /  5 =  2,000W  =  4  panels  (WRONG!)  
+COMMON  MISTAKE:  Never  Use  Theoretical  Output  for  System  Design An  installer  who  sizes  panels  using  Watts  x  PSH  without  the  0.75  efficiency  factor  will  design  a  system  that  is  25  to  33%  undersized.  The  customer  will  experience  power  shortages,  run  out  of  battery  at  night,  and  blame  the  installer.  Always  use  the  full  formula:  Design  Load  /  3.75.  
+Calculate  It  Right|     Page  11
+ 
+
+--- PAGE 12 ---
+1.4   Duty  Cycle:  How  Long  Appliances  Really  Run Not  every  appliance  runs  continuously  during  the  hours  it  is  switched  on.  
+Refrigerators,
+ 
+freezers,
+ 
+and
+ 
+air
+ 
+conditioners
+ 
+have
+ 
+compressors
+ 
+that
+ 
+automatically
+ 
+switch
+ 
+on
+ 
+and
+ 
+off
+ 
+based
+ 
+on
+ 
+temperature.
+ 
+The
+ 
+duty
+ 
+cycle
+ 
+tells
+ 
+you
+ 
+what
+ 
+fraction
+ 
+of
+ 
+the
+ 
+stated
+ 
+time
+ 
+the
+ 
+appliance
+ 
+is
+ 
+actually
+ 
+drawing
+ 
+its
+ 
+rated
+ 
+power. If  you  calculate  a  refrigerator  as  running  at  200W  for  24  hours  straight,  you  get  4,800  
+Wh
+ 
+per
+ 
+day.
+ 
+The
+ 
+correct
+ 
+calculation
+ 
+with
+ 
+a
+ 
+50%
+ 
+duty
+ 
+cycle
+ 
+gives
+ 
+200W
+ 
+x
+ 
+12
+ 
+effective
+ 
+hours
+ 
+=
+ 
+2,400
+ 
+Wh.
+ 
+That
+ 
+is
+ 
+a
+ 
+100%
+ 
+overestimate.
+ 
+Ignoring
+ 
+duty
+ 
+cycle
+ 
+makes
+ 
+your
+ 
+battery
+ 
+appear
+ 
+twice
+ 
+as
+ 
+large
+ 
+as
+ 
+it
+ 
+needs
+ 
+to
+ 
+be.  
+ Figure  1.4:  Duty  cycle  for  common  appliances.  The  ON  and  OFF  segments  show  when  the  
+compressor
+ 
+or
+ 
+motor
+ 
+is
+ 
+actually
+ 
+running.
+ 
+Fans
+ 
+and
+ 
+lights
+ 
+run
+ 
+at
+ 
+100%
+ 
+duty
+ 
+cycle.
+ 
+Fridges
+ 
+and
+ 
+freezers
+ 
+cycle
+ 
+on
+ 
+and
+ 
+off.
+  
+Appliance 
+Stated  Hours 
+Duty  Cycle 
+Effective  Running  Hours 
+Correct  Energy  Calculation 
+Incorrect  Calculation  (no  duty  cycle) 
+Refrigerator  (standard) 
+24  hrs 50% 12  hours 
+200W  x  12  =  2,400  Wh 
+200W  x  24  =  4,800  Wh  (2x  too  high) 
+Deep  Freezer 24  hrs 40% 9.6  hours 
+150W  x  9.6  =  1,440  Wh 
+150W  x  24  =  3,600  Wh  (2.5x  too  high) 
+Air  Conditioner 8  hrs 80% 6.4  hours 
+1,100W  x  6.4  =  7,040  Wh 
+1,100W  x  8  =  8,800  Wh  (25%  too  high) 
+Ceiling  Fan 8  hrs 100% 8  hours 
+75W  x  8  =  600  Wh 
+75W  x  8  =  600  Wh  (same,  no  cycling) 
+LED  Lights 6  hrs 100% 6  hours 15W  x  6  =  90  Wh 
+15W  x  6  =  90  Wh  (same,  no  cycling) Laptop  Computer 
+5  hrs 100% 5  hours 
+65W  x  5  =  325  Wh 
+65W  x  5  =  325  Wh  (same,  no  cycling) 
+Calculate  It  Right|     Page  12
+ 
+
+
+--- PAGE 13 ---
+ The  duty  cycle  values  used  throughout  this  book  are: •  Refrigerators:  50%  duty  cycle  (compressor  runs  approximately  half  of  stated  
+time) •  Deep  Freezers:  40%  duty  cycle  (colder  setting  means  less  compressor  
+running
+ 
+time) •  Air  Conditioners:  80%  duty  cycle  (cycles  less  frequently,  mostly  runs  when  
+switched
+ 
+on) •  All  other  appliances  (fans,  lights,  TV,  laptop,  pump):  100%  duty  cycle  
+TIP:  Conservative  vs  Accurate  Approach Using  duty  cycle  gives  you  a  more  accurate  and  lower  load  figure,  which  correctly  sizes  the  system  and  saves  your  client  money.  If  you  prefer  a  conservative  approach  with  extra  safety  buffer,  you  can  ignore  duty  cycle  and  calculate  full  stated  hours.  This  oversizes  the  system  by  20  to  50%  but  ensures  the  client  never  runs  short.  Always  tell  the  client  which  approach  you  used  so  they  understand  the  sizing.  
+PRO  INSTALLER  TIP Always  ask  your  client  how  they  actually  use  each  appliance,  not  how  long  they  leave  it  switched  on.  A  client  who  leaves  the  refrigerator  running  24  hours  may  actually  open  it  rarely,  meaning  the  compressor  runs  less  than  40%  of  the  time.  A  client  who  opens  the  fridge  constantly  may  see  60%  duty  cycle.  These  details  matter  for  accurate  large  system  design.  
+1.5   Key  Takeaways  and  Practice  Exercises  KEY  TAKEAWAYS 
+  Watts  measures  power  at  any  moment.  Watt-Hours  measures  energy  consumed  over  time  Energy  (Wh)  =  Power  (W)  x  Time  (Hours).  Always  multiply  by  time,  never  use  watts  alone   Africa  averages  5  Peak  Sun  Hours  per  day.  Use  this  as  your  standard  design  value   Real  panel  output  =  Watts  x  PSH  x  0.75.  Never  use  theoretical  output  for  system  sizing   Divide  the  design  load  by  3.75  to  get  required  panel  capacity  (5  PSH  x  0.75  =  3.75)   Refrigerators  run  at  50%  duty  cycle.  Freezers  run  at  40%  duty  cycle   Fans,  lights,  TVs,  laptops,  and  pumps  run  at  100%  duty  cycle   Ignoring  duty  cycle  overestimates  fridge  energy  by  up  to  100%  and  wastes  client  money  
+Calculate  It  Right|     Page  13
+ 
+
+--- PAGE 14 ---
+Practice  Exercise  1:  Energy  Calculation Calculate  the  daily  energy  consumption  of  a  small  apartment  with  the  following  
+appliances.
+ 
+Show
+ 
+all
+ 
+working.  Appliance Watts Quantity Daily  Hours Your  Calculation Your  Answer LED  Bulbs 20W 6 5  hours 20  x  6  x  5  = ____________ Ceiling  Fan 75W 1 8  hours 75  x  1  x  8  = ____________ TV  (LED  32-inch) 80W 1 4  hours 80  x  1  x  4  = ____________ 
+Fridge  (50%  duty) 150W 1 
+12  effective  hrs 
+150  x  1  x  6  = ____________ 
+Phone  Charger 10W 3 3  hours 10  x  3  x  3  = ____________ TOTAL  RAW:    Sum  all  above  = ____________ 
+DESIGN  LOAD:    Raw  Total  x  1.25  = ____________  
+Practice  Exercise  2:  Real  vs  Theoretical  Panel  Output 
+Panel  Array  Size 
+Theoretical  Output  (Watts  x  5  PSH) 
+Real  Output  (Watts  x  5  x  0.75) 
+Difference  Per  Day 
+500W  (1  panel) 500  x  5  =  2,500  Wh 500  x  5  x  0.75  =  ____ 
+____________ 
+2,000W  (4  panels) 2000  x  5  =  10,000  Wh 
+2000  x  5  x  0.75  =  ____ 
+____________ 
+5,000W  (10  panels) 5000  x  5  =  25,000  Wh 
+5000  x  5  x  0.75  =  ____ 
+____________  Answers  to  Practice  Exercise  1:  Bulbs  =  600  Wh,  Fan  =  600  Wh,  TV  =  320  Wh,  
+Fridge
+ 
+=
+ 
+900
+ 
+Wh,
+ 
+Chargers
+ 
+=
+ 
+90
+ 
+Wh,
+ 
+Raw
+ 
+Total
+ 
+=
+ 
+2,510
+ 
+Wh,
+ 
+Design
+ 
+Load
+ 
+=
+ 
+3,138
+ 
+Wh. Answers  to  Practice  Exercise  2:  500W  panel  real  output  =  1,875  Wh  (diff:  625  Wh).  
+2,000W
+ 
+real
+ 
+output
+ 
+=
+ 
+7,500
+ 
+Wh
+ 
+(diff:
+ 
+2,500
+ 
+Wh).
+ 
+5,000W
+ 
+real
+ 
+output
+ 
+=
+ 
+18,750
+ 
+Wh
+ 
+(diff:
+ 
+6,250
+ 
+Wh
+ 
+lost
+ 
+daily
+ 
+if
+ 
+using
+ 
+theoretical
+ 
+output).  
+Calculate  It  Right|     Page  14
+ 
+
+--- PAGE 15 ---
+CHAPTER
+ 
+2 
+Load  Calculation 
+ Load  calculation  is  the  most  important  step  in  solar  system  design.  Every  component  
+size
+ 
+flows
+ 
+directly
+ 
+from
+ 
+this
+ 
+number.
+ 
+Get
+ 
+it
+ 
+right
+ 
+and
+ 
+everything
+ 
+falls
+ 
+into
+ 
+place.
+ 
+This
+ 
+chapter
+ 
+shows
+ 
+the
+ 
+complete
+ 
+process
+ 
+at
+ 
+four
+ 
+skill
+ 
+levels
+ 
+with
+ 
+a
+ 
+detailed
+ 
+diagram,
+ 
+full
+ 
+worked
+ 
+examples,
+ 
+and
+ 
+the
+ 
+mistakes
+ 
+that
+ 
+catch
+ 
+most
+ 
+installers.  
+ Figure  2.1:  The  complete  load  calculation  process  from  appliance  list  to  design  load.  Follow  all  six  
+steps
+ 
+in
+ 
+order
+ 
+on
+ 
+every
+ 
+installation
+ 
+without
+ 
+exception.
+  
+2.1   The  6-Step  Load  Calculation  Process 1.  List  every  appliance  to  be  powered  by  the  solar  system. 2.  Record  the  wattage  of  each  appliance  from  its  nameplate  label. 3.  Estimate  daily  usage  hours.  Apply  duty  cycle  to  cycling  appliances. 4.  Multiply  Watts  x  Quantity  x  Effective  Hours  for  each  appliance. 5.  Sum  all  values  to  get  the  Raw  Daily  Energy  Total. 6.  Multiply  by  1.25  to  add  25%  safety  margin.  This  is  your  DESIGN  LOAD.  
+Design  Load  (Wh)  =  Sum  of  all  (Watts  x  Qty  x  Effective  Hours)  x  1.25  Always  separate  daytime  and  nighttime  loads.  Daytime  loads  can  be  powered  
+directly
+ 
+by
+ 
+solar
+ 
+panels
+ 
+without
+ 
+using
+ 
+battery.
+ 
+Nighttime
+ 
+loads
+ 
+must
+ 
+come
+ 
+from
+ 
+the
+ 
+battery
+ 
+bank.
+ 
+The
+ 
+battery
+ 
+is
+ 
+sized
+ 
+only
+ 
+on
+ 
+nighttime
+ 
+consumption.  
+Calculate  It  Right|     Page  15
+ 
+
+
+--- PAGE 16 ---
+2.2   Beginner  Example:  Studio  Apartment DAYTIME  LOADS 
+Appliance Watts Qty 
+Effective  Hrs 
+Calculation 
+Wh/Day 
+LED  Bulbs 15W 4 6  hrs 15  x  4  x  6 
+=  360  Wh 
+Ceiling  Fan 75W 1 4  hrs 75  x  1  x  4 
+=  300  Wh 
+Phone  Charger 10W 2 2  hrs 10  x  2  x  2 
+=  40  Wh Daytime  Raw: 360  +  300  +  40 
+=  700  Wh Add  25%  margin: 700  x  1.25 
+=  875  Wh/day  NIGHTTIME  LOADS 
+Appliance Watts Qty 
+Effective  Hrs 
+Calculation 
+Wh/Night 
+LED  Bulbs 15W 4 4  hrs 15  x  4  x  4 
+=  240  Wh 
+Ceiling  Fan 75W 1 4  hrs 75  x  1  x  4 
+=  300  Wh 
+LED  TV  32-inch 80W 1 3  hrs 80  x  1  x  3 
+=  240  Wh Nighttime  Raw: 240  +  300  +  240 
+=  780  Wh Add  25%  margin: 780  x  1.25 
+=  975  Wh/night TOTAL  DESIGN  LOAD: 
+875  +  975 
+=  1,850  Wh/day  
+Calculate  It  Right|     Page  16
+ 
+
+--- PAGE 17 ---
+2.3   Intermediate  Example:  3-Bedroom  Home DAYTIME  LOADS 
+Appliance Watts Qty 
+Effective  Hrs 
+Calculation 
+Wh/Day 
+LED  Bulbs 20W 8 6  hrs 20  x  8  x  6 
+=  960  Wh 
+Ceiling  Fan 75W 3 4  hrs 75  x  3  x  4 
+=  900  Wh Refrigerator  (50%  duty) 
+200W 1 5  hrs 200  x  1  x  5 
+=  1,000  Wh 
+Laptop 65W 2 4  hrs 65  x  2  x  4 
+=  520  Wh Daytime  Raw: 960+900+1000+520 
+=  3,380  Wh Add  25%  margin: 3,380  x  1.25 
+=  4,225  Wh/day  NIGHTTIME  LOADS 
+Appliance Watts Qty 
+Effective  Hrs 
+Calculation 
+Wh/Night 
+LED  Bulbs 20W 8 4  hrs 20  x  8  x  4 
+=  640  Wh 
+Ceiling  Fan 75W 3 4  hrs 75  x  3  x  4 
+=  900  Wh Refrigerator  (50%  duty) 
+200W 1 5  hrs 200  x  1  x  5 
+=  1,000  Wh 
+LED  TV  42-inch 120W 1 4  hrs 120  x  1  x  4 
+=  480  Wh Nighttime  Raw: 640+900+1000+480 
+=  3,020  Wh Add  25%  margin: 3,020  x  1.25 
+=  3,775  Wh/
+Calculate  It  Right|     Page  17
+ 
+
+--- PAGE 18 ---
+night TOTAL  DESIGN  LOAD: 
+4,225  +  3,775 
+=  8,000  Wh/day  
+2.4   Advanced  Example:  Office  with  AC DAYTIME  LOADS 
+Appliance Watts Qty 
+Effective  Hrs 
+Calculation 
+Wh/Day 
+LED  Office  Lights 20W 10 8  hrs 20  x  10  x  8 
+=  1,600  Wh 
+Desktop  Computers 150W 5 8  hrs 150  x  5  x  8 
+=  6,000  Wh Air  Conditioner  1.5HP 
+1,100W 
+1 6  hrs 1100  x  1  x  6 
+=  6,600  Wh 
+Internet  Router 20W 1 10  hrs 20  x  1  x  10 
+=  200  Wh 
+Laser  Printer 400W 1 1  hr 400  x  1  x  1 
+=  400  Wh Daytime  Raw: 1600+6000+6600+200+400 
+=  14,800  Wh 
+Add  25%  margin: 14,800  x  1.25 
+=  18,500  Wh/day  NIGHTTIME  LOADS 
+Appliance Watts Qty 
+Effective  Hrs 
+Calculation 
+Wh/Night 
+Security  Lights 100W 4 10  hrs 100  x  4  x  10 
+=  4,000  Wh 
+CCTV  System 60W 1 24  hrs 60  x  1  x  24 
+=  1,440  Wh 
+Calculate  It  Right|     Page  18
+ 
+
+--- PAGE 19 ---
+Internet  Router 20W 1 14  hrs 20  x  1  x  14 
+=  280  Wh Nighttime  Raw: 4000+1440+280 
+=  5,720  Wh Add  25%  margin: 5,720  x  1.25 
+=  7,150  Wh/night TOTAL  DESIGN  LOAD: 
+18,500  +  7,150 
+=  25,650  Wh/day  
+2.5   Professional  Example:  Large  Home  with  Multiple  ACs DAYTIME  LOADS 
+Appliance Watts Qty 
+Effective  Hrs 
+Calculation 
+Wh/Day 
+LED  Lights 15W 20 6  hrs 15  x  20  x  6 
+=  1,800  Wh 
+Ceiling  Fan 75W 5 4  hrs 75  x  5  x  4 
+=  1,500  Wh 
+AC  1.5HP  (daytime) 
+1,100W 
+2 6  hrs 1100  x  2  x  6 
+=  13,200  Wh 
+Refrigerator  (50%) 250W 1 5  hrs 250  x  1  x  5 
+=  1,250  Wh 
+Washing  Machine 
+1,000W 
+1 1  hr 1000  x  1  x  1 
+=  1,000  Wh Daytime  Raw: 1800+1500+13200+1250+1000 
+=  18,750  Wh 
+Add  25%  margin: 18,750  x  1.25 
+=  23,438  Wh/day 
+Calculate  It  Right|     Page  19
+ 
+
+--- PAGE 20 ---
+ NIGHTTIME  LOADS 
+Appliance Watts Qty 
+Effective  Hrs 
+Calculation 
+Wh/Night 
+LED  Lights 15W 20 4  hrs 15  x  20  x  4 
+=  1,200  Wh 
+Ceiling  Fan 75W 5 4  hrs 75  x  5  x  4 
+=  1,500  Wh 
+AC  1.5HP  (night) 
+1,100W 
+2 5  hrs 1100  x  2  x  5 
+=  11,000  Wh 
+Refrigerator  (50%) 250W 1 5  hrs 250  x  1  x  5 
+=  1,250  Wh 
+LED  TV  55-inch 150W 2 4  hrs 150  x  2  x  4 
+=  1,200  Wh 
+Security  Lights 100W 4 10  hrs 100  x  4  x  10 
+=  4,000  Wh Nighttime  Raw: 1200+1500+11000+1250+1200+4000 
+=  20,150  Wh 
+Add  25%  margin: 20,150  x  1.25 
+=  25,188  Wh/night TOTAL  DESIGN  LOAD: 
+23,438  +  25,188 
+=  48,626  Wh/day  
+2.6   Tips  and  Common  Mistakes  in  Load  Calculation 
+TIP:  Always  Measure  Unknown  Wattages Use  a  plug-in  watt  meter  to  measure  the  actual  wattage  of  any  appliance  whose  label  is  missing.  Never  guess.  A  fridge  labelled  200W  may  actually  draw  280W  under  load.  
+COMMON  MISTAKE:  Not  Separating  Day  and  Night  Loads 
+Calculate  It  Right|     Page  20
+ 
+
+--- PAGE 21 ---
+If  you  calculate  total  daily  load  and  size  the  battery  on  that  total,  you  will  significantly  oversize  the  battery  and  waste  the  client's  money.  Always  separate  daytime  and  nighttime  loads.  KEY  TAKEAWAYS 
+  Load  =  Watts  x  Quantity  x  Effective  Hours.  Always  multiply,  never  use  watts  alone   Separate  daytime  and  nighttime  loads  for  accurate  battery  sizing   Apply  50%  duty  cycle  to  fridges  and  40%  duty  cycle  to  freezers   Add  25%  safety  margin  to  every  load  total   Design  Load  =  Raw  Total  x  1.25  
+Calculate  It  Right|     Page  21
+ 
+
+--- PAGE 22 ---
+CHAPTER
+ 
+3 
+Solar  Panel  Sizing 
+ 
+ Figure  3.1:  Panel  sizing  formula  and  four  worked  examples  from  studio  apartment  to  large  home.  
+Always
+ 
+divide
+ 
+the
+ 
+total
+ 
+design
+ 
+load
+ 
+by
+ 
+3.75
+ 
+(5
+ 
+PSH
+ 
+x
+ 
+0.75
+ 
+efficiency).
+  
+3.1   The  Panel  Sizing  Formula 
+Panel  Capacity  (W)  =  Total  Design  Load  (Wh)  /  (PSH  x  System  Efficiency)  
+Simplified:    Panel  Capacity  (W)  =  Total  Design  Load  /  3.75  
+3.2   Why  We  Use  75%  System  Efficiency 
+Without  efficiency: 8,000  Wh  /  5  PSH =  1,600W  (WRONG) With  75%  efficiency: 8,000  Wh  /  3.75 =  2,134W  (CORRECT) Difference: 2,134  -  1,600 =  534W  undersized  
+3.3   Panel  Sizing  Examples  at  4  Levels 
+Studio  Apartment 
+Calculate  It  Right|     Page  22
+ 
+
+
+--- PAGE 23 ---
+Design  load: 1,850  Wh/day From  Chapter  2 Calculation: 1,850  /  3.75 =  493W Panels  selected: 2  x  500W  panels  =  1,000W   
+3-Bedroom  Home 
+Design  load: 8,000  Wh/day From  Chapter  2 Calculation: 8,000  /  3.75 =  2,134W Panels  selected: 5  x  500W  panels  =  2,500W   
+Office  with  AC 
+Design  load: 25,650  Wh/day From  Chapter  2 Calculation: 25,650  /  3.75 =  6,840W Panels  selected: 14  x  500W  panels  =  7,000W   
+Large  Home  +  2  ACs 
+Design  load: 48,626  Wh/day From  Chapter  2 Calculation: 48,626  /  3.75 =  12,967W Panels  selected: 26  x  500W  panels  =  13,000W   
+3.4   Choosing  the  Right  Panel  Wattage 
+Panel  Wattage Best  Use 
+Panels  Needed  for  2,000W 
+Roof  Space  Needed 300W Small  systems,  tight  budgets 7  panels ~14  sqm 400W Standard  residential 5  panels ~10  sqm 500W Recommended  for  efficiency 4  panels ~9  sqm 550W Large  commercial  systems 4  panels ~10  sqm  
+3.5   Tips  and  Common  Mistakes  in  Panel  Sizing 
+TIP:  Always  Round  Up  Panel  Count Never  round  down.  If  you  need  7.2  panels,  always  select  8.  The  extra  capacity  provides  buffer  for  dusty  days,  shading,  and  panel  degradation  over  time. 
+Calculate  It  Right|     Page  23
+ 
+
+--- PAGE 24 ---
+ 
+COMMON  MISTAKE:  Sizing  Panels  Only  on  Daytime  Load Panels  must  generate  enough  energy  to  power  daytime  loads  AND  fully  recharge  the  battery  for  overnight  use.  Always  size  panels  on  TOTAL  daily  design  load.  KEY  TAKEAWAYS 
+  Panel  formula:  Total  Design  Load  /  3.75  (using  5  PSH  x  0.75)   Always  use  75%  system  efficiency,  never  theoretical  output   Always  round  panel  count  UP,  never  down   Size  panels  on  TOTAL  daily  load  (daytime  plus  nighttime  combined)   Add  10  to  20%  extra  capacity  to  account  for  future  panel  degradation  
+Calculate  It  Right|     Page  24
+ 
+
+--- PAGE 25 ---
+CHAPTER
+ 
+4 
+Battery  Sizing 
+ 
+ Figure  4.1:  Battery  sizing  concept  and  depth  of  discharge  comparison.  Lithium  at  80%  DoD  gives  60%  
+more
+ 
+usable
+ 
+capacity
+ 
+than
+ 
+lead-acid
+ 
+at
+ 
+50%
+ 
+DoD
+ 
+from
+ 
+the
+ 
+same
+ 
+rated
+ 
+battery.
+  
+4.1   Battery  Sizing  Using  Nighttime  Load The  battery  bank  supplies  all  nighttime  loads  when  there  is  no  solar  generation.  This  
+is
+ 
+why
+ 
+battery
+ 
+sizing
+ 
+is
+ 
+based
+ 
+on
+ 
+NIGHTTIME
+ 
+load
+ 
+only.
+ 
+All
+ 
+DoD
+ 
+calculations
+ 
+in
+ 
+this
+ 
+book
+ 
+use
+ 
+Lithium
+ 
+LiFePO4
+ 
+at
+ 
+80%
+ 
+DoD. 
+Battery  Ah  =  (Nighttime  Design  Load  x  Autonomy  Days)  /  (System  Voltage  x  DoD)  
+4.2   Depth  of  Discharge:  Lithium  vs  Lead-Acid 
+Battery  Type Safe  DoD 
+Usable  from  200Ah 
+Maintenance 
+Recommendation 
+Lead-Acid  (Tubular) 
+50% 100Ah  usable 
+Every  3  months 
+Budget  installs  only 
+Gel  or  AGM 60% 120Ah  usable None Medium  budget 
+Lithium  LiFePO4 80% 160Ah  usable None 
+Recommended  always  
+4.3   Battery  Lifecycle  at  Different  DoD  Levels 
+Calculate  It  Right|     Page  25
+ 
+
+
+--- PAGE 26 ---
+Battery  Type 
+DoD  Used 
+Cycle  Life 
+Expected  Lifespan 
+Cost  Per  Cycle Lead-Acid 50% 500  to  800  cycles 3  to  5  years Highest 
+Lead-Acid 30% 
+1,000  to  1,200  cycles 
+5  to  7  years High 
+Lithium  LiFePO4 80% 
+3,000  to  6,000  cycles 
+8  to  15  years Lowest 
+Lithium  LiFePO4 50% 
+6,000  to  10,000  cycles 
+15  to  25  years Near  zero 
+ 
+PRO  INSTALLER  TIP When  clients  hesitate  over  Lithium  pricing,  show  them  the  cost  per  cycle.  A  Lithium  battery  at  3x  the  upfront  cost  but  6x  the  cycle  life  costs  50%  less  per  unit  of  energy  stored  over  its  lifetime.  
+4.4   Battery  Sizing  Examples  at  4  Levels 
+Studio  Apartment 
+Nighttime  load: 975  Wh/night Numerator: 975  x  1  =  975 Denominator: 12  x  0.80  =  9.6 Calculation: 975  /  9.6  =  102Ah Solution: 200Ah  12V  Lithium  
+3-Bedroom  Home 
+Nighttime  load: 3,775  Wh/night Numerator: 3,775  x  1  =  3,775 Denominator: 48  x  0.80  =  38.4 Calculation: 3,775  /  38.4  =  98Ah Solution: 100Ah  48V  Lithium  
+Office  with  AC 
+Nighttime  load: 7,150  Wh/night Numerator: 7,150  x  1  =  7,150 Denominator: 48  x  0.80  =  38.4 
+Calculate  It  Right|     Page  26
+ 
+
+--- PAGE 27 ---
+Calculation: 7,150  /  38.4  =  186Ah Solution: 200Ah  48V  Lithium  
+Large  Home  +  2  ACs 
+Nighttime  load: 25,188  Wh/night 
+Numerator: 25,188  x  1  =  25,188 Denominator: 48  x  0.80  =  38.4 Calculation: 25,188  /  38.4  =  656Ah Solution: 800Ah  48V  Lithium  (4  x  200Ah  in  parallel)  
+4.5   Tips  and  Common  Mistakes  in  Battery  Sizing 
+COMMON  MISTAKE:  Exceeding  the  4-Battery  Parallel  Limit Most  Lithium  manufacturers  recommend  a  maximum  of  4  batteries  in  parallel  without  a  busbar  system.  Beyond  this,  current  distribution  becomes  uneven  causing  premature  degradation.  KEY  TAKEAWAYS 
+  Battery  formula:  (Nighttime  Load  x  Days)  /  (Voltage  x  DoD)   All  DoD  calculations  use  Lithium  LiFePO4  at  80%  DoD   Size  battery  on  NIGHTTIME  load  only,  not  total  daily  load   Maximum  4  Lithium  batteries  in  parallel  without  a  busbar  system   Lithium  delivers  3,000  to  6,000  cycles  at  80%  DoD,  6x  more  than  lead-acid  
+Calculate  It  Right|     Page  27
+ 
+
+--- PAGE 28 ---
+CHAPTER
+ 
+5 
+Inverter  Sizing 
+ 
+ Figure  5.1:  Motor  startup  surge  and  inverter  sizing  examples.  The  surge  spike  shows  why  inverters  
+must
+ 
+be
+ 
+sized
+ 
+well
+ 
+above
+ 
+continuous
+ 
+load
+ 
+when
+ 
+motors
+ 
+are
+ 
+present.
+  
+5.1   The  Inverter  Sizing  Formula 
+Inverter  (W)  =  (Peak  Continuous  Load  +  Motor  Surge)  x  1.25  Safety  Factor  
+5.2   Motor  Surge  Factor  Table 
+Appliance 
+Rated  Power 
+Surge  Factor 
+Startup  Surge  Power 
+Refrigerator 250W 3x 750W  for  1  second Deep  Freezer 200W 2.5x 500W  for  1  second Air  Conditioner  1HP 
+750W 3  to  6x 2,250  to  4,500W 
+Air  Conditioner  1.5HP 
+1,100W 3  to  6x 3,300  to  6,600W 
+Water  Pump  1HP 750W 3  to  5x 2,250  to  3,750W Ceiling  Fan 75W 2  to  3x 150  to  225W  
+Calculate  It  Right|     Page  28
+ 
+
+
+--- PAGE 29 ---
+PRO  INSTALLER  TIP Always  check  the  inverter  surge  rating  in  its  technical  datasheet,  not  just  the  continuous  kVA  rating.  A  3kVA  inverter  with  6kVA  surge  handles  a  1.5HP  AC  startup.  A  3kVA  inverter  with  only  3.5kVA  surge  will  trip  on  every  AC  startup.  
+5.3   Inverter  Sizing  Examples  at  4  Levels 
+Studio  Apartment 
+Peak  continuous: Fan  75W  +  Bulbs  60W  +  TV  80W  +  Charger  20W  =  235W 
+ 
+Motor  surge: Fan  motor:  75  x  2  =  150W  Peak  with  surge: 235  +  150  =  385W  x  1.25  safety: 385  x  1.25  =  481W  Inverter  choice: 1  kVA  Pure  Sine  Wave  Hybrid   
+3-Bedroom  Home 
+Peak  continuous: Fans  225W  +  Bulbs  160W  +  TV  120W  +  Fridge  200W  +  Laptops  130W  =  835W 
+ 
+Motor  surge: Fridge:  200  x  3  =  600W  Peak  with  surge: 835  +  600  =  1,435W  x  1.25  safety: 1,435  x  1.25  =  1,794W  Inverter  choice: 3.5  kVA  Pure  Sine  Wave  Hybrid   
+Office  with  AC 
+Peak  continuous: AC  1,100W  +  Computers  750W  +  Lights  200W  +  Router  20W  =  2,070W 
+ 
+Motor  surge: AC  1.5HP:  1,100  x  4  =  4,400W  Peak  with  surge: 2,070  +  4,400  =  6,470W  x  1.25  safety: 6,470  x  1.25  =  8,088W  Inverter  choice: 10  kVA  Pure  Sine  Wave  Hybrid   
+Large  Home  +  2  ACs 
+Peak  continuous: 2xAC  2,200W  +  Fans  375W  +  Lights  300W  +  Fridge  250W  =  3,125W 
+ 
+Calculate  It  Right|     Page  29
+ 
+
+--- PAGE 30 ---
+Motor  surge: 2xAC:  2,200  x  4  =  8,800W  Peak  with  surge: 3,125  +  8,800  =  11,925W  x  1.25  safety: 11,925  x  1.25  =  14,906W  Inverter  choice: 2  x  10  kVA  Pure  Sine  Wave  Hybrid   
+5.4   Tips  and  Common  Mistakes  in  Inverter  Sizing 
+COMMON  MISTAKE:  Sizing  Only  for  Continuous  Load An  inverter  sized  at  exactly  the  continuous  load  will  trip  every  time  a  motor  starts.  Always  add  motor  surge  AND  the  1.25  safety  factor.  KEY  TAKEAWAYS 
+  Inverter  formula:  (Peak  Continuous  Load  +  Motor  Surge)  x  1.25   Motors  surge  2.5  to  6x  rated  power  during  startup,  always  account  for  this   Check  the  inverter  SURGE  rating  in  the  datasheet,  not  just  continuous  kVA   For  2  or  more  AC  units,  stagger  startup  times  to  reduce  peak  surge  demand   Never  size  an  inverter  at  exactly  its  continuous  rating,  always  go  one  size  up  
+Calculate  It  Right|     Page  30
+ 
+
+--- PAGE 31 ---
+CHAPTER
+ 
+6 
+Series  and  Parallel  Calculations 
+ 
+ Figure  6.1:  Series  connection  adds  voltage  (left).  Parallel  connection  adds  capacity  (right).  Most  
+professional
+ 
+installations
+ 
+use
+ 
+a
+ 
+combination
+ 
+of
+ 
+both
+ 
+to
+ 
+achieve
+ 
+the
+ 
+required
+ 
+voltage
+ 
+and
+ 
+Ah.
+  
+6.1   Series:  Voltage  Calculation 
+Series  Voltage  =  Sum  of  all  individual  voltages    |    Capacity  (Ah)  stays  the  same  2  x  12V  in  series: 12  +  12 =  24V  (Ah  unchanged) 4  x  12V  in  series: 12  +  12  +  12  +  12 =  48V  (Ah  unchanged)  
+6.2   Parallel:  Capacity  Calculation 
+Parallel  Capacity  =  Sum  of  all  individual  capacities    |    Voltage  stays  the  same  2  x  200Ah  in  parallel: 200  +  200 =  400Ah  (voltage  unchanged) 4  x  200Ah  in  parallel: 200  +  200  +  200  +  200 =  800Ah  (voltage  unchanged) 
+Calculate  It  Right|     Page  31
+ 
+
+
+--- PAGE 32 ---
+Warning: Maximum  4  in  parallel  without  busbar Check  battery  spec  
+6.3   Series-Parallel  Combination  Examples 
+Target  Bank Configuration Total  Batteries Result 
+48V,  400Ah 
+2  strings  x  4  x  12V  series 
+8 48V  400Ah 
+48V,  600Ah 
+3  strings  x  4  x  12V  series 
+12 48V  600Ah 
+48V,  800Ah 
+4  strings  x  4  x  12V  series 
+16 
+48V  800Ah  (at  parallel  limit) 
+48V,  1,000Ah  plus Use  busbar  system 20  plus 
+Need  battery  combiner  or  busbar  
+6.4   Panel  String  Voltage  Calculation 
+String  Voltage  =  Number  of  Panels  in  Series  x  Panel  Voc  Single  panel  Voc: 45V  (typical  500W  panel)  2  panels  in  series: 45  x  2 =  90V  string 3  panels  in  series: 45  x  3 =  135V  string Check: Must  be  below  MPPT  max  input  voltage Verify  inverter  spec  
+COMMON  MISTAKE:  Exceeding  MPPT  Maximum  Voltage If  panel  string  voltage  exceeds  the  MPPT  maximum  input  even  briefly  on  a  cold  morning,  the  controller  is  permanently  destroyed.  Always  calculate  string  voltage  before  connecting  panels.  KEY  TAKEAWAYS 
+  Series:  voltages  add  up,  capacity  stays  the  same   Parallel:  capacities  add  up,  voltage  stays  the  same   Maximum  4  batteries  in  parallel  without  a  busbar  distribution  system   String  voltage  =  Number  of  panels  x  Panel  Voc   String  voltage  must  never  exceed  MPPT  maximum  input  voltage 
+Calculate  It  Right|     Page  32
+ 
+
+--- PAGE 33 ---
+ 
+Calculate  It  Right|     Page  33
+ 
+
+--- PAGE 34 ---
+CHAPTER
+ 
+7 
+Cable  Sizing  Calculations 
+ 
+ Figure  7.1:  Cable  sizes  in  a  solar  system  and  voltage  drop  over  distance.  Undersized  cables  waste  
+energy
+ 
+as
+ 
+heat
+ 
+and
+ 
+are
+ 
+the
+ 
+leading
+ 
+cause
+ 
+of
+ 
+solar
+ 
+system
+ 
+fires.
+  Undersized  cables  are  the  number  one  cause  of  solar  system  fires.  The  cable  must  
+carry
+ 
+the
+ 
+maximum
+ 
+current
+ 
+without
+ 
+overheating.
+ 
+Always
+ 
+calculate,
+ 
+never
+ 
+guess.  
+7.1   DC  Cable  Sizing 
+DC  Current  (A)  =  Power  (W)  /  Voltage  (V)  3kVA  system  at  48V: 3,000W  /  48V =  62.5A  DC 5kVA  system  at  48V: 5,000W  /  48V =  104A  DC 10kVA  system  at  48V: 10,000W  /  48V =  208A  DC  DC  Current  Range Minimum  Cable  Size Application Up  to  30A 6mm2  flexible Panels  to  MPPT  controller 30  to  60A 10mm2  flexible Battery  to  small  inverter 60  to  100A 16  to  25mm2  flexible Battery  to  3  to  5kVA  inverter 100  to  150A 35mm2  flexible Battery  to  5  to  8kVA  inverter 150  to  200A 50mm2  flexible Battery  to  8  to  10kVA  inverter 200A  and  above 70mm2  or  busbar Large  inverters  above  10kVA 
+Calculate  It  Right|     Page  34
+ 
+
+
+--- PAGE 35 ---
+ 
+7.2   AC  Cable  Sizing 
+AC  Current  (A)  =  Power  (W)  /  (Voltage  (V)  x  Power  Factor)    Power  Factor  =  0.8  for  motors  3.5kVA  inverter  AC  output: 
+3,500  /  (220  x  0.8) =  19.9A  AC 
+5kVA  inverter  AC  output: 
+5,000  /  (220  x  0.8) =  28.4A  AC 
+10kVA  inverter  AC  output: 
+10,000  /  (220  x  0.8) =  56.8A  AC 
+ 
+7.3   Voltage  Drop  Calculation 
+Voltage  Drop  (V)  =  (2  x  Cable  Length  x  Current  x  Cable  Resistance  per  metre)  /  1,000  Example:  10mm2,  10m,  50A: 
+(2  x  10  x  50  x  1.83)  /  1,000 =  1.83V  drop 
+At  48V  system: 1.83  /  48  x  100 =  3.8%  (exceeds  3%) Action: Use  16mm2  cable  to  reduce  voltage  drop  below  3% 
+ 
+ 
+PRO  INSTALLER  TIP For  cable  runs  above  10  metres  between  battery  and  inverter,  always  go  one  cable  size  larger  than  the  minimum  current  rating  requires.  The  extra  cost  is  trivial  compared  to  energy  wasted  and  heat  generated  by  a  marginally  undersized  cable.  KEY  TAKEAWAYS 
+  DC  Current  =  Power  (W)  /  Voltage  (V)   AC  Current  =  Power  (W)  /  (Voltage  x  0.8  power  factor)   Size  cables  to  carry  125%  of  maximum  expected  current   Maximum  voltage  drop:  3%  for  DC  circuits  and  2%  for  AC  circuits   For  runs  above  10  metres,  go  one  cable  size  larger  than  minimum  
+Calculate  It  Right|     Page  35
+ 
+
+--- PAGE 36 ---
+CHAPTER
+ 
+8 
+Complete  System  Design  Examples 
+ 
+ Figure  8.1:  Two  complete  case  studies  side  by  side.  Every  step  from  load  calculation  through  to  final  
+system
+ 
+specification
+ 
+and
+ 
+cost
+ 
+estimate.
+  
+8.1   Case  Study  A:  Residential  2-Bedroom  Flat 
+Step  1:  Daytime  Load  Calculation 
+Appliance Watts Qty 
+Effective  Hrs 
+Wh/Day 
+Ceiling  Fan 75W 2 4  hrs =  600  Wh LED  Bulbs 20W 8 6  hrs =  960  Wh Laptop  Computer 65W 2 5  hrs =  650  Wh Deep  Freezer  (40%  duty) 
+200W 1 4.8  hrs =  960  Wh 
+Blender 400W 1 0.5  hrs =  200  Wh Daytime  Raw: 600+960+650+960+200 
+=  3,370  Wh Add  25%  margin: 3,370  x  1.25 
+=  4,213  Wh/day  
+Calculate  It  Right|     Page  36
+ 
+
+
+--- PAGE 37 ---
+Step  2:  Nighttime  Load  Calculation 
+Appliance Watts Qty 
+Effective  Hrs 
+Wh/Night 
+Ceiling  Fan 75W 2 4  hrs =  600  Wh LED  Bulbs 20W 8 4  hrs =  640  Wh LED  TV  43-inch 120W 1 4  hrs =  480  Wh Deep  Freezer  (40%  duty) 
+200W 1 4.8  hrs =  960  Wh 
+Security  Light 30W 2 10  hrs =  600  Wh Nighttime  Raw: 600+640+480+960+600 
+=  3,280  Wh Add  25%  margin: 3,280  x  1.25 
+=  4,100  Wh/night TOTAL  DESIGN  LOAD: 
+4,213  +  4,100 
+=  8,313  Wh/day  
+Steps  3  to  5:  Panel,  Battery  and  Inverter 
+Panel  sizing: 8,313  /  3.75 =  2,217W  =  5  x  500W  panels Battery  sizing: 4,100  /  (48  x  0.80) =  107Ah  =  200Ah  48V  Lithium Inverter  sizing: (630W  +  500W  freezer  surge)  x  1.25 =  1,413W  =  3.5  kVA  
+Final  System  Specification 
+Component Specification Quantity Solar  Panels 500W  Monocrystalline 5  panels Hybrid  Inverter 3.5  kVA  Pure  Sine  Wave  48V 1  unit Battery 200Ah  48V  Lithium  LiFePO4 1  unit DC  Cable 6mm2  UV-rated  solar  cable 20  metres 
+Calculate  It  Right|     Page  37
+ 
+
+--- PAGE 38 ---
+Battery  Cable 35mm2  flexible 3  metres  
+8.2   Case  Study  B:  Small  Commercial  Office 
+Step  1:  Daytime  Load  Calculation 
+Appliance Watts Qty 
+Effective  Hrs 
+Wh/Day 
+LED  Office  Lights 20W 10 8  hrs =  1,600  Wh Desktop  Computer 150W 5 8  hrs =  6,000  Wh Laptop 65W 2 8  hrs =  1,040  Wh 
+AC  1.5HP 
+1,100W 
+1 7  hrs =  7,700  Wh 
+Internet  Router 20W 1 10  hrs =  200  Wh Water  Dispenser 500W 1 2  hrs =  1,000  Wh Daytime  Raw: 1600+6000+1040+7700+200+1000 
+=  17,540  Wh 
+Add  25%  margin: 17,540  x  1.25 
+=  21,925  Wh/day  
+Step  2:  Nighttime  Load  Calculation 
+Appliance Watts Qty 
+Effective  Hrs 
+Wh/Night 
+Security  Lights 100W 4 10  hrs =  4,000  Wh CCTV  System 60W 1 14  hrs =  840  Wh Internet  Router 20W 1 14  hrs =  280  Wh Nighttime  Raw: 4000+840+280 
+=  5,120  Wh Add  25%  margin: 5,120  x  1.25 
+=  6,400  Wh/night 
+Calculate  It  Right|     Page  38
+ 
+
+--- PAGE 39 ---
+TOTAL  DESIGN  LOAD: 
+21,925  +  6,400 
+=  28,325  Wh/day  
+Steps  3  to  5:  Panel,  Battery  and  Inverter 
+Panel  sizing: 28,325  /  3.75 =  7,553W  =  16  x  500W  panels Battery  sizing: 6,400  /  (48  x  0.80) =  167Ah  =  200Ah  48V  Lithium Inverter  sizing: (AC  1100  +  computers  750  +  AC  surge  4400)  x  1.25 
+=  7,813W  =  10  kVA  
+Final  System  Specification 
+Component Specification Quantity Solar  Panels 500W  Monocrystalline 16  panels Hybrid  Inverter 10  kVA  Pure  Sine  Wave  48V 1  unit Battery 200Ah  48V  Lithium  LiFePO4 1  unit DC  Cable 6mm2  UV-rated  solar  cable 30  metres Battery  Cable 50mm2  flexible 3  metres  
+Calculate  It  Right|     Page  39
+ 
+
+--- PAGE 40 ---
+CHAPTER
+ 
+9 
+Top  20  Calculation  Mistakes 
+ 
+ Figure  9.1:  The  20  most  common  calculation  mistakes.  Red  cards  are  critical  errors  that  cause  system  
+failure.
+ 
+Orange
+ 
+cards
+ 
+are
+ 
+common
+ 
+errors
+ 
+that
+ 
+cause
+ 
+oversizing
+ 
+or
+ 
+undersizing.
+  These  are  the  20  most  common  calculation  errors  made  by  solar  installers  at  every  
+experience
+ 
+level.
+ 
+Study
+ 
+them
+ 
+carefully.
+ 
+Recognising
+ 
+a
+ 
+mistake
+ 
+before
+ 
+you
+ 
+make
+ 
+it
+ 
+is
+ 
+the
+ 
+mark
+ 
+of
+ 
+a
+ 
+professional.  Mistake  1:   Using  Watts  Instead  of  Watt-Hours Stating  a  system  needs  5,000W  when  you  mean  5,000Wh  per  day.  Watts  is  power.  Watt-Hours  is  energy.  They  are  completely  different  quantities.  Mistake  2:   Not  Applying  the  25%  Safety  Margin Designing  to  exact  calculated  values  with  no  margin.  The  25%  covers  unexpected  loads,  weather  variability,  panel  degradation,  and  usage  changes.  Mistake  3:   Using  Theoretical  Panel  Output Calculating  panel  output  as  Watts  x  PSH  without  applying  the  0.75  efficiency  factor.  This  overestimates  real  output  by  25  to  33%.  Mistake  4:   Sizing  Battery  on  Total  Daily  Load Using  the  full  24-hour  design  load  to  size  the  battery.  The  battery  only  supplies  nighttime  loads.  Using  total  daily  load  oversizes  the  battery  by  40  to  60%. 
+Calculate  It  Right|     Page  40
+ 
+
+
+--- PAGE 41 ---
+ Mistake  5:   Ignoring  Duty  Cycle  for  Cycling  Appliances Calculating  a  200W  refrigerator  running  24  hours  as  200  x  24  =  4,800Wh  when  real  consumption  with  50%  duty  cycle  is  2,400Wh.  Mistake  6:   Not  Accounting  for  Motor  Surge  in  Inverter  Sizing Sizing  the  inverter  at  continuous  load  without  adding  motor  surge.  The  inverter  trips  every  time  a  fridge,  AC,  or  pump  starts  up.  Mistake  7:   Rounding  Panel  Count  Down Calculating  4.6  panels  and  selecting  4  instead  of  5.  The  system  is  immediately  undersized  by  13%.  Mistake  8:   Using  Wrong  HP  to  Watt  Conversion Assuming  1HP  =  1,000W  when  the  correct  value  is  1HP  =  746W.  2HP  =  1,492W  not  2,000W.  This  overestimates  load  by  33%.  Mistake  9:   Not  Separating  Daytime  and  Nighttime  Loads Mixing  all  loads  together  without  identifying  which  run  during  the  day  and  which  at  night.  Makes  it  impossible  to  correctly  size  the  battery.  Mistake  10:  Ignoring  Phantom  and  Standby  Loads Forgetting  that  devices  on  standby  still  draw  power.  A  home  with  10  electronics  on  standby  can  accumulate  150  to  200Wh  of  standby  load  daily.  Mistake  11:  Exceeding  the  MPPT  Maximum  Input  Voltage Connecting  panel  strings  whose  combined  Voc  exceeds  the  inverter  MPPT  maximum  input  voltage.  This  permanently  destroys  the  controller.  Mistake  12:  Exceeding  the  Battery  Parallel  Limit Connecting  more  than  4  Lithium  batteries  in  parallel  without  a  busbar  system.  Uneven  current  distribution  degrades  batteries  rapidly.  Mistake  13:  Using  Incorrect  Peak  Sun  Hours Using  4  PSH  for  a  northern  Nigerian  location  that  receives  6  PSH,  or  using  6  PSH  for  a  coastal  southern  location. 
+Calculate  It  Right|     Page  41
+ 
+
+--- PAGE 42 ---
+ Mistake  14:  Forgetting  Voltage  Drop  in  Long  Cable  Runs Calculating  cable  size  for  current  capacity  only  without  checking  voltage  drop  over  the  cable  run  length.  Mistake  15:  Mixing  Appliance  Wattages  from  Memory Assuming  a  1.5HP  AC  draws  1,500W  when  it  actually  draws  1,100W.  Always  read  the  nameplate.  Memory  wattages  are  frequently  wrong.  Mistake  16:  Not  Accounting  for  AC  Running  Different  Hours Assuming  an  AC  runs  the  same  hours  day  and  night  when  the  client  actually  uses  it  6  hours  during  the  day  and  8  hours  at  night.  Mistake  17:  Sizing  for  Minimum  Rather  Than  Design  Conditions Sizing  for  a  perfect  sunny  day.  Real  systems  must  perform  on  suboptimal  days.  Always  size  for  design  conditions,  not  best-case.  Mistake  18:  Not  Including  System  Losses  in  Panel  Output Thinking  a  500W  panel  delivers  500W  to  the  inverter.  Real  output  is  approximately  375W  per  500W  panel  after  all  system  losses.  Mistake  19:  Underestimating  Washing  Machine  and  Microwave  Load A  1,500W  microwave  for  15  minutes  =  375Wh.  A  1,000W  washing  machine  for  1  hour  =  1,000Wh.  These  brief  high  draws  must  be  included.  Mistake  20:  Not  Verifying  Inverter  Surge  Specification Checking  only  continuous  kVA  and  assuming  surge  is  sufficient.  A  5kVA  inverter  with  only  5.5kVA  surge  will  trip  on  every  1.5HP  AC  startup.   
+Calculate  It  Right|     Page  42
+ 
+
+--- PAGE 43 ---
+CHAPTER
+ 
+10 
+Quick  Reference  Calculator 
+ 
+ Figure  10.1:  All  formulas  and  sizing  reference  table  in  one  place.  Use  this  page  as  your  field  reference  
+during
+ 
+client
+ 
+consultations
+ 
+and
+ 
+site
+ 
+surveys.
+  
+10.1   All  Formulas  at  a  Glance 
+Calculation Formula Notes Energy  per  appliance 
+Watts  x  Quantity  x  Hours 
+Apply  duty  cycle  to  cycling  appliances Design  Load Raw  Total  x  1.25 Always  add  25%  safety  margin Panel  Capacity Design  Load  /  3.75 Uses  5  PSH  x  0.75  efficiency 
+Number  of  Panels 
+Panel  Capacity  /  Panel  Wattage 
+Always  round  UP 
+Battery  Capacity 
+(Night  Load  x  Days)  /  (V  x  DoD) 
+Use  0.80  DoD  for  Lithium 
+DC  Current Power  (W)  /  Voltage  (V) For  cable  and  fuse  sizing AC  Current Power  /  (Voltage  x  0.8) Power  factor  0.8  for  motors String  Voltage Panels  in  series  x  Panel  Voc Must  be  below  MPPT  max  input Inverter  Size (Peak  Load  +  Surge)  x  1.25 Always  check  surge  rating Real  Panel  Output Watts  x  PSH  x  0.75 Never  use  theoretical  output  
+10.2   Common  HP  Conversions 
+Calculate  It  Right|     Page  43
+ 
+
+
+--- PAGE 44 ---
+HP  Rating Exact  Watts Use  in  Calculations Common  Application 0.5HP 373W 400W  (rounded) Small  water  pumps 1HP 746W 750W  (rounded) Standard  water  pump,  small  AC 1.5HP 1,119W 1,100W  (rounded) Standard  home  AC  unit 2HP 1,492W 1,500W  (rounded) Large  AC  or  heavy  pump 3HP 2,238W 2,200W  (rounded) Industrial  pump  or  large  AC  
+10.3   Quick  Sizing  Reference  Table 
+Home  Type 
+Typical  Daily  Load 
+Panels  (500W) 
+Battery  (48V  Lithium) 
+Inverter 
+Studio  Apartment 
+2,000  to  4,000  Wh 
+2  to  4 100  to  200Ah 
+1.5  to  2  kVA 
+2-Bedroom  Flat 
+4,000  to  10,000  Wh 
+4  to  8 200  to  300Ah 3.5  kVA 
+3-Bedroom  Home 
+8,000  to  18,000  Wh 
+8  to  14 300  to  500Ah 5  kVA 
+Large  Home  +  AC 
+20,000  to  50,000  Wh 
+16  to  30 600  to  1,000Ah 10  kVA 
+Small  Office 
+15,000  to  30,000  Wh 
+12  to  24 200  to  500Ah 10  kVA 
+ 
+Calculate  It  Right|     Page  44
+ 
+
+--- PAGE 45 ---
+CHAPTER
+ 
+11 
+Nameplate  Reading  Guide 
+ Every  solar  component  has  a  nameplate  label  that  tells  you  exactly  how  it  performs.  
+Reading
+ 
+these
+ 
+labels
+ 
+correctly
+ 
+is
+ 
+the
+ 
+foundation
+ 
+of
+ 
+professional
+ 
+solar
+ 
+design.
+ 
+Never
+ 
+guess
+ 
+a
+ 
+specification
+ 
+when
+ 
+the
+ 
+label
+ 
+is
+ 
+right
+ 
+in
+ 
+front
+ 
+of
+ 
+you. 
+11.1   Solar  Panel  Nameplate 
+ Figure  11.1:  Solar  panel  nameplate  with  all  specifications  explained.  Voc  is  used  for  string  voltage  
+calculation.
+ 
+Temperature
+ 
+coefficient
+ 
+explains
+ 
+the
+ 
+75%
+ 
+efficiency
+ 
+rule.
+ The  panel  nameplate  is  found  on  the  back  of  every  panel.  Pmax  is  the  rated  output  
+under
+ 
+standard
+ 
+test
+ 
+conditions.
+ 
+Voc
+ 
+is
+ 
+used
+ 
+to
+ 
+calculate
+ 
+string
+ 
+voltage.
+ 
+Never
+ 
+use
+ 
+Vmp
+ 
+for
+ 
+string
+ 
+voltage
+ 
+calculations.
+ 
+The
+ 
+temperature
+ 
+coefficient
+ 
+of
+ 
+-0.35%
+ 
+per
+ 
+degree
+ 
+C
+ 
+means
+ 
+a
+ 
+panel
+ 
+loses
+ 
+15.75%
+ 
+output
+ 
+at
+ 
+70
+ 
+degrees
+ 
+C
+ 
+roof
+ 
+temperature,
+ 
+which
+ 
+is
+ 
+exactly
+ 
+why
+ 
+we
+ 
+apply
+ 
+the
+ 
+75%
+ 
+system
+ 
+efficiency
+ 
+factor.  
+TIP:  Temperature  Coefficient  in  Practice A  panel  rated  at  500W  on  a  70  degree  C  roof  delivers  approximately  500  x  (1  -  0.45  x  0.0035)  =  500  x  0.8425  =  421W.  This  is  a  16%  reduction.  Multiply  by  PSH  and  system  losses  and  you  can  see  exactly  why  the  75%  efficiency  factor  is  conservative  but  safe.  
+11.2   Battery  Nameplate 
+Calculate  It  Right|     Page  45
+ 
+
+
+--- PAGE 46 ---
+ Figure  11.2:  Battery  nameplate  specifications.  The  DoD  and  usable  capacity  values  are  the  most  
+critical
+ 
+for
+ 
+system
+ 
+sizing.
+ Lithium  at  80%  DoD  gives  you  160Ah  of  usable  capacity  from  a  200Ah  battery.  
+Lead-acid
+ 
+at
+ 
+50%
+ 
+DoD
+ 
+only
+ 
+gives
+ 
+you
+ 
+100Ah
+ 
+from
+ 
+the
+ 
+same
+ 
+200Ah
+ 
+battery.
+ 
+This
+ 
+means
+ 
+you
+ 
+need
+ 
+almost
+ 
+twice
+ 
+as
+ 
+many
+ 
+lead-acid
+ 
+batteries
+ 
+to
+ 
+achieve
+ 
+the
+ 
+same
+ 
+usable
+ 
+capacity.
+ 
+The
+ 
+BMS
+ 
+(Battery
+ 
+Management
+ 
+System)
+ 
+protects
+ 
+cells
+ 
+from
+ 
+over-voltage,
+ 
+under-voltage,
+ 
+and
+ 
+over-temperature
+ 
+conditions.  
+11.3   Inverter  Nameplate 
+ Figure  11.3:  Inverter  nameplate  showing  continuous  and  surge  ratings.  The  MPPT  voltage  range  
+defines
+ 
+the
+ 
+acceptable
+ 
+panel
+ 
+string
+ 
+operating
+ 
+voltage.
+ The  inverter  nameplate  lists  both  continuous  and  surge  power  ratings.  Always  check  
+both.
+ 
+The
+ 
+MPPT
+ 
+voltage
+ 
+range
+ 
+tells
+ 
+you
+ 
+exactly
+ 
+what
+ 
+panel
+ 
+string
+ 
+voltage
+ 
+the
+ 
+controller
+ 
+accepts.
+ 
+A
+ 
+string
+ 
+that
+ 
+is
+ 
+too
+ 
+low
+ 
+will
+ 
+also
+ 
+cause
+ 
+problems,
+ 
+not
+ 
+just
+ 
+one
+ 
+that
+ 
+is
+ 
+too
+ 
+high.
+ 
+The
+ 
+efficiency
+ 
+percentage
+ 
+tells
+ 
+you
+ 
+how
+ 
+much
+ 
+energy
+ 
+is
+ 
+lost
+ 
+in
+ 
+the
+ 
+DC
+ 
+to
+ 
+AC
+ 
+conversion
+ 
+process.  
+Calculate  It  Right|     Page  46
+ 
+
+
+--- PAGE 47 ---
+COMMON  MISTAKE:  Never  Size  Inverter  on  Continuous  Rating  Alone Motor  surge  lasts  only  1  to  2  seconds  but  requires  3  to  6  times  rated  power.  Always  verify  the  surge  rating  from  the  datasheet  before  purchasing.  KEY  TAKEAWAYS 
+  Voc  on  the  panel  label  is  used  for  string  voltage  calculation,  never  Vmp   Battery  usable  capacity  =  Rated  Ah  x  DoD  (0.80  for  Lithium,  0.50  for  Lead-Acid)   Inverter  has  two  ratings:  continuous  power  and  surge  power,  check  both   MPPT  voltage  range:  string  must  operate  WITHIN  this  range   Temperature  coefficient  explains  why  we  apply  the  75%  system  efficiency  factor  
+Calculate  It  Right|     Page  47
+ 
+
+--- PAGE 48 ---
+CHAPTER
+ 
+12 
+Tilt  Angle  and  Panel  Orientation 
+ 
+ Figure  12.1:  Panel  tilt  angles  at  10,  15,  20,  and  30  degrees  with  orientation  rule  by  hemisphere.  Never  
+mount
+ 
+panels
+ 
+completely
+ 
+flat.
+  The  angle  at  which  your  solar  panels  are  mounted  directly  affects  how  much  energy  
+they
+ 
+capture.
+ 
+A
+ 
+panel
+ 
+lying
+ 
+completely
+ 
+flat
+ 
+captures
+ 
+less
+ 
+annual
+ 
+energy
+ 
+than
+ 
+one
+ 
+tilted
+ 
+toward
+ 
+the
+ 
+sun.
+ 
+The
+ 
+optimal
+ 
+tilt
+ 
+angle
+ 
+equals
+ 
+approximately
+ 
+the
+ 
+latitude
+ 
+of
+ 
+the
+ 
+installation
+ 
+location. 
+12.1   Orientation  Rule  by  Hemisphere 
+Hemisphere Countries 
+Panel  Must  Face 
+Reason 
+Northern  Hemisphere 
+Nigeria,  Ghana,  Kenya,  Ethiopia 
+SOUTH 
+Sun  arc  is  south  of  vertical Southern  Hemisphere 
+South  Africa,  Namibia,  Zimbabwe 
+NORTH 
+Sun  arc  is  north  of  vertical Near  Equator  (within  5  degrees) 
+Parts  of  Kenya,  Uganda 
+South  preferred 
+Minimal  difference 
+ 
+12.2   Tilt  Angle  Impact  on  Annual  Output  by  Region 
+Tilt  from  Horizontal 
+Annual  Output  vs  Optimal 
+Best  Location 
+0  degrees  (flat) 85  to  90%  of  optimal Not  recommended,  dust  accumulates 
+Calculate  It  Right|     Page  48
+ 
+
+
+--- PAGE 49 ---
+10  to  12  degrees 95  to  97%  of  optimal Lagos,  Accra  (south,  near  equator) 15  to  18  degrees 98  to  100%  of  optimal Abuja,  Nairobi  (middle  latitude) 20  to  25  degrees 99  to  100%  of  optimal Kano,  Addis  Ababa  (higher  latitude) 30  to  35  degrees 96  to  99%  of  optimal Johannesburg,  Cape  Town  
+PRO  INSTALLER  TIP In  Nigeria,  a  tilt  of  10  to  15  degrees  gives  excellent  results  across  all  regions  and  has  the  added  benefit  of  allowing  rainwater  to  wash  dust  off  the  panels  naturally.  KEY  TAKEAWAYS 
+  Northern  Hemisphere:  panels  face  South.  Southern  Hemisphere:  panels  face  North   Optimal  tilt  angle  approximately  equals  the  site  latitude  in  degrees   Never  mount  panels  completely  flat,  dust  accumulates  and  reduces  output   For  Nigeria,  10  to  15  degree  tilt  gives  95  to  100%  of  optimal  output   Rainwater  naturally  cleans  tilted  panels,  flat  panels  need  more  manual  cleaning  
+Calculate  It  Right|     Page  49
+ 
+
+--- PAGE 50 ---
+CHAPTER
+ 
+13 
+System  Voltage  Selection  Guide 
+ 
+ Figure  13.1:  12V  vs  24V  vs  48V  system  comparison.  Higher  voltage  means  lower  current,  thinner  
+cables,
+ 
+and
+ 
+safer
+ 
+installation.
+ 
+Always
+ 
+use
+ 
+48V
+ 
+for
+ 
+systems
+ 
+above
+ 
+2kVA.
+  System  voltage  is  one  of  the  most  important  design  decisions  you  make  for  every  
+installation.
+ 
+It
+ 
+affects
+ 
+cable
+ 
+size,
+ 
+cost,
+ 
+safety,
+ 
+and
+ 
+efficiency.
+ 
+The
+ 
+wrong
+ 
+voltage
+ 
+choice
+ 
+creates
+ 
+problems
+ 
+that
+ 
+cannot
+ 
+be
+ 
+fixed
+ 
+without
+ 
+replacing
+ 
+major
+ 
+components. 
+13.1   How  System  Voltage  Affects  Cable  Size  and  Cost 
+3kVA  at  12V: 3,000W  /  12V =  250A  DC  current 3kVA  at  24V: 3,000W  /  24V =  125A  DC  current 3kVA  at  48V: 3,000W  /  48V =  62.5A  DC  current Conclusion: 48V  uses  cables  4x  thinner  than  12V  for  same  power 
+Lower  cost  and  safer  
+13.2   Voltage  Selection  Guide  by  System  Size 
+System  Size 
+Recommended  Voltage 
+Reason Avoid 
+Under  1kVA 12V  acceptable 
+Simple  systems,  few  batteries 
+Using  12V  above  1kVA 1kVA  to  2kVA 24V  minimum Better  efficiency  than  12V 12V  for  this  range 
+Calculate  It  Right|     Page  50
+ 
+
+
+--- PAGE 51 ---
+2kVA  to  30kVA 48V  always 
+Professional  standard,  thin  cables 
+12V  or  24V  for  this  range 
+Above  30kVA 120V  or  240V  DC Large  commercial  only 
+Standard  48V  insufficient  
+COMMON  MISTAKE:  Never  Mix  System  Voltages Every  component  must  be  rated  for  the  same  voltage:  panels  via  MPPT,  battery  bank,  and  inverter.  A  48V  inverter  connected  to  a  24V  battery  bank  will  not  function  and  may  be  permanently  damaged.  KEY  TAKEAWAYS 
+  Higher  voltage  =  lower  current  =  thinner  cables  =  lower  cost  =  safer   48V  is  the  professional  standard  for  all  systems  above  2kVA   A  3kVA  system  at  48V  draws  62.5A,  same  system  at  12V  draws  250A   Never  mix  component  voltage  ratings  in  the  same  system   Upgrade  to  48V  is  always  worthwhile  for  any  system  above  1.5kVA  
+Calculate  It  Right|     Page  51
+ 
+
+--- PAGE 52 ---
+CHAPTER
+ 
+14 
+Autonomy  Days  Calculation 
+ 
+ Figure  14.1:  Battery  state  of  charge  over  5  days  including  2  cloudy  days.  The  red  line  shows  the  80%  
+DoD
+ 
+limit.
+ 
+Battery
+ 
+autonomy
+ 
+design
+ 
+prevents
+ 
+the
+ 
+system
+ 
+from
+ 
+going
+ 
+below
+ 
+this
+ 
+line.
+  Autonomy  days  refers  to  how  many  days  your  battery  bank  can  supply  nighttime  
+loads
+ 
+without
+ 
+any
+ 
+solar
+ 
+charging.
+ 
+Designing
+ 
+for
+ 
+more
+ 
+autonomy
+ 
+days
+ 
+means
+ 
+a
+ 
+larger
+ 
+battery
+ 
+bank
+ 
+but
+ 
+greater
+ 
+resilience
+ 
+during
+ 
+rainy
+ 
+seasons
+ 
+and
+ 
+cloudy
+ 
+periods. 
+14.1   Autonomy  Days  Formula  and  Worked  Examples 
+Battery  Ah  =  (Nighttime  Load  x  Autonomy  Days)  /  (System  Voltage  x  DoD)  1  day  autonomy: 3,775Wh  /  (48  x  0.80) =  98Ah  minimum 2  days  autonomy: (3,775  x  2)  /  (48  x  0.80) =  196Ah  minimum 3  days  autonomy: (3,775  x  3)  /  (48  x  0.80) =  295Ah  minimum Cost  difference: 1  day  to  3  days 3x  more  battery  cost  
+14.2   Autonomy  Recommendation  by  Region  in  Nigeria 
+Location 
+Avg  Cloudy  Days  per  Month 
+Recommended  Autonomy 
+Battery  Size  Impact 
+Calculate  It  Right|     Page  52
+ 
+
+
+--- PAGE 53 ---
+Northern  Nigeria  (Kano,  Maiduguri) 
+2  to  4  days 1  to  1.5  days Standard  sizing 
+Middle  Belt  (Abuja,  Jos) 
+5  to  8  days 1.5  to  2  days Medium  sizing 
+Southern  Nigeria  (Lagos,  PH) 
+8  to  14  days 2  to  3  days Large  sizing 
+Remote  off-grid  sites Variable 3  to  5  days Maximum  sizing  
+TIP:  Rainy  Season  Planning Always  discuss  rainy  season  expectations  with  the  client.  A  system  sized  for  1  day  autonomy  will  require  generator  backup  during  3  to  5  consecutive  cloudy  days  which  is  common  in  Lagos  from  June  to  August.  KEY  TAKEAWAYS 
+  Autonomy  days  =  number  of  days  battery  supplies  loads  with  no  solar  input   Formula:  (Nighttime  Load  x  Autonomy  Days)  /  (Voltage  x  DoD)   Northern  Nigeria:  1  to  1.5  days.  Southern  Nigeria:  2  to  3  days  recommended   More  autonomy  =  larger  battery  =  higher  cost  but  better  rainy  season  reliability  Always  discuss  seasonal  expectations  with  client  before  finalising  autonomy  days  
+Calculate  It  Right|     Page  53
+ 
+
+--- PAGE 54 ---
+CHAPTER
+ 
+15 
+Cost  Per  kWh  Calculator 
+ This  chapter  gives  you  the  most  powerful  sales  tool  in  solar:  the  cost  per  unit  of  
+energy
+ 
+comparison.
+ 
+When
+ 
+a
+ 
+client
+ 
+can
+ 
+see
+ 
+exactly
+ 
+how
+ 
+much
+ 
+each
+ 
+unit
+ 
+of
+ 
+electricity
+ 
+costs
+ 
+from
+ 
+a
+ 
+generator
+ 
+versus
+ 
+solar,
+ 
+the
+ 
+decision
+ 
+becomes
+ 
+financially
+ 
+obvious. 
+15.1   Generator  Cost  Per  kWh  Calculation 
+Generator  fuel: NGN  1,200  per  litre  (PMS)  Fuel  consumption: 2.5kVA  generator  uses  0.8  litres  per  hour  Fuel  cost  per  hour: 0.8  x  1,200 =  NGN  960  per  hour Power  output  per  hour: 2.5kVA  x  0.8  power  factor  =  2kWh  Cost  per  kWh  (generator): 
+960  /  2 =  NGN  480  per  kWh Annual  fuel  cost  (8hrs/day): 
+960  x  8  x  365 =  NGN  2,803,200/year  
+15.2   Solar  Cost  Per  kWh  Calculation 
+System  cost: NGN  1,500,000  complete  installation  Annual  maintenance: NGN  30,000  per  year  Total  20-year  cost: 1,500,000  +  (30,000  x  20) =  NGN  2,100,000 Annual  energy  produced: 
+8kWh/day  x  365  days =  2,920  kWh/year 
+20-year  total  energy: 2,920  x  20 =  58,400  kWh Cost  per  kWh  (solar): 2,100,000  /  58,400 =  NGN  36  per  kWh  
+15.3   The  20-Year  Comparison  That  Closes  Sales 
+Energy  Source Cost  Per  kWh Annual  Cost 5-Year  Cost 
+20-Year  Cost 
+Generator NGN  480/kWh NGN  2,803,200 
+NGN  14,016,000 
+NGN  56,064,000 
+Calculate  It  Right|     Page  54
+ 
+
+--- PAGE 55 ---
+Grid  electricity NGN  68/kWh NGN  396,000 NGN  1,980,000 
+NGN  7,920,000 
+Solar  (your  install) NGN  36/kWh NGN  210,000 NGN  1,050,000 
+NGN  2,100,000 
+Solar  saving  vs  Generator 
+NGN  444/kWh  saved 
+NGN  2,593,200/yr 
+NGN  12,966,000 
+NGN  53,964,000  
+TIP:  Present  the  20-Year  Cost Most  clients  think  only  about  upfront  cost.  Show  them  the  20-year  comparison.  Paying  NGN  1.5  million  for  solar  today  saves  NGN  53  million  compared  to  running  a  generator  over  20  years.  That  is  a  35-to-1  return.  KEY  TAKEAWAYS 
+  Generator  electricity  costs  NGN  400  to  600  per  kWh  in  Nigeria   Solar  electricity  costs  NGN  30  to  50  per  kWh  over  the  system  lifetime   Solar  is  10  to  15  times  cheaper  per  unit  than  generator  electricity   Show  clients  the  20-year  cost  comparison,  it  closes  hesitant  decisions  Solar  payback  period  is  typically  12  to  24  months  against  generator  fuel  cost  alone  
+Calculate  It  Right|     Page  55
+ 
+
+--- PAGE 56 ---
+CHAPTER
+ 
+16 
+Seasonal  Load  and  Output  Variation 
+ 
+ Figure  16.1:  Monthly  average  Peak  Sun  Hours  for  Lagos,  Abuja,  and  Kano.  July  and  August  are  the  
+worst
+ 
+months.
+ 
+Rainy
+ 
+season
+ 
+design
+ 
+requires
+ 
+extra
+ 
+panels
+ 
+or
+ 
+battery
+ 
+autonomy.
+  Solar  output  varies  significantly  across  seasons  in  Africa.  A  system  that  performs  
+perfectly
+ 
+in
+ 
+January
+ 
+may
+ 
+underperform
+ 
+in
+ 
+August.
+ 
+Professional
+ 
+installers
+ 
+account
+ 
+for
+ 
+this
+ 
+variation
+ 
+in
+ 
+their
+ 
+designs
+ 
+and
+ 
+communicate
+ 
+it
+ 
+clearly
+ 
+to
+ 
+clients
+ 
+so
+ 
+they
+ 
+are
+ 
+not
+ 
+surprised. 
+16.1   How  Seasons  Affect  Solar  Output  in  Nigeria 
+Season Period  in  Nigeria Effect  on  Output 
+Recommended  Action 
+Harmattan 
+November  to  February 
+Dust  reduces  output  5  to  15% 
+Schedule  panel  cleaning  monthly 
+Dry  Season October  to  April 
+Best  solar  output,  clear  skies 
+Highest  system  performance  period 
+Rainy  Season May  to  September 
+Clouds  reduce  output  20  to  40% 
+Design  for  this  worst-case  period 
+Peak  Rainy July  to  August 
+Lowest  solar  output  of  the  year 
+Battery  autonomy  most  critical  
+16.2   Designing  for  the  Worst-Case  Season 
+Calculate  It  Right|     Page  56
+ 
+
+
+--- PAGE 57 ---
+Average  PSH  used: 5.0  PSH  per  day Standard  design  figure July  PSH  in  Lagos: 3.8  PSH  per  day 24%  below  average Output  reduction: System  delivers  3.8  /  5.0  =  76%  of  normal 
+ 
+Action: Add  1  to  2  extra  panels  OR  increase  battery  autonomy  to  cover  gap 
+ 
+ 
+PRO  INSTALLER  TIP Tell  your  client  upfront  that  the  system  is  designed  for  average  conditions  and  will  slightly  underperform  during  the  wettest  weeks  of  July  and  August.  This  is  normal.  Setting  this  expectation  prevents  complaints  later.  KEY  TAKEAWAYS 
+  Rainy  season  in  Nigeria:  May  to  September,  worst  solar  output  period   Harmattan:  November  to  February,  dust  reduces  output  by  5  to  15%   Design  for  worst-case  month,  July  or  August  in  southern  Nigeria   Add  1  to  2  extra  panels  to  cover  rainy  season  output  reduction   Always  communicate  seasonal  variation  to  clients  during  consultation  
+Calculate  It  Right|     Page  57
+ 
+
+--- PAGE 58 ---
+CHAPTER
+ 
+17 
+Maintenance  Schedule  Calculator 
+ A  solar  system  is  largely  maintenance-free  but  not  completely.  Regular  inspection  
+and
+ 
+simple
+ 
+maintenance
+ 
+ensures
+ 
+the
+ 
+system
+ 
+delivers
+ 
+its
+ 
+rated
+ 
+performance
+ 
+for
+ 
+20
+ 
+or
+ 
+more
+ 
+years.
+ 
+Provide
+ 
+every
+ 
+client
+ 
+with
+ 
+a
+ 
+printed
+ 
+version
+ 
+of
+ 
+this
+ 
+schedule
+ 
+at
+ 
+handover. 
+17.1   Monthly  Maintenance  Tasks 
+Task How  to  Do  It 
+Time  Required 
+Who  Does  It 
+Panel  cleaning 
+Soft  brush  and  clean  water  early  morning  when  panels  are  cool 
+20  to  40  minutes 
+Client  or  technician 
+Visual  inspection 
+Check  cables,  connectors,  and  enclosures  for  physical  damage 
+10  minutes Client 
+Inverter  display  check 
+Verify  battery  voltage,  charging  current,  and  output  voltage  are  normal 
+5  minutes Client 
+Battery  temperature 
+Touch  battery  casing,  should  be  cool  to  warm,  never  hot 
+2  minutes Client 
+ 
+17.2   Quarterly  Maintenance  Tasks 
+Task How  to  Do  It Tools  Required MC4  connector  check 
+Pull-test  each  connector.  Check  for  discolouration  or  burning  smell 
+None 
+Terminal  torque  check 
+Verify  battery  and  inverter  terminals  are  tight.  Loose  terminals  cause  arcing 
+Torque  wrench 
+Earth  continuity  test 
+Measure  resistance  from  panel  frame  to  earth  rod.  Should  be  below  1  ohm 
+Multimeter 
+Battery  voltage  balance 
+Check  cell  voltages  via  BMS  app.  All  cells  should  be  within  0.05V  of  each  other 
+Multimeter  or  BMS  app 
+Inverter  air  filter 
+Clean  dust  from  inverter  ventilation  slots  with  soft  brush 
+Soft  brush 
+ 
+17.3   Component  Replacement  Timeline  with  Costs 
+Component 
+Expected  Lifespan 
+Replacement  Cost  (NGN) 
+Signs  of  Replacement  Needed 
+Calculate  It  Right|     Page  58
+ 
+
+--- PAGE 59 ---
+Solar  Panels 20  to  25  years 145,000  per  panel 
+Output  below  80%  of  original  rating 
+Lithium  Battery 8  to  15  years 500,000  to  1,000,000 
+Capacity  below  80%  of  rated 
+Lead-Acid  Battery 3  to  5  years 50,000  to  150,000 
+Capacity  drops  after  2  to  3  years 
+Inverter 5  to  10  years 300,000  to  600,000 
+Frequent  faults  or  reduced  efficiency 
+DC  Cables 15  to  20  years 15,000  to  50,000 
+Cracking  or  UV  damage  to  insulation 
+MC4  Connectors 10  to  15  years 5,000  to  15,000 
+Discolouration  or  burning  smell  
+PRO  INSTALLER  TIP Offer  every  client  a  quarterly  maintenance  contract  at  NGN  15,000  to  30,000  per  visit.  This  creates  a  predictable  recurring  income  stream,  keeps  the  system  performing  at  its  best,  and  gives  you  first  access  to  the  client  when  they  need  upgrades  or  new  installations.  KEY  TAKEAWAYS 
+  Monthly:  clean  panels  and  check  inverter  display  readings   Quarterly:  inspect  connectors,  check  terminal  torque,  test  earth  continuity   Lithium  batteries  last  8  to  15  years.  Lead-acid  only  3  to  5  years   Offer  quarterly  maintenance  contracts  for  recurring  income   Provide  every  client  a  printed  maintenance  schedule  at  handover  
+Calculate  It  Right|     Page  59
+ 
+
+--- PAGE 60 ---
+CHAPTER
+ 
+18 
+Complete  System  Design  Process 
+ This  chapter  brings  together  the  entire  design  process  in  two  comprehensive  visual  
+references:
+ 
+the
+ 
+load
+ 
+calculation
+ 
+flowchart
+ 
+showing
+ 
+every
+ 
+decision
+ 
+step,
+ 
+and
+ 
+the
+ 
+complete
+ 
+system
+ 
+wiring
+ 
+diagram
+ 
+showing
+ 
+every
+ 
+component
+ 
+and
+ 
+connection. 
+18.1   Load  Calculation  Flowchart:  All  8  Steps 
+ Figure  18.1:  Complete  load  calculation  flowchart.  Steps  1  to  7  produce  the  Design  Load.  Four  outputs  
+flow
+ 
+from
+ 
+the
+ 
+Design
+ 
+Load
+ 
+for
+ 
+panel,
+ 
+battery,
+ 
+and
+ 
+inverter
+ 
+sizing.
+ Follow  this  flowchart  on  every  single  installation  without  exception.  Steps  1  to  7  
+produce
+ 
+the
+ 
+Design
+ 
+Load.
+ 
+From
+ 
+the
+ 
+Design
+ 
+Load,
+ 
+you
+ 
+derive
+ 
+four
+ 
+outputs:
+ 
+the
+ 
+Daytime
+ 
+Design
+ 
+Load
+ 
+for
+ 
+panel
+ 
+sizing,
+ 
+the
+ 
+Nighttime
+ 
+Design
+ 
+Load
+ 
+for
+ 
+battery
+ 
+sizing,
+ 
+the
+ 
+Total
+ 
+Design
+ 
+Load
+ 
+which
+ 
+panels
+ 
+are
+ 
+sized
+ 
+on,
+ 
+and
+ 
+the
+ 
+Peak
+ 
+Simultaneous
+ 
+Load
+ 
+for
+ 
+inverter
+ 
+sizing
+ 
+with
+ 
+motor
+ 
+surge
+ 
+added.  
+18.2   Complete  System  Wiring  Diagram  with  Labels 
+Calculate  It  Right|     Page  60
+ 
+
+
+--- PAGE 61 ---
+ Figure  18.2:  Complete  system  wiring  diagram  with  every  component  labelled.  Follow  the  Golden  Rule:  
+connect
+ 
+Battery
+ 
+first,
+ 
+Inverter
+ 
+second,
+ 
+Solar
+ 
+panels
+ 
+third.
+ This  diagram  shows  every  component  in  a  complete  hybrid  solar  installation  and  how  
+they
+ 
+connect.
+ 
+The
+ 
+connection
+ 
+sequence
+ 
+follows
+ 
+the
+ 
+Golden
+ 
+Rule:
+ 
+battery
+ 
+first,
+ 
+then
+ 
+inverter,
+ 
+then
+ 
+solar
+ 
+panels.
+ 
+Never
+ 
+deviate
+ 
+from
+ 
+this
+ 
+sequence
+ 
+regardless
+ 
+of
+ 
+time
+ 
+pressure.  Cable  Colour Circuit Minimum  Size  for  5kVA  System 
+Orange  or  Red 
+DC  Positive  (panels  and  battery) 
+6mm2  for  panels,  35mm2  for  battery 
+Black 
+DC  Negative  (panels  and  battery) 
+6mm2  for  panels,  35mm2  for  battery Red AC  Live  output  from  inverter 4mm2 Blue  or  Black AC  Neutral  output 4mm2 Green  or  Yellow-Green 
+Earth  and  bonding  conductor 6mm2  minimum 
+ KEY  TAKEAWAYS 
+  Always  follow  the  8-step  load  calculation  process  on  every  installation   Four  outputs  from  load  calc:  daytime  load,  nighttime  load,  total  load,  peak  simultaneous   DC  positive:  orange  or  red.  DC  negative:  black.  AC:  red  and  blue.  Earth:  green   Connection  order:  Battery  first,  Inverter  second,  Solar  panels  third   Use  this  wiring  diagram  as  a  reference  checklist  during  every  installation  
+Calculate  It  Right|     Page  61
+ 
+
+
+--- PAGE 62 ---
+CHAPTER
+ 
+19 
+Cable  Sizing  Visual  Reference 
+ 
+ Figure  19.1:  All  cable  sizes  drawn  to  scale  from  2.5mm2  to  50mm2.  Larger  cross-section  means  more  
+copper,
+ 
+lower
+ 
+resistance,
+ 
+and
+ 
+higher
+ 
+safe
+ 
+current
+ 
+capacity.
+  The  cross-section  diagram  above  shows  all  common  cable  sizes  drawn  to  scale.  The  
+larger
+ 
+the
+ 
+cross-section,
+ 
+the
+ 
+more
+ 
+copper
+ 
+is
+ 
+present
+ 
+and
+ 
+the
+ 
+more
+ 
+current
+ 
+the
+ 
+cable
+ 
+can
+ 
+safely
+ 
+carry.
+ 
+Using
+ 
+a
+ 
+cable
+ 
+that
+ 
+is
+ 
+too
+ 
+small
+ 
+does
+ 
+not
+ 
+just
+ 
+reduce
+ 
+efficiency,
+ 
+it
+ 
+creates
+ 
+a
+ 
+fire
+ 
+hazard.  
+19.1   Cable  Cross-Section  Diagram  to  Scale 
+DC  Current  Range Minimum  Cable  Size Application Up  to  20A 2.5mm2 Small  AC  circuits,  lighting 20  to  30A 4mm2 Inverter  AC  output,  medium  circuits 30  to  60A 10mm2 Battery  to  small  inverter 60  to  100A 16  to  25mm2 Battery  to  3  to  5kVA  inverter 100  to  150A 35mm2 Battery  to  5  to  8kVA  inverter 150  to  200A 50mm2 Battery  to  8  to  10kVA  inverter 200A  and  above 70mm2  or  busbar Large  systems  above  10kVA  
+19.2   Cable  Size  by  System  Size  Quick  Reference  Table 
+Calculate  It  Right|     Page  62
+ 
+
+
+--- PAGE 63 ---
+System  Size 
+DC  Battery  Cable 
+DC  Solar  Cable AC  Output  Cable 
+Earth  Cable 1  to  2kVA 16mm2 4mm2 2.5mm2 4mm2 3  to  5kVA 25  to  35mm2 6mm2 4mm2 6mm2 5  to  8kVA 35  to  50mm2 6mm2 6mm2 6mm2 10kVA 50  to  70mm2 6mm2 10mm2 6mm2 15  to  20kVA 70  to  95mm2 6mm2 16mm2 10mm2  
+COMMON  MISTAKE:  The  Hidden  Danger  of  Marginally  Sized  Cables A  cable  rated  at  exactly  its  maximum  current  runs  very  hot  under  continuous  load.  Heat  degrades  insulation  over  months  and  years,  eventually  causing  shorts  and  fires.  Size  every  cable  to  carry  125%  of  maximum  expected  current.  KEY  TAKEAWAYS 
+  Battery-to-inverter  cable  is  always  the  largest  and  most  critical  cable  in  the  system   Size  every  cable  to  carry  125%  of  maximum  expected  current  for  safety  margin   DC  solar  cables  must  be  UV-rated  for  outdoor  exposure   Use  flexible  welding  cable  for  battery  connections,  it  handles  vibration  better   Label  every  cable  with  polarity,  voltage,  and  circuit  name  immediately  after  installation  
+Calculate  It  Right|     Page  63
+ 
+
+--- PAGE 64 ---
+Appendix 
+ 
+Duty  Cycle  Reference  Table 
+Appliance 
+Typical  Duty  Cycle 
+Effective  Hours  from  24hr  Operation 
+Refrigerator  (standard) 40  to  50% 9.6  to  12  hours Deep  Freezer 30  to  40% 7.2  to  9.6  hours Air  Conditioner  (cooling  mode) 
+70  to  90% Run  time  close  to  stated  hours 
+Water  Pump  (auto  pressure) 20  to  40% 4.8  to  9.6  hours  from  24hr All  other  appliances 100% Full  stated  hours   
+Glossary  of  Key  Calculation  Terms 
+Term Definition 
+Ah  (Ampere-hour) 
+Battery  capacity  unit.  A  200Ah  battery  can  supply  20A  for  10  hours. 
+Design  Load 
+Total  daily  energy  requirement  after  applying  the  25%  safety  margin. 
+DoD  (Depth  of  Discharge) 
+Maximum  percentage  of  battery  capacity  that  can  be  safely  used.  Lithium:  80%,  Lead-acid:  50%. 
+Duty  Cycle 
+Fraction  of  time  a  cycling  appliance  actually  runs  during  its  stated  operating  period. 
+kVA  (Kilovolt-Ampere) 
+Apparent  power,  the  rating  used  for  inverters  and  generators. kWh  (Kilowatt-Hour) 1,000  Watt-hours.  The  unit  used  on  electricity  meters. 
+MPPT 
+Maximum  Power  Point  Tracking,  efficient  charge  controller  that  maximises  panel  output. 
+PSH  (Peak  Sun  Hours) 
+Hours  of  equivalent  full-intensity  sunshine  per  day.  Africa  averages  5  PSH. 
+Surge  Power 
+Startup  power  drawn  by  motor-driven  appliances,  2.5  to  6x  rated  wattage  for  1  to  2  seconds. 
+System  Efficiency 
+Real-world  output  factor  accounting  for  all  losses.  Use  0.75  (75%)  for  all  calculations. 
+Calculate  It  Right|     Page  64
+ 
+
+--- PAGE 65 ---
+Voc  (Open  Circuit  Voltage) 
+Maximum  voltage  a  solar  panel  produces  when  no  load  is  connected. 
+Watt-Hour  (Wh) 
+Energy  unit:  Power  (W)  x  Time  (hours).  The  fundamental  unit  for  all  solar  calculations.    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Calculate  It  Right  /  2026  Edition Every  correct  calculation  you  make  builds  a  reputation  that  no  marketing  can  buy.  
+Calculate  It  Right|     Page  65
+ 

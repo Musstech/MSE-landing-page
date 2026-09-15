@@ -4,12 +4,15 @@ import { formatCurrency, formatNumber } from '../../utils/format'
 import { getCurrencyOption, getCurrencySymbol } from '../../data/currencies'
 import { Button } from '../../components/ui/Button'
 
-export function QuotePreview({ client, installer, system, extras, margin, reference }) {
-  const quote = calculateQuote(system, extras, margin)
+export function QuotePreview({ client, installer, system, extras, margin, reference, commercial, loads }) {
+  const quote = calculateQuote(system, extras, margin, { loads })
   const currencyOption = getCurrencyOption(installer.currencyCode || installer.currency)
   const currency = getCurrencySymbol(currencyOption.code)
   const companyName = installer.companyName || 'Your Company'
   const companySubtitle = installer.subtitle ?? installer.tagline ?? ''
+  const taxEnabled = commercial?.taxEnabled
+  const taxAmount = taxEnabled ? quote.totalCost * (Math.max(0, Number(commercial.taxPercent) || 0) / 100) : 0
+  const finalTotal = quote.totalCost + taxAmount
   const rows = [
     [`Solar Panel ${system.panelW}W`, quote.panels, system.panelPrice, quote.panels * system.panelPrice],
     [`${system.battType === 'lithium' ? 'Lithium Battery' : 'Battery'} ${system.battAh}Ah ${system.voltage}V`, quote.batteries, system.battPrice, quote.batteries * system.battPrice],
@@ -48,6 +51,7 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
               <div>{quote.panels} x {system.panelW}W panels</div>
               <div>{quote.batteries} x {system.battAh}Ah batteries</div>
               <div>{formatNumber(quote.inverterWatts / 1000, 1)}kVA inverter</div>
+              <div>{formatNumber(quote.designLoad)}Wh/day design load</div>
               <div>{formatNumber(system.psh || 5, 1)} peak sun hours</div>
             </div>
           </div>
@@ -76,9 +80,19 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
                 <td className="p-3 font-bold text-slate-950" colSpan="3">Subtotal</td>
                 <td className="p-3 text-right font-bold text-slate-950">{formatCurrency(quote.equipCost, currency)}</td>
               </tr>
+              <tr className="border-t border-slate-200">
+                <td className="p-3 font-bold text-slate-950" colSpan="3">After Margin</td>
+                <td className="p-3 text-right font-bold text-slate-950">{formatCurrency(quote.totalCost, currency)}</td>
+              </tr>
+              {taxEnabled ? (
+                <tr className="border-t border-slate-200">
+                  <td className="p-3 font-bold text-slate-950" colSpan="3">Tax / VAT ({formatNumber(commercial.taxPercent)}%)</td>
+                  <td className="p-3 text-right font-bold text-slate-950">{formatCurrency(taxAmount, currency)}</td>
+                </tr>
+              ) : null}
               <tr className="bg-sky-500 text-white">
                 <td className="p-4 font-heading font-extrabold" colSpan="3">TOTAL INVESTMENT</td>
-                <td className="p-4 text-right font-heading text-lg font-extrabold">{formatCurrency(quote.totalCost, currency)}</td>
+                <td className="p-4 text-right font-heading text-lg font-extrabold">{formatCurrency(finalTotal, currency)}</td>
               </tr>
             </tbody>
           </table>
@@ -86,9 +100,10 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
 
         <div className="mt-5 rounded-2xl bg-slate-50 p-4 text-sm leading-6 text-slate-600">
           <div className="font-bold text-slate-950">Terms & Validity</div>
-          <div>This quotation is valid for 14 days from the date above.</div>
-          <div>Prices are subject to component and installation changes.</div>
-          <div>Deposit and warranty terms should be confirmed by the installer.</div>
+          <div>This quotation is valid for {commercial?.validityDays || 14} days from the date above.</div>
+          <div>{commercial?.paymentTerms || 'Payment schedule to be agreed before procurement begins.'}</div>
+          <div>{commercial?.warranty || 'Product warranty follows the manufacturer warranty. Workmanship warranty should be stated by the installer.'}</div>
+          {commercial?.bankDetails ? <div className="mt-2 whitespace-pre-line"><span className="font-bold text-slate-950">Bank details:</span> {commercial.bankDetails}</div> : null}
         </div>
       </div>
       <Button className="print:hidden w-full rounded-none" variant="sky" onClick={() => window.print()}>

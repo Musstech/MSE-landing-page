@@ -1,0 +1,2629 @@
+FILE: Solar_Installation_Mastery_Guide.pdf
+PAGES: 60
+
+--- PAGE 1 ---
+  
+ 
+ 
+ 
+ 
+SOLAR INSTALLATION 
+MASTERY 
+A Complete Training Manual 
+ 
+Step-by-Step Guide to Designing, Installing & Profiting from Solar Energy Systems 
+ 
+ 
+ 
+ 
+ 
+IMAM MUSA 
+Solar Energy Consultant & Technical Trainer 
+Musstech Solar Energy  |  2025 Edition 
+
+
+--- PAGE 2 ---
+  
+TABLE OF CONTENTS 
+ 
+ Introduction ................................................................................................ 3 
+About This Book ................................ ................................ ................................ ............ 3 
+Who This Book Is For ................................ ................................ ................................ .... 3 
+ Chapter 1   Introduction to Solar Energy................................................. 4 
+1.1   How a Solar System Works ................................ ................................ ................... 4 
+1.2   Why Solar Is Critical in Africa ................................ ................................ ................ 4 
+1.3   Basic System Components Overview ................................ ................................ .... 5 
+1.4   Technical Rules Every Solar Installer Must Know ................................ .................. 5 
+ Chapter 2   Solar Components Explained ............................................... 6 
+2.1   Solar Panels: Full Specification Guide ................................ ................................ ... 6 
+2.2   Inverters: Types, Selection and Surge Capacity ................................ .................... 7 
+2.3   Batteries: SOC, DOD, Lifecycle and Technology Guide ................................ ........ 8 
+         State of Charge (SOC) and Depth of Discharge (DoD) ................................ ......... 8 
+         Battery Cycle Life by Type and DoD ................................ ................................ ..... 9 
+         Full Battery Comparison Table ................................ ................................ ............. 9 
+         Technical Rule: SOC Monitoring and Protection ................................ ................. 10 
+2.4   MPPT vs PWM Charge Controllers ................................ ................................ ....... 9 
+2.5   Cables, Fuses and Protection Devices ................................ ................................  10 
+ Chapter 3   Load Calculation .................................................................. 11 
+3.1   Key Terms: Watts, Watt-Hours, Peak Sun Hours ................................ ................ 11 
+3.2   The 6-Step Calculation Process ................................ ................................ .......... 12 
+3.3   Refrigerator Duty Cycle Explained ................................ ................................ ....... 12 
+3.4   Example 1: Small Apartment (Beginner) ................................ ..............................  13 
+3.5   Example 2: 3-Bedroom Home (Intermediate) ................................ ....................... 13 
+3.6   Example 3: Small Office (Advanced) ................................ ................................ ... 14 
+3.7   Example 4: Large Home with AC (Professional) ................................ .................. 15 
+ Chapter 4   System Sizing ....................................................................... 17 
+4.1   Real-World Panel Output: The 75% Efficiency Factor ................................ .......... 17 
+4.2   Panel Sizing: Step-by-Step with 4 Examples ................................ ....................... 18 
+4.3   Battery Sizing: Step-by-Step with 4 Examples ................................ ..................... 20 
+4.4   Inverter Sizing with Motor Surge Allowance ................................ ......................... 21 
+4.5   Complete System Summary Table ................................ ................................ ...... 23 
+ Chapter 5   Series vs Parallel Connections ........................................... 24 
+5.1   Series Connection: Voltage Adder ................................ ................................ ....... 24 
+5.2   Parallel Connection: Capacity Adder ................................ ................................ ... 25 
+5.3   Series-Parallel Combination ................................ ................................ ................ 25 
+5.4   Solar Panel String Design ................................ ................................ .................... 26 
+5.5   Series vs Parallel Visual Diagram ................................ ................................ ........ 26 
+ Chapter 6   Installation Process ............................................................. 27 
+6.1   Pre-Installation Site Survey Checklist ................................ ................................ .. 27 
+6.2   Panel Orientation by Hemisphere ................................ ................................ ........ 28 
+
+--- PAGE 3 ---
+  
+6.3   Tools and Materials Required ................................ ................................ .............. 28 
+6.4   Full Wiring Sequence: The Golden Rule ................................ ..............................  29 
+6.5   System Commissioning and Load Testing ................................ ........................... 30 
+ Chapter 7   Safety Practices ................................................................... 31 
+7.1   Hazard Awareness Table ................................ ................................ .................... 31 
+7.2   Electrical Safety: Non-Negotiable Rules ................................ ..............................  32 
+7.3   Fire Prevention ................................ ................................ ................................ .... 32 
+7.4   Working at Height: Roof Safety................................ ................................ ............ 32 
+7.5   Personal Protective Equipment ................................ ................................ ........... 33 
+ Chapter 8   Common Mistakes and How to Avoid Them ..................... 34 
+Mistake 1:  Skipping the Load Calculation ................................ ................................ ... 34 
+Mistake 2:  Using Theoretical Panel Output ................................ ................................ . 34 
+Mistake 3:  Ignoring Refrigerator Duty Cycle ................................ ...............................  35 
+Mistake 4:  Undersizing Inverter for Motor Surge ................................ ......................... 35 
+Mistake 5:  Wrong Panel Orientation ................................ ................................ ........... 35 
+Mistake 6:  Exceeding Battery Parallel Limit ................................ ................................  36 
+Mistake 7:  Mixing Old and New Batteries ................................ ................................ ... 36 
+Mistake 8:  No Fuse Near the Battery ................................ ................................ .......... 36 
+Mistake 9:  Loose MC4 Connectors ................................ ................................ ............. 37 
+Mistake 10: No Site Survey Before Quoting................................ ................................ . 37 
+ Chapter 9   Starting a Solar Business.................................................... 38 
+9.1   The Market Opportunity ................................ ................................ ....................... 38 
+9.2   Six Business Models Explained ................................ ................................ ........... 39 
+9.3   How to Price Your Installations ................................ ................................ ............ 40 
+9.4   Social Media Marketing Strategy ................................ ................................ ......... 41 
+9.5   Selling Digital Products for Passive Income ................................ ......................... 42 
+ Chapter 10  Complete Solar Installation Case Study ........................... 43 
+10.1  Project Brief and Client Goals ................................ ................................ ............. 43 
+10.2  Load Calculation, Panel, Battery and Inverter Sizing ................................ .......... 43 
+10.3  Full System Design and Cost Breakdown ................................ ........................... 45 
+10.4  Installation Day Sequence and ROI ................................ ................................ .... 45 
+ Chapter 11  Solar Cost Estimation and ROI .......................................... 47 
+11.1  System Cost Guide by Size ................................ ................................ ................ 47 
+11.2  Generator vs Solar ROI Comparison ................................ ................................ .. 48 
+ Chapter 12  Professional Solar Site Survey Form ................................ 49 
+12.1  Client Information Section ................................ ................................ ................... 49 
+12.2  Roof Assessment and Load Verification ................................ ............................. 50 
+12.3  Recommended System Section ................................ ................................ .......... 50 
+ Chapter 13  Solar Troubleshooting Guide............................................. 51 
+Problem 1:  Battery Not Charging ................................ ................................ ................ 51 
+Problem 2:  Inverter Overload Alarm ................................ ................................ ........... 52 
+Problem 3:  Battery Draining Too Quickly ................................ ................................ .... 52 
+Problem 4:  Panels Not Producing Expected Output ................................ ................... 53 
+Problem 5:  Inverter Low Battery Alarm ................................ ................................ ....... 53 
+Problem 6:  AC Output Voltage Incorrect ................................ ................................ ..... 54 
+
+--- PAGE 4 ---
+  
+ Chapter 14  Panel Installation Best Practices ....................................... 55 
+14.1  Roof Mounting Best Practices ................................ ................................ ............ 55 
+14.2  DC Cabling Best Practices ................................ ................................ ................. 56 
+14.3  MC4 Connector Best Practices ................................ ................................ ........... 57 
+ Chapter 15  Tools Every Solar Installer Needs ..................................... 58 
+15.1  Essential Measurement Tools................................ ................................ ............. 58 
+15.2  Essential Wiring Tools ................................ ................................ ........................ 59 
+15.3  Essential Mounting Tools................................ ................................ .................... 59 
+15.4  Starter Kit: What to Buy First ................................ ................................ .............. 60 
+ Join the Musstech Solar Community..................................................... 61 
+ Appendix .................................................................................................. 62 
+Professional Installer Checklist (28 Items) ................................ ................................ ... 62 
+Cable Sizing Quick Reference ................................ ................................ ..................... 63 
+Glossary of Key Terms ................................ ................................ ................................  64 
+  
+
+--- PAGE 5 ---
+  
+Introduction 
+Africa receives some of the highest solar radiation on Earth, yet millions of homes still 
+rely on noisy, expensive generators. At the same time, the demand for skilled solar 
+installers is exploding across the continent. Fuel prices are rising.  Grid reliability is 
+falling. The solar industry is growing at more than 20% per year. The opportunity in 
+front of you right now is enormous. 
+This book gives you a complete, practical education in solar installation from the very 
+first principles all the w ay through to running a profitable solar business. Every 
+calculation is shown step by step with full working so you can verify every result and 
+build real confidence in your skills. 
+ 
+TIP: Who This Book Is For 
+Experienced technicians filling knowledge gaps. Entrepreneurs ready to build a profitable 
+solar business. Aspiring installers who want structured, practical training. Homeowners 
+who want to understand and verify their solar system.  
+  
+
+--- PAGE 6 ---
+  
+CHAPTER 
+1 Introduction to Solar Energy 
+ 
+Africa receives an average o f 5 to 7 peak sun hours per day  far more than most of 
+Europe or North America. Yet millions of homes still depend on expensive diesel 
+generators. Solar energy is changing that reality fast. 
+1.1  How a Solar System Works 
+ 
+Solar System Energy Flow Diagram 
+Step 1: Sun 
+Sunlight strikes the solar panels. The stronger the sunlight, the more 
+electricity is produced. Africa averages 5 hours of full -intensity 
+sunlight per day. 
+Step 2: Panels 
+Photovoltaic cells inside the panels convert sunlight into DC (direct 
+current) electricity. A 400W panel produces up to 400 watts at full 
+sunlight. 
+Step 3: MPPT 
+Controller 
+The charge controller regulates DC power from the panels into the 
+battery bank, preventing overcharge and maximising energy 
+harvest. 
+Step 4: Battery 
+Bank 
+The battery stores surplus electricity generated during daylight for 
+use at night and during cloudy periods. 
+Step 5: Inverter The inverter converts DC from the batteries into 220V AC electricity  
+the same type used by all your appliances. 
+Step 6: 
+Appliances 
+Lights, fans, TVs, refrigerators, computers, all run silently and at zero 
+fuel cost on clean solar power. 
+ 
+1.2 Why Solar Is Critical in Africa 
+• The national grid supplies only 4 to 8 hours of power per day in most areas. 
+• Generator fuel costs hundreds of thousands of naira per year solar eliminates 
+this entirely. 
+
+
+--- PAGE 7 ---
+  
+• Solar payback period: 2 to 4 years. System lifespan: 20 to 25 years. 
+• Zero noise, zero fumes, zero ongoing fuel cost. 
+• Solar installation is one of the fastest-growing career fields in Africa today. 
+ 
+1.3 Basic System Components 
+Component Function Analogy 
+Solar Panel Converts sunlight to DC electricity The fuel pump 
+MPPT Controller Maximises panel output, charges 
+battery The fuel regulator 
+Battery Stores electricity for night and 
+cloudy days The fuel tank 
+Inverter Converts DC to 220V AC for 
+appliances The engine 
+Cables and Fuses Carry current safely, prevent fires Pipes and safety 
+valves 
+ 
+1.4  Technical Rules Every Solar Installer Must Know 
+Before going into detailed components, these are the fundamental technical rules that 
+govern every solar installation. Violating any of these rules leads to equipment failure, 
+safety hazards, or poor system performance. 
+ 
+Technical Rule What It Means Why It Matters 
+Ohm's Law: V = I x R Voltage equals Current 
+multiplied by Resistance 
+Explains voltage drop in 
+cables and helps size wire 
+correctly 
+Power Law: P = V x I 
+Power in watts equals 
+Voltage multiplied by 
+Current 
+Used to calculate current in 
+every circuit from the watt 
+rating 
+Energy = Power x Time 
+Watt-hours = Watts 
+multiplied by hours of 
+operation 
+Foundation of every load 
+calculation in this book 
+DC flows one direction only 
+Direct current from panels 
+and batteries never 
+reverses 
+Polarity errors destroy 
+equipment -- always verify 
+with multimeter 
+Series adds voltage 
+Connecting batteries or 
+panels positive to negative 
+adds voltage 
+Used to reach 24V or 48V 
+system voltage 
+Parallel adds current Connecting positive to 
+positive adds capacity (Ah) 
+Used to increase battery 
+storage or panel current 
+
+--- PAGE 8 ---
+  
+Fuse rating = 125% of max 
+current 
+Always size fuses above the 
+normal operating current 
+Protects cable without 
+tripping under normal load 
+Voltage drop under 3% 
+Cable resistance causes 
+voltage to drop over long 
+runs 
+Undersized long cables 
+waste energy and can 
+overheat 
+MPPT input voltage limit 
+Panel string voltage must 
+never exceed controller 
+maximum 
+Exceeding this permanently 
+destroys the MPPT 
+controller 
+Battery DoD limit must be 
+respected 
+Never discharge beyond the 
+rated depth of discharge 
+Exceeding DoD 
+permanently reduces 
+battery capacity and 
+lifespan 
+ 
+ 
+PRO INSTALLER TIP 
+Print these 10 technical rules and keep them in your work bag. They are the foundation of 
+every correct sizing decision, every safe wiring choice, and every professional installation 
+you will ever complete. 
+ 
+ 
+KEY TAKEAWAYS 
+  Solar panels convert sunlight into DC electricity 
+  MPPT controller maximizes energy from panels and charges the battery 
+  Inverter converts DC to 220V AC for all appliances 
+  Battery stores energy for use at night and on cloudy days 
+  All five components must be correctly sized and wired together 
+  
+
+--- PAGE 9 ---
+  
+ 
+CHAPTER 
+2 Solar Components Explained 
+ 
+Understanding each component in depth is what separates a professional installer 
+from someone who simply connects wires. This chapter covers every component 
+specifications, selection criteria, and critical mistakes to avoid. 
+2.1 Solar Panels Full Specification Guide 
+Solar panels are rated under Standard Test Conditions (STC): 1,000 W/m2 irradiance 
+at 25 degreesC. In real African installations, panels  operate at higher temperatures 
+which reduces output. Understanding the label is essential. 
+ 
+Label Value Meaning How to Use 
+It 
+Pmax (W) Peak output under lab conditions 
+Use in all 
+sizing 
+calculations 
+Voc (V) Max voltage with no load 
+Check 
+against 
+MPPT max 
+input voltage 
+Vmp (V) Voltage at maximum power Use for panel 
+string design 
+Isc (A) Maximum short-circuit current 
+Size DC 
+fuses and 
+cables 
+Efficiency (%) % of sunlight converted to power 
+Higher = 
+more power 
+per m2 
+Temp Coefficient Power loss per degreesC above 25 
+degreesC 
+Lower value 
+= better in hot 
+climates 
+ 
+PRO INSTALLER TIP 
+Always choose monocrystalline panels with IEC 61215 certification. Unbranded panels 
+often deliver 20 to 30% less than their stated wattage. Buy from a reputable supplier and 
+always check the certification. 
+ 
+ 
+
+--- PAGE 10 ---
+  
+2.2  Inverters Types, Selection, and Surge Capacity 
+The inverter is the most important and most expensive single component. Always 
+choose a pure sine wave hybrid inverter for home and o ffice installations. Critically, it 
+must handle motor startup surge. 
+ 
+TIP: Motor Surge Power Critical 
+Refrigerators, air conditioners, water pumps, and fans draw 3 to 6 times their rated power 
+for 1 to 2 seconds on startup. Your inverter must have sufficient SURGE CAPACITY to 
+handle this. Always check the inverter datasheet for surge rating before purchasing. 
+ 
+Appliance Rated Power Startup Surge Surge Multiple 
+Refrigerator 150W 450 to 600W 3x rated power 
+Water Pump 750W 2,250 to 3,750W 3 to 5x rated power 
+Air Conditioner 1HP 900W 2,700 to 5,400W 3 to 6x rated power 
+Ceiling Fan 75W 150 to 225W 2 to 3x rated power 
+LED Lights 15W 15W No surge (resistive 
+load) 
+ 
+2.3  Batteries: SOC, DOD, Lifecycle and Technology Guide 
+The battery bank is the most expensive and most misunderstood component in any 
+solar system. Three concepts are critical:  
+State of Charge (SOC), 
+Depth of Discharge (DoD), 
+ and Cycle Life.  
+Understanding all three is what separates professional installers from amateurs. 
+ 
+Key Battery Terms Defined 
+Term Full Name Definition Example 
+SOC State of Charge 
+The current charge 
+level of a battery 
+expressed as a 
+percentage of its 
+total capacity. SOC 
+100% means fully 
+charged. SOC 0% 
+means completely 
+empty. 
+A 200Ah battery at 
+SOC 75% contains 
+150Ah of usable 
+charge remaining 
+DoD Depth of Discharge The percentage of 
+the battery capacity 
+If SOC is 50%, then 
+DoD is also 50%. 
+
+--- PAGE 11 ---
+  
+that has been used. 
+DoD 50% means 
+half the battery has 
+been discharged. 
+DoD is the inverse 
+of SOC. 
+Battery is half 
+empty. 
+Cycle Life Number of Charge 
+Cycles 
+The total number of 
+complete charge 
+and discharge 
+cycles a battery can 
+complete before its 
+capacity drops to 
+80% of original 
+rating. 
+A battery rated 
+2,000 cycles will still 
+deliver 80% capacity 
+after 2,000 full 
+charges 
+C-Rate Charge/Discharge 
+Rate 
+The rate at which a 
+battery is charged or 
+discharged relative 
+to its capacity. C/10 
+means discharge 
+over 10 hours. C/1 
+means full 
+discharge in 1 hour. 
+A 200Ah battery at 
+C/10 delivers 20A 
+for 10 hours 
+ 
+State of Charge (SOC) Explained 
+State of Charge tells you how full your  battery is at any given moment  exactly like a 
+fuel gauge on a car. Every quality inverter and battery management system displays 
+SOC as a percentage. Understanding SOC is essential for protecting your battery 
+bank. 
+ 
+SOC Level What It Means Action Required Battery Health 
+Impact 
+100% Battery fully charged 
+Normal  this is the 
+target after a sunny 
+day 
+None healthy state 
+80 to 99% Nearly full No action needed None 
+50 to 79% Half to three-
+quarters full 
+Normal operating 
+range for overnight None 
+20 to 49% Getting low 
+Consider reducing 
+load or 
+supplementing with 
+grid/generator 
+Minor stress if 
+occasional 
+20% (Lithium) Critical low for 
+Lithium battery 
+Inverter should 
+auto-cut off at this 
+point 
+Significant damage 
+if ignored 
+50% (Lead-Acid) Critical low for Lead-
+Acid battery 
+Do not discharge 
+further under any 
+circumstances 
+Permanent capacity 
+loss below this point 
+
+--- PAGE 12 ---
+  
+Below 10% Dangerously empty 
+Emergency 
+immediate recharge 
+required 
+Severe permanent 
+damage 
+ 
+ 
+TIP: SOC and the DoD Limit 
+SOC and DoD are directly related: DoD 50% means SOC has dropped to 50%. The critical 
+rule is this, the MINIMUM safe SOC for Lead-Acid batteries is 50% (do not go below). The 
+minimum safe SOC for Lithium LiFePO4 batteries is 10 to 20%. The battery type with the 
+deeper DoD allowance,  meaning you can use more of its capacity before r eaching the 
+danger zone is LITHIUM. This is one of the key reasons lithium batteries deliver more 
+usable energy per Ah of rated capacity than lead-acid. 
+ 
+Depth of Discharge (DoD) by Battery Type 
+The DoD  rating tells you how deeply you can safely discharge each battery type. 
+Exceeding the DoD limit does not immediately destroy the battery -- but it permanently 
+reduces its capacity every time you go beyond the limit. 
+ 
+Battery Type Maximum Safe 
+DoD 
+Minimum Safe 
+SOC 
+Usable 
+Capacity of 
+200Ah 
+Technical Rule 
+Lead-Acid 
+(Flooded) 50% 50% SOC 100Ah usable 
+Never 
+discharge 
+below 50% 
+SOC. Below 
+this point, lead 
+sulphate 
+crystals form 
+permanently on 
+the plates, 
+reducing 
+capacity with 
+each violation. 
+Lead-Acid (Gel 
+VRLA) 60% 40% SOC 120Ah usable 
+Slightly deeper 
+discharge than 
+flooded but still 
+limited. Sealed 
+design means 
+no water 
+topping but 
+heat sensitive. 
+Lithium 
+LiFePO4 80 to 90% 10 to 20% SOC 160 to 180Ah 
+usable 
+The deeper 
+DoD capability 
+is why lithium is 
+preferred. Most 
+quality BMS 
+systems auto-
+disconnect at 
+10 to 20% SOC 
+
+--- PAGE 13 ---
+  
+to protect the 
+cells 
+automatically. 
+Lithium NMC 70 to 80% 20 to 30% SOC 140 to 160Ah 
+usable 
+Common in 
+portable 
+electronics. 
+Less thermally 
+stable than 
+LiFePO4. Not 
+recommended 
+for solar 
+storage. 
+ 
+TIP: Why Lithium Wins on DoD 
+A 200Ah Lead-Acid battery gives you only 100Ah of usable capacity (50% DoD). A 200Ah 
+Lithium LiFePO4 battery gives you 160 to 180Ah of usable capacity (80 to 90% DoD). This 
+means a 200Ah lithium battery effectively replaces a 320Ah lead -acid bank for the same 
+usable energy. When comparing battery prices, al ways compare cost per usable Ah  not 
+cost per rated Ah. 
+ 
+ 
+Battery Cycle Life by Type and DoD 
+Cycle life is the most important factor when calculating the long-term cost of a battery 
+bank. The key insight is that the deeper you discharge a batter y, the fewer cycles it 
+delivers so DoD and cycle life are directly connected. 
+ 
+Battery Type DoD Used Expected 
+Cycle Life 
+Years at 1 
+Cycle Per Day 
+Long-Term 
+Cost Rating 
+Lead-Acid 
+Tubular 50% DoD 500 to 800 
+cycles 1.4 to 2.2 years Poor 
+Lead-Acid 
+Tubular 
+30% DoD 
+(shallow) 
+1,200 to 1,500 
+cycles 3.3 to 4.1 years Fair (if always 
+shallow) 
+Gel VRLA 60% DoD 600 to 900 
+cycles 1.6 to 2.5 years Poor 
+Lithium 
+LiFePO4 80% DoD 3,000 to 5,000 
+cycles 
+8.2 to 13.7 
+years Excellent 
+Lithium 
+LiFePO4 
+50% DoD 
+(conservative) 
+6,000 to 8,000 
+cycles 16 to 22 years Outstanding 
+Lithium 
+LiFePO4 
+90% DoD 
+(maximum) 
+2,000 to 3,000 
+cycles 5.5 to 8.2 years Very Good 
+ 
+Technical Rule: For maximum cycle life from a Lithium LiFePO4 battery, keep daily 
+DoD between 50 and 70%. This gives 6,000 plus cycles ove r 16 years at one cycle 
+per day from a single battery bank. Shallow cycling dramatically extends lithium battery 
+lifespan. 
+
+--- PAGE 14 ---
+  
+ 
+Full Battery Comparison Table 
+Specification Lead-Acid 
+Flooded Lead-Acid Gel Lithium 
+LiFePO4 
+Lifespan 3 to 5 years 4 to 6 years 8 to 15 years 
+Maximum Safe DoD 50% 60% 80 to 90% 
+Usable Capacity (200Ah) 100Ah 120Ah 160 to 180Ah 
+Cycle Life at Max DoD 500 to 800 600 to 900 3,000 to 5,000 
+Maintenance Required Yes -- every 3 
+months None None 
+BMS Protection None None Built-in BMS 
+standard 
+Max Parallel Strings 4 to 6 4 to 6 4 max (check 
+spec) 
+Operating Temperature 15 to 40 degrees 
+C 
+0 to 45 degrees 
+C 
+minus20 to 60 
+degrees C 
+Self-Discharge Per Month 5 to 15% 3 to 5% 1 to 3% 
+Upfront Cost Lowest Medium Highest 
+Cost Per Usable Cycle Highest High Lowest 
+Recommended Use Budget installs Medium systems All premium 
+installs 
+ 
+TIP: Lithium Battery Parallel Limit 
+Most lithium manufacturers recommend no more than 4 batteries in parallel. For larger 
+banks requiring more capacity, use a busbar distribution system or battery communication 
+cables as specified by the manufacturer. Always read the battery datasheet before 
+designing a large bank. Exceeding the parallel limit causes uneven current distribution and 
+premature failure. 
+ 
+ 
+Technical Rule: SOC Monitoring and Battery Protection 
+Rule Lead-Acid Lithium LiFePO4 
+Minimum SOC before recharge 50% never go below 10 to 20% BMS should  
+auto-protects 
+Recommended daily SOC range 70 to 100% 20 to 100% 
+Overcharge protection External charge controller 
+required Built-in BMS handles this 
+Over-discharge protection Installer must set inverter 
+low-battery cutoff 
+Built-in BMS disconnects 
+automatically 
+
+--- PAGE 15 ---
+  
+Temperature monitoring Manual check required BMS monitors and 
+protects automatically 
+Cell balancing Not applicable BMS balances cells 
+automatically 
+State of charge display Voltage-based estimate 
+only (not accurate) 
+BMS provides accurate 
+SOC percentage 
+ 
+2.4  MPPT vs PWM Charge Controllers 
+Feature MPPT PWM 
+Efficiency 95 to 99% 70 to 80% 
+Energy recovered Maximum power point at 
+all times 
+Forces panel to battery 
+voltage 
+Daily energy gain vs PWM 20 to 30% more Baseline 
+Best for All systems above 200W Only under 200W 
+Verdict Always choose MPPT Avoid for serious 
+installations 
+ 
+2.5  Cables, Fuses, and Protection Devices 
+Component Location Minimum Size Purpose 
+DC Solar Cable Panels to MPPT 4 to 6mm2 UV-rated Handles panel 
+current outdoors 
+Battery Cable Battery to inverter 35 to 70mm2 Carries highest 
+current in system 
+DC Fuse Within 30cm of 
+battery + 110% of DC current Prevents short 
+circuit fire 
+AC Breaker Inverter AC output Match inverter rating Protects inverter 
+and building 
+Earth Cable Frames to ground 
+rod 6mm2 minimum 
+Prevents 
+electrocution on 
+fault 
+MC4 Connectors Between all panels Match cable size Waterproof outdoor 
+connection 
+ 
+ 
+KEY TAKEAWAYS 
+ 
+• Monocrystalline panels with IEC 61215 certification -- always verify 
+
+--- PAGE 16 ---
+  
+• Pure sine wave hybrid inverter -- never modified sine wave 
+• Motor startup surge is 3 to 6x rated power -- inverter must handle this 
+• SOC is the battery fuel gauge minimum 50% SOC for Lead-Acid, 10 to 20% for 
+Lithium            
+• DoD is the inverse of SOC -- the battery type with deeper DoD allowance is 
+LITHIUM 
+• Lithium LiFePO4 gives 3,000 to 5,000 cycles vs 500 to 800 for Lead-Acid 
+• Never exceed the DoD limit -- each violation permanently reduces battery 
+capacity 
+• Never connect more than 4 lithium batteries in parallel without a busbar system 
+• Always choose MPPT over PWM for any system above 200W 
+  
+
+--- PAGE 17 ---
+  
+CHAPTER 
+3 Load Calculation 
+ 
+ 
+This is the most important chapter in t his book. Every sizing decisions  panels, 
+batteries, inverter comes directly from a correct load calculation. Every step of every 
+calculation is shown completely transparently. No steps are skipped. 
+ 
+3.1 Key Terms 
+Term Definition Real Example 
+Watt (W) Power at any moment 75W ceiling fan while 
+running 
+Watt-Hour (Wh) Energy = Power x Time 75W x 8 hrs = 600Wh per 
+day 
+kWh 1,000 Watt-hours 600Wh = 0.6kWh 
+Peak Sun Hours Full-intensity sun hours per 
+day 
+Africa average = 5 PSH per 
+day 
+Duty Cycle Fraction of time appliance 
+actually runs 
+Fridge runs ~50% of stated 
+hours 
+Safety Margin 25% extra added for system 
+losses 5,000Wh x 1.25 = 6,250Wh 
+ 
+CORE FORMULA:   Energy (Wh)  =  Power (W)  x  Hours Used Per Day 
+ 
+ 
+ 
+ 
+ 
+
+
+--- PAGE 18 ---
+  
+TIP: Refrigerator Duty Cycle 
+Refrigerators do NOT run continuously. The compressor cycles on and off depending on 
+room temperature and thermostat setting. Effective running time is typically 30 to 50% of 
+the stated period. In this book we apply a 50% duty cycle to all refrigerators and freezers 
+for accuracy. 
+3.2 The 6-Step Calculation Process 
+1. List every appliance to be powered by the solar system. 
+2. Record the wattage of each appliance from its label or manual. 
+3. Estimate daily usage hours apply 50% duty cycle to fridges and freezers. 
+4. Multiply Watts x Hours to get daily Wh for each appliance. 
+5. Add all Wh values together this is your Raw Daily Energy Total. 
+6. Multiply by 1.25 - this is your DESIGN LOAD used for all sizing. 
+ 
+3.3  Example 1; Small Apartment (Beginner Level) 
+A 1-bedroom apartment with basic appliances. Every multiplication is written out in full. 
+ 
+Appliance Watts Qty Hours/Day Calculation Wh/Day 
+LED Lights 15W 4 6 hrs 15 x 4 x 6 = 360 Wh 
+Ceiling Fan 75W 1 8 hrs 75 x 1 x 8 = 600 Wh 
+Phone Chargers 10W 2 3 hrs 10 x 2 x 3 = 60 Wh 
+LED TV 32-inch 80W 1 4 hrs 80 x 1 x 4 = 320 Wh 
+ 
+Step 4 -- Add all Wh: 360 + 600 + 60 + 320 = 1,340 Wh/day 
+Step 5 -- Add 25% 
+margin: 
+1,340 x 1.25 = 1,675 Wh/day 
+DESIGN LOAD: Use this for all sizing 1,675 Wh/day 
+ 
+3.4  Example 2; 3-Bedroom Home (Intermediate Level) 
+A typical family home. The refr igerator uses a 50% duty cycle - compressor runs 6 
+effective hours out of 12 stated hours. 
+ 
+Appliance Watts Qty Effective 
+Hrs Calculation Wh/Day 
+LED Lights 15W 8 6 hrs 15 x 8 x 6 = 720 Wh 
+
+--- PAGE 19 ---
+  
+Ceiling Fans 75W 3 8 hrs 75 x 3 x 8 = 1,800 
+Wh 
+LED TV 32-inch 100W 1 5 hrs 100 x 1 x 5 = 500 Wh 
+Refrigerator (50% duty) 150W 1 6 hrs 150 x 1 x 6 = 900 Wh 
+Phone Chargers 10W 4 3 hrs 10 x 4 x 3 = 120 Wh 
+Standing Fan 60W 2 6 hrs 60 x 2 x 6 = 720 Wh 
+Laptop 65W 1 5 hrs 65 x 1 x 5 = 325 Wh 
+ 
+Step 4 -- Add all Wh: 720+1800+500+900+120+720+325 = 5,085 Wh/day 
+Step 5 -- Add 25% 
+margin: 
+5,085 x 1.25 = 6,356 Wh/day 
+DESIGN LOAD: Use for all sizing 6,356 Wh/day 
+ 
+3.5  Example 3; Small Office (Advanced Level) 
+Appliance Watts Qty Hours/Day Calculation Wh/Day 
+LED Office Lights 20W 10 9 hrs 20 x 10 x 9 = 1,800 
+Wh 
+Desktop Computers 120W 5 8 hrs 120 x 5 x 8 = 4,800 
+Wh 
+Laptops 65W 3 8 hrs 65 x 3 x 8 = 1,560 
+Wh 
+Laser Printer 400W 1 1 hr 400 x 1 x 1 = 400 Wh 
+Air Conditioner 1HP 900W 1 8 hrs 900 x 1 x 8 = 7,200 
+Wh 
+Ceiling Fans 75W 3 9 hrs 75 x 3 x 9 = 2,025 
+Wh 
+Internet Router 20W 1 12 hrs 20 x 1 x 12 = 240 Wh 
+CCTV System 60W 1 24 hrs 60 x 1 x 24 = 1,440 
+Wh 
+ 
+Step 4 -- Add all Wh: 1800+4800+1560+400+7200+2025+240+1440 = 19,465 
+Wh/day 
+Step 5 -- Add 25% 
+margin: 
+19,465 x 1.25 = 24,331 
+Wh/day 
+AC unit share: 7,200 / 19,465 x 100 = 37% of total 
+DESIGN LOAD: Use for all sizing 24,331 
+Wh/day 
+
+--- PAGE 20 ---
+  
+ 
+3.6  Example 4 -- Large Home with AC (Professional Level) 
+Appliance Watts Qty Effective 
+Hrs Calculation Wh/Day 
+LED Lights 15W 20 6 hrs 15 x 20 x 6 = 1,800 
+Wh 
+Ceiling Fans 75W 6 8 hrs 75 x 6 x 8 = 3,600 
+Wh 
+LED TVs 55-inch 150W 3 5 hrs 150 x 3 x 5 = 2,250 
+Wh 
+Refrigerator (50% duty) 200W 1 6 hrs 200 x 1 x 6 = 1,200 
+Wh 
+Deep Freezer (50% 
+duty) 180W 1 6 hrs 180 x 1 x 6 = 1,080 
+Wh 
+AC Units 1.5HP 1,200W 2 8 hrs 1200 x 2 x 
+8 
+= 19,200 
+Wh 
+Washing Machine 500W 1 1 hr 500 x 1 x 1 = 500 Wh 
+Microwave 1,200W 1 0.5 hr 1200 x 1 x 
+0.5 = 600 Wh 
+Water Pump 750W 1 2 hrs 750 x 1 x 2 = 1,500 
+Wh 
+Security Lights 100W 4 10 hrs 100 x 4 x 
+10 
+= 4,000 
+Wh 
+ 
+Step 4 -- 
+Add all Wh: 
+1800+3600+2250+1200+1080+19200+500+600+1500+4000 = 35,730 
+Wh/day 
+Step 5 -- 
+Add 25% 
+margin: 
+35,730 x 1.25 = 44,663 
+Wh/day 
+Both AC 
+units share: 
+19,200 / 35,730 x 100 = 54% of 
+total 
+DESIGN 
+LOAD: 
+Use for all sizing 44,663 
+Wh/day 
+ 
+ 
+ 
+TIP: The Air Conditioning Effect 
+In a large home with AC, the air conditioners account for more than half the total energy. 
+Always discuss with the client whether reducing AC hours from 8 to 4 per day is acceptable 
+-- this nearly halves the required system size and cost. 
+ 
+ 
+
+--- PAGE 21 ---
+  
+KEY TAKEAWAYS 
+• Energy (Wh) = Power (W) x Hours per Day 
+• Refrigerators use 50% duty cycle -- compressor runs half the stated time 
+• Always add 25% safety margin to get your final Design Load 
+• Air conditioners often represent 30 to 54% of total load -- always confirm with 
+client 
+• The Design Load is used for ALL sizing calculations in Chapter 4 
+  
+
+--- PAGE 22 ---
+  
+CHAPTER 
+4 System Sizing 
+ 
+ 
+Using the design load from Chapter 3, we calculate exactly how many panels, how 
+much battery capacity, and what size inverter the system needs. Every calculation is 
+shown step by step with complete working. 
+4.1 Real-World Panel Output - The 75% Efficiency Factor 
+A common mistake is calculating panel output as simply Watts x Peak Sun Hours. This 
+gives the theoretical maximum. In practice, real systems lose 20 to 30% of this 
+potential output due to several factors. 
+ 
+Loss Source Typical Loss Cause 
+Temperature losses 5 to 10% Panels lose ~0.4% per  degreesC 
+above 25 degreesC 
+Dust and soiling 2 to 5% Dirt reduces light reaching cells 
+Inverter losses 3 to 5% DC to AC conversion efficiency 
+Cable resistance 1 to 3% Voltage drop in cable runs 
+MPPT efficiency 1 to 3% Controller not perfectly at maximum 
+point 
+Shading and mismatch 0 to 10% Partial shade dramatically reduces 
+output 
+TOTAL SYSTEM LOSS 15 to 30% Use 0.75 (75%) as standard derating 
+factor 
+ 
+THEORETICAL:  Output = Watts x Peak Sun Hours 
+ 
+REAL WORLD:   Output = Watts x Peak Sun Hours x 0.75 (System 
+Efficiency) 
+
+
+--- PAGE 23 ---
+  
+ 
+Example: 400W panel x 5 PSH x 0.75 = 1,500 Wh/day real output -- not 2,000 Wh 
+theoretical. The 25% extra panels this requires is normal, professional sizing practice. 
+ 
+PRO INSTALLER TIP 
+Always apply 0.75 system efficiency in your calculations. This accounts for all real -world 
+losses. Oversizing by 25 to 30% is not excessive -- it ensures your customer gets the 
+performance they paid for, even on a dusty or hot day. 
+4.2  Panel Sizing - Step-by-Step (4 Examples) 
+Panels Required (W)  =  Design Load (Wh)  /  (Peak Sun Hours x 
+System Efficiency) 
+ 
+Panels Required (W)  =  Design Load (Wh)  /  (5 x 0.75)  =  Design Load 
+/ 3.75 
+ 
+Example 1 -- Small Apartment 
+Step 1 -- Design load: 1,675 Wh/day From Chapter 3 
+Step 2 -- Divide by 3.75: 1,675 / 3.75 = 447W needed 
+Step 3 -- Select panels: 2 x 400W panels = 800W total  
+ 
+Example 2 -- 3-Bedroom Home 
+Step 1 -- Design load: 6,356 Wh/day From Chapter 3 
+Step 2 -- Divide by 3.75: 6,356 / 3.75 = 1,695W 
+needed 
+Step 3 -- Select panels: 5 x 400W panels = 2,000W total  
+ 
+Example 3 -- Office 
+Step 1 -- Design load: 24,331 Wh/day From Chapter 3 
+Step 2 -- Divide by 3.75: 24,331 / 3.75 = 6,488W 
+needed 
+Step 3 -- Select panels: 17 x 400W panels = 6,800W total  
+ 
+Example 4 - Large Home + AC 
+Step 1 -- Design load: 44,663 Wh/day From Chapter 3 
+Step 2 -- Divide by 3.75: 44,663 / 3.75 = 11,910W 
+needed 
+
+--- PAGE 24 ---
+  
+Step 3 -- Select panels: 30 x 400W panels = 12,000W total  
+ 
+4.3 Battery Sizing - Step-by-Step (4 Examples) 
+Battery Ah  =  (Design Load Wh x Autonomy Days)  /  (System Voltage 
+x DoD) 
+ 
+Example 1 -- Small Apartment 
+Step 1 -- Load x Days: 1,675 x 1 = 1,675 
+Step 2 -- Voltage x DoD: 12 x 0.80 = 9.6 
+Step 3 -- Divide: 1,675 / 9.6 = 175Ah 
+Step 4 -- Solution: 200Ah 12V Lithium (next standard size 
+above 175Ah) 
+ 
+ 
+Example 2 -- 3-Bed Home 
+Step 1 -- Load x Days: 6,356 x 1 = 6,356 
+Step 2 -- Voltage x DoD: 48 x 0.80 = 38.4 
+Step 3 -- Divide: 6,356 / 38.4 = 166Ah 
+Step 4 -- Solution: 200Ah 48V Lithium (standard size above 
+166Ah) 
+ 
+ 
+Example 3 -- Office 
+Step 1 -- Load x Days: 24,331 x 1 = 24,331 
+Step 2 -- Voltage x DoD: 48 x 0.80 = 38.4 
+Step 3 -- Divide: 24,331 / 38.4 = 634Ah 
+Step 4 -- Solution: 4 x 200Ah 48V Lithium in parallel = 
+800Ah (max 4 in parallel) 
+ 
+ 
+Example 4 -- Large Home + AC 
+Step 1 -- Load x Days: 44,663 x 1 = 44,663 
+Step 2 -- Voltage x DoD: 48 x 0.80 = 38.4 
+Step 3 -- Divide: 44,663 / 38.4 = 1,163Ah 
+Step 4 -- Solution: Busbar system: 4 strings x 4 x 300Ah = 
+1,200Ah @ 48V 
+ 
+ 
+ 
+
+--- PAGE 25 ---
+  
+4.4  Inverter Sizing with Motor Surge (4 Examples) 
+Inverter Size  =  (Peak Continuous Load + Motor Surge Allowance)  x  
+1.25 
+ 
+Example 1 -- Small Apartment 
+Continuous load: Lights 60W + Fan 75W + TV 80W + 
+Chargers 20W = 235W 
+Surge allowance: Fan motor: add 150W surge 
+Peak total: 235 + 150 = 385W 
+x 1.25 safety: 385 x 1.25 = 481W = 0.48 kVA 
+Inverter choice: 1 kVA Hybrid Inverter 
+ 
+Example 2 -- 3-Bed Home 
+Continuous load: Fans 225W + Lights 120W + TV 100W + 
+Fridge 150W + Laptop 65W = 660W 
+Surge allowance: Fridge surge: 150W x 3 = 450W 
+Peak total: 660 + 450 = 1,110W 
+x 1.25 safety: 1,110 x 1.25 = 1,388W = 1.4 kVA 
+Inverter choice: 3 kVA Hybrid Inverter 
+ 
+Example 3 -- Office 
+Continuous load: AC 900W + Computers 720W + Lights 
+200W + Fans 225W = 2,045W 
+Surge allowance: AC surge: 900W x 4 = 3,600W 
+Peak total: 2,045 + 3,600 = 5,645W 
+x 1.25 safety: 5,645 x 1.25 = 7,056W = 7.1 kVA 
+Inverter choice: 8 or 10 kVA Hybrid Inverter 
+ 
+ 
+Example 4 -- Large Home + AC 
+Continuous load: 2xAC 2,400W + Fridge+Freezer 380W + 
+Lights+Fans 900W = 3,680W 
+Surge allowance: 2xAC surge: 2,400W x 4 = 9,600W 
+Peak total: 3,680 + 9,600 = 13,280W 
+x 1.25 safety: 13,280 x 1.25 = 16,600W = 16.6 kVA 
+
+--- PAGE 26 ---
+  
+Inverter choice: 2 x 10 kVA Hybrid Inverters 
+ 
+ 
+4.5 Complete System Summary Table 
+System Design Load Panels Battery Inverter 
+1-Bed 
+Apartment 1,675 Wh/day 2 x 400W 200Ah 12V 
+Lithium 1 kVA 
+3-Bed Home 6,356 Wh/day 5 x 400W 200Ah 48V 
+Lithium 3 kVA 
+Office 24,331 Wh/day 17 x 400W 800Ah 48V (4 
+parallel) 10 kVA 
+Large Home + 
+2 ACs 44,663 Wh/day 30 x 400W 1,200Ah 48V 
+(busbar) 2 x 10 kVA 
+ 
+ 
+KEY TAKEAWAYS 
+•   Real Output = Watts x PSH x 0.75 -- never use theoretical output for sizing 
+•   Panel formula: Design Load / (5 x 0.75) = Design Load / 3.75 
+•   Battery formula: (Load x Days) / (Voltage x DoD) 
+•   Inverter formula: (Continuous load + Motor surge) x 1.25 
+•   Motor surge is 3 to 6x rated power -- always include in inverter sizing 
+  
+
+--- PAGE 27 ---
+  
+CHAPTER 
+5 Series vs Parallel Connections 
+ 
+ 
+SERIES CONNECTION PARALLEL CONNECTION 
+Connect:  +  ->  -  ->  +  ->  - 
+12V B1 -> 12V B2 -> 12V B3 -> 12V B4 
+RESULT:  48V,  200Ah 
+Voltage multiplies  *  Capacity stays same 
+Connect:  +  ->  +  ->  +  ->  + 
+12V B1  ||  12V B2  ||  12V B3 
+RESULT:  12V,  600Ah 
+Voltage stays same  *  Capacity multiplies 
+ 
+5.1  Series Connection -- Voltage Adder 
+SERIES:  Connect + to -    ->    Voltage ADDS UP,  Capacity (Ah) 
+STAYS SAME 
+ 
+Battery 1 -- 12V, 200Ah: Running total voltage = 12V 
+Battery 2 -- 12V, 200Ah: Connect B1+ to B2- = 24V, 200Ah 
+Battery 3 -- 12V, 200Ah: Connect B2+ to B3- = 36V, 200Ah 
+Battery 4 -- 12V, 200Ah: Connect B3+ to B4- = 48V, 200Ah 
+ 
+Use series when your inverter requires 48V DC input -- the standard requirement for 
+hybrid inverters above 2kVA. 
+5.2 Parallel Connection - Capacity Adder 
+PARALLEL:  Connect + to +, - to -    ->    Capacity ADDS UP,  Voltage 
+STAYS SAME 
+ 
+Battery 1 -- 12V, 200Ah: Connect + to + busbar = 200Ah 
+
+
+--- PAGE 28 ---
+  
+Battery 2 -- 12V, 200Ah: Connect + to + busbar = 400Ah 
+Battery 3 -- 12V, 200Ah: Connect + to + busbar = 600Ah 
+ 
+TIP: Maximum 4 Batteries in Parallel 
+Do not connect more than 4 lithium batteries in parallel without a busbar distribution 
+system. Exceeding this limit causes uneven charging and premature battery failure. 
+5.3  Series-Parallel Combination 
+Goal: Build 48V, 400Ah bank using 12V 200Ah 
+batteries 
+ 
+String 1: 4 x 12V in series = 48V, 200Ah 
+String 2: 4 x 12V in series = 48V, 200Ah 
+Join strings: String 1+ to String 2+, String 1- to String 
+2- 
+Parallel join 
+RESULT: 8 batteries total = 48V, 400Ah 
+ 
+Target Bank Configuration Total Batteries Result 
+48V, 200Ah 1 string x 4 series 4 48V 200Ah 
+48V, 400Ah 2 strings x 4 series 8 48V 400Ah 
+48V, 600Ah 3 strings x 4 series 12 48V 600Ah 
+48V, 800Ah 4 strings x 4 series 16 48V 800Ah (at 
+parallel limit) 
+48V, 1,200Ah+ Use busbar system 20+ Need battery 
+combiner/busbar 
+ 
+5.4  Solar Panel String Design 
+String Voltage  =  Number of Panels in Series  x  Panel Voc 
+ 
+Panel Voc: 45V (typical 400W panel)  
+2 panels in series: 45V x 2 = 90V string 
+3 panels in series: 45V x 3 = 135V string 
+Check: Must be below MPPT max input voltage Verify inverter 
+spec! 
+ 
+ 
+
+--- PAGE 29 ---
+  
+TIP: Never Exceed MPPT Input Voltage 
+If string voltage exceeds the controller's maximum input - even briefly on a cold morning - 
+the controller is permanently destroyed. Always verify string voltage against the inverter's 
+published maximum PV input voltage. 
+ 
+KEY TAKEAWAYS 
+•   Series: + to - connects; voltage multiplies, Ah stays the same 
+•   Parallel: + to + connects; Ah multiplies, voltage stays the same 
+•   Most professional systems use series-parallel combinations 
+•   Maximum 4 lithium batteries in parallel without a busbar system 
+•   Panel string voltage must never exceed MPPT maximum input voltage 
+  
+
+--- PAGE 30 ---
+  
+CHAPTER 
+6 Installation Process 
+ 
+ 
+6.1  Pre-Installation Site Survey Checklist 
+Site Survey - Complete Checklist 
+STEP 1 
+Roof Structure 
+Check type, age, and condition. Verify it supports 18 to 22kg per panel. 
+Look for rust, rot, or weakness. 
+STEP 2 
+Shading 
+Analysis 
+Observe roof at different times of day. Identify shadows from trees, 
+tanks, or adjacent buildings. 
+STEP 3 
+Orientation 
+Northern Hemisphere (Nigeria, Ghana, Kenya): panels face South. 
+Southern Hemisphere (South Africa, Namibia): panels face North. 
+Ideal tilt: 10 to 15 degrees. 
+STEP 4 
+Cable Routes 
+Plan and measure complete cable route from panels to inverter and 
+battery. Accurate lengths are essential for correct cable sizing. 
+STEP 5 
+Battery Room 
+Identify cool, ventilated location. Lead-acid batteries require ventilation 
+-- never in a sealed room. 
+STEP 6 
+Load 
+Verification 
+Walk through the building and physically verify every appliance. 
+Measure unknown wattages with a watt meter before quoting. 
+ 
+TIP: Panel Orientation by Hemisphere 
+Northern Hemisphere countries (Nigeria, Ghana, Kenya, Ethiopia, Egypt): panels must 
+face SOUTH. Southern Hemisphere countries (South Africa, Namibia, Zimbabwe, 
+Botswana): panels must face NORTH. This is one of the most common orientation errors. 
+Always confirm hemisphere and verify with a compass. 
+ 
+ 
+
+
+--- PAGE 31 ---
+  
+6.2  Full Wiring Sequence -- The Golden Rule 
+TIP: The Golden Rule 
+Always CONNECT in this exact order: Battery -> Inverter -> Solar. Always DISCONNECT 
+in reverse: Solar -> Inverter -> Battery. Never deviate from  this sequence regardless of 
+time pressure. 
+ 
+Complete Wiring Sequence 
+STEP 1 
+1. Battery Bank 
+Wire battery bank in required configuration. Install fuse within 30cm of 
+battery + terminal. Cover positive terminals. 
+STEP 2 
+2. Inverter 
+Mount 
+Wall-mount inverter with clearance on all sides per manufacturer 
+specification. 
+STEP 3 
+3. Battery -> Inv 
+Connect battery to inverter. Positive first, then negative. Do not power 
+on yet. 
+STEP 4 
+4. Panel Mount 
+Install rails, mount panels, torque all bolts, earth  all frames. No 
+electrical connections yet. 
+STEP 5 
+5. Solar -> MPPT 
+Connect solar array to MPPT input. Verify polarity with multimeter 
+before connecting. 
+STEP 6 
+6. AC Output 
+Connect inverter AC output to distribution board via AC circuit breaker. 
+STEP 7 
+7. Power On 
+Power on inverter. Check battery voltage, solar input, and AC output 
+on inverter display. 
+STEP 8 
+8. Load Test 
+Connect all loads one by one. Verify full simultaneous load handled 
+without alarm. 
+STEP 9 
+9. Handover 
+Demonstrate system to customer. Provide warranty, system spec, and 
+maintenance schedule. 
+ 
+ 
+KEY TAKEAWAYS 
+•   Northern Hemisphere -> South-facing panels; Southern Hemisphere -> North- 
+facing  
+•   Always verify roof structure before drilling a single hole 
+•   Golden Rule: Connect Battery -> Inverter -> Solar; Disconnect in reverse 
+•   Always verify polarity with multimeter before final connection 
+•   Test every load individually before customer handover 
+  
+
+--- PAGE 32 ---
+  
+CHAPTER 
+7 Safety Practices 
+ 
+Solar installation involves live DC voltages, battery banks capable of delivering 
+thousands of amps, and working at height. Every rule here is non -negotiable. They 
+exist because people have been seriously hurt ignoring them. 
+ 
+7.1  Hazard Awareness Table 
+Hazard Why Dangerous Protection 
+DC from solar panels Live in sunlight - cannot switch off Cover panels 
+before working 
+Battery short circuit Thousands of amps instantly - 
+fire/explosion 
+Fuse within 30cm of 
+battery + 
+Working at height Falls cause death Harness anchored 
+above 
+Battery acid Burns skin and eyes Goggles and gloves 
+always 
+Hydrogen gas Explosive in enclosed space Ventilate battery 
+room always 
+Reversed polarity Permanently destroys controllers Verify with 
+multimeter first 
+ 
+7.2 Electrical Safety; Non-Negotiable Rules 
+• Never work on a live circuit. Disconnect all sources and verify with multimeter 
+before touching any wire. 
+• Cover solar panels with opaque material before working on any DC wiring. 
+• Use only insulated tools rated for 1,000V DC minimum. 
+• Install fuse or breaker within 30cm of battery positive terminal on every 
+installation without exception. 
+• Label all cables with polarity, voltage level, and circuit name. 
+• Never work alone on an installation - always have a second person present. 
+ 
+7.3  Fire Prevention 
+• Use correctly rated cables - undersized cables overheat and start fires. 
+
+--- PAGE 33 ---
+  
+• Ensure all MC4 connectors are fully clicked, locked, and pull-tested after 
+installation. 
+• Keep CO2 or dry powder fire extinguisher near the battery bank at all times. 
+• Never use water on an electrical fire - CO2 or dry powder only. 
+• Inspect all DC connections for heat damage every six months. 
+ 
+7.4  Working at Height -- Roof Safety 
+• Never work on a roof above 3 metres without a properly fitted safety harness 
+anchored above you. 
+• Inspect the roof surface for loose or broken sections before stepping onto it. 
+• Never stand directly on old corrugated iron sheets -- they may collapse 
+without warning. 
+• Keep all tools and materials secured -- a falling tool from height is a lethal 
+projectile. 
+• Never work on a wet roof -- surfaces become extremely slippery. 
+•  
+7.5  Personal Protective Equipment (PPE) 
+PPE Item Specification When Required 
+Insulated Gloves 1,000V rated Class 0 or 1 All electrical work on 
+live circuits 
+Safety Goggles Chemical and impact rated Battery handling and 
+drilling 
+Hard Hat EN397 rated All work near roof 
+edges 
+Safety Boots Steel toe, slip-resistant sole All site work 
+Safety Harness Full body EN361 with lanyard All roofs above 3 
+metres 
+ 
+ 
+KEY TAKEAWAYS 
+• Solar panels are live whenever sunlight hits them -- cover before working 
+• Battery short circuits deliver thousands of amps -- fuse within 30cm always 
+• Safety harness is mandatory on all roofs above 3 metres -- no exceptions 
+• Lead-acid batteries release hydrogen gas -- ventilate battery room always 
+• PPE is mandatory on every installation -- not optional 
+
+--- PAGE 34 ---
+  
+CHAPTER 
+8 
+Common Mistakes and How to Avoid 
+Them 
+ 
+These are the most costly mistakes made by solar installers at every experience level. 
+Each is based on real failures. Understanding these now protects your reputation, your 
+income, and your customers. 
+ 
+Mistake 1 -- Skipping the Load Calculation 
+Guessing system size leads to undersized or overpriced systems. Always complete a full, 
+verified load calculation -- measuring unknown wattages with a watt meter -- before quoting 
+any installation. This step takes 20 to 30 minutes and always pays off. 
+ 
+Mistake 2 -- Using Theoretical Panel Output 
+Calculating panel output as Watts x PSH without applying system efficiency gives results 
+25 to 33% too optimistic. Always use: Real Output = Watts x PSH x 0.75. This accounts 
+for temperature, dust, inverter, and cable losses. 
+ 
+Mistake 3 -- Ignoring Refrigerator Duty Cycle 
+Assuming a refrigerator runs continuously overestimates its consumption. Apply 50% duty 
+cycle to all refrigerators and freezers. A 150W fridge over 12 hours = 150W x 6 effective 
+hours = 900Wh, not 1,800Wh. 
+ 
+Mistake 4 -- Undersizing the Inverter for Motor Surge 
+Motors draw 3 to 6 times rated power on startup. An inverter sized only for continuous load 
+shuts down every time a fridge or AC starts. Always add surge allowance for every motor 
+and verify the inverter's surge rating in its datasheet. 
+ 
+Mistake 5 -- Wrong Panel Orientation 
+Nigeria, Ghana, and Kenya are in the Northern Hemisphere -- panels face South. South 
+Africa and Namibia are in the Southern Hemisphere -- panels face North. Getting this 
+wrong reduces output by 30 to 50%. Always use a compass to verify. 
+ 
+Mistake 6 -- Exceeding Battery Parallel Limit 
+Connecting more than 4 lithium batteries in parallel without a busbar system causes 
+uneven current distribution and premature failure. For large banks, use a proper busbar 
+distribution system as specified by the battery manufacturer. 
+ 
+Mistake 7 -- Mixing Old and New Batteries 
+
+--- PAGE 35 ---
+  
+Old batteries have higher internal resistance. New batteries compensate by working 
+harder, degrading rapidly. The entire bank performs like the oldest battery within months. 
+Never mix batteries of different ages, brands, or capacities. 
+ 
+Mistake 8 -- No Fuse Near the Battery 
+A direct short circuit delivers thousands of amps in seconds -- vaporising cables and 
+starting fires. Always install a correctly rated fuse within 30 centimetres of the battery 
+positive terminal on every installation, without exception. 
+ 
+Mistake 9 -- Loose MC4 Connectors 
+Partially-inserted MC4 connectors create resistance that generates heat under load, 
+leading to arcing and fire. Use the proper MC4 crimping and locking tool, click connectors 
+fully until the lock clicks, and pull-test every connection. 
+ 
+Mistake 10 -- No Site Survey Before Quoting 
+Quoting without a site visit leads to surprises -- difficult roof access, longer cable runs, 
+structural problems. These force you back to the customer for more money, destroying 
+trust. Always survey the site in person before giving a final quote. 
+ 
+ 
+KEY TAKEAWAYS 
+• Real Output = Watts x PSH x 0.75 -- never use theoretical output 
+• Apply 50% duty cycle to all refrigerators and freezers 
+• Inverter must handle motor surge -- 3 to 6x rated power 
+• North Hemisphere -> South panels; South Hemisphere -> North panels 
+• Maximum 4 lithium batteries in parallel without a busbar 
+• Fuse within 30cm of battery positive on every installation -- no exceptions 
+  
+
+--- PAGE 36 ---
+  
+CHAPTER 
+9 Starting a Solar Business 
+ 
+The solar installation market across Africa is growing at more than 20% per year. 
+Skilled, professional installers are in genuine short supply. This chapter gives you a 
+complete roadmap to building a profitable, sustainable solar business. 
+9.1  The Market Opportunity 
+Market Factor What It Means for You 
+Grid reliability worsening Demand grows automatically - no 
+need to create it 
+Fuel costs rising Every generator user is a potential 
+solar customer 
+Panel prices falling Systems now affordable for middle-
+income customers 
+Installer shortage Quality work earns referrals - never 
+short of work 
+High profit margins 25 to 40% gross margin on correctly 
+priced jobs 
+Recurring revenue Maintenance contracts provide 
+predictable monthly income 
+Free marketing TikTok and Instagram reach 
+thousands at zero cost 
+ 
+9.2  Six Business Models Explained 
+Solar Business Models 
+STEP 1 
+1. Install Only 
+Customer buys equipment, you provide la bour only. Lowest startup 
+cost - tools and skills only. Best for beginners building experience. 
+STEP 2 
+2. Supply + 
+Install 
+You source equipment and install complete systems. Higher capital 
+but significantly more revenue per job. You control quality. 
+STEP 3 
+3. Maintenance 
+Service installed systems every 3 to 6 months. Panel cleaning, 
+connection checks, battery testing. Recurring profit from existing 
+customers. 
+STEP 4 
+4. Training 
+Workshops 
+Run 2 to 5 day in-person training courses. Charge 20,000 to 100,000 
+Naira per student. High hourly value, multiplies your impact. 
+STEP 5 Sell digital products online - exactly like this book. Zero overhead, zero 
+inventory. Products sell while you sleep. Scales globally. 
+
+--- PAGE 37 ---
+  
+5. eBook + 
+Courses 
+STEP 6 
+6. Solar 
+Consulting 
+Provide feasibility reports to developers and businesses. Charge 
+20,000 to 100,000 Naira per consultation. High value for experienced 
+professionals. 
+ 
+9.3  Pricing Your Installations 
+Quote  =  Equipment Cost  +  (Equipment Cost x 30%)  +  Labour  +  
+Transport 
+ 
+3-Bed Home Example:   
+Equipment cost: 5 panels + battery + inverter + cables = 600,000 
+30% markup: 600,000 x 0.30 = 180,000 
+Labour (2 days): 2 installers x 2 days = 80,000 
+Transport: Delivery + site visits = 20,000 
+TOTAL QUOTE: 600,000 + 180,000 + 80,000 + 20,000 = 880,000 
+GROSS PROFIT: 880,000 - 600,000 - 80,000 - 20,000 = 180,000 
+ 
+System Equipment 30% 
+Markup Labour Total Quote Gross Profit 
+1-Bed Apt 250,000 75,000 50,000 375,000 75,000 
+3-Bed Home 600,000 180,000 80,000 880,000 180,000 
+Office 1,500,000 450,000 200,000 2,200,000 450,000 
+Large + AC 3,000,000 900,000 400,000 4,400,000 900,000 
+ 
+9.4  Social Media Marketing Strategy 
+Proven Content That Generates Leads 
+STEP 1 
+Education 
+'How to size a solar system in 10 minutes'. Builds trust and expertise. 
+Viewers become customers. 
+STEP 2 
+Mistakes 
+'Most installers make this wiring mistake -- here is why it causes fires'. 
+High engagement. Show wrong, then show correct professional 
+method. 
+STEP 3 
+Time-Lapse 
+'Full 5kVA installation from start to finish'. Demonstrates skill. Justifies 
+your pricing. Builds customer confidence. 
+
+--- PAGE 38 ---
+  
+STEP 4 
+Results 
+'Generator bill was 120,000/month. Now it is ZERO'. Real results with 
+real numbers. Most powerful sales content. 
+STEP 5 
+Testimonials 
+Ask every satisfied customer for a 30 -second video. Social proof is 
+worth more than any paid advertisement. 
+ 
+9.5  Digital Product Income -- Passive Revenue 
+Price per eBook: 5,000 Naira  
+10 sales/month: 10 x 5,000 = 50,000/month 
+50 sales/month: 50 x 5,000 = 
+250,000/month 
+100 sales/month: 100 x 5,000 = 
+500,000/month 
+500 sales/month: 500 x 5,000 = 
+2,500,000/month 
+ 
+TIP: Passive Income Power 
+An eBook is created once and sold unlimited times. 500 sales per month at 5,000 Naira 
+earns 2.5 million Naira monthly from a single product. Combined with installation income, 
+digital products can completely transform your finances. 
+ 
+ 
+KEY TAKEAWAYS 
+•   Solar market grows at 20%+ annually -- demand increases without effort 
+•   Formula: Equipment Cost + 30% + Labour + Transport = Quote 
+•   TikTok education and results videos are the most powerful free marketing 
+•   eBooks and courses generate income while you sleep -- zero overhead 
+•   Quality workmanship and professional handover generate the best referrals 
+  
+
+--- PAGE 39 ---
+  
+CHAPTER 
+10 Complete Solar Installation Case Study 
+ 
+This chapter walks through a complete, real-world solar installation from first customer 
+conversation to final handover. Every step is shown in full detail so you can follow the 
+exact same process on your own jobs. 
+Project Brief 
+Project Detail Information 
+Location 3-Bedroom House, Lagos, Nigeria 
+Client Goal Run lights, fans, TV, refrigerator, and laptop 24 
+hours 
+Grid Power Available 4 hours per day average 
+Generator Fuel Cost NGN3,000 per day (NGN90,000/month) 
+Client Budget NGN800,000 to NGN1,200,000 
+Battery Preference Lithium for low maintenance 
+Timeline Installation within 2 weeks of survey 
+ 
+Step 1 -- Load Calculation 
+The first visit was a site survey. The installer walked through every room and recorded 
+all appliances the client wanted to power, measuring any unknown wattages with a 
+plug-in watt meter. 
+ 
+Appliance Watts Qty Effective 
+Hrs/Day Calculation Wh/Day 
+LED Lights 15W 8 6 hrs 15 x 8 x 6 = 720 Wh 
+Ceiling Fans 75W 3 8 hrs 75 x 3 x 8 = 1,800 Wh 
+LED TV 32-inch 100W 1 5 hrs 100 x 1 x 5 = 500 Wh 
+Refrigerator (50% 
+duty) 150W 1 6 hrs 150 x 1 x 6 = 900 Wh 
+Laptop 65W 1 5 hrs 65 x 1 x 5 = 325 Wh 
+Phone Chargers 10W 4 3 hrs 10 x 4 x 3 = 120 Wh 
+ 
+Step 4 -- Raw total: 720 + 1800 + 500 + 900 + 325 + 120 = 4,365 Wh/day 
+Step 5 -- Add 25%: 4,365 x 1.25 = 5,456 Wh/day 
+DESIGN LOAD: Used for all sizing below 5,456 Wh/day 
+
+--- PAGE 40 ---
+  
+Step 2 - Panel Sizing 
+Formula: Design Load / (PSH x System Efficiency)  
+Calculation: 5,456 / (5 x 0.75) = 5,456 / 3.75 = 1,455W 
+needed 
+Panels selected: 4 x 400W monocrystalline panels = 1,600W total 
+Headroom: (1,600 - 1,455) / 1,455 x 100 = 10% above 
+minimum 
+ 
+PRO INSTALLER TIP 
+The 10% headroom above the minimum gives the system buffer for occasional shading 
+from a nearby water tank and for dusty harmattan days when panel output drops 
+temporarily. 
+Step 3 -- Battery Sizing 
+Formula: (Design Load x Days) / (Voltage x DoD)  
+Numerator: 5,456 x 1 day = 5,456 
+Denominator: 48V x 0.80 DoD = 38.4 
+Required Ah: 5,456 / 38.4 = 142Ah at 48V 
+Battery selected: 200Ah 48V Lithium LiFePO4 41% above 
+minimum 
+ 
+The installer chose 200Ah rather than the minimum 142Ah to give the client 
+comfortable backup through a full night plus cloudy morning, without stressing the 
+battery to its DoD limit. 
+Step 4 - Inverter Selection 
+Peak continuous load: 3 Fans 225W + Lights 120W + TV 100W 
++ Fridge 150W + Laptop 65W 
+= 660W 
+Motor surge (fridge): 150W x 3 = 450W surge 
+Peak with surge: 660 + 450 = 1,110W 
+x 1.25 safety factor: 1,110 x 1.25 = 1,388W = 1.4 
+kVA 
+Inverter selected: 3.5 kVA Pure Sine Wave Hybrid Inverter 
+at 48V 
+Ample 
+headroom 
+ 
+The installer selected a 3.5 kVA inverter rather than the minimum 1.4 kVA for three 
+reasons: it allows future load additions, it handles the fridge surge comfortably, and 
+the client's budget allowed it. 
+Step 5 - Final System Design 
+
+--- PAGE 41 ---
+  
+Component Specification Quantity Estimated Cost 
+(NGN) 
+Solar Panels 400W 
+Monocrystalline 4 panels 320,000 
+Hybrid Inverter 3.5 kVA Pure Sine 
+Wave 48V 1 unit 180,000 
+Lithium Battery 200Ah 48V 
+LiFePO4 1 unit 250,000 
+DC Solar Cables 6mm2 UV-rated 20 metres 15,000 
+Battery Cables 35mm2 flexible 3 metres 8,000 
+MC4 Connectors Paired sets 6 pairs 3,000 
+DC Circuit Breaker 63A DC rated 1 unit 5,000 
+AC Circuit Breaker 32A AC rated 1 unit 3,000 
+Mounting Rails Aluminium roof kit 1 set 35,000 
+Earth Cable and 
+Rod 
+6mm2 + 1.2m 
+copper rod 1 set 8,000 
+Miscellaneous Cable ties, tray, 
+tape 1 set 5,000 
+EQUIPMENT 
+TOTAL   832,000 
+Installation Labour 2 installers x 2 days  80,000 
+Transport Equipment delivery 
++ 2 site visits  20,000 
+TOTAL QUOTED   932,000 
+ 
+Step 6 - Installation Summary 
+Installation Day Sequence 
+STEP 1 
+8:00 AM Site 
+Setup 
+Tools and equipment staged. Roof inspected. Exclusion zone marked 
+on ground below work area. All PPE fitted. 
+STEP 2 
+8:30 AM Roof 
+Work 
+Mounting rails installed on South -facing roof face at 12 -degree tilt. 4 
+panels mounted, earthed, and MC4 connected. Cabling routed 
+through conduit to inverter location. 
+STEP 3 
+11:00 AM 
+Inverter + 
+Battery 
+Inverter wall -mounted with 20cm clearance on all sides. Battery 
+positioned on battery shelf. DC fuse installed within 25cm of battery 
+positive terminal. 
+STEP 4 
+12:00 PM Wiring 
+Battery connected to inverter. Solar array connected to MPPT input 
+(polarity verified with multimeter first). AC output connected to 
+distribution board. 
+
+--- PAGE 42 ---
+  
+STEP 5 
+1:30 PM 
+Commissioning 
+System powered on. Battery voltage: 52.4V (full charge). Solar input: 
+48.2V, 18.6A (good charging current). AC output: 221V, 50Hz. All 
+readings normal. 
+STEP 6 
+2:00 PM Load 
+Test 
+All appliances connected and tested simultaneously. No alarm. 
+Inverter ru nning at 38% of rated capacity - comfortable headroom 
+confirmed. 
+STEP 7 
+2:30 PM 
+Handover 
+System demonstrated to client. Inverter display explained. 
+Maintenance schedule provided. Warranty certificate signed. Client 
+expressed satisfaction. 
+ 
+Step 7 - ROI Calculation for This Client 
+Previous generator 
+cost: 
+NGN3,000/day x 30 days = 
+NGN90,000/month 
+Annual generator cost: NGN90,000 x 12 months = 
+NGN1,080,000/year 
+Total solar investment: Equipment + Labour + Transport = NGN932,000 
+Monthly savings: NGN90,000 (no more fuel) = 
+NGN90,000/month 
+Payback period: NGN932,000 / NGN90,000 approx. 10.4 
+months 
+Year 2 onwards: Pure savings (system lasts 20+ years) NGN1,080,000/year 
+ 
+TIP: Sales Tip 
+Always calculate and show the ROI to your customer. When a client sees that their 
+NGN932,000 solar system pays for itself in 10 months and saves NGN1,080,000 every 
+year after that, the decision becomes obvious. ROI calculation closes more sales than any 
+discount. 
+ 
+ 
+KEY TAKEAWAYS 
+• A complete case study follows: Survey -> Load Calc -> Panel Size -> Battery -> 
+Inverter -> Install 
+• Always measure actual appliance wattages during the site survey 
+• Select components one size above minimum for comfort, reliability, and future 
+expansion 
+• Show the ROI calculation to every customer -- it makes solar an investment, not a 
+cost 
+• Professional handover with warranty and maintenance schedule builds long-term 
+trust 
+  
+
+--- PAGE 43 ---
+  
+CHAPTER 
+11 Solar Cost Estimation & ROI 
+ 
+The most common question every solar installer hears is: 'How much will it cost?' This 
+chapter gives you the tools to answer that question professionally and to show 
+customers the compelling financial return on their solar investment. 
+11. System Cost Guide by Size 
+Prices below are estimates f or the Nigerian market as of 2025. Actual costs vary by 
+battery type, panel brand, inverter quality, and installation complexity. Always obtain 
+current supplier quotes before finalising your customer price. 
+ 
+System Size Typical Use Approx. 
+Equipment 
+With 
+Installation 
+Monthly 
+Savings (est.) 
+1 kVA Lights + TV + 
+Fans 
+NGN250k - 
+NGN400k 
+NGN330k - 
+NGN500k 
+NGN30k - 
+NGN50k 
+3 kVA Small 2-bed 
+home 
+NGN600k - 
+NGN900k 
+NGN750k - 
+NGN1.1M 
+NGN60k - 
+NGN90k 
+5 kVA Medium 3-bed 
+home 
+NGN1.1M - 
+NGN1.8M 
+NGN1.4M - 
+NGN2.2M 
+NGN80k - 
+NGN130k 
+10 kVA Large home or 
+office 
+NGN2.5M - 
+NGN4M 
+NGN3.1M - 
+NGN4.8M 
+NGN150k - 
+NGN250k 
+20 kVA+ Large office / 
+multiple ACs 
+NGN5M - 
+NGN9M 
+NGN6.2M - 
+NGN11M 
+NGN300k - 
+NGN600k 
+ 
+Prices vary based on three main factors: 
+• Battery type -- Lithium batteries cost 2 to 3 times more than lead-acid upfront 
+but last 3 to 4 times longer and require no maintenance. 
+• Panel brand -- Premium branded monocrystalline panels from established 
+manufacturers cost 20 to 40% more than unbranded but deliver their rated 
+output reliably for 25+ years. 
+• Inverter quality -- Budget inverters save money short-term but are more likely 
+to fail within 2 to 3 years. Always recommend quality brands with local 
+warranty support. 
+11.2 Generator vs Solar - ROI Comparison 
+This table sho ws the financial comparison for a typical 3 -bedroom home running a 
+generator. Use this exact table when presenting solar to a potential customer -- it 
+converts hesitant customers into buyers. 
+ 
+Cost Factor Generator 
+(Annual) Solar (Annual) Solar 
+Advantage 
+
+--- PAGE 44 ---
+  
+Fuel cost NGN1,080,000 NGN0 Save 
+NGN1,080,000/yr 
+Maintenance NGN120,000 NGN20,000 Save 
+NGN100,000/yr 
+Repairs / parts NGN80,000 NGN0 Save 
+NGN80,000/yr 
+Noise and health Significant None Priceless 
+Total annual cost NGN1,280,000 NGN20,000 Save 
+NGN1,260,000/yr 
+5-year total cost NGN6,400,000 NGN1,120,000 Solar saves 
+NGN5,280,000 
+ 
+Solar system cost: 3 kVA system fully installed approx. 
+NGN900,000 
+Annual savings: Generator cost eliminated = 
+NGN1,260,000/year 
+Payback period: NGN900,000 / NGN1,260,000 = 8.6 months 
+Year 2 savings: Pure profit, zero fuel needed NGN1,260,000/year 
+5-year savings: NGN1,260,000 x 5 - NGN900,000 = NGN5,400,000 
+net gain 
+ 
+TIP: The Sales Close 
+Print this ROI calculation and show it to every customer. When they see they recover their 
+investment in under a year and save over 5 million naira in five years,  solar is no longer 
+an expense - it becomes one of the best financial decisions they can make. 
+ 
+ 
+KEY TAKEAWAYS 
+•   A 3kVA system typically costs NGN750k to NGN1.1M fully installed 
+•   Generator fuel alone costs NGN1M+ per year for a typical home 
+•   Solar payback period is typically 8 to 14 months - not years 
+•   5-year net saving can exceed NGN5 million compared to generator operation 
+•  b  Always show the ROI calculation - it is your most powerful sales tool 
+  
+
+--- PAGE 45 ---
+  
+CHAPTER 
+12 Professional Solar Site Survey Form 
+ 
+Professional installers always conduct a structured site survey before quoting. This 
+chapter provides a complete site survey form you can print and use on every job. Using 
+a formal survey form demonstrates professionalism and protects you legally by 
+documenting the existing site conditions. 
+ 
+MUSSTECH SOLAR ENERGY 
+PROFESSIONAL SOLAR SITE SURVEY FORM 
+SECTION 1 - CLIENT INFORMATION 
+Client Name: _________________________________ 
+Phone Number: _________________________________ 
+Email Address: _________________________________ 
+Installation Address: ______________________________________________ 
+Survey Date: _________________     Survey By: _________________ 
+SECTION 2 -- ROOF ASSESSMENT 
+Roof Type:   [ ] Aluminium Sheet       [ ] Concrete Slab       [ ] Clay Tiles       
+[ ] Other 
+Roof Condition:   [ ] Excellent       [ ] Good       [ ] Fair -- Needs Repair       [ ] 
+Poor -- Cannot Install 
+Roof Orientation:   [ ] South-Facing       [ ] North-Facing       [ ] East-Facing       
+[ ] West-Facing 
+Roof Tilt Angle: ________ degrees 
+Shading Present:   [ ] No Shading       [ ] Minor Shading (trees)       [ ] 
+Moderate Shading       [ ] Heavy Shading 
+Shading Source: ______________________________________________
+__ 
+Available Roof Area: ________ m2 (usable for panels) 
+SECTION 3 -- SYSTEM LOCATION 
+Inverter Location: ______________________________________________
+__ 
+Battery Location: ______________________________________________
+__ 
+Battery Ventilation:   [ ] Good Natural Ventilation       [ ] Requires Ventilation 
+Improvement       [ ] Not Ventilated -- Must Fix 
+Distance: Roof to Inverter: ________ metres (for cable sizing) 
+Distance: Inverter to 
+Battery: 
+________ metres 
+
+--- PAGE 46 ---
+  
+Distance: Inverter to DB 
+Board: 
+________ metres 
+SECTION 4 -- LOAD ASSESSMENT 
+Total Appliances Listed: ________   (attach completed load calculation sheet) 
+Total Daily Design Load: ________ Wh/day 
+AC Units Included:   [ ] No AC Units       [ ] 1 AC Unit       [ ] 2 AC Units       [ ] 3 
+or More 
+Highest Single Load: ________ Watts  (Appliance: 
+_______________________) 
+SECTION 5 -- RECOMMENDED SYSTEM 
+Solar Panels: ________ x ________ W  =  ________ W total 
+Inverter Size: ________ kVA  (Surge rated: ________ kVA) 
+Battery Bank: ________ Ah  @  ________ V  (________ batteries) 
+Estimated Equipment 
+Cost: 
+NGN ________________________________ 
+Estimated Total Quote: NGN ________________________________ 
+SECTION 6 -- NOTES AND SPECIAL CONSIDERATIONS 
+Notes: 
+_______________________________________________________________________
+_______________________________________________________________________
+____________________________________________________ 
+ 
+PRO INSTALLER TIP 
+Print 20 copies of this form and keep them in your work bag at all times. Presenting a 
+professional printed survey form during your first visit immediately separates you from 
+casual installers. Customers trust professionals who follow structured processes. 
+ 
+KEY TAKEAWAYS 
+•   Always conduct a physical site survey before quoting any installation 
+•   Document roof condition, orientation, and shading on the survey form 
+•   Record all cable distances - essential for correct cable sizing 
+•   A professional survey form builds customer trust from the first visit 
+•   Keep completed survey forms on file - they protect you if disputes arise later 
+  
+
+--- PAGE 47 ---
+  
+CHAPTER 
+13 Solar Troubleshooting Guide 
+ 
+Every solar installer encounters system problems after installation. Knowing how to 
+diagnose and resolve common issues quickly is what separates a professional from 
+an amateur. This chapter covers the most common problems encountered in the field. 
+ 
+Problem 1 - Battery Not Charging 
+Possible Causes: 
+• Solar panel voltage too low (panels covered or shaded) 
+• MPPT controller not enabled or incorrectly configured 
+• DC wiring polarity reversed at MPPT input 
+• Loose or corroded MC4 connector reducing panel output 
+• Battery fully charged and in float mode (this is normal) 
+Diagnosis Steps: 
+Check 1: Measure panel open circuit voltage (Voc) 
+with multimeter 
+Should be 35 to 
+50V per panel 
+Check 2: Measure MPPT input voltage at controller 
+terminals 
+Should be 
+higher than 
+battery voltage 
+Check 3: Check MPPT controller display - is 
+charging current shown? 
+Should show 
+positive amps 
+Check 4: Inspect all MC4 connectors for full 
+insertion and locking 
+Click and pull-
+test each one 
+ 
+ 
+Problem 2 - Inverter Showing Overload Alarm 
+Possible Causes: 
+• Too many appliances connected simultaneously 
+• Motor surge from fridge, AC, or pump starting up 
+• Inverter undersized for the actual peak load 
+• AC output short circuit in building wiring 
+ 
+ 
+ 
+
+--- PAGE 48 ---
+  
+Diagnosis Steps: 
+Check 1: Disconnect all loads and reconnect one 
+by one 
+Identify which 
+load triggers 
+alarm 
+Check 2: Check inverter's continuous and surge 
+ratings in manual 
+Compare 
+against peak 
+load 
+calculation 
+Check 3: Start AC or fridge separately -- does 
+inverter alarm? 
+Confirms motor 
+surge issue 
+Check 4: Check AC output wiring for short circuit or 
+fault 
+Continuity test 
+on all circuits 
+ 
+ 
+Problem 3 - Battery Draining Too Quickly 
+Possible Causes: 
+• Load calculation was underestimated - real load higher than designed for 
+• Battery capacity smaller than required 
+• Excessive phantom loads (devices on standby) 
+• Battery aging and losing actual capacity 
+Diagnosis Steps: 
+Check 1: Review actual daily energy usage on 
+inverter display 
+Compare with 
+design load figure 
+Check 2: Test battery capacity under controlled 
+conditions 
+Old batteries may 
+be 50 to 70% of 
+rated capacity 
+Check 3: Switch off all appliances -- does battery 
+still drain? 
+Identifies 
+parasitic/phantom 
+loads 
+Check 4: Check battery age and number of cycles 
+on BMS display 
+Replace if at end 
+of cycle life 
+ 
+ 
+Problem 4 - Panels Not Producing Expected Output 
+Possible Causes: 
+• Heavy dust or bird droppings on panel surface 
+• Partial shading from newly grown trees or new structures 
+• Panel degradation over time (normal after 10+ years) 
+
+--- PAGE 49 ---
+  
+• Incorrect panel tilt or orientation 
+ 
+Diagnosis Steps: 
+Check 1: Compare actual solar input kWh today vs 
+same day last year 
+More than 15% 
+drop needs 
+investigation 
+Check 2: Clean panels thoroughly and compare 
+output before and after 
+Often recovers 
+5 to 15% output 
+Check 3: Check for new shading sources -- 
+buildings, trees, tanks 
+Any shadow on 
+one panel 
+affects string 
+Check 4: Measure Voc and Isc of each panel 
+individually 
+Weak panel 
+shows lower 
+values than 
+others 
+ 
+Problem 5 - Inverter Showing Low Battery Alarm 
+Possible Causes: 
+• Extended cloudy weather without sufficient charging 
+• Load consumption exceeding solar generation 
+• Battery bank undersized for the actual load 
+• MPPT controller fault reducing charging efficiency 
+Diagnosis Steps: 
+Check 1: Review how many days of cloudy 
+weather have occurred 
+Battery needs 
+recharge from 
+grid or 
+generator 
+Check 2: Compare daily energy generated vs daily 
+energy consumed 
+Check inverter 
+energy 
+monitoring log 
+Check 3: Check MPPT charging current during 
+peak sunlight hours 
+Should be at or 
+near maximum 
+rated current 
+Check 4: Consider temporary load reduction until 
+battery recovers 
+Prevents 
+battery damage 
+from over-
+discharge 
+ 
+Problem 6 - AC Output Voltage Incorrect 
+
+--- PAGE 50 ---
+  
+Possible Causes: 
+• Inverter fault or firmware issue 
+• Heavy load causing voltage drop 
+• Faulty AC wiring or poor connections 
+• Inverter overheating - output de-rated 
+Diagnosis Steps: 
+Check 1: Measure AC output voltage at inverter 
+terminals 
+Should be 220V 
++/- 5V (215 to 
+225V) 
+Check 2: Check inverter temperature -- is 
+ventilation adequate? 
+Overheating 
+causes output 
+voltage drop 
+Check 3: Disconnect all loads -- does voltage 
+return to normal? 
+Confirms 
+overload issue 
+Check 4: Check inverter error log on display or app Error codes 
+guide fault 
+diagnosis 
+ 
+PRO INSTALLER TIP 
+Keep a digital logbook for every system you install. Record the installation date, 
+component brands and serial numbers, initial readings, and any issues encountered. 
+When a customer calls with a problem 2 years later, your logbook lets you diagnose 
+remotely in minutes -- this level of service builds an outstanding reputation. 
+ 
+KEY TAKEAWAYS 
+•   Always use a multimeter to verify voltages before assuming component failure 
+•   Battery not charging - first check panel Voc, then polarity, then MC4 connectors 
+•   Inverter overload - identify the triggering load and check for motor surge 
+•   Fast battery drain - compare actual load to design load and check battery age 
+•   Panel underperformance - clean panels first, then check for new shading 
+sources 
+•   Document every fault and resolution in your installation logbook 
+  
+
+--- PAGE 51 ---
+  
+CHAPTER 
+14 Panel Installation Best Practices 
+ 
+ 
+The difference between a good solar installation and a great one often comes down 
+to the details of the physical panel mounting. This chapter covers professional best 
+practices that ensure maximum performance, long -term reli ability, and a clean, 
+impressive finish. 
+14.1 Roof Mounting Best Practices 
+Professional Panel Mounting Guidelines 
+STEP 1 
+Airflow Gap 
+Always leave a minimum 10 to 15 cm gap between the bottom of the 
+panels and the roof surface. This allows air to circulate  under the 
+panels, cooling them and improving output by 3 to 5% compared to 
+panels mounted flush to the roof. 
+STEP 2 
+Tilt Angle 
+Set panel tilt at 10 to 15 degrees for maximum annual output in Africa 
+(close to the equator). Never  mount panels completely flat - a flat 
+mount pools water and dirt in the frame, accelerating corrosion and 
+reducing light transmission. 
+STEP 3 
+Orientation 
+Panels must face due South in the Northern Hemisphere (Nigeria, 
+Ghana, Kenya) and due North in the Southern Hemisphere (South 
+Africa, Namibia). Use a compass app on your phone to verify. Even 
+30 degrees off due South reduces annual output by 5 to 8%. 
+STEP 4 
+Roof 
+Penetrations 
+Every roof penetration (mounting bolt hole) must be properly sealed 
+with butyl  tape, rubber gaskets, or roofing sealant. Unsealed 
+penetrations cause water ingress and roof leaks - the most common 
+customer complaint after installation. 
+STEP 5 
+Structural Load 
+Distribute mounting hardware across roof rafters, not just the roof 
+sheeting. Each panel weighs 18 to 22 kg. Confirm rafter positions from 
+inside the roof before drilling any holes. Use M8 or M10 stainless steel 
+bolts minimum. 
+STEP 6 
+Rail Alignment 
+Use a spirit level to ensure mounting rails are perfectly level in both 
+directions before tightening. Misaligned rails cause uneven panel 
+loading, stress on panel frames, and a visually unprofessional result. 
+
+
+--- PAGE 52 ---
+  
+STEP 7 
+Panel Spacing 
+Leave at least 10 mm between adjacent panels for thermal expansion. 
+Panels heat up during the d ay - without expansion gap, thermal 
+movement can crack glass or damage frames over time. 
+STEP 8 
+Earthing 
+Earth every panel frame and every section of mounting rail using an 
+earth bonding cable (minimum 6mm2). All earth points must connect 
+to a single common earth rod at ground level. Test continuity from 
+furthest panel to earth rod. 
+14.2 DC Cabling Best Practices 
+• Always use UV-stabilized, double-insulated solar DC cables rated for outdoor 
+use. Standard electrical cable degrades in sunlight within 2 to 3 years and is a 
+serious fire hazard. 
+• Run DC cables in UV-resistant conduit or cable tray wherever exposed to 
+direct sunlight. Loose cables flapping in the wind abrade their insulation 
+against roof edges. 
+• Never run DC cables alongside AC cables in the same conduit -
+electromagnetic interference reduces system efficiency. 
+• Secure all cables with UV-resistant cable ties or saddle clips every 30 
+centimeters. Unsecured cables vibrate in wind, work loose, and create arcing 
+hazards. 
+• Label both ends of every DC cable with its polarity (+/-), circuit name, and 
+voltage. Future maintenance becomes simple when cables are clearly 
+labelled. 
+• Keep DC cable runs as short as possible. Every extra metre of cable adds 
+resistance, increases voltage drop, and reduces the energy reaching the 
+inverter. 
+14.3 MC4 Connector Best Practices 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- PAGE 53 ---
+  
+Step Action Why It Matters 
+1 
+Strip cable insulation 
+exactly 20mm -- not more, 
+not less 
+Short strip = poor contact; 
+long strip = exposed 
+conductor 
+2 
+Insert conductor fully into 
+MC4 contact pin - no copper 
+visible 
+Partial insertion causes high 
+resistance and heat 
+3 
+Crimp contact pin using a 
+dedicated MC4 crimping 
+tool 
+Pliers crimp unevenly - only 
+proper tool ensures reliable 
+joint 
+4 
+Push crimped pin into MC4 
+housing until you hear the 
+click 
+Click confirms the locking 
+tab has engaged 
+5 
+Mate male and female 
+connectors and push until 
+second click 
+Both clicks must be heard - 
+one click means not fully 
+mated 
+6 
+Pull-test every mated 
+connector with firm hand 
+pressure 
+If it pulls apart, it was not 
+properly mated -- reconnect 
+7 
+Never disconnect under 
+load -- always isolate panels 
+first 
+DC arc under load destroys 
+connectors and starts fires 
+ 
+PRO INSTALLER TIP 
+Invest in a quality MC4 crimping and extraction tool set. Budget NGN5,000 to NGN10,000 
+for a professional tool. Your entire solar career depends on reliable MC4 connections - do 
+not use pliers. One fire caused by a poor MC4 connection destroys your reputation 
+permanently. 
+ 
+ 
+KEY TAKEAWAYS 
+•   Always leave 10 to 15 cm airflow gap under panels - improves output and 
+prevents heat damage 
+•  Never mount panels flat - pooled water and dirt reduce output and accelerate 
+corrosion 
+•   Seal every roof penetration with appropriate waterproofing material 
+•   Use UV-rated solar cables in conduit for all outdoor runs 
+•   Use proper MC4 crimping tool - pliers produce unreliable connections that cause 
+fires 
+•   Pull-test every MC4 connection after mating -- if it pulls apart, redo it 
+  
+
+--- PAGE 54 ---
+  
+CHAPTER 
+15 Tools Every Solar Installer Needs 
+ 
+Having the right tools is the difference between a smooth, professional installation and 
+a frustrating, dangerous one. This chapter lists every tool you need, what it is used for, 
+and what to look for when buying. 
+15.1  Essential Measurement Tools 
+Tool Purpose What to Buy 
+Approx. 
+Cost 
+(NGN) 
+Digital Multimeter 
+Measure DC/AC voltage, 
+current, resistance, and 
+continuity 
+Minimum 600V CAT III 
+rated. Auto-ranging 
+preferred 
+5,000 - 
+15,000 
+Clamp Meter Measure DC and AC current 
+without breaking the circuit 
+DC clamp capability 
+essential for solar work 
+15,000 - 
+40,000 
+Non-Contact 
+Voltage Tester 
+Quickly check if a wire is live 
+before touching 
+Any reputable brand, 
+1,000V rated 
+3,000 - 
+8,000 
+Solar Irradiance 
+Meter 
+Measure actual sunlight 
+intensity at panel surface 
+Optional but valuable 
+for professional 
+commissioning 
+25,000 - 
+80,000 
+ 
+PRO INSTALLER TIP 
+A quality multimeter is the single most important tool in your kit. Buy the best multimeter 
+you can afford - your Fluke or Uni -T 600V CAT III will outlast twenty cheap meters. An 
+inaccurate multimeter gives false readings and makes fault-finding impossible. 
+15.2  Essential Wiring Tools 
+Tool Purpose What to Buy 
+Approx. 
+Cost 
+(NGN) 
+MC4 Crimping Tool Crimp MC4 connector pins 
+onto solar cables 
+Solar-specific MC4 tool 
+- not a generic crimper 
+8,000 - 
+20,000 
+MC4 Extraction 
+Tool 
+Safely disconnect locked 
+MC4 connectors 
+Comes in a set with 
+crimping tool usually 
+Included 
+in set 
+Wire Stripper 
+Strip cable insulation 
+precisely without damaging 
+conductors 
+Adjustable for 1.5mm2 
+to 16mm2 
+3,000 - 
+8,000 
+Cable Crimping 
+Tool + Lugs 
+Create battery and inverter 
+terminal connections 
+Ratchet-type crimper 
+for consistent pressure 
+6,000 - 
+15,000 
+
+--- PAGE 55 ---
+  
+Insulation Tape 
+Insulate exposed 
+connections and cable 
+joints 
+UV-resistant, high-
+temperature rated 
+500 - 
+1,500 
+Heat Shrink Tubing Professional waterproof 
+insulation of cable joints Assorted sizes 2,000 - 
+5,000 
+ 
+15.3 Essential Mounting Tools 
+Tool Purpose Specification 
+Approx. 
+Cost 
+(NGN) 
+Power Drill + Bits Drill holes in roof for 
+mounting hardware 
+Corded or 18V cordless 
+with masonry and metal 
+bits 
+25,000 - 
+60,000 
+Torque Wrench Apply correct torque to all 
+panel and rail bolts 
+Set to manufacturer 
+specification -- prevents 
+over/under tightening 
+15,000 - 
+35,000 
+Spirit Level Ensure mounting rails are 
+perfectly level 
+1 metre long minimum -- 
+longer is more accurate 
+3,000 - 
+8,000 
+Measuring Tape Measure roof area, cable 
+runs, and panel spacing 
+5 metre minimum, 10 
+metre preferred 
+1,500 - 
+4,000 
+Chalk Line Mark straight panel layout 
+lines on roof 
+Essential for large arrays 
+of 6+ panels 
+1,500 - 
+3,000 
+Safety Harness + 
+Anchor 
+Fall protection for all roofs 
+above 3 metres 
+EN361 full-body harness -
+- non-negotiable 
+20,000 - 
+50,000 
+ 
+15.4  Starter Kit - What to Buy First 
+If you are just starting out, buy these tools first and add others as your income grows: 
+ 
+Priority Tool Why First Budget 
+(NGN) 
+1 Digital Multimeter (600V CAT 
+III) 
+Cannot safely install without 
+it 8,000 
+2 MC4 Crimping Tool Set Every installation needs 
+panel connections 12,000 
+3 Wire Stripper Needed for every cable in 
+every job 4,000 
+4 Safety Harness Legal and moral requirement 
+for roof work 25,000 
+
+--- PAGE 56 ---
+  
+5 Cable Crimping Tool + Lugs Battery and inverter 
+connections 8,000 
+6 Power Drill + Bits Roof mounting on every 
+installation 30,000 
+STARTER 
+TOTAL   NGN87,000 
+approx. 
+ 
+ 
+TIP:Starting With Limited Budget 
+If NGN87,000 is too much at once, start with the multimeter  (NGN8,000) and MC4 tool 
+(NGN12,000) and borrow or hire other tools for your first jobs. Reinvest your first profits 
+into completing your tool kit. Never compromise on the safety harness -- rent one if you 
+cannot buy immediately. 
+ 
+ 
+KEY TAKEAWAYS 
+OK  A quality multimeter is your single most important tool -- never work without one 
+OK  MC4 crimping tool is mandatory -- pliers produce unreliable and dangerous 
+connections 
+OK  Safety harness is non-negotiable for any roof above 3 metres 
+OK  Starter tool kit costs approximately NGN87,000 -- recoverable from your first 
+installation 
+OK  Invest in quality tools once -- cheap tools cost more in the long run through failure 
+and rework 
+  
+
+--- PAGE 57 ---
+  
+ 
+ 
+ 
+ 
+ 
+JOIN THE MUSSTECH SOLAR COMMUNITY 
+For Training, Support, and Industry Updates 
+ 
+CONNECT WITH US 
+TikTok:  @Musstech_Solar_Energy 
+Instagram:  @Musstech 
+Email:  musstech00@gmail.com 
+WhatsApp:  +234 915 813 4345 
+TRAINING PROGRAMMES 
+Solar Installation Mastery Course 
+5-day intensive hands-on training 
+Solar Business Launch Programme 
+From installer to business owner 
+Online Solar Masterclass 
+Learn at your own pace, anywhere 
+ 
+ 
+The demand is rising. 
+The opportunity is here. 
+Your journey starts today. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+--- PAGE 58 ---
+  
+Appendix 
+ 
+Professional Installer Checklist (28 Items) 
+BEFORE INSTALLATION 
+Completed full load calculation with measured appliance wattages [ ] 
+Applied 75% system efficiency (x 0.75) to panel sizing [ ] 
+Applied 50% duty cycle to all refrigerators and freezers [ ] 
+Verified roof structure can support full panel weight [ ] 
+Confirmed panel orientation (South = Northern Hemisphere; North = Southern 
+Hemisphere) 
+[ ] 
+Checked inverter surge rating against all motor loads in the system [ ] 
+Verified battery parallel limit not exceeded (max 4 without busbar) [ ] 
+Confirmed MPPT max input voltage vs panel string voltage [ ] 
+Planned complete cable routes and measured all lengths [ ] 
+Prepared all PPE: gloves, goggles, hard hat, safety harness [ ] 
+ 
+DURING INSTALLATION 
+Covered all panels with opaque material before starting work [ ] 
+Installed DC fuse within 30cm of battery positive terminal [ ] 
+Verified polarity with multimeter before every final connection [ ] 
+Followed correct wiring sequence: Battery -> Inverter -> Solar [ ] 
+Earthed all panel frames and equipment enclosures [ ] 
+MC4 connectors fully clicked, locked, and pull-tested [ ] 
+All cables labelled with polarity, voltage, and circuit name [ ] 
+Cables routed neatly in tray or conduit and secured with cable ties [ ] 
+ 
+AFTER INSTALLATION 
+Battery voltage on inverter display within expected range [ ] 
+Solar charging current positive and visible on a sunny day [ ] 
+AC output voltage verified: 220V +/- 5V [ ] 
+Full load test completed with all appliances running simultaneously [ ] 
+No inverter alarm or error code present [ ] 
+System fully demonstrated to customer [ ] 
+Written warranty and system certificate provided to customer [ ] 
+Maintenance schedule given to customer in writing [ ] 
+
+--- PAGE 59 ---
+  
+All tools, waste materials, and packaging removed from site [ ] 
+Customer signed job completion document [ ] 
+ 
+Cable Sizing Quick Reference 
+Max Current Cable Size Application 
+Up to 10A 1.5mm2 Lighting circuits 
+10 to 20A 2.5mm2 General AC circuits 
+20 to 30A 4mm2 Inverter AC output 
+30 to 60A 10mm2 Battery to small inverter 
+60 to 100A 16 to 25mm2 Battery to 3kVA inverter 
+100 to 200A 35 to 50mm2 Battery to 5 to 10kVA 
+200 to 300A 70mm2 Battery to large inverter/busbar 
+ 
+ 
+Glossary of Key Terms 
+Term Definition 
+AC (Alternating Current) 220V, 50Hz electricity used in homes and offices. 
+Ah (Ampere-hour) Battery capacity unit. 200Ah delivers 20A for 10 
+hours. 
+BMS (Battery Management 
+System) 
+Protects lithium cells from overcharge and over-
+discharge. 
+DC (Direct Current) Electricity from solar panels and batteries. 
+DoD (Depth of Discharge) Lead-acid: 50% max. Lithium: 80 to 90% max. 
+Duty Cycle Fraction of time a cycling appliance actually runs. 
+Fridges: ~50%. 
+kVA (Kilovolt-Ampere) Inverter and generator power rating. 
+kWh (Kilowatt-Hour) 1,000 Watt-hours -- unit on electricity meters. 
+MPPT (Maximum Power Point 
+Tracking) Most efficient type of solar charge controller. 
+PSH (Peak Sun Hours) Africa averages 5 full-intensity sun hours per day. 
+PV (Photovoltaic) Technology converting sunlight directly into DC 
+electricity. 
+PWM (Pulse Width Modulation) Less efficient charge controller -- avoid above 200W. 
+STC (Standard Test Conditions) Panel rating conditions: 1,000W/m2 at 25 degreesC. 
+Surge Power Startup power drawn by motors - 3 to 6x rated 
+wattage for 1 to 2 seconds. 
+
+--- PAGE 60 ---
+  
+System Efficiency Real-world output factor accounting for all losses. 
+Use 0.75 (75%). 
+Vmp (Voltage at Max Power) Panel operating voltage at full output. 
+Voc (Open Circuit Voltage) Maximum panel voltage with no load connected. 
+ 
+ 
+ 
+ 
+

@@ -4,15 +4,18 @@ import { PremiumGate } from '../components/auth/PremiumAccess'
 import { usePersistentState } from '../hooks/usePersistentState'
 import { Button } from '../components/ui/Button'
 import { QuotePreview } from '../features/quotation/QuotePreview'
+import { initialRows } from '../features/calculators/LoadCalculator'
 
 const today = new Date().toISOString().slice(0, 10)
 
 export function QuotePreviewPage() {
   const [installer] = usePersistentState('mse-quote-installer', { companyName: '', subtitle: '', currencyCode: 'USD' })
   const [client] = usePersistentState('mse-quote-client', { name: '', address: '', phone: '', email: '', date: today })
-  const [system] = usePersistentState('mse-quote-system', { designLoad: 8000, nightLoad: 4000, voltage: 48, battType: 'lithium', autonomy: 1, regionId: 'global-average', psh: 5, efficiency: 75, panelW: 500, battAh: 200, panelPrice: 145000, battPrice: 480000, invPrice: 520000 })
+  const [system] = usePersistentState('mse-quote-system', { designLoad: 8000, nightLoad: 4000, voltage: 48, battType: 'lithium', autonomy: 1, regionId: 'global-average', psh: 5, efficiency: 75, panelW: 500, battAh: 200, panelPrice: 0, battPrice: 0, invPrice: 0 })
+  const [commercial] = usePersistentState('mse-quote-commercial', { validityDays: 14, taxEnabled: false, taxPercent: 0, bankDetails: '', paymentTerms: 'Payment schedule to be agreed before procurement begins.', warranty: 'Product warranty follows the manufacturer warranty. Workmanship warranty should be stated by the installer.' })
+  const [loadRows] = usePersistentState('mse-load-rows', initialRows)
   const [margin] = usePersistentState('mse-quote-margin', 20)
-  const [extras] = usePersistentState('mse-quote-extras', 150000)
+  const [extras] = usePersistentState('mse-quote-extras', 0)
   const [reference] = usePersistentState('mse-quote-reference', `QUOTE-${Date.now().toString().slice(-6)}`)
 
   return (
@@ -28,7 +31,7 @@ export function QuotePreviewPage() {
             Back to Editor
           </Button>
         </div>
-        <QuotePreview client={client} installer={installer} system={system} extras={extras} margin={margin} reference={reference} />
+        <QuotePreview client={client} installer={installer} system={system} extras={extras} margin={margin} reference={reference} commercial={commercial} loads={loadRows} />
       </div>
     </PremiumGate>
   )

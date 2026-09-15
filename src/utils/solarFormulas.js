@@ -143,14 +143,18 @@ export function calculateCost({ systemCost, dailyKwh, years, maintenance, genFue
 }
 
 export function calculateQuote(system, extras, margin, options = {}) {
+  const connectedLoad = Array.isArray(options.loads) ? calculateLoad(options.loads) : null
+  const designLoad = options.designLoad ?? connectedLoad?.design ?? system.designLoad
+  const nightLoad = options.nightLoad ?? connectedLoad?.nightDesign ?? system.nightLoad
+  const inverterResult = Array.isArray(options.loads) ? calculateInverter(options.loads) : null
   const panelResult = calculatePanels({
-    designLoad: system.designLoad,
+    designLoad,
     panelW: system.panelW,
     psh: options.psh ?? system.psh ?? DEFAULT_PSH,
     efficiency: options.efficiency ?? system.efficiency ?? DEFAULT_EFFICIENCY * 100,
   })
-  const batteryResult = calculateBattery(system)
-  const inverterWatts = Math.ceil((((Number(system.designLoad) || 0) / 24) * 1.5 * DESIGN_MARGIN) / 1000) * 1000
+  const batteryResult = calculateBattery({ ...system, nightLoad })
+  const inverterWatts = inverterResult?.recommended ?? Math.ceil((((Number(designLoad) || 0) / 24) * 1.5 * DESIGN_MARGIN) / 1000) * 1000
   const panels = panelResult.count
   const batteries = batteryResult.count
   const equipCost =
@@ -163,6 +167,12 @@ export function calculateQuote(system, extras, margin, options = {}) {
     panels,
     batteries,
     inverterWatts,
+    designLoad,
+    nightLoad,
+    panelResult,
+    batteryResult,
+    inverterResult,
+    loadResult: connectedLoad,
     equipCost,
     totalCost: equipCost * (1 + Math.max(0, Number(margin) || 0) / 100),
   }
