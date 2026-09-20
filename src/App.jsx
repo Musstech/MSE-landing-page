@@ -9,6 +9,7 @@ import { QuotePreviewPage } from './pages/QuotePreviewPage'
 import { SolarNavigatorPage } from './pages/SolarNavigatorPage'
 import { SettingsPage } from './pages/SettingsPage'
 import { AuthPage } from './pages/AuthPage'
+import { ResetPasswordPage } from './pages/ResetPasswordPage'
 import { PremiumAccessProvider } from './components/auth/PremiumAccess'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { AuthProvider } from './contexts/AuthContext'
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       { path: 'navigator', element: <SolarNavigatorPage /> },
       { path: 'settings', element: <SettingsPage /> },
       { path: 'auth', element: <AuthPage /> },
+      { path: 'reset-password', element: <ResetPasswordPage /> },
     ],
   },
 ])

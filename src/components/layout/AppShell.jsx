@@ -14,6 +14,7 @@ const titles = {
   '/navigator': 'Solar Navigator',
   '/settings': 'Settings',
   '/auth': 'Account',
+  '/reset-password': 'Reset Password',
 }
 
 const drawerLinks = [

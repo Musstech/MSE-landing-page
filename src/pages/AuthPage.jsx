@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { LogIn, LogOut, Mail, UserPlus } from 'lucide-react'
+import { KeyRound, LogIn, LogOut, Mail, UserPlus } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext'
 import { Button } from '../components/ui/Button'
 import { Card } from '../components/ui/Card'
@@ -7,7 +7,7 @@ import { TextInput } from '../components/ui/Form'
 import { SectionHeader } from '../components/ui/SectionHeader'
 
 export function AuthPage() {
-  const { user, session, loading, isSupabaseConfigured, signUp, signIn, signOut } = useAuth()
+  const { user, session, loading, isSupabaseConfigured, signUp, signIn, signOut, resetPassword } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState('')
@@ -39,6 +39,24 @@ export function AuthPage() {
       setMessage('Signed out successfully.')
     } catch (authError) {
       setError(authError.message || 'Sign out failed.')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  async function handlePasswordReset() {
+    setSubmitting(true)
+    setMessage('')
+    setError('')
+    try {
+      if (!email.trim()) {
+        throw new Error('Enter your email address first, then request a password reset.')
+      }
+      const { error: authError } = await resetPassword({ email: email.trim() })
+      if (authError) throw authError
+      setMessage('Password reset email sent. Open the link in your email to set a new password.')
+    } catch (authError) {
+      setError(authError.message || 'Password reset failed.')
     } finally {
       setSubmitting(false)
     }
@@ -78,6 +96,10 @@ export function AuthPage() {
                 Sign In
               </Button>
             </div>
+            <Button type="button" variant="ghost" className="justify-self-start px-0" disabled={!isSupabaseConfigured || submitting || loading} onClick={handlePasswordReset}>
+              <KeyRound className="h-4 w-4" />
+              Forgot password?
+            </Button>
           </form>
 
           {message ? <div className="mt-4 rounded-2xl bg-green-50 p-3 text-sm text-green-700 dark:bg-green-950/30 dark:text-green-100">{message}</div> : null}
