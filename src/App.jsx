@@ -8,8 +8,10 @@ import { QuotationPage } from './pages/QuotationPage'
 import { QuotePreviewPage } from './pages/QuotePreviewPage'
 import { SolarNavigatorPage } from './pages/SolarNavigatorPage'
 import { SettingsPage } from './pages/SettingsPage'
+import { AuthPage } from './pages/AuthPage'
 import { PremiumAccessProvider } from './components/auth/PremiumAccess'
 import { ThemeProvider } from './contexts/ThemeContext'
+import { AuthProvider } from './contexts/AuthContext'
 import { Analytics } from '@vercel/analytics/react'
 
 const router = createBrowserRouter([
@@ -25,6 +27,7 @@ const router = createBrowserRouter([
       { path: 'quotation/preview', element: <QuotePreviewPage /> },
       { path: 'navigator', element: <SolarNavigatorPage /> },
       { path: 'settings', element: <SettingsPage /> },
+      { path: 'auth', element: <AuthPage /> },
     ],
   },
 ])
@@ -32,9 +35,11 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <ThemeProvider>
-      <PremiumAccessProvider>
-        <RouterProvider router={router} />
-      </PremiumAccessProvider>
+      <AuthProvider>
+        <PremiumAccessProvider>
+          <RouterProvider router={router} />
+        </PremiumAccessProvider>
+      </AuthProvider>
       <Analytics />
     </ThemeProvider>
   )

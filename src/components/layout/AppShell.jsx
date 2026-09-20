@@ -13,9 +13,11 @@ const titles = {
   '/quotation/preview': 'Quotation Preview',
   '/navigator': 'Solar Navigator',
   '/settings': 'Settings',
+  '/auth': 'Account',
 }
 
 const drawerLinks = [
+  { id: 'account', label: 'Account', path: '/auth', icon: User },
   { id: 'books', label: 'Books', path: '/books', icon: BookOpen },
   { id: 'quote', label: 'Quote', path: '/quotation', icon: FileText },
   { id: 'navigator', label: 'Solar Navigator', path: '/navigator', icon: Compass },
@@ -111,7 +113,7 @@ export function AppShell() {
               >
                 {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
               </button>
-              <NavLink className="hidden min-h-10 items-center gap-3 rounded-full bg-white/75 px-3 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur dark:bg-white/10 dark:text-slate-200 sm:inline-flex" to="/settings">
+              <NavLink className="hidden min-h-10 items-center gap-3 rounded-full bg-white/75 px-3 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur dark:bg-white/10 dark:text-slate-200 sm:inline-flex" to="/auth">
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-50 text-sky-700 dark:bg-sky-400/15 dark:text-sky-300"><User className="h-4 w-4" /></span>
                 Account
               </NavLink>
