@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Activity, ArrowRight, BatteryCharging, Cable, Calculator, CheckCircle2, Compass, FileText, Lock, Search, SunMedium } from 'lucide-react'
-import { usePremiumAccess, PremiumUnlockCard } from '../components/auth/PremiumAccess'
+import { useSubscription } from '../contexts/SubscriptionContext'
 import { Card } from '../components/ui/Card'
 import { books } from '../data/books'
 
@@ -55,7 +55,7 @@ function ActionGrid({ items }) {
 }
 
 export function HomePage() {
-  const { premiumUnlocked } = usePremiumAccess()
+  const { isPremium, planName, subscriptionActive } = useSubscription()
   const featuredBooks = books.slice(0, 5)
 
   return (
@@ -65,6 +65,10 @@ export function HomePage() {
         <p className="mt-3 max-w-2xl text-base leading-7 text-slate-500 dark:text-slate-400">
           Plan solar loads, size core components, diagnose field issues, and prepare documents your clients can understand.
         </p>
+        <div className="mt-4 inline-flex flex-wrap items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur dark:bg-white/10 dark:text-slate-200">
+          <span>Plan: {planName}</span>
+          {isPremium ? <span className="text-sky-600 dark:text-sky-300">Status: {subscriptionActive ? 'Active' : 'Inactive'}</span> : <span className="text-slate-500">Professional tools are available with Premium.</span>}
+        </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link className="inline-flex min-h-11 items-center gap-2 rounded-full bg-sky-500 px-5 text-sm font-bold text-white shadow-lg shadow-sky-500/25" to="/calculators?tab=load">
             <Calculator className="h-4 w-4" />
@@ -73,6 +77,11 @@ export function HomePage() {
           <Link className="inline-flex min-h-11 items-center rounded-full bg-white/70 px-5 text-sm font-bold text-slate-800 shadow-sm backdrop-blur dark:bg-white/10 dark:text-white" to="/books">
             View Books
           </Link>
+          {!isPremium ? (
+            <Link className="inline-flex min-h-11 items-center rounded-full bg-white/70 px-5 text-sm font-bold text-sky-700 shadow-sm backdrop-blur dark:bg-white/10 dark:text-sky-300" to="/pricing">
+              Explore Premium
+            </Link>
+          ) : null}
         </div>
       </section>
 
@@ -133,11 +142,11 @@ export function HomePage() {
         <Card>
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-sky-100 text-sky-600 dark:bg-sky-400/15 dark:text-sky-300">
-              {premiumUnlocked ? <CheckCircle2 className="h-5 w-5" /> : <Lock className="h-5 w-5" />}
+              {isPremium ? <CheckCircle2 className="h-5 w-5" /> : <Lock className="h-5 w-5" />}
             </div>
             <div>
-              <h3 className="font-heading text-lg font-bold text-slate-950 dark:text-white">{premiumUnlocked ? 'Professional Access Active' : 'Professional Tools'}</h3>
-              <p className="text-sm text-slate-500 dark:text-slate-400">{premiumUnlocked ? 'Advanced sizing and quotation tools are available on this device.' : 'Unlock the design tools installers use for complete system proposals.'}</p>
+              <h3 className="font-heading text-lg font-bold text-slate-950 dark:text-white">{isPremium ? `${planName} Active` : 'Professional Tools'}</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400">{isPremium ? 'Advanced sizing and quotation tools are available for this account.' : 'Unlock the design tools installers use for complete system proposals.'}</p>
             </div>
           </div>
           <div className="mt-5 grid gap-2">
@@ -153,7 +162,19 @@ export function HomePage() {
         </Card>
       </div>
 
-      {!premiumUnlocked ? <PremiumUnlockCard compact /> : null}
+      {!isPremium ? (
+        <Card>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 className="font-heading text-lg font-bold text-slate-950 dark:text-white">Upgrade Professional Access</h3>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Monthly and Yearly Premium unlock the full Solar Hub professional toolkit.</p>
+            </div>
+            <Link className="inline-flex min-h-11 items-center justify-center rounded-lg bg-sky-500 px-5 text-sm font-bold text-white shadow-lg shadow-sky-500/20" to="/pricing">
+              Explore Premium
+            </Link>
+          </div>
+        </Card>
+      ) : null}
     </div>
   )
 }

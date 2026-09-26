@@ -4,7 +4,7 @@ import { solarRegions } from '../data/solarRegions'
 import { currencyOptions, formatCurrencyOption, getCurrencyOption, getCurrencySymbol, normalizeCurrencyCode } from '../data/currencies'
 import { formatCurrency, formatNumber } from '../utils/format'
 import { usePersistentState } from '../hooks/usePersistentState'
-import { PremiumGate } from '../components/auth/PremiumAccess'
+import { PremiumGate } from '../components/auth/PremiumGate'
 import { initialRows } from '../features/calculators/LoadCalculator'
 import { Button } from '../components/ui/Button'
 import { Card, StatCard } from '../components/ui/Card'
@@ -16,7 +16,7 @@ const today = new Date().toISOString().slice(0, 10)
 
 export function QuotationPage() {
   return (
-    <PremiumGate title="Unlock Professional Quotations">
+    <PremiumGate featureCode="solar_quote" title="Unlock Professional Quotations">
       <QuotationBuilder />
     </PremiumGate>
   )

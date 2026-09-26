@@ -10,9 +10,10 @@ import { SolarNavigatorPage } from './pages/SolarNavigatorPage'
 import { SettingsPage } from './pages/SettingsPage'
 import { AuthPage } from './pages/AuthPage'
 import { ResetPasswordPage } from './pages/ResetPasswordPage'
-import { PremiumAccessProvider } from './components/auth/PremiumAccess'
+import { PricingPage } from './pages/PricingPage'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { AuthProvider } from './contexts/AuthContext'
+import { SubscriptionProvider } from './contexts/SubscriptionContext'
 import { Analytics } from '@vercel/analytics/react'
 
 const router = createBrowserRouter([
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: 'settings', element: <SettingsPage /> },
       { path: 'auth', element: <AuthPage /> },
       { path: 'reset-password', element: <ResetPasswordPage /> },
+      { path: 'pricing', element: <PricingPage /> },
     ],
   },
 ])
@@ -38,9 +40,9 @@ export default function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <PremiumAccessProvider>
+        <SubscriptionProvider>
           <RouterProvider router={router} />
-        </PremiumAccessProvider>
+        </SubscriptionProvider>
       </AuthProvider>
       <Analytics />
     </ThemeProvider>

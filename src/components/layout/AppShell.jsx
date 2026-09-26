@@ -15,6 +15,7 @@ const titles = {
   '/settings': 'Settings',
   '/auth': 'Account',
   '/reset-password': 'Reset Password',
+  '/pricing': 'Pricing',
 }
 
 const drawerLinks = [
@@ -86,7 +87,7 @@ export function AppShell() {
           <div className="rounded-3xl border border-sky-100 bg-white/70 p-4 shadow-sm dark:border-white/10 dark:bg-white/5">
             <div className="text-sm font-extrabold text-slate-950 dark:text-white">Go Professional</div>
             <p className="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400">Unlock advanced sizing, editable costs, and client-ready quotations.</p>
-            <NavLink className="mt-4 inline-flex min-h-10 w-full items-center justify-center rounded-xl bg-sky-500 px-3 text-xs font-bold text-white shadow-lg shadow-sky-500/20" to="/quotation">
+            <NavLink className="mt-4 inline-flex min-h-10 w-full items-center justify-center rounded-xl bg-sky-500 px-3 text-xs font-bold text-white shadow-lg shadow-sky-500/20" to="/pricing">
               Upgrade Now
             </NavLink>
           </div>

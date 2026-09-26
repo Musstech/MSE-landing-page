@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { Tabs } from '../components/ui/Tabs'
-import { PremiumGate, usePremiumAccess } from '../components/auth/PremiumAccess'
+import { PremiumGate } from '../components/auth/PremiumGate'
 import { LoadCalculator } from '../features/calculators/LoadCalculator'
 import { PanelCalculator } from '../features/calculators/PanelCalculator'
 import { BatteryCalculator } from '../features/calculators/BatteryCalculator'
@@ -11,14 +11,15 @@ import { CostCalculator } from '../features/calculators/CostCalculator'
 import { initialRows } from '../features/calculators/LoadCalculator'
 import { usePersistentState } from '../hooks/usePersistentState'
 import { calculateLoad } from '../utils/solarFormulas'
+import { useSubscription } from '../contexts/SubscriptionContext'
 
 const tabs = [
   { id: 'load', label: 'Load' },
   { id: 'panel', label: 'Panel' },
-  { id: 'battery', label: 'Battery', premium: true },
-  { id: 'inverter', label: 'Inverter', premium: true },
-  { id: 'cable', label: 'Cable', premium: true },
-  { id: 'cost', label: 'Cost/kWh', premium: true },
+  { id: 'battery', label: 'Battery', premium: true, featureCode: 'battery_sizing' },
+  { id: 'inverter', label: 'Inverter', premium: true, featureCode: 'inverter_sizing' },
+  { id: 'cable', label: 'Cable', premium: true, featureCode: 'panel_configuration' },
+  { id: 'cost', label: 'Cost/kWh', premium: true, featureCode: 'advanced_reports' },
 ]
 
 export function CalculatorsPage() {
@@ -28,10 +29,10 @@ export function CalculatorsPage() {
   const [tab, setTab] = useState(initialTab)
   const [rows, setRows] = usePersistentState('mse-load-rows', initialRows)
   const loadResult = calculateLoad(rows)
-  const { premiumUnlocked } = usePremiumAccess()
+  const { isPremium } = useSubscription()
   const visibleTabs = tabs.map((item) => ({
     ...item,
-    label: item.premium && !premiumUnlocked ? `${item.label} Pro` : item.label,
+    label: item.premium && !isPremium ? `${item.label} Pro` : item.label,
   }))
 
   useEffect(() => {
@@ -50,10 +51,10 @@ export function CalculatorsPage() {
       <Tabs tabs={visibleTabs} active={tab} onChange={selectTab} />
       {tab === 'load' && <LoadCalculator rows={rows} setRows={setRows} result={loadResult} />}
       {tab === 'panel' && <PanelCalculator designLoad={loadResult.design} />}
-      {tab === 'battery' && <PremiumGate title="Unlock Battery Sizing"><BatteryCalculator nightLoad={loadResult.nightDesign} /></PremiumGate>}
-      {tab === 'inverter' && <PremiumGate title="Unlock Inverter Sizing"><InverterCalculator sourceLoads={rows} /></PremiumGate>}
-      {tab === 'cable' && <PremiumGate title="Unlock Cable & Breaker Sizing"><CableCalculator /></PremiumGate>}
-      {tab === 'cost' && <PremiumGate title="Unlock Cost Tools"><CostCalculator /></PremiumGate>}
+      {tab === 'battery' && <PremiumGate featureCode="battery_sizing" title="Unlock Battery Sizing"><BatteryCalculator nightLoad={loadResult.nightDesign} /></PremiumGate>}
+      {tab === 'inverter' && <PremiumGate featureCode="inverter_sizing" title="Unlock Inverter Sizing"><InverterCalculator sourceLoads={rows} /></PremiumGate>}
+      {tab === 'cable' && <PremiumGate featureCode="panel_configuration" title="Unlock Cable Sizing"><CableCalculator /></PremiumGate>}
+      {tab === 'cost' && <PremiumGate featureCode="advanced_reports" title="Unlock Cost Tools"><CostCalculator /></PremiumGate>}
     </div>
   )
 }

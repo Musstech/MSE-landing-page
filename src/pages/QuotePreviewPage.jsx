@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
-import { PremiumGate } from '../components/auth/PremiumAccess'
+import { PremiumGate } from '../components/auth/PremiumGate'
 import { usePersistentState } from '../hooks/usePersistentState'
 import { Button } from '../components/ui/Button'
 import { QuotePreview } from '../features/quotation/QuotePreview'
@@ -19,7 +19,7 @@ export function QuotePreviewPage() {
   const [reference] = usePersistentState('mse-quote-reference', `QUOTE-${Date.now().toString().slice(-6)}`)
 
   return (
-    <PremiumGate title="Unlock Professional Quotations">
+    <PremiumGate featureCode="solar_quote" title="Unlock Professional Quotations">
       <div>
         <div className="print:hidden mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
