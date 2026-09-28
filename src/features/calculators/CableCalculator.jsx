@@ -25,12 +25,14 @@ export function CableCalculator() {
       <div className="mt-4">
         <ResultBanner label="Circuit Current" value={formatNumber(result.current, 1)} unit="A" />
       </div>
-      <div className="mt-3 grid gap-3 sm:grid-cols-3">
-        <StatCard label="Breaker Size" value={`${result.breaker}A`} tone="gold" />
+      <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <StatCard label={result.protectionLabel} value={`${result.breaker}A`} tone="gold" />
+        <StatCard label="Cable Guide" value={`${result.recommendedCable}mm2`} tone={Number(state.cableSize) < result.recommendedCable ? 'red' : 'green'} />
         <StatCard label="Voltage Drop" value={formatNumber(result.dropV, 2)} unit="V" tone={result.dropPct > result.maxDrop ? 'red' : 'green'} />
         <StatCard label="Drop Percent" value={formatNumber(result.dropPct, 1)} unit="%" tone={result.dropPct > result.maxDrop ? 'red' : 'green'} />
       </div>
-      {result.dropPct > result.maxDrop ? <Callout tone="warning">Voltage drop exceeds the recommended {result.maxDrop}% maximum. Use a larger cable or reduce run length.</Callout> : <Callout>Voltage drop is within the recommended {result.maxDrop}% maximum.</Callout>}
+      {Number(state.cableSize) < result.recommendedCable ? <Callout tone="warning">The selected cable is below the guide’s {result.recommendedCable}mm2 recommendation for this current. Increase the conductor size and verify its installation rating.</Callout> : null}
+      {result.dropPct > result.maxDrop ? <Callout tone="warning">Voltage drop exceeds the recommended {result.maxDrop}% maximum. Use a larger cable or reduce run length.</Callout> : <Callout>{state.circuitType === 'dc' ? 'Use a DC-rated fuse or breaker close to the battery positive terminal. ' : 'Use an AC-rated output breaker matched to the inverter output. '}Voltage drop is within the recommended {result.maxDrop}% maximum.</Callout>}
     </div>
   )
 }

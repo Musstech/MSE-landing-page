@@ -4,7 +4,7 @@ import { formatCurrency, formatNumber } from '../../utils/format'
 import { getCurrencyOption, getCurrencySymbol } from '../../data/currencies'
 import { Button } from '../../components/ui/Button'
 
-export function QuotePreview({ client, installer, system, extras, margin, reference, commercial, loads }) {
+export function QuotePreview({ client, installer, system, extras, margin, reference, commercial, loads, mode = 'basic', advanced = {} }) {
   const quote = calculateQuote(system, extras, margin, { loads })
   const currencyOption = getCurrencyOption(installer.currencyCode || installer.currency)
   const currency = getCurrencySymbol(currencyOption.code)
@@ -31,7 +31,7 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
           </div>
           <div className="rounded-2xl bg-white/10 p-4 text-sm text-white/80 backdrop-blur sm:text-right">
             <div>Date: {client.date}</div>
-            <div>Ref: {reference}</div>
+            <div>Ref: {reference || 'Not provided'}</div>
             <div>{currencyOption.code} {currencyOption.symbol}</div>
           </div>
         </div>
@@ -42,6 +42,7 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
           <div className="rounded-2xl bg-slate-50 p-4">
             <div className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-500">Prepared for</div>
             <div className="font-bold text-slate-950">{client.name || 'Client name'}</div>
+            {client.projectName ? <div className="mt-1 text-sm font-semibold text-slate-700">{client.projectName}</div> : null}
             <div className="text-sm text-slate-500">{client.address || 'Site address'}</div>
             <div className="text-sm text-slate-500">{client.phone} {client.email}</div>
           </div>
@@ -97,6 +98,26 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
             </tbody>
           </table>
         </div>
+
+        {mode === 'advanced' ? (
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <div className="text-xs font-bold uppercase tracking-wide text-slate-500">Technical Specification</div>
+              <div className="mt-3 grid gap-2 text-sm text-slate-700">
+                <div><span className="font-semibold">System:</span> {advanced.systemType || 'Hybrid solar system'}</div>
+                <div><span className="font-semibold">PV array:</span> {quote.panels} x {system.panelW}W {advanced.panelModel || 'panels'}</div>
+                <div><span className="font-semibold">Battery:</span> {quote.batteries} x {system.battAh}Ah {advanced.batteryModel || 'battery bank'}</div>
+                <div><span className="font-semibold">Inverter:</span> {formatNumber(quote.inverterWatts / 1000, 1)}kVA {advanced.inverterModel || 'hybrid inverter'}</div>
+                {advanced.cableNotes ? <div><span className="font-semibold">Cabling:</span> {advanced.cableNotes}</div> : null}
+                {advanced.protectionNotes ? <div><span className="font-semibold">Protection:</span> {advanced.protectionNotes}</div> : null}
+              </div>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <div className="text-xs font-bold uppercase tracking-wide text-slate-500">Installation Scope</div>
+              <p className="mt-3 whitespace-pre-line text-sm leading-6 text-slate-700">{advanced.installationScope || 'Scope to be confirmed by the installer before procurement and installation.'}</p>
+            </div>
+          </div>
+        ) : null}
 
         <div className="mt-5 rounded-2xl bg-slate-50 p-4 text-sm leading-6 text-slate-600">
           <div className="font-bold text-slate-950">Terms & Validity</div>

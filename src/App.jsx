@@ -11,6 +11,8 @@ import { SettingsPage } from './pages/SettingsPage'
 import { AuthPage } from './pages/AuthPage'
 import { ResetPasswordPage } from './pages/ResetPasswordPage'
 import { PricingPage } from './pages/PricingPage'
+import { CodesPage } from './pages/CodesPage'
+import { QuizPage } from './pages/QuizPage'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { AuthProvider } from './contexts/AuthContext'
 import { SubscriptionProvider } from './contexts/SubscriptionContext'
@@ -24,6 +26,8 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: 'calculators', element: <CalculatorsPage /> },
       { path: 'troubleshooting', element: <TroubleshootingPage /> },
+      { path: 'codes', element: <CodesPage /> },
+      { path: 'quiz', element: <QuizPage /> },
       { path: 'books', element: <BooksPage /> },
       { path: 'quotation', element: <QuotationPage /> },
       { path: 'quotation/preview', element: <QuotePreviewPage /> },

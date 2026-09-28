@@ -47,7 +47,7 @@ export function ResetPasswordPage() {
 
   return (
     <div>
-      <SectionHeader title="Reset Password" subtitle="Set a new password after opening the Supabase recovery email link." />
+      <SectionHeader title="Reset Password" subtitle="Choose a new password from the secure link sent to your email." />
       <Card className="mx-auto max-w-2xl">
         <div className="mb-5 flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-sky-100 text-sky-700 dark:bg-sky-400/15 dark:text-sky-300">
@@ -61,7 +61,7 @@ export function ResetPasswordPage() {
 
         {!isSupabaseConfigured ? (
           <div className="rounded-2xl bg-amber-50 p-4 text-sm leading-6 text-amber-800 dark:bg-amber-950/30 dark:text-amber-100">
-            Supabase is not configured yet. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`, then restart the dev server.
+            Account service is not available right now. Please try again shortly.
           </div>
         ) : null}
 

@@ -1,4 +1,5 @@
 export const appliances = [
+  { id: 'none', name: 'None', w: 0, cat: 'None', duty: 'none', surge: 'none' },
   { id: 'led', name: 'LED Bulb', w: 15, cat: 'Lighting', duty: 'default', surge: 'default' },
   { id: 'led-flood', name: 'LED Floodlight', w: 50, cat: 'Lighting', duty: 'default', surge: 'default' },
   { id: 'ceiling-fan', name: 'Ceiling Fan', w: 75, cat: 'Fans', duty: 'default', surge: 'fan' },

@@ -10,10 +10,8 @@ import { ResultBanner } from '../../components/ui/ResultBanner'
 import { SectionHeader } from '../../components/ui/SectionHeader'
 
 export const initialRows = [
-  { id: 1, name: 'LED Bulb', watts: 15, qty: 6, dayH: 0, nightH: 5, duty: 'default', surge: 'default' },
-  { id: 2, name: 'Ceiling Fan', watts: 75, qty: 2, dayH: 4, nightH: 4, duty: 'default', surge: 'fan' },
-  { id: 3, name: 'LED TV 42"', watts: 120, qty: 1, dayH: 0, nightH: 4, duty: 'default', surge: 'default' },
-  { id: 4, name: 'Refrigerator', watts: 200, qty: 1, dayH: 6, nightH: 6, duty: 'fridge', surge: 'fridge' },
+  { id: 1, applianceId: 'none', name: 'None', watts: 0, qty: 0, dayH: 1, nightH: 1, duty: 'none', surge: 'none' },
+  { id: 2, applianceId: 'none', name: 'None', watts: 0, qty: 0, dayH: 0, nightH: 0, duty: 'none', surge: 'none' },
 ]
 
 export function LoadCalculator({ rows: controlledRows, setRows: controlledSetRows, result: controlledResult }) {
@@ -27,15 +25,39 @@ export function LoadCalculator({ rows: controlledRows, setRows: controlledSetRow
   }
 
   function addAppliance(item) {
-    setRows((current) => [...current, { id: Date.now(), name: item.name, watts: item.w, qty: 1, dayH: 4, nightH: 4, duty: item.duty, surge: item.surge }])
+    setRows((current) => [...current, { id: Date.now(), applianceId: item.id, name: item.name, watts: item.w, qty: item.id === 'none' ? 0 : 1, dayH: 1, nightH: 1, duty: item.duty, surge: item.surge === 'default' ? 'none' : item.surge }])
   }
+
+  function selectedApplianceId(row) {
+    return row.applianceId || appliances.find((item) => item.name === row.name)?.id || 'custom'
+  }
+
+  function selectAppliance(row, applianceId) {
+    if (applianceId === 'custom') {
+      updateRow(row.id, 'applianceId', 'custom')
+      return
+    }
+    const appliance = appliances.find((item) => item.id === applianceId)
+    if (!appliance) return
+    setRows((current) => current.map((item) => item.id === row.id ? {
+      ...item,
+      applianceId,
+      name: appliance.name,
+      watts: appliance.w,
+      qty: applianceId === 'none' ? 0 : Math.max(1, Number(item.qty) || 1),
+      duty: appliance.duty,
+      surge: appliance.surge === 'default' ? 'none' : appliance.surge,
+    } : item))
+  }
+
+  const hasCustomAppliance = rows.some((row) => selectedApplianceId(row) === 'custom')
 
   return (
     <div>
       <SectionHeader
         title="Load Calculator"
         subtitle="Build a daily load schedule. Night load feeds the battery sizing; total load feeds panel sizing."
-        action={<Button variant="soft" size="sm" onClick={() => setRows((current) => [...current, { id: Date.now(), name: 'Custom Appliance', watts: 100, qty: 1, dayH: 2, nightH: 2, duty: 'default', surge: 'default' }])}><Plus className="h-4 w-4" />Custom</Button>}
+        action={<Button variant="soft" size="sm" disabled={hasCustomAppliance} onClick={() => setRows((current) => [...current, { id: Date.now(), applianceId: 'custom', name: 'Custom Appliance', watts: 0, qty: 1, dayH: 1, nightH: 1, duty: 'default', surge: 'none' }])}><Plus className="h-4 w-4" />Custom</Button>}
       />
 
       <Card className="mb-4 p-0">
@@ -47,7 +69,11 @@ export function LoadCalculator({ rows: controlledRows, setRows: controlledSetRow
             <div key={row.id} className="grid gap-3 p-4 md:grid-cols-[1fr_90px_70px_80px_90px_130px_44px] md:items-center">
               <label className="block">
                 <span className="mobile-row-label">Appliance</span>
-                <input className="input" value={row.name} onChange={(event) => updateRow(row.id, 'name', event.target.value)} aria-label="Appliance name" />
+                <select className="input bg-white" value={selectedApplianceId(row)} onChange={(event) => selectAppliance(row, event.target.value)} aria-label="Appliance">
+                  {appliances.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}
+                  <option value="custom">Custom Appliance</option>
+                </select>
+                {selectedApplianceId(row) === 'custom' ? <input className="input mt-2" value={row.name} onChange={(event) => updateRow(row.id, 'name', event.target.value)} aria-label="Custom appliance name" /> : null}
               </label>
               <label className="block">
                 <span className="mobile-row-label">Watts</span>
@@ -67,8 +93,8 @@ export function LoadCalculator({ rows: controlledRows, setRows: controlledSetRow
               </label>
               <label className="block">
                 <span className="mobile-row-label">Surge Type</span>
-                <select className="input bg-white" value={row.surge || 'default'} onChange={(event) => updateRow(row.id, 'surge', event.target.value)} aria-label="Surge type">
-                  <option value="default">General</option><option value="fan">Fan</option><option value="fridge">Fridge</option><option value="freezer">Freezer</option><option value="ac">AC</option><option value="pump">Pump</option>
+                <select className="input bg-white" value={row.surge === 'default' ? 'none' : row.surge || 'none'} onChange={(event) => updateRow(row.id, 'surge', event.target.value)} aria-label="Surge type">
+                  <option value="none">None</option><option value="fan">Fan</option><option value="fridge">Fridge</option><option value="freezer">Freezer</option><option value="ac">AC</option><option value="pump">Pump</option>
                 </select>
               </label>
               <Button variant="danger" size="sm" aria-label="Remove appliance" onClick={() => setRows((current) => current.filter((item) => item.id !== row.id))}><Trash2 className="h-4 w-4" /></Button>
@@ -80,7 +106,7 @@ export function LoadCalculator({ rows: controlledRows, setRows: controlledSetRow
       <Card className="mb-4">
         <div className="mb-3 text-sm font-bold text-navy">Quick add from appliance database</div>
         <div className="flex max-h-44 flex-wrap gap-2 overflow-y-auto">
-          {appliances.map((item) => (
+          {appliances.filter((item) => item.id !== 'none').map((item) => (
             <button key={item.id} onClick={() => addAppliance(item)} className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-navy hover:bg-[#EEF2F7]">
               {item.name} <span className="text-slate-400">({item.w}W)</span>
             </button>

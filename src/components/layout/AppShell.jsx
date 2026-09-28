@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { BookOpen, ChevronRight, Compass, FileText, Menu, Moon, Search, Settings, Sun, User, X } from 'lucide-react'
+import { BookOpen, ChevronRight, ClipboardCheck, Compass, FileText, Menu, Search, Settings, User, X } from 'lucide-react'
 import { navigation } from '../../data/navigation'
-import { useTheme } from '../../contexts/ThemeContext'
 
 const titles = {
   '/': 'Solar Hub',
   '/calculators': 'Solar Design',
   '/troubleshooting': 'Troubleshooting',
+  '/codes': 'Fault Codes',
+  '/quiz': 'Solar Quiz',
   '/books': 'Ebooks',
   '/quotation': 'Quotation Generator',
   '/quotation/preview': 'Quotation Preview',
@@ -22,6 +23,8 @@ const drawerLinks = [
   { id: 'account', label: 'Account', path: '/auth', icon: User },
   { id: 'books', label: 'Books', path: '/books', icon: BookOpen },
   { id: 'quote', label: 'Quote', path: '/quotation', icon: FileText },
+  { id: 'codes', label: 'Codes', path: '/codes', icon: FileText },
+  { id: 'quiz', label: 'Quiz', path: '/quiz', icon: ClipboardCheck },
   { id: 'navigator', label: 'Solar Navigator', path: '/navigator', icon: Compass },
   { id: 'settings', label: 'Settings', path: '/settings', icon: Settings },
 ]
@@ -29,7 +32,6 @@ const drawerLinks = [
 export function AppShell() {
   const location = useLocation()
   const title = titles[location.pathname] || 'Solar Hub'
-  const { theme, toggleTheme } = useTheme()
   const [drawerOpen, setDrawerOpen] = useState(false)
   const mobileNav = navigation.filter((item) => ['home', 'calculators', 'troubleshooting', 'books'].includes(item.id))
 
@@ -84,13 +86,6 @@ export function AppShell() {
           })}
         </nav>
         <div className="p-4">
-          <div className="rounded-3xl border border-sky-100 bg-white/70 p-4 shadow-sm dark:border-white/10 dark:bg-white/5">
-            <div className="text-sm font-extrabold text-slate-950 dark:text-white">Go Professional</div>
-            <p className="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400">Unlock advanced sizing, editable costs, and client-ready quotations.</p>
-            <NavLink className="mt-4 inline-flex min-h-10 w-full items-center justify-center rounded-xl bg-sky-500 px-3 text-xs font-bold text-white shadow-lg shadow-sky-500/20" to="/pricing">
-              Upgrade Now
-            </NavLink>
-          </div>
           <NavLink className="mt-5 flex min-h-11 items-center justify-between rounded-2xl px-3 text-sm font-semibold text-slate-500 hover:bg-white/70 dark:text-slate-400 dark:hover:bg-white/10" to="/settings">
             <span className="inline-flex items-center gap-3"><Settings className="h-5 w-5" /> Settings</span>
             <ChevronRight className="h-4 w-4" />
@@ -105,16 +100,8 @@ export function AppShell() {
             <div className="hidden min-h-11 w-full max-w-xl items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/75 px-4 text-sm text-slate-400 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5 lg:flex">
               <Search className="h-4 w-4 text-sky-700 dark:text-sky-300" />
               <input className="w-full bg-transparent outline-none placeholder:text-slate-400" placeholder="Search tools, calculations, books..." aria-label="Search tools, calculations, books" />
-              <kbd className="rounded-lg bg-slate-100 px-2 py-1 text-[10px] font-bold text-slate-400 dark:bg-white/10">Ctrl K</kbd>
             </div>
             <div className="flex items-center gap-2">
-              <button
-                className="inline-flex min-h-10 w-10 items-center justify-center rounded-full bg-white/75 text-sky-700 shadow-sm backdrop-blur transition hover:bg-sky-50 dark:bg-white/10 dark:text-sky-300 dark:hover:bg-white/15"
-                onClick={toggleTheme}
-                aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-              >
-                {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-              </button>
               <NavLink className="hidden min-h-10 items-center gap-3 rounded-full bg-white/75 px-3 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur dark:bg-white/10 dark:text-slate-200 sm:inline-flex" to="/auth">
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-sky-50 text-sky-700 dark:bg-sky-400/15 dark:text-sky-300"><User className="h-4 w-4" /></span>
                 Account

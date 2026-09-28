@@ -8,6 +8,7 @@ import { BatteryCalculator } from '../features/calculators/BatteryCalculator'
 import { InverterCalculator } from '../features/calculators/InverterCalculator'
 import { CableCalculator } from '../features/calculators/CableCalculator'
 import { CostCalculator } from '../features/calculators/CostCalculator'
+import { MpptCalculator } from '../features/calculators/MpptCalculator'
 import { initialRows } from '../features/calculators/LoadCalculator'
 import { usePersistentState } from '../hooks/usePersistentState'
 import { calculateLoad } from '../utils/solarFormulas'
@@ -16,6 +17,7 @@ import { useSubscription } from '../contexts/SubscriptionContext'
 const tabs = [
   { id: 'load', label: 'Load' },
   { id: 'panel', label: 'Panel' },
+  { id: 'mppt', label: 'MPPT' },
   { id: 'battery', label: 'Battery', premium: true, featureCode: 'battery_sizing' },
   { id: 'inverter', label: 'Inverter', premium: true, featureCode: 'inverter_sizing' },
   { id: 'cable', label: 'Cable', premium: true, featureCode: 'panel_configuration' },
@@ -51,6 +53,7 @@ export function CalculatorsPage() {
       <Tabs tabs={visibleTabs} active={tab} onChange={selectTab} />
       {tab === 'load' && <LoadCalculator rows={rows} setRows={setRows} result={loadResult} />}
       {tab === 'panel' && <PanelCalculator designLoad={loadResult.design} />}
+      {tab === 'mppt' && <MpptCalculator />}
       {tab === 'battery' && <PremiumGate featureCode="battery_sizing" title="Unlock Battery Sizing"><BatteryCalculator nightLoad={loadResult.nightDesign} /></PremiumGate>}
       {tab === 'inverter' && <PremiumGate featureCode="inverter_sizing" title="Unlock Inverter Sizing"><InverterCalculator sourceLoads={rows} /></PremiumGate>}
       {tab === 'cable' && <PremiumGate featureCode="panel_configuration" title="Unlock Cable Sizing"><CableCalculator /></PremiumGate>}

@@ -9,9 +9,9 @@ import { ResultBanner } from '../../components/ui/ResultBanner'
 import { SectionHeader } from '../../components/ui/SectionHeader'
 
 const initialLoads = [
-  { id: 1, name: 'LED Lights & Fans', watts: 300, qty: 1, surge: 'default' },
+  { id: 1, name: 'LED Lights & Fans', watts: 300, qty: 1, surge: 'none' },
   { id: 2, name: 'Refrigerator', watts: 200, qty: 1, surge: 'fridge' },
-  { id: 3, name: 'LED TV', watts: 120, qty: 1, surge: 'default' },
+  { id: 3, name: 'LED TV', watts: 120, qty: 1, surge: 'none' },
   { id: 4, name: 'AC 1.5HP', watts: 1100, qty: 1, surge: 'ac' },
 ]
 
@@ -21,7 +21,7 @@ function mapLoadRows(rows) {
     name: row.name,
     watts: row.watts,
     qty: row.qty,
-    surge: row.surge || 'default',
+    surge: row.surge === 'default' ? 'none' : row.surge || 'none',
   }))
 }
 
@@ -38,7 +38,7 @@ export function InverterCalculator({ sourceLoads }) {
       <SectionHeader
         title="Inverter Sizing Calculator"
         subtitle="Uses the connected appliance list to calculate peak continuous load and the largest motor starting surge."
-        action={!controlled ? <Button variant="soft" size="sm" onClick={() => setLoads((current) => [...current, { id: Date.now(), name: 'New Load', watts: 100, qty: 1, surge: 'default' }])}><Plus className="h-4 w-4" />Load</Button> : null}
+        action={!controlled ? <Button variant="soft" size="sm" onClick={() => setLoads((current) => [...current, { id: Date.now(), name: 'New Load', watts: 100, qty: 1, surge: 'none' }])}><Plus className="h-4 w-4" />Load</Button> : null}
       />
       <Card className="mb-4 p-0">
         {controlled ? <div className="border-b border-sky-100 bg-sky-50/70 px-4 py-3 text-xs font-semibold text-sky-800 dark:border-white/10 dark:bg-sky-400/10 dark:text-sky-200">Synced from Load Calculator. Edit wattage, quantity, and surge type from the load schedule.</div> : null}
@@ -62,7 +62,7 @@ export function InverterCalculator({ sourceLoads }) {
             <label className="block">
               <span className="mobile-row-label">Surge Type</span>
               <select className="input bg-white" value={load.surge} onChange={(event) => update(load.id, 'surge', event.target.value)} disabled={controlled}>
-                <option value="default">General</option><option value="fan">Fan</option><option value="fridge">Fridge</option><option value="freezer">Freezer</option><option value="ac">AC</option><option value="pump">Pump</option>
+                <option value="none">None</option><option value="fan">Fan</option><option value="fridge">Fridge</option><option value="freezer">Freezer</option><option value="ac">AC</option><option value="pump">Pump</option>
               </select>
             </label>
             {!controlled ? <Button variant="danger" size="sm" onClick={() => setLoads((current) => current.filter((item) => item.id !== load.id))}><Trash2 className="h-4 w-4" /></Button> : null}

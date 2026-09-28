@@ -5,10 +5,13 @@ import {
   calculateCost,
   calculateInverter,
   calculateLoad,
+  calculateMppt,
   calculatePanels,
   calculateQuote,
+  calculateStringConfiguration,
   nextBreaker,
 } from '../src/utils/solarFormulas.js'
+import { getQuizQuestions } from '../src/data/quizQuestions.js'
 
 const load = calculateLoad([
   { watts: 100, qty: 2, dayH: 3, nightH: 4, duty: 'default' },
@@ -33,7 +36,28 @@ assert.equal(nextBreaker(57), 63)
 
 const cable = calculateCable({ power: 5000, voltage: 48, circuitType: 'dc', length: 3, cableSize: '35' })
 assert.equal(Math.round(cable.current), 104)
-assert.equal(cable.breaker, 175)
+assert.equal(cable.breaker, 125)
+assert.equal(cable.recommendedCable, 35)
+
+const dcCable = calculateCable({ power: 1200, voltage: 48, circuitType: 'dc', length: 3, cableSize: '6' })
+assert.equal(dcCable.recommendedCable, 6)
+
+const acCable = calculateCable({ power: 4400, voltage: 220, circuitType: 'ac', length: 3, cableSize: '4' })
+assert.equal(acCable.recommendedCable, 4)
+
+const mppt = calculateMppt({ arrayWatts: 2500, batteryVoltage: 48, controllerAmps: 60, panelVoc: 90, controllerMaxVoltage: 150 })
+assert.equal(Math.ceil(mppt.requiredAmps), 53)
+assert.equal(mppt.recommendedAmps, 60)
+assert.equal(mppt.currentCompatible, true)
+
+const stringConfig = calculateStringConfiguration({ panelW: 500, panelVoc: 45, panelIsc: 11, panelsSeries: 3, stringsParallel: 2, requiredPanels: 6, mpptMaxVoltage: 150, mpptMaxCurrent: 30, mpptInputs: 1 })
+assert.equal(stringConfig.stringVoltage, 135)
+assert.equal(stringConfig.arrayWatts, 3000)
+assert.equal(stringConfig.voltageCompatible, true)
+
+assert.equal(getQuizQuestions('basic').length, 50)
+assert.equal(getQuizQuestions('intermediate').length, 50)
+assert.equal(getQuizQuestions('advanced').length, 50)
 
 const cost = calculateCost({ systemCost: 1500000, dailyKwh: 8, years: 20, maintenance: 30000, genFuelPerL: 1200 })
 assert.ok(Number.isFinite(cost.solarKwh))

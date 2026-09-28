@@ -4,18 +4,20 @@ export const DEFAULT_EFFICIENCY = 0.75
 export const DEFAULT_FACTOR = DEFAULT_PSH * DEFAULT_EFFICIENCY
 
 export const DUTY_FACTORS = {
+  none: 0,
   fridge: 0.5,
   freezer: 0.4,
   default: 1,
 }
 
 export const SURGE_FACTORS = {
+  none: 1,
   fridge: 3,
   freezer: 2.5,
   ac: 4,
   pump: 4,
   fan: 2.5,
-  default: 1.5,
+  default: 1,
 }
 
 export const DOD_FACTORS = {
@@ -26,6 +28,7 @@ export const DOD_FACTORS = {
 
 export const STANDARD_BREAKERS = [6, 10, 16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 175, 200]
 export const STANDARD_INVERTERS = [1000, 1500, 2000, 3000, 3500, 5000, 6000, 8000, 10000, 15000, 20000]
+export const STANDARD_MPPT_CONTROLLERS = [20, 30, 40, 50, 60, 80, 100, 120, 150]
 
 export function nextBreaker(amps) {
   const value = Math.max(0, Number(amps) || 0)
@@ -110,17 +113,99 @@ export function calculateCable({ power, voltage, circuitType, length, cableSize 
   const safeVoltage = Math.max(1, Number(voltage) || 1)
   const safePower = Math.max(0, Number(power) || 0)
   const current = circuitType === 'dc' ? safePower / safeVoltage : safePower / (safeVoltage * 0.8)
-  const breaker = nextBreaker((current / 0.8) * 1.25)
+  // The installation guide specifies a DC fuse at 110% of DC current and an AC breaker matched to output demand.
+  const protectionCurrent = circuitType === 'dc' ? current * 1.1 : current
+  const breaker = nextBreaker(protectionCurrent)
   const resistanceMap = { '1.5': 12.1, '2.5': 7.41, '4': 4.61, '6': 3.08, '10': 1.83, '16': 1.15, '25': 0.727, '35': 0.524, '50': 0.387, '70': 0.268 }
   const resistance = resistanceMap[cableSize] || 1.83
   const dropV = (2 * Math.max(0, Number(length) || 0) * current * resistance) / 1000
   const dropPct = (dropV / safeVoltage) * 100
+  const recommendedCable = circuitType === 'dc'
+    ? current <= 30
+      ? 6
+      : current <= 60
+        ? 10
+        : current <= 100
+          ? 16
+          : current <= 150
+            ? 35
+            : current <= 200
+              ? 50
+              : 70
+    : current <= 10
+      ? 1.5
+      : current <= 20
+        ? 2.5
+        : current <= 30
+          ? 4
+          : current <= 60
+            ? 10
+            : current <= 100
+              ? 16
+              : current <= 200
+                ? 35
+                : 70
   return {
     current,
     breaker,
     dropV,
     dropPct,
     maxDrop: circuitType === 'dc' ? 3 : 2,
+    protectionCurrent,
+    recommendedCable,
+    protectionLabel: circuitType === 'dc' ? 'DC fuse / breaker' : 'AC output breaker',
+  }
+}
+
+export function calculateMppt({ arrayWatts, batteryVoltage, controllerAmps, panelVoc, controllerMaxVoltage }) {
+  const safeArrayWatts = Math.max(0, Number(arrayWatts) || 0)
+  const safeBatteryVoltage = Math.max(1, Number(batteryVoltage) || 1)
+  const requiredAmps = safeArrayWatts / safeBatteryVoltage
+  const controllerRating = Math.max(1, Number(controllerAmps) || 1)
+  const pvVoltage = Math.max(0, Number(panelVoc) || 0)
+  const maxVoltage = Math.max(1, Number(controllerMaxVoltage) || 1)
+  const recommendedAmps = STANDARD_MPPT_CONTROLLERS.find((size) => size >= requiredAmps) || Math.ceil(requiredAmps)
+
+  return {
+    requiredAmps,
+    recommendedAmps,
+    controllerRating,
+    pvVoltage,
+    maxVoltage,
+    currentCompatible: controllerRating >= requiredAmps,
+    voltageCompatible: pvVoltage > safeBatteryVoltage && pvVoltage < maxVoltage,
+  }
+}
+
+export function calculateStringConfiguration({ panelW, panelVoc, panelIsc, panelsSeries, stringsParallel, requiredPanels, mpptMaxVoltage, mpptMaxCurrent, mpptInputs }) {
+  const series = Math.max(1, Math.floor(Number(panelsSeries) || 1))
+  const parallel = Math.max(1, Math.floor(Number(stringsParallel) || 1))
+  const inputs = Math.max(1, Math.floor(Number(mpptInputs) || 1))
+  const voc = Math.max(0, Number(panelVoc) || 0)
+  const isc = Math.max(0, Number(panelIsc) || 0)
+  const totalPanels = series * parallel
+  const stringVoltage = series * voc
+  const stringCurrent = isc
+  const inputCurrent = parallel * isc
+  const stringsPerInput = Math.ceil(parallel / inputs)
+  const currentPerInput = inputCurrent / inputs
+  const arrayWatts = totalPanels * Math.max(0, Number(panelW) || 0)
+  const maxVoltage = Math.max(1, Number(mpptMaxVoltage) || 1)
+  const maxCurrent = Math.max(1, Number(mpptMaxCurrent) || 1)
+
+  return {
+    series,
+    parallel,
+    totalPanels,
+    stringVoltage,
+    stringCurrent,
+    inputCurrent,
+    stringsPerInput,
+    currentPerInput,
+    arrayWatts,
+    panelCountMatches: !requiredPanels || totalPanels === Number(requiredPanels),
+    voltageCompatible: stringVoltage < maxVoltage,
+    currentCompatible: currentPerInput <= maxCurrent,
   }
 }
 

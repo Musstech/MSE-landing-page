@@ -7,6 +7,7 @@ import { Callout } from '../../components/ui/Callout'
 import { Card, StatCard } from '../../components/ui/Card'
 import { ResultBanner } from '../../components/ui/ResultBanner'
 import { SectionHeader } from '../../components/ui/SectionHeader'
+import { StringConfiguration } from './StringConfiguration'
 
 export function PanelCalculator({ designLoad }) {
   const [state, setState] = usePersistentState('mse-panel-calc', { designLoad: 8000, panelW: 500, regionId: 'global-average', psh: 5, efficiency: 75 })
@@ -52,6 +53,7 @@ export function PanelCalculator({ designLoad }) {
       </div>
       <Callout>{selectedRegion.note} Always round panel count up and apply real-world efficiency.</Callout>
       {state.psh < 3 ? <Callout tone="warning">Peak sun hours are low. Expect more panels or review shading and site conditions before installation.</Callout> : null}
+      <StringConfiguration panelW={state.panelW} requiredPanels={result.count} />
     </div>
   )
 }

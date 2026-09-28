@@ -11,6 +11,7 @@ import { Card, StatCard } from '../components/ui/Card'
 import { NumberInput, SelectInput, TextInput } from '../components/ui/Form'
 import { ResultBanner } from '../components/ui/ResultBanner'
 import { SectionHeader } from '../components/ui/SectionHeader'
+import { Tabs } from '../components/ui/Tabs'
 
 const today = new Date().toISOString().slice(0, 10)
 
@@ -25,13 +26,15 @@ export function QuotationPage() {
 function QuotationBuilder() {
   const navigate = useNavigate()
   const [installer, setInstaller] = usePersistentState('mse-quote-installer', { companyName: '', subtitle: '', currencyCode: 'USD' })
-  const [client, setClient] = usePersistentState('mse-quote-client', { name: '', address: '', phone: '', email: '', date: today })
+  const [client, setClient] = usePersistentState('mse-quote-client', { name: '', projectName: '', address: '', phone: '', email: '', date: today })
   const [system, setSystem] = usePersistentState('mse-quote-system', { designLoad: 8000, nightLoad: 4000, voltage: 48, battType: 'lithium', autonomy: 1, regionId: 'global-average', psh: 5, efficiency: 75, panelW: 500, battAh: 200, panelPrice: 0, battPrice: 0, invPrice: 0 })
   const [commercial, setCommercial] = usePersistentState('mse-quote-commercial', { validityDays: 14, taxEnabled: false, taxPercent: 0, bankDetails: '', paymentTerms: 'Payment schedule to be agreed before procurement begins.', warranty: 'Product warranty follows the manufacturer warranty. Workmanship warranty should be stated by the installer.' })
   const [loadRows] = usePersistentState('mse-load-rows', initialRows)
   const [margin, setMargin] = usePersistentState('mse-quote-margin', 20)
   const [extras, setExtras] = usePersistentState('mse-quote-extras', 0)
-  const [, setReference] = usePersistentState('mse-quote-reference', `QUOTE-${Date.now().toString().slice(-6)}`)
+  const [reference, setReference] = usePersistentState('mse-quote-reference', '')
+  const [mode, setMode] = usePersistentState('mse-quote-mode', 'basic')
+  const [advanced, setAdvanced] = usePersistentState('mse-quote-advanced', { systemType: 'Hybrid solar system', installationScope: '', panelModel: '', inverterModel: '', batteryModel: '', cableNotes: '', protectionNotes: '' })
   const quote = calculateQuote(system, extras, margin, { loads: loadRows })
   const taxAmount = commercial.taxEnabled ? quote.totalCost * (Math.max(0, Number(commercial.taxPercent) || 0) / 100) : 0
   const finalTotal = quote.totalCost + taxAmount
@@ -42,6 +45,7 @@ function QuotationBuilder() {
   const updateClient = (field, value) => setClient((current) => ({ ...current, [field]: value }))
   const updateSystem = (field, value) => setSystem((current) => ({ ...current, [field]: value }))
   const updateCommercial = (field, value) => setCommercial((current) => ({ ...current, [field]: value }))
+  const updateAdvanced = (field, value) => setAdvanced((current) => ({ ...current, [field]: value }))
   const updateCurrency = (currencyCode) => {
     const option = getCurrencyOption(currencyCode)
     setInstaller((current) => ({
@@ -59,13 +63,13 @@ function QuotationBuilder() {
     }))
   }
   const openPreview = () => {
-    setReference(`QUOTE-${Date.now().toString().slice(-6)}`)
     navigate('/quotation/preview')
   }
 
   return (
     <div>
-      <SectionHeader title="Quotation Generator" subtitle="Enter the installer, client, system, and pricing details before opening the client preview page." />
+      <SectionHeader title="Quotation Generator" subtitle="Build a clean client quotation from your connected design and commercial details." />
+      <Tabs tabs={[{ id: 'basic', label: 'Basic Quotation' }, { id: 'advanced', label: 'Advanced Quotation' }]} active={mode} onChange={setMode} />
       <div className="grid gap-5 lg:grid-cols-3">
         <Card>
           <h3 className="mb-4 font-heading font-extrabold text-slate-950 dark:text-white">Installer Profile</h3>
@@ -79,10 +83,12 @@ function QuotationBuilder() {
           <h3 className="mb-4 font-heading font-extrabold text-slate-950 dark:text-white">Client Details</h3>
           <div className="grid gap-4">
             <TextInput label="Client Name" value={client.name} onChange={(value) => updateClient('name', value)} />
+            <TextInput label="Project Name" value={client.projectName || ''} onChange={(value) => updateClient('projectName', value)} />
             <TextInput label="Site Address" value={client.address} onChange={(value) => updateClient('address', value)} />
             <TextInput label="Phone Number" value={client.phone} onChange={(value) => updateClient('phone', value)} />
             <TextInput label="Email" value={client.email} onChange={(value) => updateClient('email', value)} />
             <TextInput label="Date" type="date" value={client.date} onChange={(value) => updateClient('date', value)} />
+            <TextInput label="Quotation Reference" value={reference} onChange={setReference} />
           </div>
         </Card>
         <Card>
@@ -120,6 +126,24 @@ function QuotationBuilder() {
         </div>
       </Card>
 
+      {mode === 'advanced' ? (
+        <PremiumGate featureCode="advanced_reports" title="Unlock Advanced Quotations">
+          <Card className="mt-5">
+            <h3 className="mb-2 font-heading font-extrabold text-slate-950 dark:text-white">Advanced Project Details</h3>
+            <p className="mb-4 text-sm leading-6 text-slate-500 dark:text-slate-400">Add the technical and scope details that should appear in the extended client document.</p>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <TextInput label="System Type" value={advanced.systemType} onChange={(value) => updateAdvanced('systemType', value)} />
+              <TextInput label="Panel Model" value={advanced.panelModel} onChange={(value) => updateAdvanced('panelModel', value)} />
+              <TextInput label="Battery Model" value={advanced.batteryModel} onChange={(value) => updateAdvanced('batteryModel', value)} />
+              <TextInput label="Inverter Model" value={advanced.inverterModel} onChange={(value) => updateAdvanced('inverterModel', value)} />
+              <TextInput label="Cable Details" value={advanced.cableNotes} onChange={(value) => updateAdvanced('cableNotes', value)} />
+              <TextInput label="Protection Details" value={advanced.protectionNotes} onChange={(value) => updateAdvanced('protectionNotes', value)} />
+              <TextInput label="Installation Scope" value={advanced.installationScope} onChange={(value) => updateAdvanced('installationScope', value)} />
+            </div>
+          </Card>
+        </PremiumGate>
+      ) : null}
+
       <Card className="mt-5">
         <h3 className="mb-4 font-heading font-extrabold text-slate-950 dark:text-white">Quotation Terms</h3>
         <div className="grid gap-4 lg:grid-cols-3">
@@ -141,7 +165,7 @@ function QuotationBuilder() {
         </div>
       </div>
 
-      <Button className="mt-5 w-full" variant="primary" size="lg" onClick={openPreview}>Open Quotation Preview Page</Button>
+      <Button className="mt-5 w-full" variant="primary" size="lg" onClick={openPreview}>Open Quotation Preview</Button>
     </div>
   )
 }

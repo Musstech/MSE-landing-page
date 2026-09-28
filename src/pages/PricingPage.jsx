@@ -8,28 +8,18 @@ import { Button } from '../components/ui/Button'
 import { Card } from '../components/ui/Card'
 import { SectionHeader } from '../components/ui/SectionHeader'
 
-const freeFeatures = ['Load Calculator', 'PV Sizing']
+const freeFeatures = ['Load Calculator', 'Panel Sizing', 'MPPT Calculator', 'Solar Quiz']
 
-const premiumFeatures = [
-  'Load Calculator',
-  'Inverter Sizing',
-  'Battery Sizing',
-  'PV Sizing',
-  'MPPT Calculator',
-  'Panel Configuration',
-  'Solar Quote',
-  'Advanced Reports',
-]
+const monthlyFeatures = [...freeFeatures, 'Basic Quotation']
+const yearlyFeatures = [...monthlyFeatures, 'Advanced Quotation']
 
 const featureRows = [
   ['Load Calculator', true, true, true],
-  ['Inverter Sizing', false, true, true],
-  ['Battery Sizing', false, true, true],
-  ['PV Sizing', true, true, true],
-  ['MPPT Calculator', false, true, true],
-  ['Panel Configuration', false, true, true],
-  ['Solar Quote', false, true, true],
-  ['Advanced Reports', false, true, true],
+  ['Panel Sizing', true, true, true],
+  ['MPPT Calculator', true, true, true],
+  ['Solar Quiz', true, true, true],
+  ['Basic Quotation', false, true, true],
+  ['Advanced Quotation', false, false, true],
 ]
 
 export function PricingPage() {
@@ -57,7 +47,7 @@ export function PricingPage() {
     }
 
     if (!supabase) {
-      setError('Payment setup is not available until Supabase is configured.')
+      setError('Secure checkout is temporarily unavailable. Please try again later.')
       return
     }
 
@@ -137,7 +127,7 @@ export function PricingPage() {
         <PlanCard
           title="Monthly Premium"
           description="Professional solar design and project tools."
-          features={premiumFeatures}
+          features={monthlyFeatures}
           current={planCode === 'monthly'}
           highlighted
           action={
@@ -167,7 +157,7 @@ export function PricingPage() {
         <PlanCard
           title="Yearly Premium"
           description="Full professional access with yearly billing."
-          features={premiumFeatures}
+          features={yearlyFeatures}
           current={planCode === 'yearly'}
           action={
             planCode === 'yearly' ? (

@@ -21,7 +21,7 @@ export function AuthPage() {
     try {
       const { error: authError } = await action({ email, password })
       if (authError) throw authError
-      setMessage('Authentication request completed successfully.')
+      setMessage(action === signUp ? 'Check your email to confirm your account, then sign in.' : 'You are signed in.')
     } catch (authError) {
       setError(authError.message || 'Authentication failed.')
     } finally {
@@ -64,7 +64,7 @@ export function AuthPage() {
 
   return (
     <div>
-      <SectionHeader title="Account" subtitle="Temporary Supabase authentication screen for testing email and password access." />
+      <SectionHeader title="Account" subtitle="Sign in to keep your professional workspace connected across sessions." />
       <div className="grid gap-5 lg:grid-cols-[1fr_0.85fr]">
         <Card>
           <div className="mb-5 flex items-center gap-3">
@@ -72,14 +72,14 @@ export function AuthPage() {
               <Mail className="h-5 w-5" />
             </div>
             <div>
-              <h3 className="font-heading text-lg font-extrabold text-slate-950 dark:text-white">Email Authentication</h3>
-              <p className="text-sm text-slate-500 dark:text-slate-400">This is only for verifying Supabase auth wiring.</p>
+              <h3 className="font-heading text-lg font-extrabold text-slate-950 dark:text-white">Your Account</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400">Use your email and password to access account features.</p>
             </div>
           </div>
 
           {!isSupabaseConfigured ? (
             <div className="rounded-2xl bg-amber-50 p-4 text-sm leading-6 text-amber-800 dark:bg-amber-950/30 dark:text-amber-100">
-              Supabase is not configured yet. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` to your local environment file, then restart the dev server.
+              Account service is not available right now. Please try again shortly.
             </div>
           ) : null}
 
@@ -107,15 +107,14 @@ export function AuthPage() {
         </Card>
 
         <Card>
-          <h3 className="font-heading text-lg font-extrabold text-slate-950 dark:text-white">Current Session</h3>
+          <h3 className="font-heading text-lg font-extrabold text-slate-950 dark:text-white">Account Status</h3>
           <div className="mt-4 rounded-2xl bg-sky-50/70 p-4 text-sm leading-6 text-slate-600 dark:bg-sky-400/10 dark:text-slate-300">
-            {loading ? 'Checking Supabase session...' : user ? (
+            {loading ? 'Checking your account...' : user ? (
               <>
                 <div className="text-xs font-bold uppercase tracking-wide text-sky-700 dark:text-sky-300">Signed in as</div>
                 <div className="mt-1 break-all font-semibold text-slate-950 dark:text-white">{user.email}</div>
-                <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">User ID: {user.id}</div>
               </>
-            ) : 'No authenticated Supabase user is active.'}
+            ) : 'Sign in to access your account and professional tools.'}
           </div>
           {session ? (
             <Button className="mt-5 w-full" type="button" variant="danger" disabled={submitting} onClick={handleSignOut}>

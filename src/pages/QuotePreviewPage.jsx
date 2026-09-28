@@ -10,17 +10,18 @@ const today = new Date().toISOString().slice(0, 10)
 
 export function QuotePreviewPage() {
   const [installer] = usePersistentState('mse-quote-installer', { companyName: '', subtitle: '', currencyCode: 'USD' })
-  const [client] = usePersistentState('mse-quote-client', { name: '', address: '', phone: '', email: '', date: today })
+  const [client] = usePersistentState('mse-quote-client', { name: '', projectName: '', address: '', phone: '', email: '', date: today })
   const [system] = usePersistentState('mse-quote-system', { designLoad: 8000, nightLoad: 4000, voltage: 48, battType: 'lithium', autonomy: 1, regionId: 'global-average', psh: 5, efficiency: 75, panelW: 500, battAh: 200, panelPrice: 0, battPrice: 0, invPrice: 0 })
   const [commercial] = usePersistentState('mse-quote-commercial', { validityDays: 14, taxEnabled: false, taxPercent: 0, bankDetails: '', paymentTerms: 'Payment schedule to be agreed before procurement begins.', warranty: 'Product warranty follows the manufacturer warranty. Workmanship warranty should be stated by the installer.' })
   const [loadRows] = usePersistentState('mse-load-rows', initialRows)
   const [margin] = usePersistentState('mse-quote-margin', 20)
   const [extras] = usePersistentState('mse-quote-extras', 0)
-  const [reference] = usePersistentState('mse-quote-reference', `QUOTE-${Date.now().toString().slice(-6)}`)
+  const [reference] = usePersistentState('mse-quote-reference', '')
+  const [mode] = usePersistentState('mse-quote-mode', 'basic')
+  const [advanced] = usePersistentState('mse-quote-advanced', { systemType: 'Hybrid solar system', installationScope: '', panelModel: '', inverterModel: '', batteryModel: '', cableNotes: '', protectionNotes: '' })
 
-  return (
-    <PremiumGate featureCode="solar_quote" title="Unlock Professional Quotations">
-      <div>
+  const preview = (
+    <div>
         <div className="print:hidden mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="font-heading text-2xl font-extrabold text-slate-950 dark:text-white">Quotation Preview</h2>
@@ -31,8 +32,13 @@ export function QuotePreviewPage() {
             Back to Editor
           </Button>
         </div>
-        <QuotePreview client={client} installer={installer} system={system} extras={extras} margin={margin} reference={reference} commercial={commercial} loads={loadRows} />
-      </div>
+        <QuotePreview client={client} installer={installer} system={system} extras={extras} margin={margin} reference={reference} commercial={commercial} loads={loadRows} mode={mode} advanced={advanced} />
+    </div>
+  )
+
+  return (
+    <PremiumGate featureCode="solar_quote" title="Unlock Professional Quotations">
+      {mode === 'advanced' ? <PremiumGate featureCode="advanced_reports" title="Unlock Advanced Quotations">{preview}</PremiumGate> : preview}
     </PremiumGate>
   )
 }
