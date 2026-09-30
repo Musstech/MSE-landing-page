@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { KeyRound, LogIn, LogOut, Mail, UserPlus } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext'
 import { Button } from '../components/ui/Button'
@@ -8,20 +9,29 @@ import { SectionHeader } from '../components/ui/SectionHeader'
 
 export function AuthPage() {
   const { user, session, loading, isSupabaseConfigured, signUp, signIn, signOut, resetPassword } = useAuth()
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
-  async function runAuth(action) {
+  useEffect(() => {
+    if (!loading && user) navigate('/', { replace: true })
+  }, [loading, navigate, user])
+
+  async function runAuth(action, type) {
     setSubmitting(true)
     setMessage('')
     setError('')
     try {
       const { error: authError } = await action({ email, password })
       if (authError) throw authError
-      setMessage(action === signUp ? 'Check your email to confirm your account, then sign in.' : 'You are signed in.')
+      if (type === 'signup') {
+        setMessage('Check your email to confirm your account, then sign in.')
+      } else {
+        navigate('/', { replace: true })
+      }
     } catch (authError) {
       setError(authError.message || 'Authentication failed.')
     } finally {
@@ -87,11 +97,11 @@ export function AuthPage() {
             <TextInput label="Email" type="email" value={email} onChange={setEmail} />
             <TextInput label="Password" type="password" value={password} onChange={setPassword} />
             <div className="grid gap-3 sm:grid-cols-2">
-              <Button type="button" variant="primary" disabled={!isSupabaseConfigured || submitting || loading} onClick={() => runAuth(signUp)}>
+              <Button type="button" variant="primary" disabled={!isSupabaseConfigured || submitting || loading} onClick={() => runAuth(signUp, 'signup')}>
                 <UserPlus className="h-4 w-4" />
                 Sign Up
               </Button>
-              <Button type="button" variant="soft" disabled={!isSupabaseConfigured || submitting || loading} onClick={() => runAuth(signIn)}>
+              <Button type="button" variant="soft" disabled={!isSupabaseConfigured || submitting || loading} onClick={() => runAuth(signIn, 'signin')}>
                 <LogIn className="h-4 w-4" />
                 Sign In
               </Button>

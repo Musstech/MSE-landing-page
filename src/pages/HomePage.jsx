@@ -1,95 +1,137 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Activity, ArrowRight, BatteryCharging, Cable, Calculator, Compass, FileText, Search, SunMedium } from 'lucide-react'
+import { Activity, ArrowRight, BatteryCharging, BookOpen, Cable, Calculator, CheckCircle2, Compass, FileText, Home, Search, SunMedium, Zap } from 'lucide-react'
 import { books } from '../data/books'
 
-const quickActions = [
-  { title: 'New Design', text: 'Start a full sizing workflow from load entry.', to: '/calculators?tab=load', icon: SunMedium },
-  { title: 'Diagnose', text: 'Find fault checks quickly.', to: '/troubleshooting', icon: Search },
-  { title: 'Quote', text: 'Prepare a client document.', to: '/quotation', icon: FileText },
-  { title: 'Navigator', text: 'Check panel-facing direction.', to: '/navigator', icon: Compass },
+const heroMessages = [
+  { eyebrow: 'Solar engineering workspace', lead: 'Design', tail: 'with clarity.', text: 'Turn appliance loads into a practical solar system recommendation.', action: 'Start a design', to: '/calculators?tab=load' },
+  { eyebrow: 'Solar engineering workspace', lead: 'Diagnose', tail: 'with structure.', text: 'Move from a symptom to the right field checks without the guesswork.', action: 'Open diagnosis', to: '/troubleshooting' },
+  { eyebrow: 'Solar engineering workspace', lead: 'Calculate', tail: 'with confidence.', text: 'Review the component decisions that shape a dependable installation.', action: 'Open calculators', to: '/calculators?tab=panel' },
+  { eyebrow: 'Solar engineering workspace', lead: 'Quote', tail: 'professionally.', text: 'Bring a clear design into a client-ready quotation when the work is ready.', action: 'Create quotation', to: '/quotation' },
+  { eyebrow: 'Solar engineering workspace', lead: 'Learn', tail: 'in the field.', text: 'Keep practical installation guidance and technical references close by.', action: 'Explore guides', to: '/books' },
+]
+
+const pathways = [
+  { title: 'Professional solar guides', text: 'Practical books for designing, wiring, configuring, and troubleshooting.', to: '/books', action: 'Explore books', icon: BookOpen },
+  { title: 'Professional calculations', text: 'Move from real appliance loads to panel, battery, inverter, and cable decisions.', to: '/calculators?tab=load', action: 'Open design tools', icon: Calculator },
+  { title: 'Professional quotation', text: 'Prepare a clean project document from the solar system you have designed.', to: '/quotation', action: 'Create quotation', icon: FileText },
+]
+
+const capabilities = [
+  { title: 'Design', text: 'Size the key components of a solar system from appliance loads.', to: '/calculators?tab=load', icon: SunMedium },
+  { title: 'Diagnose', text: 'Follow clear field checks for common installation issues.', to: '/troubleshooting', icon: Search },
+  { title: 'Configure', text: 'Review panels, batteries, inverter capacity, and MPPT choices.', to: '/calculators?tab=mppt', icon: Activity },
+  { title: 'Quote', text: 'Build a client document that reflects the installer’s own business.', to: '/quotation', icon: FileText },
+  { title: 'Navigator', text: 'Use a phone compass to check a panel-facing direction.', to: '/navigator', icon: Compass },
 ]
 
 const tools = [
-  { title: 'Solar Sizing', text: 'PV panel sizing', to: '/calculators?tab=panel', icon: SunMedium },
-  { title: 'Solar Battery Sizing', text: 'Night load bank', to: '/calculators?tab=battery', icon: BatteryCharging },
-  { title: 'Inverter Sizing', text: 'Continuous and surge', to: '/calculators?tab=inverter', icon: Activity },
-  { title: 'Cable Sizing', text: 'Cable checks', to: '/calculators?tab=cable', icon: Cable },
+  { title: 'Solar sizing', text: 'PV panel sizing', to: '/calculators?tab=panel', icon: SunMedium },
+  { title: 'Battery sizing', text: 'Night load bank', to: '/calculators?tab=battery', icon: BatteryCharging },
+  { title: 'Inverter sizing', text: 'Running and surge load', to: '/calculators?tab=inverter', icon: Activity },
+  { title: 'Cable sizing', text: 'Cable and voltage drop', to: '/calculators?tab=cable', icon: Cable },
 ]
 
-function ActionGrid({ items }) {
+function SolarSystemVisual() {
   return (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
-      {items.map((item) => {
-        const Icon = item.icon
-        return (
-          <Link key={item.title} to={item.to} className="group min-h-28 rounded-2xl border border-white/70 bg-white/60 p-3 shadow-sm transition hover:border-sky-200 hover:bg-sky-50/75 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10">
-            <div className="flex items-center justify-between">
-              <Icon className="h-5 w-5 text-sky-700 dark:text-sky-300" />
-              <ArrowRight className="h-3.5 w-3.5 text-slate-300 transition group-hover:translate-x-0.5 group-hover:text-sky-500" />
-            </div>
-            <div className="mt-3 font-heading text-sm font-bold text-slate-950 dark:text-white">{item.title}</div>
-            <div className="mt-1 text-xs leading-5 text-slate-500 dark:text-slate-400">{item.text}</div>
-          </Link>
-        )
-      })}
+    <div className="hero-system" aria-label="Solar energy flows from the sun through panels and an inverter to battery storage and a home">
+      <div className="energy-line energy-line-top" />
+      <div className="energy-line energy-line-bottom" />
+      <div className="system-sun"><SunMedium className="h-7 w-7" /></div>
+      <div className="system-panel" aria-hidden="true"><span /><span /><span /><span /><span /><span /><span /><span /></div>
+      <div className="system-inverter"><Zap className="h-6 w-6" /><span>Inverter</span></div>
+      <div className="system-battery"><BatteryCharging className="h-6 w-6" /><span>Battery</span></div>
+      <div className="system-home"><Home className="h-7 w-7" /><span>Home load</span></div>
+      <div className="system-caption"><CheckCircle2 className="h-4 w-4" /> Design decisions, connected.</div>
     </div>
   )
 }
 
 export function HomePage() {
-  const featuredBooks = books.slice(0, 5)
+  const [activeHero, setActiveHero] = useState(0)
+  const message = heroMessages[activeHero]
+  const featuredBooks = books.slice(0, 3)
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setActiveHero((current) => (current + 1) % heroMessages.length), 3000)
+    return () => window.clearInterval(timer)
+  }, [])
 
   return (
-    <div className="space-y-5">
-      <section className="ios-card relative overflow-hidden p-6 sm:p-8">
-        <h2 className="font-heading text-3xl font-extrabold tracking-normal text-slate-950 dark:text-white sm:text-4xl">Welcome back to your workspace.</h2>
-        <p className="mt-3 max-w-2xl text-base leading-7 text-slate-500 dark:text-slate-400">
-          Plan solar loads, size core components, diagnose field issues, and prepare documents your clients can understand.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link className="inline-flex min-h-11 items-center gap-2 rounded-full bg-sky-500 px-5 text-sm font-bold text-white shadow-lg shadow-sky-500/25" to="/calculators?tab=load">
-            <Calculator className="h-4 w-4" />
-            Start a Calculation
-          </Link>
-          <Link className="inline-flex min-h-11 items-center rounded-full bg-white/70 px-5 text-sm font-bold text-slate-800 shadow-sm backdrop-blur dark:bg-white/10 dark:text-white" to="/books">
-            View Books
-          </Link>
-        </div>
-      </section>
-
-      <section className="ios-card p-4 sm:p-5">
-        <div className="mb-4 flex items-center justify-between">
-          <h3 className="font-heading text-lg font-extrabold text-slate-950 dark:text-white">Your Tools</h3>
-          <Link className="text-sm font-bold text-sky-600 dark:text-sky-300" to="/calculators?tab=load">View all</Link>
-        </div>
-        <ActionGrid items={tools} />
-      </section>
-
-      <section className="ios-card p-4 sm:p-5">
-        <div className="mb-4 flex items-center justify-between gap-3">
-          <div>
-            <h3 className="font-heading text-lg font-extrabold text-slate-950 dark:text-white">Featured Books</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Practical guides for sizing, wiring, configuration, and diagnosis.</p>
+    <div className="home-page">
+      <section className="home-hero">
+        <div className="home-hero-copy">
+          <div key={message.lead} className="hero-copy-transition">
+            <p className="eyebrow">{message.eyebrow}</p>
+            <h1><span>{message.lead}.</span> {message.tail}</h1>
+            <p className="home-hero-description">{message.text}</p>
           </div>
-          <Link className="shrink-0 text-sm font-bold text-sky-600 dark:text-sky-300" to="/books">View all</Link>
+          <div className="mt-7 flex flex-wrap items-center gap-4">
+            <Link className="primary-cta" to={message.to}>{message.action}<ArrowRight className="h-4 w-4" /></Link>
+            <Link className="text-link" to="/books">Browse technical books <ArrowRight className="h-4 w-4" /></Link>
+          </div>
+          <div className="hero-indicators" aria-label="Solar Hub capabilities">
+            {heroMessages.map((item, index) => <button key={item.lead} className={index === activeHero ? 'hero-indicator-active' : ''} onClick={() => setActiveHero(index)} aria-label={`Show ${item.lead} message`} />)}
+          </div>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {featuredBooks.map((book) => (
-            <Link key={book.id} to="/books" className="rounded-2xl border border-white/70 bg-white/60 p-3 transition hover:bg-sky-50/75 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10">
-              <img src={book.cover} alt={`${book.title} cover`} className="aspect-[3/4] w-full rounded-xl object-cover shadow-sm" loading="lazy" />
-              <div className="mt-3 line-clamp-2 font-heading text-sm font-bold text-slate-950 dark:text-white">{book.title}</div>
-            </Link>
-          ))}
+        <SolarSystemVisual />
+      </section>
+
+      <section className="home-section pathway-section" aria-label="Solar Hub services">
+        {pathways.map((item) => {
+          const Icon = item.icon
+          return <Link className="pathway-card" key={item.title} to={item.to}>
+            <span className="pathway-icon"><Icon className="h-5 w-5" /></span>
+            <span className="min-w-0"><span className="block font-heading text-base font-extrabold text-slate-950 dark:text-white">{item.title}</span><span className="mt-1 block text-sm leading-6 text-slate-500 dark:text-slate-400">{item.text}</span><span className="pathway-action">{item.action}<ArrowRight className="h-4 w-4" /></span></span>
+          </Link>
+        })}
+      </section>
+
+      <section className="home-section section-split">
+        <div className="section-intro">
+          <p className="eyebrow">Core capabilities</p>
+          <h2>One calm place for the work around a solar system.</h2>
+          <p>Start where the project needs you, then move naturally into calculations, field checks, technical references, or a client quotation.</p>
+        </div>
+        <div className="capability-list">
+          {capabilities.map((item) => {
+            const Icon = item.icon
+            return <Link className="capability-row" key={item.title} to={item.to}><span className="capability-icon"><Icon className="h-5 w-5" /></span><span className="min-w-0 flex-1"><span className="block font-heading font-extrabold text-slate-950 dark:text-white">{item.title}</span><span className="mt-0.5 block text-sm leading-5 text-slate-500 dark:text-slate-400">{item.text}</span></span><ArrowRight className="h-4 w-4 text-slate-300 dark:text-slate-600" /></Link>
+          })}
         </div>
       </section>
 
-      <section className="ios-card p-4 sm:p-5">
-        <div className="mb-4 flex items-center justify-between">
-          <h3 className="font-heading text-lg font-extrabold text-slate-950 dark:text-white">Quick Actions</h3>
+      <section className="home-section workflow-section">
+        <div className="section-heading-row"><div><p className="eyebrow">A practical workflow</p><h2>From load data to a complete solar system.</h2></div></div>
+        <div className="workflow-grid">
+          {[['01', 'Analyse', 'Enter appliance loads and the project needs.'], ['02', 'Calculate', 'Review component sizing and technical checks.'], ['03', 'Configure', 'Compare the equipment decisions for the system.'], ['04', 'Deliver', 'Prepare a polished quotation for the client.']].map(([number, title, text]) => <div key={number} className="workflow-step"><span>{number}</span><h3>{title}</h3><p>{text}</p></div>)}
         </div>
-        <ActionGrid items={quickActions} />
       </section>
 
+      <section className="home-section tools-section">
+        <div className="section-heading-row"><div><p className="eyebrow">Solar tools</p><h2>Make the core sizing decisions quickly.</h2></div><Link className="text-link hidden sm:inline-flex" to="/calculators?tab=load">Open all calculations <ArrowRight className="h-4 w-4" /></Link></div>
+        <div className="tool-grid">
+          {tools.map((tool) => { const Icon = tool.icon; return <Link className="tool-card" key={tool.title} to={tool.to}><Icon className="h-5 w-5 text-sky-600 dark:text-sky-300" /><span><span className="block font-heading text-sm font-extrabold text-slate-950 dark:text-white">{tool.title}</span><span className="mt-1 block text-xs leading-5 text-slate-500 dark:text-slate-400">{tool.text}</span></span><ArrowRight className="ml-auto h-4 w-4 text-slate-300 dark:text-slate-600" /></Link> })}
+        </div>
+      </section>
+
+      <section className="home-section books-section">
+        <div className="section-heading-row"><div><p className="eyebrow">Technical library</p><h2>Keep proven guidance close by.</h2></div><Link className="text-link" to="/books">View all books <ArrowRight className="h-4 w-4" /></Link></div>
+        <div className="featured-book-grid">
+          {featuredBooks.map((book) => <Link className="featured-book" key={book.id} to="/books"><img src={book.cover} alt={`${book.title} cover`} loading="lazy" /><div className="p-4"><h3>{book.title}</h3><p>{book.subtitle}</p></div></Link>)}
+        </div>
+      </section>
+
+      <section className="home-section quiz-prompt">
+        <div><p className="eyebrow">Keep learning</p><h2>Test practical solar knowledge as you build.</h2><p>Work through a timed quiz across basic, intermediate, and advanced solar topics.</p></div>
+        <Link className="secondary-cta" to="/quiz">Open solar quiz <ArrowRight className="h-4 w-4" /></Link>
+      </section>
+
+      <section className="home-final-cta">
+        <p className="eyebrow">Ready when the project is</p>
+        <h2>Bring the next solar system into focus.</h2>
+        <Link className="primary-cta" to="/calculators?tab=load">Start a design <ArrowRight className="h-4 w-4" /></Link>
+      </section>
     </div>
   )
 }
