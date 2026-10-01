@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { ChevronRight, ClipboardCheck, Compass, FileText, Menu, Moon, Search, Settings, Sun, X } from 'lucide-react'
+import { ChevronRight, ClipboardCheck, Compass, FileText, Mail, Menu, MessageCircle, Moon, Search, Settings, Sun, X } from 'lucide-react'
 import { navigation } from '../../data/navigation'
 import { useTheme } from '../../contexts/ThemeContext'
 import { AccountMenu } from './AccountMenu'
@@ -52,7 +52,7 @@ export function AppShell() {
           <nav className="ml-3 hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
             {primaryNavigation.map((item) => {
               const Icon = item.icon
-              return <NavLink key={item.id} to={item.path} end={item.path === '/'} className={({ isActive }) => `desktop-nav-link ${isActive ? 'desktop-nav-link-active' : ''}`}><Icon className="h-4 w-4" />{item.label}</NavLink>
+              return <NavLink key={item.id} to={item.path} end={item.path === '/'} className={({ isActive }) => `desktop-nav-link ${isActive ? 'desktop-nav-link-active' : ''}`}><Icon className="h-[18px] w-[18px]" />{item.label}</NavLink>
             })}
           </nav>
 
@@ -77,6 +77,17 @@ export function AppShell() {
           <Outlet />
         </div>
       </main>
+
+      <footer className="site-footer border-t border-slate-200/70 px-4 pb-28 pt-6 dark:border-white/10 lg:pb-7">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <span className="footer-brand">Solar Hub <span>MUSSTECH SOLAR ENERGY</span></span>
+          <div className="footer-contacts" aria-label="Contact Solar Hub">
+            <a className="footer-contact" href="mailto:imammusa2017@gmail.com"><span className="footer-contact-icon"><Mail className="h-4 w-4" /></span><span>imammusa2017@gmail.com</span></a>
+            <a className="footer-contact" href="https://wa.me/2349151834345" target="_blank" rel="noreferrer"><span className="footer-contact-icon"><MessageCircle className="h-4 w-4" /></span><span>WhatsApp</span></a>
+          </div>
+          <span>© 2026 Solar Hub</span>
+        </div>
+      </footer>
 
       <div className="fixed inset-x-0 bottom-4 z-50 px-3 pb-[env(safe-area-inset-bottom)] lg:hidden">
         <nav className="ios-pill mx-auto grid max-w-md grid-cols-5 p-1.5" aria-label="Mobile navigation">

@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 export function Card({ children, className }) {
-  return <div className={clsx('ios-card p-4 sm:p-5', className)}>{children}</div>
+  return <div className={clsx('ios-card card-surface p-4 sm:p-5', className)}>{children}</div>
 }
 
 export function StatCard({ label, value, unit, tone = 'navy' }) {
@@ -15,9 +15,9 @@ export function StatCard({ label, value, unit, tone = 'navy' }) {
   }
 
   return (
-    <Card className="min-w-0 bg-white/70 dark:bg-slate-800/70">
-      <div className="text-[10px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-300">{label}</div>
-      <div className={`mt-1 break-words font-heading text-xl font-extrabold ${tones[tone] || tones.navy}`}>
+    <Card className="stat-card min-w-0">
+      <div className="text-[11px] font-semibold text-slate-500 dark:text-slate-300">{label}</div>
+      <div className={`technical-value mt-1 break-words font-heading text-xl font-extrabold ${tones[tone] || tones.navy}`}>
         {value}
         {unit ? <span className="ml-1 text-xs font-semibold text-slate-500">{unit}</span> : null}
       </div>

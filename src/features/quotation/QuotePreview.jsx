@@ -21,15 +21,15 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
   ]
 
   return (
-    <section className="quote-print overflow-hidden rounded-[28px] border border-slate-200 bg-white text-slate-800 shadow-2xl dark:border-slate-800">
-      <div className="bg-gradient-to-br from-slate-950 to-sky-700 p-6 text-white sm:p-8">
+    <section className="quote-print quote-document overflow-hidden bg-white text-slate-800 dark:border-slate-800">
+      <div className="quote-letterhead p-6 text-white sm:p-8">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.18em] text-sky-200">Solar Quotation</div>
             <div className="mt-2 font-heading text-3xl font-extrabold tracking-normal">{companyName}</div>
             {companySubtitle ? <div className="mt-1 text-sm text-white/70">{companySubtitle}</div> : null}
           </div>
-          <div className="rounded-2xl bg-white/10 p-4 text-sm text-white/80 backdrop-blur sm:text-right">
+          <div className="quote-reference p-4 text-sm text-white/80 sm:text-right">
             <div>Date: {client.date}</div>
             <div>Ref: {reference || 'Not provided'}</div>
             <div>{currencyOption.code} {currencyOption.symbol}</div>
@@ -39,15 +39,15 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
 
       <div className="p-5 sm:p-8">
         <div className="mb-6 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-2xl bg-slate-50 p-4">
-            <div className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-500">Prepared for</div>
+          <div className="quote-info-card p-4">
+            <div className="mb-2 text-xs font-semibold text-slate-500">Prepared for</div>
             <div className="font-bold text-slate-950">{client.name || 'Client name'}</div>
             {client.projectName ? <div className="mt-1 text-sm font-semibold text-slate-700">{client.projectName}</div> : null}
             <div className="text-sm text-slate-500">{client.address || 'Site address'}</div>
             <div className="text-sm text-slate-500">{client.phone} {client.email}</div>
           </div>
-          <div className="rounded-2xl bg-sky-50 p-4">
-            <div className="mb-2 text-xs font-bold uppercase tracking-wide text-sky-700">System Summary</div>
+          <div className="quote-info-card quote-system-summary p-4">
+            <div className="mb-2 text-xs font-semibold text-sky-700">System Summary</div>
             <div className="grid gap-1 text-sm text-slate-700">
               <div>{quote.panels} x {system.panelW}W panels</div>
               <div>{quote.batteries} x {system.battAh}Ah batteries</div>
@@ -58,7 +58,7 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
           </div>
         </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-slate-200">
+        <div className="quote-table-wrap overflow-x-auto">
           <table className="w-full min-w-[620px] border-collapse text-sm">
             <thead>
               <tr className="bg-slate-950 text-white">
@@ -91,7 +91,7 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
                   <td className="p-3 text-right font-bold text-slate-950">{formatCurrency(taxAmount, currency)}</td>
                 </tr>
               ) : null}
-              <tr className="bg-sky-500 text-white">
+              <tr className="bg-slate-950 text-white">
                 <td className="p-4 font-heading font-extrabold" colSpan="3">TOTAL INVESTMENT</td>
                 <td className="p-4 text-right font-heading text-lg font-extrabold">{formatCurrency(finalTotal, currency)}</td>
               </tr>
@@ -101,8 +101,8 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
 
         {mode === 'advanced' ? (
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-              <div className="text-xs font-bold uppercase tracking-wide text-slate-500">Technical Specification</div>
+            <div className="quote-info-card p-4">
+              <div className="text-xs font-semibold text-slate-500">Technical Specification</div>
               <div className="mt-3 grid gap-2 text-sm text-slate-700">
                 <div><span className="font-semibold">System:</span> {advanced.systemType || 'Hybrid solar system'}</div>
                 <div><span className="font-semibold">PV array:</span> {quote.panels} x {system.panelW}W {advanced.panelModel || 'panels'}</div>
@@ -112,14 +112,14 @@ export function QuotePreview({ client, installer, system, extras, margin, refere
                 {advanced.protectionNotes ? <div><span className="font-semibold">Protection:</span> {advanced.protectionNotes}</div> : null}
               </div>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-              <div className="text-xs font-bold uppercase tracking-wide text-slate-500">Installation Scope</div>
+            <div className="quote-info-card p-4">
+              <div className="text-xs font-semibold text-slate-500">Installation Scope</div>
               <p className="mt-3 whitespace-pre-line text-sm leading-6 text-slate-700">{advanced.installationScope || 'Scope to be confirmed by the installer before procurement and installation.'}</p>
             </div>
           </div>
         ) : null}
 
-        <div className="mt-5 rounded-2xl bg-slate-50 p-4 text-sm leading-6 text-slate-600">
+        <div className="quote-terms mt-5 p-4 text-sm leading-6 text-slate-600">
           <div className="font-bold text-slate-950">Terms & Validity</div>
           <div>This quotation is valid for {commercial?.validityDays || 14} days from the date above.</div>
           <div>{commercial?.paymentTerms || 'Payment schedule to be agreed before procurement begins.'}</div>

@@ -4,11 +4,10 @@ import { Activity, ArrowRight, BatteryCharging, BookOpen, Cable, Calculator, Che
 import { books } from '../data/books'
 
 const heroMessages = [
-  { eyebrow: 'Solar engineering workspace', lead: 'Design', tail: 'with clarity.', text: 'Turn appliance loads into a practical solar system recommendation.', action: 'Start a design', to: '/calculators?tab=load' },
-  { eyebrow: 'Solar engineering workspace', lead: 'Diagnose', tail: 'with structure.', text: 'Move from a symptom to the right field checks without the guesswork.', action: 'Open diagnosis', to: '/troubleshooting' },
-  { eyebrow: 'Solar engineering workspace', lead: 'Calculate', tail: 'with confidence.', text: 'Review the component decisions that shape a dependable installation.', action: 'Open calculators', to: '/calculators?tab=panel' },
-  { eyebrow: 'Solar engineering workspace', lead: 'Quote', tail: 'professionally.', text: 'Bring a clear design into a client-ready quotation when the work is ready.', action: 'Create quotation', to: '/quotation' },
-  { eyebrow: 'Solar engineering workspace', lead: 'Learn', tail: 'in the field.', text: 'Keep practical installation guidance and technical references close by.', action: 'Explore guides', to: '/books' },
+  { eyebrow: 'Professional solar workspace', lead: 'Design', tail: 'with clarity.', text: 'Plan and size practical solar systems from the loads that matter.', action: 'Explore solar tools', to: '/calculators?tab=load' },
+  { eyebrow: 'Professional solar workspace', lead: 'Diagnose', tail: 'with structure.', text: 'Find faults faster with practical field checks and technical references.', action: 'Open diagnosis', to: '/troubleshooting' },
+  { eyebrow: 'Professional solar workspace', lead: 'Quote', tail: 'professionally.', text: 'Prepare client-ready project documents from your completed design.', action: 'Create quotation', to: '/quotation' },
+  { eyebrow: 'Learn in the field', lead: 'Keep learning', tail: 'with confidence.', text: 'Strengthen practical solar knowledge with timed questions, clear corrections, and field-ready technical guidance.', action: 'Take the solar quiz', to: '/quiz' },
 ]
 
 const pathways = [
@@ -101,6 +100,13 @@ export function HomePage() {
         </div>
       </section>
 
+      <section className="home-section books-section">
+        <div className="section-heading-row"><div><p className="eyebrow">Technical library</p><h2>Keep proven guidance close by.</h2></div><Link className="text-link" to="/books">View all books <ArrowRight className="h-4 w-4" /></Link></div>
+        <div className="featured-book-grid">
+          {featuredBooks.map((book) => <Link className="featured-book" key={book.id} to="/books"><img src={book.cover} alt={`${book.title} cover`} loading="lazy" /><div className="p-4"><h3>{book.title}</h3><p>{book.subtitle}</p></div></Link>)}
+        </div>
+      </section>
+
       <section className="home-section workflow-section">
         <div className="section-heading-row"><div><p className="eyebrow">A practical workflow</p><h2>From load data to a complete solar system.</h2></div></div>
         <div className="workflow-grid">
@@ -112,13 +118,6 @@ export function HomePage() {
         <div className="section-heading-row"><div><p className="eyebrow">Solar tools</p><h2>Make the core sizing decisions quickly.</h2></div><Link className="text-link hidden sm:inline-flex" to="/calculators?tab=load">Open all calculations <ArrowRight className="h-4 w-4" /></Link></div>
         <div className="tool-grid">
           {tools.map((tool) => { const Icon = tool.icon; return <Link className="tool-card" key={tool.title} to={tool.to}><Icon className="h-5 w-5 text-sky-600 dark:text-sky-300" /><span><span className="block font-heading text-sm font-extrabold text-slate-950 dark:text-white">{tool.title}</span><span className="mt-1 block text-xs leading-5 text-slate-500 dark:text-slate-400">{tool.text}</span></span><ArrowRight className="ml-auto h-4 w-4 text-slate-300 dark:text-slate-600" /></Link> })}
-        </div>
-      </section>
-
-      <section className="home-section books-section">
-        <div className="section-heading-row"><div><p className="eyebrow">Technical library</p><h2>Keep proven guidance close by.</h2></div><Link className="text-link" to="/books">View all books <ArrowRight className="h-4 w-4" /></Link></div>
-        <div className="featured-book-grid">
-          {featuredBooks.map((book) => <Link className="featured-book" key={book.id} to="/books"><img src={book.cover} alt={`${book.title} cover`} loading="lazy" /><div className="p-4"><h3>{book.title}</h3><p>{book.subtitle}</p></div></Link>)}
         </div>
       </section>
 

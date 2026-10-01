@@ -10,7 +10,8 @@ export default {
         sgreen: "#0EA5E9",
       },
       fontFamily: {
-        heading: ["-apple-system","BlinkMacSystemFont","Segoe UI","sans-serif"],
+        heading: ["-apple-system", "BlinkMacSystemFont", "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Arial", "sans-serif"],
+        mono: ["SF Mono", "JetBrains Mono", "IBM Plex Mono", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       }
     }
   },

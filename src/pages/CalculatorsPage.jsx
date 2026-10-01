@@ -49,7 +49,7 @@ export function CalculatorsPage() {
   }
 
   return (
-    <div>
+    <div className="calculator-page">
       <Tabs tabs={visibleTabs} active={tab} onChange={selectTab} />
       {tab === 'load' && <LoadCalculator rows={rows} setRows={setRows} result={loadResult} />}
       {tab === 'panel' && <PanelCalculator designLoad={loadResult.design} />}

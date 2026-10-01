@@ -19,7 +19,7 @@ export function StringConfiguration({ panelW, requiredPanels }) {
   const update = (field, value) => setState((current) => ({ ...current, [field]: value }))
 
   return (
-    <details className="mt-5 rounded-2xl border border-sky-100 bg-sky-50/45 p-4 dark:border-sky-400/15 dark:bg-sky-400/5">
+    <details className="technical-details mt-5 p-4">
       <summary className="cursor-pointer list-none font-heading text-base font-extrabold text-slate-950 marker:hidden dark:text-white">
         Panel String Configuration
         <span className="ml-2 text-xs font-semibold text-sky-700 dark:text-sky-300">Optional</span>

@@ -40,28 +40,28 @@ export function InverterCalculator({ sourceLoads }) {
         subtitle="Uses the connected appliance list to calculate peak continuous load and the largest motor starting surge."
         action={!controlled ? <Button variant="soft" size="sm" onClick={() => setLoads((current) => [...current, { id: Date.now(), name: 'New Load', watts: 100, qty: 1, surge: 'none' }])}><Plus className="h-4 w-4" />Load</Button> : null}
       />
-      <Card className="mb-4 p-0">
-        {controlled ? <div className="border-b border-sky-100 bg-sky-50/70 px-4 py-3 text-xs font-semibold text-sky-800 dark:border-white/10 dark:bg-sky-400/10 dark:text-sky-200">Synced from Load Calculator. Edit wattage, quantity, and surge type from the load schedule.</div> : null}
-        <div className={`hidden gap-2 rounded-t-lg bg-navy px-4 py-3 text-xs font-bold uppercase tracking-wide text-white md:grid ${controlled ? 'md:grid-cols-[1fr_90px_70px_130px]' : 'md:grid-cols-[1fr_90px_70px_130px_44px]'}`}>
+      <Card className="data-grid mb-4 overflow-hidden p-0">
+        {controlled ? <div className="connected-note border-b px-4 py-3 text-xs font-semibold">Synced from Load Calculator. Edit wattage, quantity, and surge type from the load schedule.</div> : null}
+        <div className={`data-grid-head hidden gap-2 px-4 py-3 text-xs font-semibold md:grid ${controlled ? 'md:grid-cols-[1fr_90px_70px_130px]' : 'md:grid-cols-[1fr_90px_70px_130px_44px]'}`}>
           <div>Load</div><div>Watts</div><div>Qty</div><div>Surge</div>{!controlled ? <div /> : null}
         </div>
         {loads.map((load) => (
-          <div key={load.id} className={`grid gap-3 border-b border-slate-100 p-4 md:items-center ${controlled ? 'md:grid-cols-[1fr_90px_70px_130px]' : 'md:grid-cols-[1fr_90px_70px_130px_44px]'}`}>
+          <div key={load.id} className={`data-grid-row grid gap-3 p-4 md:items-center ${controlled ? 'md:grid-cols-[1fr_90px_70px_130px]' : 'md:grid-cols-[1fr_90px_70px_130px_44px]'}`}>
             <label className="block">
               <span className="mobile-row-label">Load</span>
               <input className="input" value={load.name} onChange={(event) => update(load.id, 'name', event.target.value)} readOnly={controlled} />
             </label>
             <label className="block">
               <span className="mobile-row-label">Watts</span>
-              <input className="input" type="number" min="0" value={load.watts} onChange={(event) => update(load.id, 'watts', Number(event.target.value))} readOnly={controlled} />
+              <input className="input technical-input" type="number" min="0" value={load.watts} onChange={(event) => update(load.id, 'watts', Number(event.target.value))} readOnly={controlled} />
             </label>
             <label className="block">
               <span className="mobile-row-label">Qty</span>
-              <input className="input" type="number" min="0" value={load.qty} onChange={(event) => update(load.id, 'qty', Number(event.target.value))} readOnly={controlled} />
+              <input className="input technical-input" type="number" min="0" value={load.qty} onChange={(event) => update(load.id, 'qty', Number(event.target.value))} readOnly={controlled} />
             </label>
             <label className="block">
               <span className="mobile-row-label">Surge Type</span>
-              <select className="input bg-white" value={load.surge} onChange={(event) => update(load.id, 'surge', event.target.value)} disabled={controlled}>
+              <select className="input select-input" value={load.surge} onChange={(event) => update(load.id, 'surge', event.target.value)} disabled={controlled}>
                 <option value="none">None</option><option value="fan">Fan</option><option value="fridge">Fridge</option><option value="freezer">Freezer</option><option value="ac">AC</option><option value="pump">Pump</option>
               </select>
             </label>

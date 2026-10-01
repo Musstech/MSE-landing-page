@@ -15,7 +15,7 @@ export function FaultWizard() {
         <SectionHeader title="What symptom are you seeing?" subtitle="Choose the closest match and walk through a systematic diagnosis." />
         <div className="grid gap-3">
           {symptoms.map((item) => (
-            <button key={item.id} className="rounded-lg border border-slate-200 bg-white p-4 text-left text-sm font-semibold text-navy shadow-sm transition hover:border-gold" onClick={() => { setSymptom(item); setStep(0) }}>
+            <button key={item.id} className="diagnosis-choice p-4 text-left text-sm font-semibold" onClick={() => { setSymptom(item); setStep(0) }}>
               {item.label}
             </button>
           ))}
@@ -27,15 +27,15 @@ export function FaultWizard() {
   return (
     <div>
       <Button variant="ghost" size="sm" className="mb-4" onClick={() => { setSymptom(null); setStep(0) }}><ChevronLeft className="h-4 w-4" />Symptoms</Button>
-      <section className="mb-5 rounded-lg bg-gradient-to-br from-navy to-[#2C5282] p-5 text-white">
-        <div className="text-xs font-bold uppercase tracking-wide text-white/60">Diagnosing</div>
+      <section className="diagnosis-hero mb-5 p-5">
+        <div className="text-xs font-semibold text-sky-700 dark:text-sky-300">Diagnosing</div>
         <div className="mt-1 font-heading text-xl font-extrabold">{symptom.label}</div>
       </section>
       <div className="space-y-3">
         {symptom.steps.map((item, index) => (
-          <Card key={item} className={index < step ? 'border-sgreen bg-[#F0FFF4]' : index === step ? 'border-gold' : 'bg-slate-50'}>
+          <Card key={item} className={`diagnosis-step ${index < step ? 'diagnosis-step-complete' : index === step ? 'diagnosis-step-current' : 'diagnosis-step-idle'}`}>
             <div className="flex gap-3">
-              <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${index < step ? 'bg-sgreen text-white' : index === step ? 'bg-gold text-navy' : 'bg-slate-200 text-navy'}`}>
+              <div className={`diagnosis-step-number flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${index < step ? 'diagnosis-step-number-complete' : index === step ? 'diagnosis-step-number-current' : 'diagnosis-step-number-idle'}`}>
                 {index < step ? <Check className="h-4 w-4" /> : index + 1}
               </div>
               <div className="flex-1">
@@ -47,13 +47,12 @@ export function FaultWizard() {
         ))}
       </div>
       {step >= symptom.steps.length ? (
-        <Card className="mt-4 border-sgreen bg-[#F0FFF4] text-center">
-          <div className="font-heading text-lg font-extrabold text-sgreen">Diagnostic steps completed</div>
-          <p className="mt-1 text-sm text-[#2D6A4F]">If the issue persists, check the fault code reference or contact the manufacturer service centre.</p>
+        <Card className="diagnosis-complete mt-4 text-center">
+          <div className="font-heading text-lg font-extrabold text-slate-950 dark:text-white">Diagnostic steps completed</div>
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">If the issue persists, check the fault code reference or contact the manufacturer service centre.</p>
           <Button className="mt-4" variant="primary" onClick={() => { setSymptom(null); setStep(0) }}>Start new diagnosis</Button>
         </Card>
       ) : null}
     </div>
   )
 }
-

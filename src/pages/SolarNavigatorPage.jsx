@@ -99,7 +99,7 @@ export function SolarNavigatorPage() {
       <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
         <Card>
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-700 dark:bg-sky-400/15 dark:text-sky-300">
+            <div className="navigator-icon flex h-12 w-12 items-center justify-center text-sky-700 dark:text-sky-300">
               <Compass className="h-6 w-6" />
             </div>
             <div>
@@ -109,7 +109,7 @@ export function SolarNavigatorPage() {
           </div>
 
           <div className="my-6 flex justify-center">
-            <div className="relative flex h-56 w-56 items-center justify-center rounded-full border border-white/80 bg-white/75 shadow-inner backdrop-blur dark:border-white/10 dark:bg-white/5">
+            <div className="navigator-compass relative flex h-56 w-56 items-center justify-center">
               <div className="absolute top-4 text-xs font-bold text-slate-400">N</div>
               <div className="absolute bottom-4 text-xs font-bold text-slate-400">S</div>
               <div className="absolute left-5 text-xs font-bold text-slate-400">W</div>
@@ -135,7 +135,7 @@ export function SolarNavigatorPage() {
 
         <div className="space-y-4">
           <ResultBanner label="Placement Status" value={placement.label} sub={ideal.reason} />
-          <Card className="overflow-hidden p-0">
+          <Card className="navigator-map overflow-hidden p-0">
             <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4 dark:border-white/10">
               <div className="flex items-center gap-2 font-heading font-bold text-slate-950 dark:text-white">
                 <MapPin className="h-5 w-5 text-sky-600" />

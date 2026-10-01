@@ -255,13 +255,7 @@ function PlanCard({
   highlighted,
 }) {
   return (
-    <Card
-      className={`${
-        highlighted
-          ? 'border-sky-200 bg-sky-50/60 dark:bg-sky-400/10'
-          : ''
-      }`}
-    >
+    <Card className={`plan-card ${highlighted ? 'plan-card-highlighted' : ''}`}>
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-heading text-xl font-extrabold text-slate-950 dark:text-white">
@@ -274,7 +268,7 @@ function PlanCard({
         </div>
 
         {current ? (
-          <span className="rounded-full bg-sky-100 px-3 py-1 text-xs font-bold text-sky-700 dark:bg-sky-400/15 dark:text-sky-300">
+          <span className="plan-current px-3 py-1 text-xs font-semibold">
             Current
           </span>
         ) : null}

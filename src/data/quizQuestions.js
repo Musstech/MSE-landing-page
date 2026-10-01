@@ -86,12 +86,32 @@ const advanced = [
   fact('What should be verified after the full cable route is planned?', 'Before installation, what route detail must be measured for cable sizing?', 'All cable lengths', ['Only the panel colour', 'The book cover', 'The client email'], 'Cable routes and lengths must be measured because length changes resistance and voltage drop.'),
 ]
 
-const levels = { basic, intermediate, advanced }
+const sessionBanks = {
+  basic: [...basic, ...intermediate],
+  intermediate: [...intermediate, ...advanced],
+  advanced: [...advanced, ...intermediate],
+}
 
-function optionsFor(answer, wrong, offset) {
-  const options = [answer, ...wrong]
-  const start = offset % options.length
-  return [...options.slice(start), ...options.slice(0, start)]
+function shuffle(items) {
+  const result = [...items]
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1))
+    ;[result[index], result[swapIndex]] = [result[swapIndex], result[index]]
+  }
+  return result
+}
+
+function keepAnswersApart(items) {
+  const remaining = shuffle(items)
+  const ordered = []
+
+  while (remaining.length) {
+    const previousAnswer = ordered.at(-1)?.answer
+    const nextIndex = remaining.findIndex((item) => item.answer !== previousAnswer)
+    ordered.push(remaining.splice(nextIndex === -1 ? 0 : nextIndex, 1)[0])
+  }
+
+  return ordered
 }
 
 export const quizLevels = [
@@ -101,21 +121,12 @@ export const quizLevels = [
 ]
 
 export function getQuizQuestions(level) {
-  const facts = levels[level] || basic
-  return facts.flatMap((item, index) => ([
-    {
-      id: `${level}-${index + 1}-a`,
-      prompt: item.question,
-      options: optionsFor(item.answer, item.wrong, index * 2),
-      answer: item.answer,
-      explanation: item.explanation,
-    },
-    {
-      id: `${level}-${index + 1}-b`,
-      prompt: item.alternate,
-      options: optionsFor(item.answer, item.wrong, index * 2 + 1),
-      answer: item.answer,
-      explanation: item.explanation,
-    },
-  ])).slice(0, 50)
+  const facts = sessionBanks[level] || sessionBanks.basic
+  return keepAnswersApart(facts).slice(0, 50).map((item, index) => ({
+    id: `${level}-${index + 1}`,
+    prompt: item.question,
+    options: shuffle([item.answer, ...item.wrong]),
+    answer: item.answer,
+    explanation: item.explanation,
+  }))
 }

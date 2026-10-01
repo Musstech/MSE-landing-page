@@ -53,15 +53,15 @@ export function QuizPage() {
 
   if (!session) {
     return (
-      <div className="space-y-5">
+      <div className="quiz-page space-y-6">
         <SectionHeader title="Solar Quiz" subtitle="Build practical solar knowledge from the same calculation and installation guidance used in the workspace." />
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="quiz-level-grid grid gap-4 lg:grid-cols-3">
           {quizLevels.map((level) => (
-            <Card key={level.id} className="flex flex-col">
-              <div className="text-xs font-bold uppercase tracking-wide text-sky-700 dark:text-sky-300">50 questions</div>
+            <Card key={level.id} className="quiz-level-card flex flex-col">
+              <div className="quiz-level-meta"><span>50 questions</span><span>45 min</span></div>
               <h2 className="mt-2 font-heading text-2xl font-extrabold text-slate-950 dark:text-white">{level.label}</h2>
               <p className="mt-3 min-h-16 text-sm leading-6 text-slate-500 dark:text-slate-400">{level.description}</p>
-              <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-300"><Clock3 className="h-4 w-4 text-sky-600" />45 minutes</div>
+              <div className="quiz-level-detail mt-5"><Clock3 className="h-4 w-4" />Timed technical assessment</div>
               <Button className="mt-6 w-full" variant={level.id === 'intermediate' ? 'primary' : 'soft'} onClick={() => startSession(level.id)}>Start {level.label}</Button>
             </Card>
           ))}
@@ -73,14 +73,14 @@ export function QuizPage() {
   if (submitted) {
     const mistakes = questions.filter((question) => answers[question.id] !== question.answer)
     return (
-      <div className="space-y-5">
+      <div className="quiz-page space-y-6">
         <SectionHeader title={`${session.level[0].toUpperCase()}${session.level.slice(1)} Quiz Results`} subtitle={seconds === 0 ? 'Time is up. Your answers have been submitted.' : 'Your answers have been submitted.'} />
-        <div className="grid gap-4 sm:grid-cols-3">
-          <Card><div className="text-xs font-bold uppercase tracking-wide text-slate-500">Score</div><div className="mt-1 font-heading text-3xl font-extrabold text-slate-950 dark:text-white">{correct} / 50</div></Card>
-          <Card><div className="text-xs font-bold uppercase tracking-wide text-slate-500">Percentage</div><div className="mt-1 font-heading text-3xl font-extrabold text-sky-700 dark:text-sky-300">{percentage}%</div></Card>
-          <Card><div className="text-xs font-bold uppercase tracking-wide text-slate-500">Incorrect</div><div className="mt-1 font-heading text-3xl font-extrabold text-slate-950 dark:text-white">{50 - correct}</div></Card>
+        <div className="quiz-result-grid grid gap-4 sm:grid-cols-3">
+          <Card className="stat-card"><div className="text-xs font-semibold text-slate-500">Score</div><div className="technical-value mt-1 font-heading text-3xl font-extrabold text-slate-950 dark:text-white">{correct} / 50</div></Card>
+          <Card className="stat-card"><div className="text-xs font-semibold text-slate-500">Percentage</div><div className="technical-value mt-1 font-heading text-3xl font-extrabold text-sky-700 dark:text-sky-300">{percentage}%</div></Card>
+          <Card className="stat-card"><div className="text-xs font-semibold text-slate-500">Incorrect</div><div className="technical-value mt-1 font-heading text-3xl font-extrabold text-slate-950 dark:text-white">{50 - correct}</div></Card>
         </div>
-        <Card>
+        <Card className="quiz-review-card">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="font-heading text-xl font-extrabold text-slate-950 dark:text-white">Review mistakes</h2>
@@ -91,8 +91,8 @@ export function QuizPage() {
           {showReview ? (
             <div className="mt-5 grid gap-4">
               {mistakes.length ? mistakes.map((question, index) => (
-                <div key={question.id} className="rounded-2xl border border-slate-200 bg-white/60 p-4 dark:border-white/10 dark:bg-white/5">
-                  <div className="text-xs font-bold uppercase tracking-wide text-slate-400">Question {questions.indexOf(question) + 1}</div>
+                <div key={question.id} className="quiz-review-item p-4">
+                  <div className="text-xs font-semibold text-slate-400">Question {questions.indexOf(question) + 1}</div>
                   <div className="mt-2 font-bold text-slate-950 dark:text-white">{question.prompt}</div>
                   <div className="mt-3 text-sm text-red-600 dark:text-red-300">Your answer: {answers[question.id] || 'Not answered'}</div>
                   <div className="mt-1 text-sm font-semibold text-sky-700 dark:text-sky-300">Correct answer: {question.answer}</div>
@@ -110,22 +110,23 @@ export function QuizPage() {
   const selectedAnswer = answers[current.id]
   const progress = ((position + 1) / questions.length) * 100
   return (
-    <div className="space-y-5">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div>
+    <div className="quiz-page space-y-5">
+      <div className="quiz-session-head flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="quiz-session-title">
           <div className="text-xs font-bold uppercase tracking-wide text-sky-700 dark:text-sky-300">{session.level} level</div>
           <h1 className="mt-1 font-heading text-2xl font-extrabold text-slate-950 dark:text-white">Question {position + 1} of {questions.length}</h1>
         </div>
-        <div className="inline-flex items-center gap-2 rounded-full border border-sky-100 bg-white/70 px-4 py-2 text-sm font-bold text-slate-700 shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-slate-200"><Clock3 className="h-4 w-4 text-sky-600" />{formatTime(seconds)}</div>
+        <div className="quiz-timer inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold"><Clock3 className="h-4 w-4 text-sky-600" />{formatTime(seconds)}</div>
       </div>
-      <div className="h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-white/10"><div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${progress}%` }} /></div>
-      <Card>
+      <div className="quiz-progress-track h-2 overflow-hidden rounded-full bg-slate-200 dark:bg-white/10" aria-label={`${Math.round(progress)}% of quiz complete`}><div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${progress}%` }} /></div>
+      <Card className="quiz-question-card">
+        <div className="quiz-question-label">Choose the most accurate answer</div>
         <div className="font-heading text-xl font-extrabold leading-8 text-slate-950 dark:text-white">{current.prompt}</div>
         <div className="mt-6 grid gap-3">
-          {current.options.map((option) => {
+          {current.options.map((option, optionIndex) => {
             const selected = selectedAnswer === option
-            return <button key={option} type="button" onClick={() => chooseAnswer(option)} className={`min-h-14 rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition ${selected ? 'border-sky-300 bg-sky-50 text-sky-900 dark:border-sky-400/30 dark:bg-sky-400/15 dark:text-sky-100' : 'border-slate-200 bg-white/60 text-slate-700 hover:border-sky-200 hover:bg-sky-50/60 dark:border-white/10 dark:bg-white/5 dark:text-slate-200'}`}>
-              <span className="inline-flex items-center gap-3">{selected ? <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-300" /> : <span className="h-5 w-5 rounded-full border border-slate-300 dark:border-slate-500" />}{option}</span>
+            return <button key={option} type="button" onClick={() => chooseAnswer(option)} className={`quiz-answer min-h-14 px-4 py-3 text-left text-sm font-semibold ${selected ? 'quiz-answer-selected' : ''}`}>
+              <span className="inline-flex items-center gap-3"><span className="quiz-answer-marker">{String.fromCharCode(65 + optionIndex)}</span><span className="flex-1">{option}</span>{selected ? <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-300" /> : null}</span>
             </button>
           })}
         </div>

@@ -30,9 +30,9 @@ export function PanelCalculator({ designLoad }) {
       <SectionHeader title="Panel Sizing Calculator" subtitle="Convert design load into the required PV array size." />
       <div className="grid gap-4 md:grid-cols-2">
         {linkedDesignLoad ? (
-          <Card className="bg-sky-50/70 p-4 dark:bg-sky-400/10">
-            <div className="text-[11px] font-bold uppercase tracking-wide text-sky-700 dark:text-sky-300">Total Design Load</div>
-            <div className="mt-1 font-heading text-2xl font-extrabold text-slate-950 dark:text-white">{formatNumber(linkedDesignLoad)} <span className="text-sm font-semibold text-slate-500">Wh/day</span></div>
+          <Card className="connected-result p-4">
+            <div className="text-[11px] font-semibold text-sky-700 dark:text-sky-300">Total Design Load</div>
+            <div className="technical-value mt-1 font-heading text-2xl font-extrabold text-slate-950 dark:text-white">{formatNumber(linkedDesignLoad)} <span className="text-sm font-semibold text-slate-500">Wh/day</span></div>
             <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Connected from the load calculator with the 25% design margin applied.</p>
           </Card>
         ) : (
